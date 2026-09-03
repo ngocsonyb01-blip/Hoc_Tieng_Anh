@@ -923,5 +923,45 @@ export const part3TopicDev = [
         "suggestedAnswer": "Yes, absolutely. Government funding can improve public infrastructure, subsidize training programs, and create equal opportunities for citizens across all provinces."
       }
     ]
+  },
+  {
+    "id": "sp3-auth-01",
+    "topicId": "reading-benefits",
+    "centralTopic": "Benefits of Daily Book Reading (Đề Thi Thật Đề 1)",
+    "mindMap": {
+      "subIdea1": "Knowledge Expansion & Cognitive Development",
+      "subIdea2": "Language Competence & Eloquent Vocabulary",
+      "subIdea3": "Stress Relief & Mental Calmness",
+      "ownIdea": "Cultivation of Empathy & Critical Perspective"
+    },
+    "modelSpeech": "Good morning examiner. Today, I would like to deliver my presentation regarding the profound merits of cultivating a daily book reading habit.\n\nFirst and foremost, reading books serves as an unparalleled gateway to knowledge acquisition and intellectual enrichment. Whether one explores historical non-fiction, scientific discoveries, or classical literature, books broaden our horizons and provide structured understanding of complex global phenomena that bite-sized social media posts cannot deliver.\n\nSecondly, regular reading dramatically polishes language proficiency and communication eloquence. As readers immerse themselves in well-crafted syntax and rich academic vocabulary, they naturally internalize advanced grammar patterns and expand their lexical repertoire, which directly elevates their writing and speaking confidence.\n\nThirdly, reading offers a powerful antidote to modern stress. Disconnecting from digital screens and immersing oneself in an engaging narrative calms the nervous system, lowers heart rates, and fosters inner tranquility after hectic working hours.\n\nFinally, my own personal idea is that literature cultivates profound empathy and critical thinking. By stepping into the shoes of diverse protagonists from different eras and cultures, readers develop open-mindedness and emotional maturity.\n\nIn conclusion, reading daily is indispensable for holistic intellectual and emotional cultivation.",
+    "followUpQuestions": [
+      {
+        "q": "Do you think e-books will completely replace physical paper books in the future?",
+        "suggestedAnswer": "While e-books offer portability and environmental advantages, I believe physical books will never disappear. The tactile pleasure of turning paper pages, the distinctive smell of ink, and the aesthetic joy of bookshelf collecting ensure printed books remain timeless."
+      },
+      {
+        "q": "How can parents cultivate reading habits in young children?",
+        "suggestedAnswer": "Parents should lead by example by reading in front of children rather than scrolling on smartphones, create cozy home reading nooks, and read bedtime stories together every night."
+      }
+    ]
+  },
+  {
+    "id": "sp3-auth-02",
+    "topicId": "studying-abroad",
+    "centralTopic": "Benefits of Studying Abroad (Đề Thi Thật Đề 2)",
+    "mindMap": {
+      "subIdea1": "Foreign Language Mastery in Immersion Environment",
+      "subIdea2": "Fostering Personal Independence & Self-Reliance",
+      "subIdea3": "Superior Career Prospects & Global Employability",
+      "ownIdea": "Cross-Cultural Networking & Global Worldview"
+    },
+    "modelSpeech": "Good morning examiner. Today, I am pleased to discuss the manifold benefits of pursuing higher education in a foreign country.\n\nPrimarily, overseas education provides an authentic linguistic immersion environment that accelerates language acquisition. Being surrounded 24/7 by native speakers forces international students to communicate in English during academic lectures, grocery shopping, and social interactions, allowing them to achieve native-like fluency and pronunciation within a remarkably short period.\n\nIn addition, studying abroad acts as a powerful catalyst for personal independence. Living thousands of miles away from family support systems obliges students to take full ownership of their lives—from budgeting money, cooking nutritious meals, to handling administrative tasks and solving unforeseen crises autonomously, thereby building immense emotional resilience.\n\nFurthermore, an internationally recognized degree drastically enhances graduate employability. Multinationals and domestic enterprises aggressively seek candidates who possess overseas qualifications, bilingual versatility, and intercultural agility.\n\nFinally, my own thought is that studying abroad nurtures a lifelong international network of friends and mentors from diverse cultural backgrounds, fostering an open-minded and empathetic global perspective.\n\nTo sum up, despite initial hurdles, studying abroad is an invaluable life-transforming investment.",
+    "followUpQuestions": [
+      {
+        "q": "What is the biggest challenge international students face when studying abroad?",
+        "suggestedAnswer": "In my opinion, culture shock and language barriers during the initial six months represent the steepest hurdles. Overcoming homesickness and adapting to unfamiliar academic conventions require significant emotional fortitude."
+      }
+    ]
   }
 ];

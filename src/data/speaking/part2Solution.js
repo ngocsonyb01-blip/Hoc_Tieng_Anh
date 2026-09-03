@@ -379,5 +379,43 @@ export const part2Solution = [
       "counterArgument": "On the contrary, regarding the other options such as Fast food restaurant waiter or Online freelance graphic designer, although they have minor benefits, they are either excessively expensive or less enjoyable.",
       "conclusion": "Taking all factors into account, Option 2: English tutor for elementary pupils is undeniably the optimal solution."
     }
+  },
+  {
+    "id": "sp2-auth-01",
+    "situationTitle": "Weekend Outing with Foreign Friend (Đề Thi Thật Đề 1)",
+    "context": "A foreign friend is visiting your city for the weekend. You have three options: Taking a walking tour in the Old Quarter, Visiting the National History Museum, or Going on a boat cruise along the river.",
+    "options": [
+      "Walking tour in the Old Quarter",
+      "Visiting the National History Museum",
+      "Going on a boat cruise along the river"
+    ],
+    "bestChoice": "Option 1: Walking tour in the Old Quarter",
+    "rationale": "It allows firsthand immersion in local street food, vibrant sidewalk culture, and ancient architecture, providing a genuine cultural experience.",
+    "speechTemplate": {
+      "opening": "Well, placed in the situation where my foreign friend is visiting our city for the weekend, among the three proposed options, I would strongly advocate for taking a walking tour around the Old Quarter as the supreme choice.",
+      "justification1": "First and foremost, the Old Quarter is the vibrant beating heart of our city's culture. Strolling leisurely through historical alleys allows my friend to directly absorb the lively street atmosphere, witness centuries-old architecture, and sample authentic culinary specialties like pho and egg coffee.",
+      "justification2": "Furthermore, walking offers maximum spontaneity. We can stop whenever we encounter interesting artisanal workshops or strike up conversations with welcoming local residents, which creates unforgettable travel memories.",
+      "counterArgument": "Regarding the other alternatives, although the History Museum is informative, it might feel somewhat static and academic for a short weekend visit. Meanwhile, a river boat cruise is relatively costly and confines us to a fixed seating area with limited interaction.",
+      "conclusion": "Taking all factors into consideration, exploring the Old Quarter on foot is unquestionably the most immersive, dynamic, and memorable experience for my friend."
+    }
+  },
+  {
+    "id": "sp2-auth-02",
+    "situationTitle": "Farewell Gift for Study Abroad Friend (Đề Thi Thật Đề 2)",
+    "context": "Your close friend is preparing to study abroad in the UK for three years. Your group is choosing a farewell gift: An electronic translation device, A customized memory photo album, or Warm thermal winter clothing.",
+    "options": [
+      "An electronic translation device",
+      "A customized memory photo album",
+      "Warm thermal winter clothing"
+    ],
+    "bestChoice": "Option 2: A customized memory photo album",
+    "rationale": "It possesses deep sentimental value, reminding your friend of home during bouts of homesickness, while clothing and electronics can easily be purchased in the host country.",
+    "speechTemplate": {
+      "opening": "Well, in this meaningful situation where our close friend is embarking on a three-year study abroad journey in the UK, among the three gift alternatives, I would firmly choose Option 2: A customized memory photo album with handwritten messages.",
+      "justification1": "First of all, studying abroad is an emotionally taxing endeavor where students inevitably experience severe homesickness and isolation. Whenever my friend feels overwhelmed by unfamiliar surroundings, flipping through cherished photographs of our close moments and reading encouraging notes will serve as an emotional anchor, reminding them that they are loved and supported.",
+      "justification2": "Additionally, a personalized album is uniquely irreplaceable. It carries profound emotional warmth that commercial products simply cannot replicate.",
+      "counterArgument": "In contrast, an electronic translator is largely redundant because modern smartphones already possess sophisticated translation applications. Furthermore, while thermal winter clothing is practical, size mismatches can easily occur, and British stores offer apparel specifically tailored to local sub-zero weather.",
+      "conclusion": "In conclusion, a customized photo album is undeniably the most thoughtful and heartwarming farewell token that our friend will treasure for a lifetime."
+    }
   }
 ];

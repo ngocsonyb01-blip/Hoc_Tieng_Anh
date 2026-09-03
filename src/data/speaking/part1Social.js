@@ -1637,5 +1637,106 @@ export const part1Social = [
         ]
       }
     ]
+  },
+  {
+    "id": "sp1-auth-01",
+    "topicId": "accommodation-home",
+    "topicName": "Accommodation & Living (Đề Thi Thật Đề 1)",
+    "questions": [
+      {
+        "q": "Do you live in a house or a flat?",
+        "areaAnswer": {
+          "answer": "Currently, I live in a cozy two-story townhouse with my extended family in a peaceful suburban neighborhood.",
+          "reason": "It offers plenty of living space with three bedrooms, a bright living room, and a lovely small garden in the backyard.",
+          "example": "For instance, I have lived there since childhood, so I have a profound emotional attachment to the place.",
+          "alternative": "However, when I attend university, I might consider renting a small studio apartment near campus."
+        },
+        "audioText": "Currently, I live in a cozy two-story townhouse with my extended family in a peaceful suburban neighborhood. It offers plenty of living space with three bedrooms, a bright living room, and a lovely small garden in the backyard. For instance, I have lived there since childhood, so I have a profound emotional attachment to the place.",
+        "vocabularyHighlights": [
+          "cozy townhouse",
+          "suburban neighborhood",
+          "emotional attachment",
+          "studio apartment"
+        ]
+      },
+      {
+        "q": "What is your favorite room in your house?",
+        "areaAnswer": {
+          "answer": "Without doubt, my bedroom is my absolute favorite sanctuary in the entire house.",
+          "reason": "It is the only private space where I can unwind, listen to acoustic music, and focus completely on my studies without distractions.",
+          "example": "For example, I placed my study desk right next to the large window to enjoy fresh air and morning sunlight.",
+          "alternative": "Occasionally, I also enjoy spending time in the kitchen when cooking dinner with my mother."
+        },
+        "audioText": "Without doubt, my bedroom is my absolute favorite sanctuary in the entire house. It is the only private space where I can unwind, listen to acoustic music, and focus completely on my studies without distractions. For example, I placed my study desk right next to the large window to enjoy fresh air and morning sunlight.",
+        "vocabularyHighlights": [
+          "private sanctuary",
+          "unwind",
+          "without distractions",
+          "acoustic music"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sp1-auth-02",
+    "topicId": "movies-entertainment",
+    "topicName": "Cinema & Movies (Đề Thi Thật Đề 2)",
+    "questions": [
+      {
+        "q": "Do you like watching movies?",
+        "areaAnswer": {
+          "answer": "Yes, absolutely. I am a passionate movie enthusiast and watch films on a weekly basis.",
+          "reason": "Cinematic storytelling provides a fantastic escape from stressful working days and stimulates my creative imagination.",
+          "example": "For instance, I particularly adore science fiction and romantic comedies because they always cheer me up.",
+          "alternative": "If I am extremely occupied, I watch short film reviews on YouTube instead."
+        },
+        "audioText": "Yes, absolutely. I am a passionate movie enthusiast and watch films on a weekly basis. Cinematic storytelling provides a fantastic escape from stressful working days and stimulates my creative imagination. For instance, I particularly adore science fiction and romantic comedies because they always cheer me up.",
+        "vocabularyHighlights": [
+          "passionate movie enthusiast",
+          "cinematic storytelling",
+          "fantastic escape",
+          "cheer me up"
+        ]
+      },
+      {
+        "q": "Do you prefer watching movies at home or at the cinema?",
+        "areaAnswer": {
+          "answer": "Personally, I distinctly prefer going to the movie theater whenever a blockbuster is released.",
+          "reason": "The monumental screen, surround sound system, and energetic auditorium atmosphere cannot be replicated at home.",
+          "example": "For example, watching action movies like Marvel films at an IMAX cinema delivers an unparalleled sensory experience.",
+          "alternative": "Nonetheless, streaming on Netflix at home is more budget-friendly for casual viewing."
+        },
+        "audioText": "Personally, I distinctly prefer going to the movie theater whenever a blockbuster is released. The monumental screen, surround sound system, and energetic auditorium atmosphere cannot be replicated at home. For example, watching action movies at an IMAX cinema delivers an unparalleled sensory experience.",
+        "vocabularyHighlights": [
+          "movie theater",
+          "blockbuster",
+          "surround sound system",
+          "unparalleled sensory experience"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sp1-auth-03",
+    "topicId": "parks-nature",
+    "topicName": "Parks & Public Spaces (Đề Thi Thật Đề 3)",
+    "questions": [
+      {
+        "q": "Do you like to go to the park?",
+        "areaAnswer": {
+          "answer": "Yes, certainly. I make it a habit to visit my local city park at least twice a week.",
+          "reason": "The tranquil atmosphere, lush green canopy, and fresh air provide an invigorating respite from urban bustle.",
+          "example": "For example, I love jogging around the central lake in the early morning while listening to inspirational podcasts.",
+          "alternative": "On rainy days, I replace my park walk with indoor treadmill exercises at the gymnasium."
+        },
+        "audioText": "Yes, certainly. I make it a habit to visit my local city park at least twice a week. The tranquil atmosphere, lush green canopy, and fresh air provide an invigorating respite from urban bustle. For example, I love jogging around the central lake in the early morning while listening to inspirational podcasts.",
+        "vocabularyHighlights": [
+          "make it a habit",
+          "tranquil atmosphere",
+          "lush green canopy",
+          "invigorating respite"
+        ]
+      }
+    ]
   }
 ];
