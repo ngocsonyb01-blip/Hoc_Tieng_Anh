@@ -370,15 +370,18 @@ class AudioController {
 
     if (btnEl) {
       if (this.isPlaying) {
-        btnEl.innerHTML = '<i data-lucide="pause"></i> Tạm Dừng';
+        btnEl.innerHTML = '<i data-lucide="pause"></i>';
+        btnEl.title = 'Tạm dừng';
         btnEl.classList.remove('btn-primary');
         btnEl.classList.add('btn-warning');
       } else if (this.isPaused) {
-        btnEl.innerHTML = '<i data-lucide="play"></i> Tiếp Tục';
+        btnEl.innerHTML = '<i data-lucide="play"></i>';
+        btnEl.title = 'Tiếp tục';
         btnEl.classList.remove('btn-warning');
         btnEl.classList.add('btn-primary');
       } else {
-        btnEl.innerHTML = '<i data-lucide="play"></i> Phát Audio';
+        btnEl.innerHTML = '<i data-lucide="play"></i>';
+        btnEl.title = 'Phát';
         btnEl.classList.remove('btn-warning');
         btnEl.classList.add('btn-primary');
       }
@@ -592,18 +595,18 @@ export function renderAudioPlayerComponent(id, text, label = 'Bản Thu Âm Mẫ
         <div id="audio-progress-${id}" style="background: linear-gradient(90deg, var(--primary), var(--secondary)); height: 100%; width: 0%; border-radius: var(--radius-full); transition: width 0.1s linear;"></div>
       </div>
 
-      <!-- Controller Action Buttons -->
+      <!-- Controller Action Buttons (Dùng biểu tượng icon tinh gọn) -->
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button id="audio-btn-${id}" class="btn btn-primary btn-sm" onclick="window.toggleAudioPlay('${id}', '${cleanText}', '${realUrl}')">
-            <i data-lucide="play"></i> Phát Audio
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <button id="audio-btn-${id}" class="btn btn-primary btn-sm" onclick="window.toggleAudioPlay('${id}', '${cleanText}', '${realUrl}')" title="Phát / Tạm dừng" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 34px; padding: 0;">
+            <i data-lucide="play" style="width: 16px; height: 16px;"></i>
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="window.replayAudio('${id}', '${cleanText}', '${realUrl}')" title="Nghe lại từ đầu">
-            <i data-lucide="rotate-ccw"></i> Nghe Lại Từ Đầu
+          <button class="btn btn-secondary btn-sm" onclick="window.replayAudio('${id}', '${cleanText}', '${realUrl}')" title="Phát lại từ đầu" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 34px; padding: 0;">
+            <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i>
           </button>
           ${!isRealMp3 ? `
-            <button class="btn btn-secondary btn-sm" onclick="window.toggleTranscript('${id}')">
-              <i data-lucide="file-text"></i> Lời Thoại (Transcript)
+            <button class="btn btn-secondary btn-sm" onclick="window.toggleTranscript('${id}')" title="Lời thoại (Transcript)" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 34px; padding: 0;">
+              <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
             </button>
           ` : ''}
         </div>
