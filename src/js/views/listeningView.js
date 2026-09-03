@@ -93,10 +93,58 @@ export function renderListeningView() {
 function renderPracticeTab() {
   const sets = listeningPracticeTests.testSets || [];
   const testSet = sets[selectedTestSetIndex] || sets[0] || {};
+  const isAuthentic = !!testSet.audioUrl;
   const part1 = testSet.part1 || { title: 'Part 1: 8 Thông Báo Ngắn', questions: [] };
   const part2 = testSet.part2 || { title: 'Part 2: 3 Đoạn Hội Thoại Dài', conversations: [] };
   const part3 = testSet.part3 || { title: 'Part 3: 3 Bài Thuyết Trình Học Thuật', talks: [] };
 
+  // Đối với các đề thi thật có băng ghi âm gốc (Test 1, 2, 3):
+  // Phát 1 đoạn ghi âm dài liên tục từ đầu đến cuối theo đúng 1 giọng chuẩn phòng thi,
+  // hiển thị liền mạch cả 3 Part trên cùng 1 trang, không chia nhỏ hoặc dùng giọng TTS khác.
+  if (isAuthentic) {
+    return `
+      <div>
+        <!-- Test Set Selector Carousel -->
+        <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">
+          ${sets.map((s, idx) => `
+            <button class="tab-btn ${selectedTestSetIndex === idx ? 'active' : ''}" onclick="window.handleListeningSetChange(${idx})" style="white-space: nowrap; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="disc" style="width: 15px; height: 15px;"></i>
+              <span>Đề ${idx + 1}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        <!-- Sticky Master Audio Player (Phát toàn bộ bài thi liên tục từ đầu đến cuối) -->
+        <div style="position: sticky; top: 10px; z-index: 99; margin-bottom: 2rem; background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #38bdf8; border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; color: #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;"><i data-lucide="disc"></i> BĂNG GHI ÂM GỐC VSTEP</span>
+              <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 600;">(Phát liên tục từ đầu đến cuối • 1 giọng chuẩn phòng thi)</span>
+            </div>
+            <div style="display: flex; gap: 0.35rem;">
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p1-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 1 (1-8)</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p2-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 2 (9-20)</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p3-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 3 (21-35)</button>
+            </div>
+          </div>
+          ${renderAudioPlayerComponent(`lview-full-master-${selectedTestSetIndex}`, testSet.audioUrl, 'Băng Nghe Toàn Bộ Bài Thi (35 Phút)', testSet.audioUrl)}
+        </div>
+
+        <!-- Hiển thị liền mạch toàn bộ 35 câu từ Part 1 đến Part 3 -->
+        <div id="p1-block" style="margin-bottom: 3rem;">
+          ${renderPart1Section(part1, testSet)}
+        </div>
+        <div id="p2-block" style="margin-bottom: 3rem;">
+          ${renderPart2Section(part2, testSet)}
+        </div>
+        <div id="p3-block" style="margin-bottom: 3rem;">
+          ${renderPart3Section(part3, testSet)}
+        </div>
+      </div>
+    `;
+  }
+
+  // Chế độ cho các bộ đề tổng hợp khác (chia theo tab Part)
   return `
     <div>
       <!-- Test Set Selector Carousel -->
@@ -108,20 +156,6 @@ function renderPracticeTab() {
           </button>
         `).join('')}
       </div>
-
-      <!-- Authentic MP3 Master Player Banner (nếu bộ đề có file âm thanh gốc) -->
-      ${testSet.audioUrl ? `
-        <div class="card" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #38bdf8; padding: 1.25rem 1.5rem; color: #fff;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;"><i data-lucide="disc"></i> BĂNG GHI ÂM GỐC VSTEP</span>
-              <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 600;">(Định dạng MP3 phòng thi chuẩn ĐHQG)</span>
-            </div>
-            <span style="font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">35 Câu • 3 Parts</span>
-          </div>
-          ${renderAudioPlayerComponent(`lview-full-master-${selectedTestSetIndex}`, testSet.audioUrl, 'Băng Nghe Toàn Bộ Bài Thi', testSet.audioUrl)}
-        </div>
-      ` : ''}
 
       <!-- Part Selector Carousel -->
       <div class="tabs-header" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; overflow-x: auto;">
@@ -201,7 +235,7 @@ function renderSkillsTab() {
 
 function renderPart1Section(part1, testSet = null) {
   const questions = part1.questions || [];
-  const audioUrl = part1.audioUrl || testSet?.audioUrl || null;
+  const isAuthentic = !!testSet?.audioUrl;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
@@ -212,9 +246,11 @@ function renderPart1Section(part1, testSet = null) {
           </div>
           <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
         </div>
-        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Audio Part 1', audioUrl)}
-        </div>
+        ${!isAuthentic ? `
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+            ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Audio Part 1')}
+          </div>
+        ` : ''}
       </div>
 
       ${questions.map((q, idx) => {
@@ -227,8 +263,8 @@ function renderPart1Section(part1, testSet = null) {
               <span style="font-size: 0.85rem; color: var(--text-muted);">Dạng bài: Thông báo công cộng / Hội thoại 2 lượt</span>
             </div>
 
-            <!-- Audio Player Controller Component -->
-            ${renderAudioPlayerComponent(audioId, script, `Audio Câu ${idx + 1} (Có Lời Dẫn Chuẩn VSTEP)`)}
+            <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp, đề gốc dùng băng liền mạch ở trên -->
+            ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio Câu ${idx + 1}`) : ''}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.95rem; line-height: 1.7;">
               <strong style="color: var(--primary);">Lời thoại (Audio Transcript):</strong>
@@ -269,7 +305,7 @@ function renderPart1Section(part1, testSet = null) {
 
 function renderPart2Section(part2, testSet = null) {
   const conversations = part2.conversations || [];
-  const audioUrl = part2.audioUrl || testSet?.audioUrl || null;
+  const isAuthentic = !!testSet?.audioUrl;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--secondary);">
@@ -280,9 +316,11 @@ function renderPart2Section(part2, testSet = null) {
           </div>
           <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
         </div>
-        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Audio Part 2', audioUrl)}
-        </div>
+        ${!isAuthentic ? `
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+            ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Audio Part 2')}
+          </div>
+        ` : ''}
       </div>
 
       ${conversations.map((conv, cIdx) => {
@@ -297,8 +335,8 @@ function renderPart2Section(part2, testSet = null) {
               <h3 style="margin: 0; font-size: 1.3rem; color: var(--primary);">${conv.title}</h3>
             </div>
 
-            <!-- Audio Player Controller -->
-            ${renderAudioPlayerComponent(audioId, script, `Audio ${conv.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+            <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp -->
+            ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio ${conv.title}`) : ''}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
               <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${conv.audioTranscript}
@@ -335,7 +373,7 @@ function renderPart2Section(part2, testSet = null) {
 
 function renderPart3Section(part3, testSet = null) {
   const talks = part3.talks || [];
-  const audioUrl = part3.audioUrl || testSet?.audioUrl || null;
+  const isAuthentic = !!testSet?.audioUrl;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--success);">
@@ -346,9 +384,11 @@ function renderPart3Section(part3, testSet = null) {
           </div>
           <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
         </div>
-        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Audio Part 3', audioUrl)}
-        </div>
+        ${!isAuthentic ? `
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+            ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Audio Part 3')}
+          </div>
+        ` : ''}
       </div>
 
       ${talks.map((talk, tIdx) => {
@@ -363,8 +403,8 @@ function renderPart3Section(part3, testSet = null) {
               <h3 style="margin: 0; font-size: 1.3rem; color: var(--primary);">${talk.title}</h3>
             </div>
 
-            <!-- Audio Player Controller -->
-            ${renderAudioPlayerComponent(audioId, script, `Audio ${talk.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+            <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp -->
+            ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio ${talk.title}`) : ''}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
               <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${talk.audioTranscript}
