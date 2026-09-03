@@ -21,30 +21,15 @@ export function renderVocabularyView() {
 
   window.openVocabTestModal = () => {
     isVocabModalOpen = true;
-    isVocabModalMinimized = false;
-    renderOrUpdateVocabModalDOM();
-  };
-
-  window.minimizeVocabTestModal = () => {
-    isVocabModalMinimized = true;
-    renderOrUpdateVocabModalDOM();
-    if (window.showToast) {
-      window.showToast('Đã thu nhỏ cửa sổ Flashcard xuống nền. Bạn có thể tra cứu và mở lại bất cứ lúc nào!', 'info');
-    }
-  };
-
-  window.restoreVocabTestModal = () => {
-    isVocabModalMinimized = false;
     renderOrUpdateVocabModalDOM();
   };
 
   window.closeVocabTestModal = () => {
     isVocabModalOpen = false;
-    isVocabModalMinimized = false;
     const modal = document.getElementById('vocab-floating-test-modal');
     if (modal) modal.style.display = 'none';
     const dock = document.getElementById('vocab-test-dock-pill');
-    if (dock) dock.style.display = 'none';
+    if (dock) dock.remove();
   };
 
   window.submitVocabModalChoice = (selectedAnswer, btnIndex) => {
@@ -179,41 +164,15 @@ function renderOrUpdateVocabModalDOM() {
     document.body.appendChild(modal);
   }
 
-  // 2. Dock Pill
-  let dock = document.getElementById('vocab-test-dock-pill');
-  if (!dock) {
-    dock = document.createElement('div');
-    dock.id = 'vocab-test-dock-pill';
-    dock.style.position = 'fixed';
-    dock.style.bottom = '25px';
-    dock.style.right = '25px';
-    dock.style.zIndex = '99999';
-    dock.style.display = 'none';
-    document.body.appendChild(dock);
-  }
+  // Clean up any old dock pill if present
+  const oldDock = document.getElementById('vocab-test-dock-pill');
+  if (oldDock) oldDock.remove();
 
   if (!isVocabModalOpen) {
     modal.style.display = 'none';
-    dock.style.display = 'none';
     return;
   }
 
-  if (isVocabModalMinimized) {
-    modal.style.display = 'none';
-    dock.style.display = 'block';
-    dock.innerHTML = `
-      <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 0.75rem 1.4rem; border-radius: var(--radius-full); box-shadow: 0 10px 25px rgba(37,99,235,0.4); cursor: pointer; display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 0.95rem;"
-           onclick="window.restoreVocabTestModal()">
-        <i data-lucide="brain-circuit"></i>
-        <span>Gói Flashcard Từ Vựng • Mở lại ➔</span>
-      </div>
-    `;
-    if (window.lucide) window.lucide.createIcons();
-    return;
-  }
-
-  // Active modal view
-  dock.style.display = 'none';
   modal.style.display = 'flex';
 
   modal.innerHTML = `
@@ -225,15 +184,9 @@ function renderOrUpdateVocabModalDOM() {
           <span style="font-size: 0.95rem; font-weight: 800; color: var(--primary);">Hệ Thống Gói Flashcard VSTEP B1</span>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <button class="btn btn-secondary btn-sm" title="Ẩn xuống nền để tra cứu từ điển" onclick="window.minimizeVocabTestModal()" style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.825rem;">
-            <i data-lucide="minimize-2"></i>
-            <span>Ẩn Xuống Nền</span>
-          </button>
-          <button class="btn btn-secondary btn-sm btn-icon" title="Đóng cửa sổ" onclick="window.closeVocabTestModal()">
-            <i data-lucide="x"></i>
-          </button>
-        </div>
+        <button class="btn btn-secondary btn-sm btn-icon" title="Đóng cửa sổ" onclick="window.closeVocabTestModal()">
+          <i data-lucide="x"></i>
+        </button>
       </div>
 
       <!-- Modal Content Body -->
