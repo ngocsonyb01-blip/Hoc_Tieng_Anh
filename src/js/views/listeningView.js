@@ -109,6 +109,20 @@ function renderPracticeTab() {
         `).join('')}
       </div>
 
+      <!-- Authentic MP3 Master Player Banner (nếu bộ đề có file âm thanh gốc) -->
+      ${testSet.audioUrl ? `
+        <div class="card" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #38bdf8; padding: 1.25rem 1.5rem; color: #fff;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;"><i data-lucide="disc"></i> BĂNG GHI ÂM GỐC VSTEP</span>
+              <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 600;">(Định dạng MP3 phòng thi chuẩn ĐHQG)</span>
+            </div>
+            <span style="font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">35 Câu • 3 Parts</span>
+          </div>
+          ${renderAudioPlayerComponent(`lview-full-master-${selectedTestSetIndex}`, testSet.audioUrl, 'Băng Nghe Toàn Bộ Bài Thi', testSet.audioUrl)}
+        </div>
+      ` : ''}
+
       <!-- Part Selector Carousel -->
       <div class="tabs-header" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; overflow-x: auto;">
         <button class="tab-btn ${selectedPart === 'part1' ? 'active' : ''}" onclick="window.handleListeningPartChange('part1')" style="font-weight: 700; white-space: nowrap;">
@@ -122,9 +136,9 @@ function renderPracticeTab() {
         </button>
       </div>
 
-      ${selectedPart === 'part1' ? renderPart1Section(part1) : ''}
-      ${selectedPart === 'part2' ? renderPart2Section(part2) : ''}
-      ${selectedPart === 'part3' ? renderPart3Section(part3) : ''}
+      ${selectedPart === 'part1' ? renderPart1Section(part1, testSet) : ''}
+      ${selectedPart === 'part2' ? renderPart2Section(part2, testSet) : ''}
+      ${selectedPart === 'part3' ? renderPart3Section(part3, testSet) : ''}
     </div>
   `;
 }
@@ -185,8 +199,9 @@ function renderSkillsTab() {
   `;
 }
 
-function renderPart1Section(part1) {
+function renderPart1Section(part1, testSet = null) {
   const questions = part1.questions || [];
+  const audioUrl = part1.audioUrl || testSet?.audioUrl || null;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
@@ -198,7 +213,7 @@ function renderPart1Section(part1) {
           <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Audio Part 1')}
+          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Audio Part 1', audioUrl)}
         </div>
       </div>
 
@@ -252,20 +267,21 @@ function renderPart1Section(part1) {
   `;
 }
 
-function renderPart2Section(part2) {
+function renderPart2Section(part2, testSet = null) {
   const conversations = part2.conversations || [];
+  const audioUrl = part2.audioUrl || testSet?.audioUrl || null;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--secondary);">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <div>
-            <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part2.title}</h3>
-            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part2.description || 'Nghe 3 đoạn hội thoại đời sống / công việc / học thuật'}</p>
+            <h3 style="margin: 0 0 0.25rem 0; color: var(--secondary);">${part2.title}</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part2.instructions || 'Nghe 3 cuộc hội thoại và chọn đáp án chính xác cho các câu hỏi 9 - 20'}</p>
           </div>
           <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Audio Part 2')}
+          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Audio Part 2', audioUrl)}
         </div>
       </div>
 
@@ -317,20 +333,21 @@ function renderPart2Section(part2) {
   `;
 }
 
-function renderPart3Section(part3) {
+function renderPart3Section(part3, testSet = null) {
   const talks = part3.talks || [];
+  const audioUrl = part3.audioUrl || testSet?.audioUrl || null;
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--success);">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <div>
-            <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part3.title}</h3>
-            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part3.description || 'Nghe 3 bài thuyết trình học thuật chuyên sâu'}</p>
+            <h3 style="margin: 0 0 0.25rem 0; color: var(--success-text);">${part3.title}</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part3.instructions || 'Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35'}</p>
           </div>
           <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Audio Part 3')}
+          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Audio Part 3', audioUrl)}
         </div>
       </div>
 

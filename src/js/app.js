@@ -21,13 +21,13 @@ window.closeSettingsModal = closeSettingsModal;
 window.openVoiceSettingsModal = () => openSettingsModal('voice');
 
 // Global Audio Handlers for Interactive Audio Player Component
-window.toggleAudioPlay = (id, text) => {
+window.toggleAudioPlay = (id, text, audioUrl = null) => {
   if (globalAudio.currentId === id && globalAudio.isPlaying) {
     globalAudio.pause();
   } else if (globalAudio.currentId === id && globalAudio.isPaused) {
     globalAudio.resume();
   } else {
-    globalAudio.play(id, text);
+    globalAudio.play(id, text, null, audioUrl);
   }
 };
 
@@ -35,12 +35,19 @@ window.stopAudioPlay = () => {
   globalAudio.stop();
 };
 
-window.replayAudio = (id, text) => {
-  globalAudio.replay(id, text);
+window.replayAudio = (id, text, audioUrl = null) => {
+  globalAudio.replay(id, text, audioUrl);
 };
 
-window.setAudioRate = (id, text, rate) => {
-  globalAudio.play(id, text, rate);
+window.setAudioRate = (id, text, rate, audioUrl = null) => {
+  globalAudio.play(id, text, rate, audioUrl);
+};
+
+window.seekAudio = (event, id) => {
+  const rect = event.currentTarget.getBoundingClientRect();
+  const clickX = event.clientX - rect.left;
+  const pct = Math.max(0, Math.min(1, clickX / rect.width));
+  globalAudio.seek(id, pct);
 };
 
 class App {

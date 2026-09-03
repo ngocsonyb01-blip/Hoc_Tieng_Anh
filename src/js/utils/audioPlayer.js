@@ -76,7 +76,9 @@ export function getAuthoritativeMaleVoice() {
 class AudioController {
   constructor() {
     this.currentText = '';
+    this.currentAudioUrl = null;
     this.currentId = null;
+    this.htmlAudio = null;
     this.utterance = null;
     this.isPlaying = false;
     this.isPaused = false;
@@ -94,13 +96,69 @@ class AudioController {
     }
   }
 
-  play(id, text, rate = null) {
+  play(id, text, rate = null, audioUrl = null) {
+    if (rate) this.rate = rate;
+
+    const realAudioUrl = audioUrl || (text && (text.endsWith('.mp3') || text.includes('./audio/')) ? text : null);
+
+    // Xử lý phát file âm thanh MP3 thật (Authentic Audio MP3)
+    if (realAudioUrl) {
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+      if (this.currentId === id && this.htmlAudio && this.isPaused) {
+        this.resume();
+        return;
+      }
+
+      this.stopInternal();
+
+      this.currentId = id;
+      this.currentText = text;
+      this.currentAudioUrl = realAudioUrl;
+      this.isPlaying = true;
+      this.isPaused = false;
+
+      this.htmlAudio = new Audio(realAudioUrl);
+      this.htmlAudio.playbackRate = this.rate || 1.0;
+
+      this.htmlAudio.onloadedmetadata = () => {
+        if (this.htmlAudio && this.htmlAudio.duration && !isNaN(this.htmlAudio.duration)) {
+          this.durationEstimate = Math.round(this.htmlAudio.duration);
+          this.updateProgressBar();
+        }
+      };
+
+      this.htmlAudio.ontimeupdate = () => {
+        if (!this.htmlAudio) return;
+        this.elapsedSeconds = Math.round(this.htmlAudio.currentTime);
+        if (this.htmlAudio.duration && !isNaN(this.htmlAudio.duration)) {
+          this.durationEstimate = Math.round(this.htmlAudio.duration);
+        }
+        this.updateProgressBar();
+      };
+
+      this.htmlAudio.onended = () => {
+        this.finishPlayback();
+      };
+
+      this.htmlAudio.onerror = (e) => {
+        console.warn('HTML Audio playback notice:', e);
+        this.finishPlayback();
+      };
+
+      this.htmlAudio.play().catch(err => {
+        console.warn('Audio play request notice:', err);
+      });
+
+      this.updateUI();
+      return;
+    }
+
+    // Fallback: Web Speech API TTS
     if (!('speechSynthesis' in window)) {
       alert('Trình duyệt của bạn không hỗ trợ Web Speech API.');
       return;
     }
-
-    if (rate) this.rate = rate;
 
     // If currently paused on the same ID, resume instantly
     if (this.currentId === id && this.isPaused) {
@@ -112,6 +170,7 @@ class AudioController {
 
     this.currentId = id;
     this.currentText = text;
+    this.currentAudioUrl = null;
     this.isPlaying = true;
     this.isPaused = false;
     this.elapsedSeconds = 0;
@@ -154,7 +213,11 @@ class AudioController {
 
   pause() {
     if (!this.isPlaying || this.isPaused) return;
-    window.speechSynthesis.cancel();
+    if (this.htmlAudio) {
+      this.htmlAudio.pause();
+    } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
     this.isPaused = true;
     this.isPlaying = false;
     this.clearTimer();
@@ -163,6 +226,13 @@ class AudioController {
 
   resume() {
     if (!this.isPaused) return;
+    if (this.htmlAudio) {
+      this.htmlAudio.play().catch(() => {});
+      this.isPlaying = true;
+      this.isPaused = false;
+      this.updateUI();
+      return;
+    }
     const remainingText = this.currentText.slice(this.charIndex || 0).trim();
     if (!remainingText) {
       this.finishPlayback();
@@ -204,9 +274,25 @@ class AudioController {
     this.updateUI();
   }
 
-  replay(id, text) {
+  replay(id, text, audioUrl = null) {
+    if (this.currentId === id && this.htmlAudio) {
+      this.htmlAudio.currentTime = 0;
+      this.htmlAudio.play().catch(() => {});
+      this.isPlaying = true;
+      this.isPaused = false;
+      this.updateUI();
+      return;
+    }
     this.stopInternal();
-    this.play(id, text, this.rate);
+    this.play(id, text, this.rate, audioUrl);
+  }
+
+  seek(id, percent) {
+    if (this.currentId === id && this.htmlAudio && this.htmlAudio.duration) {
+      this.htmlAudio.currentTime = Math.max(0, Math.min(this.htmlAudio.duration, percent * this.htmlAudio.duration));
+      this.elapsedSeconds = Math.round(this.htmlAudio.currentTime);
+      this.updateProgressBar();
+    }
   }
 
   stop() {
@@ -215,6 +301,11 @@ class AudioController {
   }
 
   stopInternal() {
+    if (this.htmlAudio) {
+      this.htmlAudio.pause();
+      this.htmlAudio.currentTime = 0;
+      this.htmlAudio = null;
+    }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -466,17 +557,22 @@ if (typeof window !== 'undefined') {
 /**
  * Generates an interactive Audio Player Bar (without redundant stop button)
  */
-export function renderAudioPlayerComponent(id, text, label = 'Bản Thu Âm Mẫu') {
-  const cleanText = text.replace(/'/g, "\\'").replace(/\n/g, ' ');
-  const wordCount = text.split(/\s+/).filter(w => w.trim()).length;
-  const estSeconds = Math.max(3, Math.round((wordCount / 130) * 60));
+export function renderAudioPlayerComponent(id, text, label = 'Bản Thu Âm Mẫu', audioUrl = null) {
+  const cleanText = (text || '').replace(/'/g, "\\'").replace(/\n/g, ' ');
+  const wordCount = (text || '').split(/\s+/).filter(w => w.trim()).length;
+  const isRealMp3 = !!(audioUrl || (text && (text.endsWith('.mp3') || text.includes('./audio/'))));
+  const realUrl = audioUrl || (isRealMp3 ? text : '');
+  const estSeconds = isRealMp3 ? (35 * 60) : Math.max(3, Math.round((wordCount / 130) * 60));
   const estFormatted = `${Math.floor(estSeconds / 60) < 10 ? '0' : ''}${Math.floor(estSeconds / 60)}:${estSeconds % 60 < 10 ? '0' : ''}${estSeconds % 60}`;
 
   return `
     <div class="audio-player-box" style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.25rem; box-shadow: var(--shadow-sm);">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span class="badge badge-primary"><i data-lucide="volume-2" style="width: 13px; height: 13px;"></i> ${label}</span>
+          <span class="badge ${isRealMp3 ? 'badge-success' : 'badge-primary'}">
+            <i data-lucide="${isRealMp3 ? 'disc' : 'volume-2'}" style="width: 13px; height: 13px;"></i> 
+            ${label}
+          </span>
           <span id="audio-time-${id}" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
             00:00 / ${estFormatted}
           </span>
@@ -484,30 +580,32 @@ export function renderAudioPlayerComponent(id, text, label = 'Bản Thu Âm Mẫ
 
         <div style="display: flex; align-items: center; gap: 0.5rem;">
           <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Tốc độ:</span>
-          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 0.8)">0.8x</button>
-          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 1.0)">1.0x</button>
-          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 1.2)">1.2x</button>
+          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 0.8, '${realUrl}')">0.8x</button>
+          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 1.0, '${realUrl}')">1.0x</button>
+          <button class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;" onclick="window.setAudioRate('${id}', '${cleanText}', 1.2, '${realUrl}')">1.2x</button>
         </div>
       </div>
 
-      <!-- Timeline Progress Bar -->
-      <div style="background: var(--bg-muted); height: 7px; border-radius: var(--radius-full); overflow: hidden; margin-bottom: 0.85rem; position: relative; cursor: pointer;" 
-           onclick="window.replayAudio('${id}', '${cleanText}')" title="Nhấp để nghe lại từ đầu">
-        <div id="audio-progress-${id}" style="background: linear-gradient(90deg, var(--primary), var(--secondary)); height: 100%; width: 0%; border-radius: var(--radius-full); transition: width 0.3s ease;"></div>
+      <!-- Timeline Progress Bar with Interactive Seeking -->
+      <div style="background: var(--bg-muted); height: 8px; border-radius: var(--radius-full); overflow: hidden; margin-bottom: 0.85rem; position: relative; cursor: pointer;" 
+           onclick="window.seekAudio(event, '${id}')" title="Nhấp vào thanh để tua đến đoạn cần nghe">
+        <div id="audio-progress-${id}" style="background: linear-gradient(90deg, var(--primary), var(--secondary)); height: 100%; width: 0%; border-radius: var(--radius-full); transition: width 0.1s linear;"></div>
       </div>
 
       <!-- Controller Action Buttons -->
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button id="audio-btn-${id}" class="btn btn-primary btn-sm" onclick="window.toggleAudioPlay('${id}', '${cleanText}')">
+          <button id="audio-btn-${id}" class="btn btn-primary btn-sm" onclick="window.toggleAudioPlay('${id}', '${cleanText}', '${realUrl}')">
             <i data-lucide="play"></i> Phát Audio
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="window.replayAudio('${id}', '${cleanText}')" title="Nghe lại từ đầu">
+          <button class="btn btn-secondary btn-sm" onclick="window.replayAudio('${id}', '${cleanText}', '${realUrl}')" title="Nghe lại từ đầu">
             <i data-lucide="rotate-ccw"></i> Nghe Lại Từ Đầu
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="window.toggleTranscript('${id}')">
-            <i data-lucide="file-text"></i> Lời Thoại (Transcript)
-          </button>
+          ${!isRealMp3 ? `
+            <button class="btn btn-secondary btn-sm" onclick="window.toggleTranscript('${id}')">
+              <i data-lucide="file-text"></i> Lời Thoại (Transcript)
+            </button>
+          ` : ''}
         </div>
 
         <div id="audio-wave-${id}" class="audio-wave" style="display: flex; gap: 3px; align-items: center; height: 16px; opacity: 0.2; transition: opacity 0.3s;">

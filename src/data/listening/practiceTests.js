@@ -2,6 +2,3272 @@ export const LISTENING_PRACTICE_DATA = {
   "title": "Kho Đề Luyện Nghe VSTEP B1 Chuẩn (Comprehensive Listening Arena)",
   "testSets": [
     {
+      "id": "set-auth-1",
+      "title": "Bộ Đề 01 (Băng Gốc)",
+      "badge": "Audio Gốc ĐHQG",
+      "audioUrl": "./audio/listening/test1.mp3",
+      "part1": {
+        "title": "Part 1: 8 Thông Báo & Hướng Dẫn Ngắn",
+        "description": "Nghe 8 đoạn thông báo/hướng dẫn ngắn và chọn 1 đáp án chính xác nhất.",
+        "audioUrl": "./audio/listening/test1.mp3",
+        "audioStartTime": 0,
+        "questions": [
+          {
+            "id": 1,
+            "audioText": "VSTEP Authentic Audio Track - Question 1",
+            "question": "When is the man's appointment?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Wednesday"
+              },
+              {
+                "key": "B",
+                "text": "Thursday"
+              },
+              {
+                "key": "B",
+                "text": "big trees"
+              },
+              {
+                "key": "C",
+                "text": "Friday"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 2,
+            "audioText": "VSTEP Authentic Audio Track - Question 2",
+            "question": "Which is the aunt's postcard?",
+            "options": [
+              {
+                "key": "A",
+                "text": "a pretty village right by the sea"
+              },
+              {
+                "key": "B",
+                "text": "Lựa chọn B"
+              },
+              {
+                "key": "C",
+                "text": "a pretty village behind the tall trees"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 3,
+            "audioText": "VSTEP Authentic Audio Track - Question 3",
+            "question": "What time will the plane to Milan leave?",
+            "options": [
+              {
+                "key": "A",
+                "text": "01:00"
+              },
+              {
+                "key": "B",
+                "text": "07:15 c. 08 15"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "a pretty village on the hills"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 4,
+            "audioText": "VSTEP Authentic Audio Track - Question 4",
+            "question": "Which present has the girl bought her mother?",
+            "options": [
+              {
+                "key": "A",
+                "text": "earrings"
+              },
+              {
+                "key": "B",
+                "text": "music"
+              },
+              {
+                "key": "C",
+                "text": "pen"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 5,
+            "audioText": "VSTEP Authentic Audio Track - Question 5",
+            "question": "What time will the pie be ready?",
+            "options": [
+              {
+                "key": "A",
+                "text": "four fifteen"
+              },
+              {
+                "key": "B",
+                "text": "five o'clock"
+              },
+              {
+                "key": "C",
+                "text": "twenty past five"
+              },
+              {
+                "key": "D",
+                "text": "notebook"
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 6,
+            "audioText": "VSTEP Authentic Audio Track - Question 6",
+            "question": "What time is the swimming lesson today?",
+            "options": [
+              {
+                "key": "A",
+                "text": "half past four"
+              },
+              {
+                "key": "B",
+                "text": "fifteen to five"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 7,
+            "audioText": "VSTEP Authentic Audio Track - Question 7",
+            "question": "Which subject does the boy like best?",
+            "options": [
+              {
+                "key": "A",
+                "text": "information technology"
+              },
+              {
+                "key": "B",
+                "text": "geography"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 8,
+            "audioText": "VSTEP Authentic Audio Track - Question 8",
+            "question": "Which T-shirt does the boy decide to buy?",
+            "options": [
+              {
+                "key": "A",
+                "text": "a short-sleeved T-shirt with round neck"
+              },
+              {
+                "key": "B",
+                "text": "a V-neck black T-shirt"
+              },
+              {
+                "key": "C",
+                "text": "a long-sleeved T-shirt"
+              },
+              {
+                "key": "C",
+                "text": "fifteen past five"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "title": "Part 2: 3 Đoạn Hội Thoại Đời Sống & Học Thuật",
+        "instructions": "Nghe 3 cuộc hội thoại và chọn đáp án chính xác cho các câu hỏi 9 - 20.",
+        "audioUrl": "./audio/listening/test1.mp3",
+        "conversations": [
+          {
+            "id": "auth-1-conv-1",
+            "title": "Hội thoại 1",
+            "scenario": "Cuộc hội thoại đầu tiên",
+            "audioText": "Authentic conversation 1 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 9,
+                "audioText": "VSTEP Authentic Audio Track - Question 9",
+                "question": "What is Kate's health problem?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She has coughs ho"
+                  },
+                  {
+                    "key": "A",
+                    "text": "It makes them funny."
+                  },
+                  {
+                    "key": "A",
+                    "text": "She had coughs"
+                  },
+                  {
+                    "key": "A",
+                    "text": "She has backache"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 10,
+                "question": "Question 10",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Option A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Option B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Option C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Option D"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là B."
+              },
+              {
+                "id": 11,
+                "audioText": "VSTEP Authentic Audio Track - Question 11",
+                "question": "What did Kate have last year?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She had coughs"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "She had a fall off her bike"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 12,
+                "audioText": "VSTEP Authentic Audio Track - Question 12",
+                "question": "What does Kate have now, too?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She has backache"
+                  },
+                  {
+                    "key": "B",
+                    "text": "It makes them annoyed."
+                  },
+                  {
+                    "key": "B",
+                    "text": "She had headache"
+                  },
+                  {
+                    "key": "B",
+                    "text": "She has headache"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-1-conv-2",
+            "title": "Hội thoại 2",
+            "scenario": "Cuộc hội thoại thứ hai",
+            "audioText": "Authentic conversation 2 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 13,
+                "audioText": "VSTEP Authentic Audio Track - Question 13",
+                "question": "Why does the man want to gout out?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 14,
+                "audioText": "VSTEP Authentic Audio Track - Question 14",
+                "question": "Why does the woman want to stay at home?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 15,
+                "audioText": "VSTEP Authentic Audio Track - Question 15",
+                "question": "Why doesn't the woman want to watch an Italian film?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 16,
+                "audioText": "VSTEP Authentic Audio Track - Question 16",
+                "question": "Why doesn't the woman want to watch a Robert de Niro?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-1-conv-3",
+            "title": "Hội thoại 3",
+            "scenario": "Cuộc hội thoại thứ ba",
+            "audioText": "Authentic conversation 3 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 17,
+                "audioText": "VSTEP Authentic Audio Track - Question 17",
+                "question": "What does the girl think about a good holiday?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It may be cheap."
+                  },
+                  {
+                    "key": "B",
+                    "text": "It may be very cheap."
+                  },
+                  {
+                    "key": "C",
+                    "text": "It may be expensive."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It may be very expensive."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 18,
+                "audioText": "VSTEP Authentic Audio Track - Question 18",
+                "question": "Why doesn't the boy want to walk?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 19,
+                "audioText": "VSTEP Authentic Audio Track - Question 19",
+                "question": "What does the girl think about the food in Youth Hostels?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It is comfortable."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "It is not good. 3. It is good."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It is clean and cheap."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 20,
+                "audioText": "VSTEP Authentic Audio Track - Question 20",
+                "question": "What does the boy decide to do in the end?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "go home"
+                  },
+                  {
+                    "key": "B",
+                    "text": "leave home"
+                  },
+                  {
+                    "key": "C",
+                    "text": "sell his home"
+                  },
+                  {
+                    "key": "D",
+                    "text": "enjoy his holiday home"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "part3": {
+        "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
+        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "audioUrl": "./audio/listening/test1.mp3",
+        "talks": [
+          {
+            "id": "auth-1-talk-1",
+            "title": "Bài giảng 1",
+            "topic": "Bài nói học thuật thứ nhất",
+            "audioText": "Authentic talk 1 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 21,
+                "audioText": "VSTEP Authentic Audio Track - Question 21",
+                "question": "Why did the speaker have to help her mother with the shopping?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "There were no Vietnamese people living near her."
+                  },
+                  {
+                    "key": "B",
+                    "text": "There were no Vietnamese working in the stores."
+                  },
+                  {
+                    "key": "C",
+                    "text": "There wasnt always someone to go shopping with her."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Her mother could speak a little English."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 22,
+                "audioText": "VSTEP Authentic Audio Track - Question 22",
+                "question": "Why did her father find working in a factory difficult?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "He couldn't speak any English."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He didn't have many friends there."
+                  },
+                  {
+                    "key": "C",
+                    "text": "He had had a much better job in Vietnam."
+                  },
+                  {
+                    "key": "D",
+                    "text": "He couldn't get used to the working style."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 23,
+                "audioText": "VSTEP Authentic Audio Track - Question 23",
+                "question": "Why are the speaker and her brother more fortunate than their sisters?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "They did not need extra English lessons."
+                  },
+                  {
+                    "key": "B",
+                    "text": "They look more"
+                  },
+                  {
+                    "key": "C",
+                    "text": "They speak with"
+                  },
+                  {
+                    "key": "D",
+                    "text": "They quickly adopted the way of life."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 24,
+                "audioText": "VSTEP Authentic Audio Track - Question 24",
+                "question": "What has the speaker forgotten about life in Vietnam?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Living close to other people"
+                  },
+                  {
+                    "key": "B",
+                    "text": "The warm weather"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Wearing traditional clothes"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Traditional food"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 25,
+                "audioText": "VSTEP Authentic Audio Track - Question 25",
+                "question": "Why does she find it difficult to invite friends to her home?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Her parents do not have much money."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Her parents haven't adopted an"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Her parents do not speak English well."
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-1-talk-2",
+            "title": "Bài giảng 2",
+            "topic": "Bài nói học thuật thứ hai",
+            "audioText": "Authentic talk 2 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 26,
+                "audioText": "VSTEP Authentic Audio Track - Question 26",
+                "question": "What happened in American schools before 1972? A Girls didn't go to school.",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Lựa chọn A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Every classroom was a mix of boys and girls."
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": "They didn't teach girls some subjects."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 27,
+                "audioText": "VSTEP Authentic Audio Track - Question 27",
+                "question": "What is the reason that most American schools have mixed classes?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Scientists said that it was the best thing."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Teachers did not want to teach single-gender classes."
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 28,
+                "audioText": "VSTEP Authentic Audio Track - Question 28",
+                "question": "Why might girls not get a chance to talk much in a class with boys?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 29,
+                "audioText": "VSTEP Authentic Audio Track - Question 29",
+                "question": "What is NOT the reason that some schools are reconsidering separating classes?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "They prefer the old teaching styles."
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 30,
+                "audioText": "VSTEP Authentic Audio Track - Question 30",
+                "question": "Which is one class that is not mentioned as being separated?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Math"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Social Studies"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Science"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Physical Education"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-1-talk-3",
+            "title": "Bài giảng 3",
+            "topic": "Bài nói học thuật thứ ba",
+            "audioText": "Authentic talk 3 from original test tape.",
+            "audioUrl": "./audio/listening/test1.mp3",
+            "questions": [
+              {
+                "id": 31,
+                "audioText": "VSTEP Authentic Audio Track - Question 31",
+                "question": "Who is listening to the orientation talk?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "the director of international students"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "the teachers of international department"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 32,
+                "audioText": "VSTEP Authentic Audio Track - Question 32",
+                "question": "What is the purpose of this talk?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "to introduce the director for international student affairs"
+                  },
+                  {
+                    "key": "B",
+                    "text": "new international students"
+                  },
+                  {
+                    "key": "B",
+                    "text": "to deal with all international students' problems."
+                  },
+                  {
+                    "key": "C",
+                    "text": "to inform the importance of using English in class."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 33,
+                "audioText": "VSTEP Authentic Audio Track - Question 33",
+                "question": "According to the speaker, what is body language?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "les the use of verb tenses and modals."
+                  },
+                  {
+                    "key": "B",
+                    "text": "It's the way to ask for directions"
+                  },
+                  {
+                    "key": "C",
+                    "text": "It's the language used in class only."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It's the language of movements and facial expressions."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 34,
+                "audioText": "VSTEP Authentic Audio Track - Question 34",
+                "question": "In American culture,",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Eye contact is the same as most cultures."
+                  },
+                  {
+                    "key": "B",
+                    "text": "making eye contact is a sign of disrespect."
+                  },
+                  {
+                    "key": "C",
+                    "text": "people don't look in others' eyes while talking."
+                  },
+                  {
+                    "key": "D",
+                    "text": "eye contact is considered as a sign Of honesty."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 35,
+                "audioText": "VSTEP Authentic Audio Track - Question 35",
+                "question": "According to thüöéaker, what is TRUE about handshakes in American Culture?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": "Handshakes are not common."
+                  },
+                  {
+                    "key": "C",
+                    "text": "Handshakes need to be firm."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Shaking hands is not 'important."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "set-auth-2",
+      "title": "Bộ Đề 02 (Băng Gốc)",
+      "badge": "Audio Gốc ĐHQG",
+      "audioUrl": "./audio/listening/test2.mp3",
+      "part1": {
+        "title": "Part 1: 8 Thông Báo & Hướng Dẫn Ngắn",
+        "description": "Nghe 8 đoạn thông báo/hướng dẫn ngắn và chọn 1 đáp án chính xác nhất.",
+        "audioUrl": "./audio/listening/test2.mp3",
+        "audioStartTime": 0,
+        "questions": [
+          {
+            "id": 1,
+            "audioText": "VSTEP Authentic Audio Track - Question 1",
+            "question": "You will hear a journalist interviewing Geoff Thompson, a British sportsman. 9. Where was Geoff Thompson born?",
+            "options": [
+              {
+                "key": "A",
+                "text": "In London."
+              },
+              {
+                "key": "A",
+                "text": "He discovered karate by himself."
+              },
+              {
+                "key": "A",
+                "text": "In 1972."
+              },
+              {
+                "key": "A",
+                "text": "Two times."
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 2,
+            "audioText": "VSTEP Authentic Audio Track - Question 2",
+            "question": "What did the woman repair? chair",
+            "options": [
+              {
+                "key": "A",
+                "text": "Lựa chọn A"
+              },
+              {
+                "key": "B",
+                "text": "blue"
+              },
+              {
+                "key": "B",
+                "text": "shelf"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 3,
+            "audioText": "VSTEP Authentic Audio Track - Question 3",
+            "question": "What are they going to buy for Pam?",
+            "options": [
+              {
+                "key": "A",
+                "text": "a book"
+              },
+              {
+                "key": "B",
+                "text": "Lựa chọn B"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 4,
+            "audioText": "VSTEP Authentic Audio Track - Question 4",
+            "question": "What has the girl lost?",
+            "options": [
+              {
+                "key": "A",
+                "text": "mobile phone"
+              },
+              {
+                "key": "A",
+                "text": "waterskiing"
+              },
+              {
+                "key": "A",
+                "text": "his grandmother"
+              },
+              {
+                "key": "A",
+                "text": "suitcase"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 5,
+            "question": "Question 5",
+            "options": [
+              {
+                "key": "A",
+                "text": "Option A"
+              },
+              {
+                "key": "B",
+                "text": "Option B"
+              },
+              {
+                "key": "C",
+                "text": "Option C"
+              },
+              {
+                "key": "D",
+                "text": "Option D"
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Căn cứ theo băng ghi âm gốc Đề 5. Đáp án đúng là C."
+          },
+          {
+            "id": 6,
+            "audioText": "VSTEP Authentic Audio Track - Question 6",
+            "question": "Who lives with Josh in his house?",
+            "options": [
+              {
+                "key": "A",
+                "text": "his grandmother"
+              },
+              {
+                "key": "B",
+                "text": "his father"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 7,
+            "audioText": "VSTEP Authentic Audio Track - Question 7",
+            "question": "What will the girl take with her on holiday?",
+            "options": [
+              {
+                "key": "A",
+                "text": "suitcase"
+              },
+              {
+                "key": "B",
+                "text": "sports bag"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 8,
+            "audioText": "VSTEP Authentic Audio Track - Question 8",
+            "question": "Where do the boys decide to go?",
+            "options": [
+              {
+                "key": "A",
+                "text": "cinema"
+              },
+              {
+                "key": "B",
+                "text": "game store"
+              },
+              {
+                "key": "C",
+                "text": "brown"
+              },
+              {
+                "key": "C",
+                "text": "desk"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "title": "Part 2: 3 Đoạn Hội Thoại Đời Sống & Học Thuật",
+        "instructions": "Nghe 3 cuộc hội thoại và chọn đáp án chính xác cho các câu hỏi 9 - 20.",
+        "audioUrl": "./audio/listening/test2.mp3",
+        "conversations": [
+          {
+            "id": "auth-2-conv-1",
+            "title": "Hội thoại 1",
+            "scenario": "Cuộc hội thoại đầu tiên",
+            "audioText": "Authentic conversation 1 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 9,
+                "audioText": "VSTEP Authentic Audio Track - Question 9",
+                "question": "Where was Geoff Thompson born?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "In London."
+                  },
+                  {
+                    "key": "A",
+                    "text": "He discovered karate by himself."
+                  },
+                  {
+                    "key": "A",
+                    "text": "In 1972."
+                  },
+                  {
+                    "key": "A",
+                    "text": "Two times."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 10,
+                "question": "Question 10",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Option A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Option B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Option C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Option D"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là B."
+              },
+              {
+                "id": 11,
+                "audioText": "VSTEP Authentic Audio Track - Question 11",
+                "question": "When did he take part in the World Championships in Taiwan?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "In 1972."
+                  },
+                  {
+                    "key": "B",
+                    "text": "In 1980."
+                  },
+                  {
+                    "key": "C",
+                    "text": "In 1982."
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 12,
+                "audioText": "VSTEP Authentic Audio Track - Question 12",
+                "question": "How many times has he got the World Champion?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Two times."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Three times."
+                  },
+                  {
+                    "key": "C",
+                    "text": "Four times."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Five times."
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-2-conv-2",
+            "title": "Hội thoại 2",
+            "scenario": "Cuộc hội thoại thứ hai",
+            "audioText": "Authentic conversation 2 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 13,
+                "audioText": "VSTEP Authentic Audio Track - Question 13",
+                "question": "Which position does this hotel need? A A temporary' staff.",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Lựa chọn A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 14,
+                "audioText": "VSTEP Authentic Audio Track - Question 14",
+                "question": "What about the hour of work?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "There are two shifts and two days off."
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": "There are two shifts and one day off."
+                  },
+                  {
+                    "key": "C",
+                    "text": "There's a day shift from 7 to 2 and a late shift from 4 till 11."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 15,
+                "audioText": "VSTEP Authentic Audio Track - Question 15",
+                "question": "What does the woman mention about the uniform?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It's prepared by the hotel."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He needs to wear dark clothes."
+                  },
+                  {
+                    "key": "C",
+                    "text": "He needs a white shirt and dark trousers."
+                  },
+                  {
+                    "key": "D",
+                    "text": "He needs wear uniform five days a week."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 16,
+                "audioText": "VSTEP Authentic Audio Track - Question 16",
+                "question": "When does he start his job?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": "On the 10th of May."
+                  },
+                  {
+                    "key": "C",
+                    "text": "On the 10th of June."
+                  },
+                  {
+                    "key": "D",
+                    "text": "On the 28th of June."
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-2-conv-3",
+            "title": "Hội thoại 3",
+            "scenario": "Cuộc hội thoại thứ ba",
+            "audioText": "Authentic conversation 3 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 17,
+                "audioText": "VSTEP Authentic Audio Track - Question 17",
+                "question": "What does the man plan to write his paper on?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "The preservation of old books."
+                  },
+                  {
+                    "key": "B",
+                    "text": "The local coal industry."
+                  },
+                  {
+                    "key": "C",
+                    "text": "The famous archives librarian."
+                  },
+                  {
+                    "key": "D",
+                    "text": "The collection of rare books."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 18,
+                "audioText": "VSTEP Authentic Audio Track - Question 18",
+                "question": "What security prpcedures does the librarian tell the man he must follow?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Show her his note cards before leaving."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Show her his I"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Pay a fee."
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 19,
+                "audioText": "VSTEP Authentic Audio Track - Question 19",
+                "question": "Why did the librarian mention the age of the books?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "They need to be handled with gloves."
+                  },
+                  {
+                    "key": "B",
+                    "text": "The man can only look at photographs of them."
+                  },
+                  {
+                    "key": "C",
+                    "text": "They were added to the collection recently."
+                  },
+                  {
+                    "key": "D",
+                    "text": "They are value books."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 20,
+                "audioText": "VSTEP Authentic Audio Track - Question 20",
+                "question": "How did the man collect his needed information about his paper?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "He took a picture."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He scanned these images."
+                  },
+                  {
+                    "key": "C",
+                    "text": "He could just look them."
+                  },
+                  {
+                    "key": "D",
+                    "text": "He photocopied these books."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "part3": {
+        "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
+        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "audioUrl": "./audio/listening/test2.mp3",
+        "talks": [
+          {
+            "id": "auth-2-talk-1",
+            "title": "Bài giảng 1",
+            "topic": "Bài nói học thuật thứ nhất",
+            "audioText": "Authentic talk 1 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 21,
+                "audioText": "VSTEP Authentic Audio Track - Question 21",
+                "question": "The presenter doesn't wear a suit because",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "He is not an important person."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He wants to talk about different fashion trend."
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "He works for a fashion company."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 22,
+                "audioText": "VSTEP Authentic Audio Track - Question 22",
+                "question": "According to the speaker, which statement is TRUE?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It's important to look casually-dressed in public."
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "Wearing shorts is 0K, sometimes."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Nobody can describe the way he's dressed."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 23,
+                "audioText": "VSTEP Authentic Audio Track - Question 23",
+                "question": "What does the phrase \"Dress-down Fridays\" mean?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Employees must wear fashionable clothes on Fridays."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Employees can wear anything they want on Fridays."
+                  },
+                  {
+                    "key": "C",
+                    "text": "Employees are allowed to wear informally on Fridays."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Employees are required to wear special clothes on Fridays."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 24,
+                "audioText": "VSTEP Authentic Audio Track - Question 24",
+                "question": "According to the speaker, who may be the most informal dressers?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "People working in IT"
+                  },
+                  {
+                    "key": "B",
+                    "text": "people working in banks."
+                  },
+                  {
+                    "key": "C",
+                    "text": "People working in customer services."
+                  },
+                  {
+                    "key": "D",
+                    "text": "people working with clients."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 25,
+                "audioText": "VSTEP Authentic Audio Track - Question 25",
+                "question": "What does a customer feel about a man in uniform?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "reliable"
+                  },
+                  {
+                    "key": "B",
+                    "text": "recognized"
+                  },
+                  {
+                    "key": "C",
+                    "text": "expertised"
+                  },
+                  {
+                    "key": "D",
+                    "text": "reassured"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-2-talk-2",
+            "title": "Bài giảng 2",
+            "topic": "Bài nói học thuật thứ hai",
+            "audioText": "Authentic talk 2 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 26,
+                "audioText": "VSTEP Authentic Audio Track - Question 26",
+                "question": "How many hours of sleep do experts suggest for kids?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Ten"
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "70"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 27,
+                "audioText": "VSTEP Authentic Audio Track - Question 27",
+                "question": "According to the speaker, why is sleep important for the brain?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Sleep generates dreams so brain can relax."
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "Sleep can save energy for the brain."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Sleep improves the effectiveness of the brain."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 28,
+                "audioText": "VSTEP Authentic Audio Track - Question 28",
+                "question": "Why don't the students learn well when they are tired?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "They can't finish their homework."
+                  },
+                  {
+                    "key": "B",
+                    "text": "They can't deal with troubles in class."
+                  },
+                  {
+                    "key": "C",
+                    "text": "They get very excited."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 29,
+                "audioText": "VSTEP Authentic Audio Track - Question 29",
+                "question": "Which is NOT a reason for poor sleep?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "drinking soda"
+                  },
+                  {
+                    "key": "B",
+                    "text": "playing computer games"
+                  },
+                  {
+                    "key": "C",
+                    "text": "staying up late"
+                  },
+                  {
+                    "key": "D",
+                    "text": "They can't pay attention very well"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 30,
+                "audioText": "VSTEP Authentic Audio Track - Question 30",
+                "question": "What should students try to do each night?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Watch a scary movie"
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "GO to bed at a regular time"
+                  },
+                  {
+                    "key": "D",
+                    "text": "relax with a TV show"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-2-talk-3",
+            "title": "Bài giảng 3",
+            "topic": "Bài nói học thuật thứ ba",
+            "audioText": "Authentic talk 3 from original test tape.",
+            "audioUrl": "./audio/listening/test2.mp3",
+            "questions": [
+              {
+                "id": 31,
+                "audioText": "VSTEP Authentic Audio Track - Question 31",
+                "question": "Which is NOT the shape Of the northern lights?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "a straight line"
+                  },
+                  {
+                    "key": "B",
+                    "text": "a curved line"
+                  },
+                  {
+                    "key": "C",
+                    "text": "a round shape"
+                  },
+                  {
+                    "key": "D",
+                    "text": "an oval shape"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 32,
+                "audioText": "VSTEP Authentic Audio Track - Question 32",
+                "question": "What does \"aurora borealis\" exactly mean?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "northern lights"
+                  },
+                  {
+                    "key": "B",
+                    "text": "northern dawn"
+                  },
+                  {
+                    "key": "C",
+                    "text": "northern sky"
+                  },
+                  {
+                    "key": "D",
+                    "text": "early morning lights"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 33,
+                "audioText": "VSTEP Authentic Audio Track - Question 33",
+                "question": "Where is the best place to see the northern lights?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "The northernmost point of Earth"
+                  },
+                  {
+                    "key": "B",
+                    "text": "The north of Poland"
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": "Most parts of the world"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 34,
+                "audioText": "VSTEP Authentic Audio Track - Question 34",
+                "question": "What is one Of the stories developed by people before modern science?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "The lights were caused by foxes."
+                  },
+                  {
+                    "key": "B",
+                    "text": "The lights were the dance of animals."
+                  },
+                  {
+                    "key": "C",
+                    "text": "The liÉhts appeared when people."
+                  },
+                  {
+                    "key": "D",
+                    "text": "The lights came from fires of northern gods."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 35,
+                "audioText": "VSTEP Authentic Audio Track - Question 35",
+                "question": "Which of the following is NOT mentioned in this talk?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": ""
+                  },
+                  {
+                    "key": "B",
+                    "text": "The scientific explanation for the lights"
+                  },
+                  {
+                    "key": "C",
+                    "text": "The discovery of the lights"
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "set-auth-3",
+      "title": "Bộ Đề 03 (Băng Gốc)",
+      "badge": "Audio Gốc ĐHQG",
+      "audioUrl": "./audio/listening/test3.mp3",
+      "part1": {
+        "title": "Part 1: 8 Thông Báo & Hướng Dẫn Ngắn",
+        "description": "Nghe 8 đoạn thông báo/hướng dẫn ngắn và chọn 1 đáp án chính xác nhất.",
+        "audioUrl": "./audio/listening/test3.mp3",
+        "audioStartTime": 0,
+        "questions": [
+          {
+            "id": 1,
+            "audioText": "VSTEP Authentic Audio Track - Question 1",
+            "question": "What have they forgotten?",
+            "options": [
+              {
+                "key": "A",
+                "text": "ticket"
+              },
+              {
+                "key": "B",
+                "text": "camera"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 2,
+            "audioText": "VSTEP Authentic Audio Track - Question 2",
+            "question": "What time does the train go?",
+            "options": [
+              {
+                "key": "A",
+                "text": "06.15"
+              },
+              {
+                "key": "B",
+                "text": "07.40"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 3,
+            "audioText": "VSTEP Authentic Audio Track - Question 3",
+            "question": "How did the woman get to work?",
+            "options": [
+              {
+                "key": "A",
+                "text": "by bicycle"
+              },
+              {
+                "key": "B",
+                "text": "by bus"
+              },
+              {
+                "key": "C",
+                "text": "Lựa chọn C"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 4,
+            "audioText": "VSTEP Authentic Audio Track - Question 4",
+            "question": "Where are the man's shoes?",
+            "options": [
+              {
+                "key": "A",
+                "text": "under the chair"
+              },
+              {
+                "key": "B",
+                "text": "by the television"
+              },
+              {
+                "key": "C",
+                "text": "passport c. 06.10"
+              },
+              {
+                "key": "C",
+                "text": "by car"
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 5,
+            "audioText": "VSTEP Authentic Audio Track - Question 5",
+            "question": "What will Paul get at the shop?",
+            "options": [
+              {
+                "key": "A",
+                "text": "mushrooms"
+              },
+              {
+                "key": "B",
+                "text": "onions"
+              },
+              {
+                "key": "C",
+                "text": "carrots"
+              },
+              {
+                "key": "D",
+                "text": "red pepper"
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 6,
+            "audioText": "VSTEP Authentic Audio Track - Question 6",
+            "question": "How were they told to do their homework? write it in the books",
+            "options": [
+              {
+                "key": "A",
+                "text": "Lựa chọn A"
+              },
+              {
+                "key": "B",
+                "text": "write it on paper"
+              },
+              {
+                "key": "C",
+                "text": "type it"
+              },
+              {
+                "key": "D",
+                "text": "email it"
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 7,
+            "audioText": "VSTEP Authentic Audio Track - Question 7",
+            "question": "What did Helen buy?",
+            "options": [
+              {
+                "key": "A",
+                "text": "gloves"
+              },
+              {
+                "key": "B",
+                "text": "sweater"
+              },
+              {
+                "key": "C",
+                "text": "socks"
+              },
+              {
+                "key": "D",
+                "text": "Lựa chọn D"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          },
+          {
+            "id": 8,
+            "audioText": "VSTEP Authentic Audio Track - Question 8",
+            "question": "How did the woman get to work today?",
+            "options": [
+              {
+                "key": "A",
+                "text": "by bus"
+              },
+              {
+                "key": "B",
+                "text": "a neighbour offered her a lift"
+              },
+              {
+                "key": "C",
+                "text": "by bike"
+              },
+              {
+                "key": "D",
+                "text": "hat"
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "keyVocab": [
+              "authentic recording (băng ghi âm gốc)",
+              "key point (thông tin then chốt)"
+            ]
+          }
+        ]
+      },
+      "part2": {
+        "title": "Part 2: 3 Đoạn Hội Thoại Đời Sống & Học Thuật",
+        "instructions": "Nghe 3 cuộc hội thoại và chọn đáp án chính xác cho các câu hỏi 9 - 20.",
+        "audioUrl": "./audio/listening/test3.mp3",
+        "conversations": [
+          {
+            "id": "auth-3-conv-1",
+            "title": "Hội thoại 1",
+            "scenario": "Cuộc hội thoại đầu tiên",
+            "audioText": "Authentic conversation 1 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 9,
+                "audioText": "VSTEP Authentic Audio Track - Question 9",
+                "question": "What hours does the speaker work on Monday?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Noon to 6 PM"
+                  },
+                  {
+                    "key": "A",
+                    "text": "Monday and Tuesday"
+                  },
+                  {
+                    "key": "A",
+                    "text": "To discuss the importance of the job"
+                  },
+                  {
+                    "key": "A",
+                    "text": "She enjoys sleeping late every morning."
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 10,
+                "question": "Question 10",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Option A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Option B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Option C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Option D"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là C."
+              },
+              {
+                "id": 11,
+                "question": "Question 11",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Option A"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Option B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Option C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Option D"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ theo băng ghi âm gốc Đề 11. Đáp án đúng là D."
+              },
+              {
+                "id": 12,
+                "audioText": "VSTEP Authentic Audio Track - Question 12",
+                "question": "What does the speaker think Of her work?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She enjoys sleeping late every morning."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "She enjoys helping the patients. 3. It is difficult to describe her schedule."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It is too complicated to remember."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-3-conv-2",
+            "title": "Hội thoại 2",
+            "scenario": "Cuộc hội thoại thứ hai",
+            "audioText": "Authentic conversation 2 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 13,
+                "audioText": "VSTEP Authentic Audio Track - Question 13",
+                "question": "According to the conversation, which item did the woman NOT purchase With her credit card?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "a digital camera"
+                  },
+                  {
+                    "key": "B",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "a stereo"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 14,
+                "audioText": "VSTEP Authentic Audio Track - Question 14",
+                "question": "What is one reason to explain why the woman obtained a student credit card?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She wants to buy things at a discount using the card"
+                  },
+                  {
+                    "key": "B",
+                    "text": "She hopes to establish a good credit rating."
+                  },
+                  {
+                    "key": "C",
+                    "text": "She doesn't want to borrow from her parents."
+                  },
+                  {
+                    "key": "D",
+                    "text": "She can be financially independent."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 15,
+                "audioText": "VSTEP Authentic Audio Track - Question 15",
+                "question": "What does the woman imply about how she plans on resolving her credit card problems?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She hopes that someone will give her the money."
+                  },
+                  {
+                    "key": "B",
+                    "text": "She plans on getting rid of her student credit cards."
+                  },
+                  {
+                    "key": "C",
+                    "text": "SW II get a part-time job"
+                  },
+                  {
+                    "key": "D",
+                    "text": "She is going to return the items she purchased on the card."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 16,
+                "audioText": "VSTEP Authentic Audio Track - Question 16",
+                "question": "What is the man going to do for the woman to help her manage her money?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "help her find a better paying job to cover her expenses"
+                  },
+                  {
+                    "key": "B",
+                    "text": "teach her how to prepare a financial management plan"
+                  },
+                  {
+                    "key": "C",
+                    "text": "show her how she can apply for low-interest student credit cards"
+                  },
+                  {
+                    "key": "D",
+                    "text": "teach her how to shop wisely."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-3-conv-3",
+            "title": "Hội thoại 3",
+            "scenario": "Cuộc hội thoại thứ ba",
+            "audioText": "Authentic conversation 3 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 17,
+                "audioText": "VSTEP Authentic Audio Track - Question 17",
+                "question": "Why does the Customer not buy the recommended sandwich at the beginning Of the conve 0 n ?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It is too expensive."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He is not interested in ordering a burger."
+                  },
+                  {
+                    "key": "C",
+                    "text": "It is not tasty."
+                  },
+                  {
+                    "key": "D",
+                    "text": "He fears the food will make him sick."
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 18,
+                "audioText": "VSTEP Authentic Audio Track - Question 18",
+                "question": "How does the specialty drink get its name?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "It contains a wide range of ingredients."
+                  },
+                  {
+                    "key": "B",
+                    "text": "It is prepared in the kitchen sink."
+                  },
+                  {
+                    "key": "C",
+                    "text": "It contains chicken soup."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It comes in a very large cup."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 19,
+                "audioText": "VSTEP Authentic Audio Track - Question 19",
+                "question": "Why was the man surprised by the price Of his meal?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "He thought the drink should have been included. 3. He felt the meal was way overpriced."
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "He was charged fortwo sandwiches instead of one."
+                  },
+                  {
+                    "key": "D",
+                    "text": "It was lower than he had expected."
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 20,
+                "audioText": "VSTEP Authentic Audio Track - Question 20",
+                "question": "What does the customer decide to do at the end of the conversation?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "He orders something from the restaurant menu."
+                  },
+                  {
+                    "key": "B",
+                    "text": "He plans to come back at weekend."
+                  },
+                  {
+                    "key": "C",
+                    "text": "He decides to 100k for another place to eat."
+                  },
+                  {
+                    "key": "D",
+                    "text": "He plans to come in a week when the prices are lower."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "part3": {
+        "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
+        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "audioUrl": "./audio/listening/test3.mp3",
+        "talks": [
+          {
+            "id": "auth-3-talk-1",
+            "title": "Bài giảng 1",
+            "topic": "Bài nói học thuật thứ nhất",
+            "audioText": "Authentic talk 1 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 21,
+                "audioText": "VSTEP Authentic Audio Track - Question 21",
+                "question": "What did Sandy Duffy want to be when she was at school?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "a journalist _3. a musician"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 22,
+                "audioText": "VSTEP Authentic Audio Track - Question 22",
+                "question": "What did Sandy study at university?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "Math and Physics"
+                  },
+                  {
+                    "key": "B",
+                    "text": "film making"
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "C",
+                    "text": "Technology"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 23,
+                "audioText": "VSTEP Authentic Audio Track - Question 23",
+                "question": "How did Sandy get her first job as a video game writer?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She answered a job advertisement."
+                  },
+                  {
+                    "key": "B",
+                    "text": "She met someone at a conference."
+                  },
+                  {
+                    "key": "C",
+                    "text": "She sent some information about herself to a company."
+                  },
+                  {
+                    "key": "D",
+                    "text": "She was invited by a friend."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 24,
+                "audioText": "VSTEP Authentic Audio Track - Question 24",
+                "question": "What does Sandy like best about being a video game writer?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "the prizes she has won."
+                  },
+                  {
+                    "key": "B",
+                    "text": "the high salary"
+                  },
+                  {
+                    "key": "C",
+                    "text": "the people she works with"
+                  },
+                  {
+                    "key": "D",
+                    "text": "the great working condition"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 25,
+                "audioText": "VSTEP Authentic Audio Track - Question 25",
+                "question": "What does Sandy dislike about being a video game writer?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "She has to travel a lot."
+                  },
+                  {
+                    "key": "B",
+                    "text": "She has to work long hours."
+                  },
+                  {
+                    "key": "C",
+                    "text": "She often has to change her job."
+                  },
+                  {
+                    "key": "D",
+                    "text": "She has to live far from home."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-3-talk-2",
+            "title": "Bài giảng 2",
+            "topic": "Bài nói học thuật thứ hai",
+            "audioText": "Authentic talk 2 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 26,
+                "audioText": "VSTEP Authentic Audio Track - Question 26",
+                "question": "HOW long does the trek last?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "a day"
+                  },
+                  {
+                    "key": "B",
+                    "text": "three days"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Lựa chọn C"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 27,
+                "audioText": "VSTEP Authentic Audio Track - Question 27",
+                "question": "The trek aims to raise money for",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "health care"
+                  },
+                  {
+                    "key": "B",
+                    "text": "school education"
+                  },
+                  {
+                    "key": "C",
+                    "text": "five days"
+                  },
+                  {
+                    "key": "C",
+                    "text": "hospital"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 28,
+                "audioText": "VSTEP Authentic Audio Track - Question 28",
+                "question": "The cost of the trek includes —",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "flight and airport taxes"
+                  },
+                  {
+                    "key": "B",
+                    "text": "medical provision and taxes"
+                  },
+                  {
+                    "key": "C",
+                    "text": "Foods"
+                  },
+                  {
+                    "key": "D",
+                    "text": "Food and accommodation"
+                  }
+                ],
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 29,
+                "audioText": "VSTEP Authentic Audio Track - Question 29",
+                "question": "participants must",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "walk across a glacier."
+                  },
+                  {
+                    "key": "B",
+                    "text": "complete a fitness course."
+                  },
+                  {
+                    "key": "C",
+                    "text": "agree to raise funds for the charity."
+                  },
+                  {
+                    "key": "D",
+                    "text": "pay amount of money."
+                  }
+                ],
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 30,
+                "audioText": "VSTEP Authentic Audio Track - Question 30",
+                "question": "The trip starts on",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "1st of November"
+                  },
+                  {
+                    "key": "B",
+                    "text": "3rd Of November"
+                  },
+                  {
+                    "key": "C",
+                    "text": "13th of November"
+                  },
+                  {
+                    "key": "D",
+                    "text": "23th of November"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "auth-3-talk-3",
+            "title": "Bài giảng 3",
+            "topic": "Bài nói học thuật thứ ba",
+            "audioText": "Authentic talk 3 from original test tape.",
+            "audioUrl": "./audio/listening/test3.mp3",
+            "questions": [
+              {
+                "id": 31,
+                "audioText": "VSTEP Authentic Audio Track - Question 31",
+                "question": "Where do many Of the rich people live?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "next to the new road"
+                  },
+                  {
+                    "key": "B",
+                    "text": "Lựa chọn B"
+                  },
+                  {
+                    "key": "C",
+                    "text": "in the countryside."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Lựa chọn D"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 32,
+                "audioText": "VSTEP Authentic Audio Track - Question 32",
+                "question": "How long is the road?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "600 kilometres"
+                  },
+                  {
+                    "key": "B",
+                    "text": "in the cities."
+                  },
+                  {
+                    "key": "B",
+                    "text": "6,000 kilometers"
+                  },
+                  {
+                    "key": "C",
+                    "text": "60,000 kilometres"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 33,
+                "audioText": "VSTEP Authentic Audio Track - Question 33",
+                "question": "What can you see on the computers at the road's headquarters in Delhi?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "small vehicles on the road"
+                  },
+                  {
+                    "key": "B",
+                    "text": "any vehicle and problems on the road"
+                  },
+                  {
+                    "key": "C",
+                    "text": "big vehicles on the road"
+                  },
+                  {
+                    "key": "D",
+                    "text": "serious problems on the road"
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 34,
+                "audioText": "VSTEP Authentic Audio Track - Question 34",
+                "question": "What types of transport can you see on the road?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "all types"
+                  },
+                  {
+                    "key": "B",
+                    "text": "mostly cars"
+                  },
+                  {
+                    "key": "C",
+                    "text": "mostly motorbikes"
+                  },
+                  {
+                    "key": "D",
+                    "text": "the presenter doesn't say"
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              },
+              {
+                "id": 35,
+                "audioText": "VSTEP Authentic Audio Track - Question 35",
+                "question": "Why does the presenter describe the new road as a symbol of India's future?",
+                "options": [
+                  {
+                    "key": "A",
+                    "text": "because ifs the same shape as the country of India."
+                  },
+                  {
+                    "key": "B",
+                    "text": "because it is modern, it is helping the economy grow."
+                  },
+                  {
+                    "key": "C",
+                    "text": ""
+                  },
+                  {
+                    "key": "D",
+                    "text": ""
+                  }
+                ],
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "authentic recording (băng ghi âm gốc)",
+                  "key point (thông tin then chốt)"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "set-1",
       "title": "Bộ Đề Luyện Nghe Số 01 (Toàn Diện 3 Phần - 35 Câu)",
       "badge": "Đề Tổng Hợp B1",
