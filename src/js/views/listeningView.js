@@ -1,6 +1,7 @@
 import { microSkills, listeningPracticeTests } from '../../data/listening/index.js';
 import { renderAudioPlayerComponent } from '../utils/audioPlayer.js';
 import { AnalyticsStore } from '../modules/analytics/analyticsStore.js';
+import { VstepAudioDirector } from '../modules/listening/vstepAudioDirector.js';
 
 let activeListeningTab = 'practice'; // 'skills' | 'practice'
 let selectedTestSetIndex = 0;
@@ -176,12 +177,21 @@ function renderPart1Section(part1) {
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
-        <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part1.title}</h3>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part1.description || 'Nghe 8 đoạn thông báo/hướng dẫn ngắn và chọn đáp án chính xác'}</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part1.title}</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part1.description || 'Nghe 8 đoạn thông báo/hướng dẫn ngắn và chọn đáp án chính xác'}</p>
+          </div>
+          <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Phát Toàn Bộ Băng Part 1 (Có Lời Dẫn Giám Khảo & Chime)')}
+        </div>
       </div>
 
       ${questions.map((q, idx) => {
         const audioId = `lp1-${q.id}`;
+        const script = VstepAudioDirector.buildQuestionAudioScript(q, idx + 1);
         return `
           <div class="card" id="lq-${q.id}" style="padding: 2rem; border: 1px solid var(--border-color);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -190,7 +200,7 @@ function renderPart1Section(part1) {
             </div>
 
             <!-- Audio Player Controller Component -->
-            ${renderAudioPlayerComponent(audioId, q.audioText, `Audio Câu ${idx + 1}`)}
+            ${renderAudioPlayerComponent(audioId, script, `Audio Câu ${idx + 1} (Có Lời Dẫn Chuẩn VSTEP)`)}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.95rem; line-height: 1.7;">
               <strong style="color: var(--primary);">Lời thoại (Audio Transcript):</strong>
@@ -233,22 +243,33 @@ function renderPart2Section(part2) {
   const conversations = part2.conversations || [];
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
-      <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
-        <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part2.title}</h3>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part2.description || 'Nghe 3 cuộc hội thoại thường nhật/học đường (mỗi bài 4 câu hỏi)'}</p>
+      <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--secondary);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part2.title}</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part2.description || 'Nghe 3 đoạn hội thoại đời sống / công việc / học thuật'}</p>
+          </div>
+          <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Phát Toàn Bộ Băng Part 2 (Có Lời Dẫn Giám Khảo & 3 Hội Thoại)')}
+        </div>
       </div>
 
-      ${conversations.map(conv => {
+      ${conversations.map((conv, cIdx) => {
         const audioId = `lp2-${conv.id}`;
+        const startQ = 9 + (cIdx * 4);
+        const endQ = startQ + 3;
+        const script = VstepAudioDirector.buildConversationAudioScript(conv, startQ, endQ);
         return `
           <div class="card" style="padding: 2rem; border: 1px solid var(--border-color);">
             <div style="margin-bottom: 1rem;">
-              <span class="badge badge-secondary" style="margin-bottom: 0.35rem;">Hội Thoại ${conv.id}</span>
+              <span class="badge badge-secondary" style="margin-bottom: 0.35rem;">Hội Thoại ${cIdx + 1} (Câu ${startQ} - ${endQ})</span>
               <h3 style="margin: 0; font-size: 1.3rem; color: var(--primary);">${conv.title}</h3>
             </div>
 
             <!-- Audio Player Controller -->
-            ${renderAudioPlayerComponent(audioId, conv.audioTranscript, `Audio Hội Thoại ${conv.id}`)}
+            ${renderAudioPlayerComponent(audioId, script, `Audio ${conv.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
               <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${conv.audioTranscript}
@@ -287,22 +308,33 @@ function renderPart3Section(part3) {
   const talks = part3.talks || [];
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
-      <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
-        <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part3.title}</h3>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part3.description || 'Nghe 3 bài thuyết trình học thuật chuyên sâu'}</p>
+      <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--success);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem 0; color: var(--primary);">${part3.title}</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">${part3.description || 'Nghe 3 bài thuyết trình học thuật chuyên sâu'}</p>
+          </div>
+          <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Phát Toàn Bộ Băng Part 3 (Có Lời Dẫn Giám Khảo & 3 Bài Giảng)')}
+        </div>
       </div>
 
-      ${talks.map(talk => {
+      ${talks.map((talk, tIdx) => {
         const audioId = `lp3-${talk.id}`;
+        const startQ = 21 + (tIdx * 5);
+        const endQ = startQ + 4;
+        const script = VstepAudioDirector.buildTalkAudioScript(talk, startQ, endQ);
         return `
           <div class="card" style="padding: 2rem; border: 1px solid var(--border-color);">
             <div style="margin-bottom: 1rem;">
-              <span class="badge badge-secondary" style="margin-bottom: 0.35rem;">Bài Giảng ${talk.id}</span>
+              <span class="badge badge-secondary" style="margin-bottom: 0.35rem;">Bài Giảng ${tIdx + 1} (Câu ${startQ} - ${endQ})</span>
               <h3 style="margin: 0; font-size: 1.3rem; color: var(--primary);">${talk.title}</h3>
             </div>
 
             <!-- Audio Player Controller -->
-            ${renderAudioPlayerComponent(audioId, talk.audioTranscript, `Audio Bài Giảng ${talk.id}`)}
+            ${renderAudioPlayerComponent(audioId, script, `Audio ${talk.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
 
             <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
               <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${talk.audioTranscript}

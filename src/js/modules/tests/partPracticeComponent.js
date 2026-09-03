@@ -8,6 +8,7 @@ import { renderAudioPlayerComponent } from '../../utils/audioPlayer.js';
 import { showConfirmModal, showAlertModal, showToast } from '../../utils/modal.js';
 import { evaluateWritingWithGemini, evaluateSpeakingWithGemini } from '../../services/geminiService.js';
 import { AnalyticsStore } from '../analytics/analyticsStore.js';
+import { VstepAudioDirector } from '../listening/vstepAudioDirector.js';
 
 export const VSTEP_PARTS_CONFIG = [
   {
@@ -658,12 +659,20 @@ export class PartPracticeComponent {
       return `
         <div class="card" style="padding: 2rem;">
           <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
-            <span class="badge badge-primary">LISTENING PART 1</span>
-            <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p1.title}</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p1.instructions}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <span class="badge badge-primary">LISTENING PART 1</span>
+                <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p1.title}</h3>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p1.instructions}</p>
+              </div>
+              <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
+            </div>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+              ${renderAudioPlayerComponent('p-part1-master-tape', VstepAudioDirector.buildPart1FullAudioScript(p1), 'Phát Toàn Bộ Băng Part 1 (Có Lời Dẫn Giám Khảo & Chime)')}
+            </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2rem;">
-            ${(p1.questions || []).map((q, idx) => this.renderPracticeQuestionCard(q, `p-lp1-${q.id}`, q.audioText, idx + 1)).join('')}
+            ${(p1.questions || []).map((q, idx) => this.renderPracticeQuestionCard(q, `p-lp1-${q.id}`, VstepAudioDirector.buildQuestionAudioScript(q, idx + 1), idx + 1)).join('')}
           </div>
         </div>
       `;
@@ -677,23 +686,36 @@ export class PartPracticeComponent {
       return `
         <div class="card" style="padding: 2rem;">
           <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
-            <span class="badge badge-secondary">LISTENING PART 2</span>
-            <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p2.title}</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p2.instructions}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <span class="badge badge-secondary">LISTENING PART 2</span>
+                <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p2.title}</h3>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p2.instructions}</p>
+              </div>
+              <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
+            </div>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+              ${renderAudioPlayerComponent('p-part2-master-tape', VstepAudioDirector.buildPart2FullAudioScript(p2), 'Phát Toàn Bộ Băng Part 2 (Có Lời Dẫn Giám Khảo & 3 Hội Thoại)')}
+            </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-            ${(p2.conversations || []).map(conv => `
-              <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
-                <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${conv.title}</h4>
-                ${renderAudioPlayerComponent(`p-lconv-${conv.id}`, conv.audioTranscript, `Audio ${conv.title}`)}
-                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
-                  ${(conv.questions || []).map(q => {
-                    qIdx++;
-                    return this.renderPracticeQuestionCard(q, `p-lconv-${conv.id}-${q.id}`, null, qIdx);
-                  }).join('')}
+            ${(p2.conversations || []).map(conv => {
+              const startQ = qIdx + 1;
+              const endQ = qIdx + (conv.questions?.length || 4);
+              const script = VstepAudioDirector.buildConversationAudioScript(conv, startQ, endQ);
+              return `
+                <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${conv.title} (Câu ${startQ} - ${endQ})</h4>
+                  ${renderAudioPlayerComponent(`p-lconv-${conv.id}`, script, `Audio ${conv.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+                    ${(conv.questions || []).map(q => {
+                      qIdx++;
+                      return this.renderPracticeQuestionCard(q, `p-lconv-${conv.id}-${q.id}`, null, qIdx);
+                    }).join('')}
+                  </div>
                 </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       `;
@@ -707,23 +729,36 @@ export class PartPracticeComponent {
       return `
         <div class="card" style="padding: 2rem;">
           <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
-            <span class="badge badge-primary">LISTENING PART 3</span>
-            <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p3.title}</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p3.instructions}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <span class="badge badge-primary">LISTENING PART 3</span>
+                <h3 style="margin: 0.35rem 0; color: var(--text-primary);">${p3.title}</h3>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">${p3.instructions}</p>
+              </div>
+              <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
+            </div>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
+              ${renderAudioPlayerComponent('p-part3-master-tape', VstepAudioDirector.buildPart3FullAudioScript(p3), 'Phát Toàn Bộ Băng Part 3 (Có Lời Dẫn Giám Khảo & 3 Bài Giảng)')}
+            </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-            ${(p3.talks || []).map(talk => `
-              <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
-                <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${talk.title}</h4>
-                ${renderAudioPlayerComponent(`p-ltalk-${talk.id}`, talk.audioTranscript, `Audio ${talk.title}`)}
-                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
-                  ${(talk.questions || []).map(q => {
-                    qIdx++;
-                    return this.renderPracticeQuestionCard(q, `p-ltalk-${talk.id}-${q.id}`, null, qIdx);
-                  }).join('')}
+            ${(p3.talks || []).map(talk => {
+              const startQ = qIdx + 1;
+              const endQ = qIdx + (talk.questions?.length || 5);
+              const script = VstepAudioDirector.buildTalkAudioScript(talk, startQ, endQ);
+              return `
+                <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${talk.title} (Câu ${startQ} - ${endQ})</h4>
+                  ${renderAudioPlayerComponent(`p-ltalk-${talk.id}`, script, `Audio ${talk.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                  <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+                    ${(talk.questions || []).map(q => {
+                      qIdx++;
+                      return this.renderPracticeQuestionCard(q, `p-ltalk-${talk.id}-${q.id}`, null, qIdx);
+                    }).join('')}
+                  </div>
                 </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       `;
