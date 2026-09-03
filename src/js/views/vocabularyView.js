@@ -220,8 +220,8 @@ function renderTopicsTab(currentTopic) {
       <div class="card" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 4px solid var(--primary);">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <span class="badge badge-primary">Chủ điểm ${currentTopic.id}: ${currentTopic.name}</span>
-            <h3 style="font-size: 1.4rem; margin-top: 0.25rem;">${currentTopic.vn || currentTopic.name} (${currentTopicWords.length} Từ Vựng Đầy Đủ)</h3>
+            <span class="badge badge-primary">Chủ điểm ${currentTopic.id}</span>
+            <h3 style="font-size: 1.4rem; margin-top: 0.25rem;">${currentTopic.vn || currentTopic.name}</h3>
             <p style="margin: 0; color: var(--text-secondary);">${currentTopic.desc || ''}</p>
           </div>
           <div style="width: 320px;">

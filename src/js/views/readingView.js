@@ -232,7 +232,7 @@ function renderPassagesTab(passage) {
           <div class="card" style="padding: 1rem 1.25rem; background: var(--bg-accent); border-left: 4px solid var(--primary);">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
               <div>
-                <h4 style="margin: 0; font-size: 1rem; color: var(--primary);">Bảng Câu Hỏi (${questions.length} câu)</h4>
+                <h4 style="margin: 0; font-size: 1rem; color: var(--primary);">Bảng Câu Hỏi</h4>
                 <span style="font-size: 0.8rem; color: var(--text-secondary);">
                   ${isSubmitted 
                     ? `Kết quả: <strong style="color: var(--primary);">${correctCount}/${questions.length} đúng (${percent}%)</strong>`

@@ -530,7 +530,7 @@ function renderExamSelectionLobby() {
               <!-- Skill Structure Badges -->
               <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
                 <div style="font-size: 0.825rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                  <i data-lucide="check-circle" style="width: 14px; height: 14px; vertical-align: middle;"></i> Cấu Trúc 4 Kỹ Năng Đầy Đủ:
+                  <i data-lucide="check-circle" style="width: 14px; height: 14px; vertical-align: middle;"></i> Cấu Trúc 4 Kỹ Năng:
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.825rem; color: var(--text-secondary);">
                   <div>🎧 <strong>Nghe:</strong> 35 câu (40p)</div>
