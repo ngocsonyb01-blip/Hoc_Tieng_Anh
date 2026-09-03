@@ -2,6 +2,7 @@ import { authenticVstepExams } from '../../data/tests/index.js';
 import { renderAudioPlayerComponent } from '../utils/audioPlayer.js';
 import { showConfirmModal, showAlertModal, showToast } from '../utils/modal.js';
 import { evaluateWritingWithGemini, evaluateSpeakingWithGemini } from '../services/geminiService.js';
+import { PartPracticeComponent } from '../modules/tests/partPracticeComponent.js';
 
 let isExamActive = false; // false = Show Exam Selection Lobby; true = In Exam Paper
 let selectedSkill = 'listening'; // 'listening' | 'reading' | 'writing' | 'speaking'
@@ -116,6 +117,11 @@ function startActiveExamTimer() {
 }
 
 export function renderTestsView() {
+  // Bind PartPracticeComponent actions
+  PartPracticeComponent.initWindowBindings(() => {
+    if (window.app) window.app.renderCurrentView();
+  });
+
   window.startExam = (idx) => {
     const saved = getSavedExamProgress(idx);
     if (saved && !saved.isExamSubmitted) {
@@ -374,9 +380,25 @@ export function renderTestsView() {
 
   const currentExam = authenticVstepExams[selectedExamIndex] || authenticVstepExams[0];
 
+  if (isExamActive) {
+    return `
+      <div class="tests-page animate-fade-in">
+        ${renderActiveExamPaper(currentExam)}
+      </div>
+    `;
+  }
+
+  if (PartPracticeComponent.isCurrentlyPracticing()) {
+    return `
+      <div class="tests-page animate-fade-in">
+        ${PartPracticeComponent.renderPracticePaper()}
+      </div>
+    `;
+  }
+
   return `
     <div class="tests-page animate-fade-in">
-      ${isExamActive ? renderActiveExamPaper(currentExam) : renderExamSelectionLobby()}
+      ${renderExamSelectionLobby()}
     </div>
   `;
 }
@@ -455,6 +477,9 @@ function renderExamSelectionLobby() {
         `;
         }).join('')}
       </div>
+
+      <!-- VSTEP Sectional / Part-by-Part Practice Section -->
+      ${PartPracticeComponent.renderLobbySection()}
     </div>
   `;
 }
