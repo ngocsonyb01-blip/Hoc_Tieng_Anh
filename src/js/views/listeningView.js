@@ -6,7 +6,6 @@ import { VstepAudioDirector } from '../modules/listening/vstepAudioDirector.js';
 let activeListeningTab = 'practice'; // 'skills' | 'practice'
 let selectedTestSetIndex = 0;
 let selectedPart = 'part1'; // 'part1' | 'part2' | 'part3'
-let showTranscripts = {};
 let userAnswers = {};
 
 export function renderListeningView() {
@@ -24,14 +23,6 @@ export function renderListeningView() {
   window.handleListeningPartChange = (part) => {
     selectedPart = part;
     window.app.renderCurrentView();
-  };
-
-  window.toggleTranscript = (id) => {
-    showTranscripts[id] = !showTranscripts[id];
-    const el = document.getElementById(`transcript-${id}`);
-    if (el) {
-      el.style.display = showTranscripts[id] ? 'block' : 'none';
-    }
   };
 
   window.selectListeningAnswer = (qId, optionKey, correctKey) => {
@@ -262,11 +253,6 @@ function renderPart1Section(part1, testSet = null) {
             <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp, đề gốc dùng băng liền mạch ở trên -->
             ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio Câu ${idx + 1}`) : ''}
 
-            <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.95rem; line-height: 1.7;">
-              <strong style="color: var(--primary);">Lời thoại (Audio Transcript):</strong>
-              <p style="margin: 0.35rem 0 0 0; font-style: italic; color: var(--text-primary);">"${q.audioText}"</p>
-            </div>
-
             <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; color: var(--text-primary);">
               ${q.question}
             </div>
@@ -334,10 +320,6 @@ function renderPart2Section(part2, testSet = null) {
             <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp -->
             ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio ${conv.title}`) : ''}
 
-            <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
-              <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${conv.audioTranscript}
-            </div>
-
             <!-- Sub-questions -->
             <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
               ${(conv.questions || []).map(q => `
@@ -401,10 +383,6 @@ function renderPart3Section(part3, testSet = null) {
 
             <!-- Audio Player chỉ hiện khi đề dùng TTS tổng hợp -->
             ${!isAuthentic ? renderAudioPlayerComponent(audioId, script, `Audio ${talk.title}`) : ''}
-
-            <div id="transcript-${audioId}" style="display: none; background: var(--bg-muted); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
-              <strong style="color: var(--primary); font-size: 1rem;">Audio Transcript (Lời Thoại):</strong>\n${talk.audioTranscript}
-            </div>
 
             <!-- Sub-questions -->
             <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">

@@ -604,11 +604,6 @@ export function renderAudioPlayerComponent(id, text, label = 'Bản Thu Âm Mẫ
           <button class="btn btn-secondary btn-sm" onclick="window.replayAudio('${id}', '${cleanText}', '${realUrl}')" title="Phát lại từ đầu" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 34px; padding: 0;">
             <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i>
           </button>
-          ${!isRealMp3 ? `
-            <button class="btn btn-secondary btn-sm" onclick="window.toggleTranscript('${id}')" title="Lời thoại (Transcript)" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 34px; padding: 0;">
-              <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
-            </button>
-          ` : ''}
         </div>
 
         <div id="audio-wave-${id}" class="audio-wave" style="display: flex; gap: 3px; align-items: center; height: 16px; opacity: 0.2; transition: opacity 0.3s;">
