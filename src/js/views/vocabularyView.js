@@ -1,57 +1,35 @@
 import { topics, allVocabulary, phrasalVerbs, collocations, wordFamilies, irregularVerbs } from '../../data/vocabulary/index.js';
 import { speakText } from '../utils/audioPlayer.js';
-import { getUserVocabList, updateUserVocabItem } from '../modules/vocab/vocabModel.js';
-import { AdaptiveVocabEngine } from '../modules/vocab/adaptiveEngine.js';
-import { QuestionGenerator } from '../modules/vocab/questionGenerator.js';
-import { AnalyticsStore } from '../modules/analytics/analyticsStore.js';
+import { FlashcardTestComponent } from '../modules/vocab/flashcardTestComponent.js';
 
 let activeTab = 'topics'; // 'topics' | 'irregular' | 'phrasal' | 'collocations' | 'families'
 let selectedTopicId = topics[0]?.slug || 'personal-info';
 let searchQuery = '';
 let irregularSearchQuery = '';
 
-// Vocab Adaptive Test Modal State
-let vocabEngine = null;
-let vocabGenerator = null;
-let currentVocabWord = null;
-let currentVocabQuestion = null;
-let isVocabAnswered = false;
+// Vocab Flashcard Test Modal State
 let isVocabModalOpen = false;
 let isVocabModalMinimized = false;
-let vocabSessionStats = {
-  totalAnswered: 0,
-  correct: 0,
-  wrong: 0,
-  currentStreak: 0,
-  maxStreak: 0
-};
 
 export function renderVocabularyView() {
-  // Initialize AI Adaptive Engine
-  const vocabList = getUserVocabList();
-  if (!vocabEngine) {
-    vocabEngine = new AdaptiveVocabEngine(vocabList);
-    vocabGenerator = new QuestionGenerator(vocabList);
-  } else {
-    vocabEngine.setVocabList(vocabList);
-    vocabGenerator.setVocabList(vocabList);
-  }
+  // Bind Flashcard Test Component callbacks
+  FlashcardTestComponent.initWindowBindings(() => {
+    if (isVocabModalOpen) {
+      renderOrUpdateVocabModalDOM();
+    }
+  });
 
   window.openVocabTestModal = () => {
     isVocabModalOpen = true;
     isVocabModalMinimized = false;
-    if (!currentVocabQuestion) {
-      loadNextVocabQuestion();
-    } else {
-      renderOrUpdateVocabModalDOM();
-    }
+    renderOrUpdateVocabModalDOM();
   };
 
   window.minimizeVocabTestModal = () => {
     isVocabModalMinimized = true;
     renderOrUpdateVocabModalDOM();
     if (window.showToast) {
-      window.showToast('Đã thu nhỏ bài test từ vựng xuống nền. Bạn có thể tra cứu và mở lại bất cứ lúc nào!', 'info');
+      window.showToast('Đã thu nhỏ cửa sổ Flashcard xuống nền. Bạn có thể tra cứu và mở lại bất cứ lúc nào!', 'info');
     }
   };
 
@@ -178,81 +156,7 @@ export function renderVocabularyView() {
   `;
 }
 
-function loadNextVocabQuestion() {
-  isVocabAnswered = false;
-  if (!vocabEngine) {
-    const list = getUserVocabList();
-    vocabEngine = new AdaptiveVocabEngine(list);
-    vocabGenerator = new QuestionGenerator(list);
-  }
-  currentVocabWord = vocabEngine.getNextWord();
-  if (currentVocabWord) {
-    currentVocabQuestion = vocabGenerator.generateQuestion(currentVocabWord);
-  }
-  renderOrUpdateVocabModalDOM();
-}
-
-function handleVocabModalSubmission(userAnswer, btnIndex) {
-  isVocabAnswered = true;
-  vocabSessionStats.totalAnswered += 1;
-
-  let isCorrect = false;
-  if (currentVocabQuestion.type === 'text_input') {
-    isCorrect = userAnswer.toLowerCase() === currentVocabQuestion.correctAnswer.toLowerCase();
-  } else {
-    isCorrect = userAnswer === currentVocabQuestion.correctAnswer;
-  }
-
-  if (isCorrect) {
-    vocabSessionStats.correct += 1;
-    vocabSessionStats.currentStreak += 1;
-    if (vocabSessionStats.currentStreak > vocabSessionStats.maxStreak) {
-      vocabSessionStats.maxStreak = vocabSessionStats.currentStreak;
-    }
-    AnalyticsStore.updateSkillScore('vocabulary', +2);
-    if (window.showToast) {
-      window.showToast('🎉 Chính xác! +2 điểm Vốn Từ Vựng', 'success');
-    }
-  } else {
-    vocabSessionStats.wrong += 1;
-    vocabSessionStats.currentStreak = 0;
-    if (window.showToast) {
-      window.showToast('⚠️ Chưa chính xác. Hãy ghi nhớ từ vựng này!', 'warning');
-    }
-  }
-
-  // Update memory retention in model
-  if (vocabEngine && currentVocabWord) {
-    vocabEngine.recordResult(currentVocabWord.id, isCorrect, currentVocabQuestion.format);
-  }
-
-  renderOrUpdateVocabModalDOM(userAnswer, isCorrect);
-}
-
-function getVocabLevelBadge(level = 1, score = 0) {
-  switch (level) {
-    case 1: return { text: 'Level 1: Chưa nắm', color: '#ef4444', bg: 'rgba(239, 68, 68, 0.12)', icon: '🔴' };
-    case 2: return { text: 'Level 2: Đang hình thành', color: '#f97316', bg: 'rgba(249, 115, 22, 0.12)', icon: '🟠' };
-    case 3: return { text: 'Level 3: Đang củng cố', color: '#eab308', bg: 'rgba(234, 179, 8, 0.12)', icon: '🟡' };
-    case 4: return { text: 'Level 4: Nhớ tốt', color: '#10b981', bg: 'rgba(16, 185, 129, 0.12)', icon: '🟢' };
-    case 5:
-    default: return { text: 'Level 5: Nhớ bền vững', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.12)', icon: '🔵' };
-  }
-}
-
-function getVocabFormatBadge(format) {
-  switch (format) {
-    case 'meaning_to_word': return 'Nghĩa ➔ Chọn Từ';
-    case 'word_to_meaning': return 'Từ ➔ Chọn Nghĩa';
-    case 'cloze_sentence': return 'Điền Từ Vào Câu';
-    case 'collocation': return 'Cụm Từ Cố Định (Collocation)';
-    case 'spelling': return 'Kiểm Tra Chính Tả (Dictation)';
-    case 'advanced_context': return 'Phân Tích Ngữ Cảnh B1';
-    default: return 'Trắc Nghiệm';
-  }
-}
-
-function renderOrUpdateVocabModalDOM(userAnswer = null, isCorrect = false) {
+function renderOrUpdateVocabModalDOM() {
   if (typeof document === 'undefined') return;
 
   // 1. Modal Container
@@ -301,7 +205,7 @@ function renderOrUpdateVocabModalDOM(userAnswer = null, isCorrect = false) {
       <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 0.75rem 1.4rem; border-radius: var(--radius-full); box-shadow: 0 10px 25px rgba(37,99,235,0.4); cursor: pointer; display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 0.95rem;"
            onclick="window.restoreVocabTestModal()">
         <i data-lucide="brain-circuit"></i>
-        <span>Test Từ Vựng: ${vocabSessionStats.totalAnswered} câu (${vocabSessionStats.correct} đúng) • Mở lại ➔</span>
+        <span>Gói Flashcard Từ Vựng • Mở lại ➔</span>
       </div>
     `;
     if (window.lucide) window.lucide.createIcons();
@@ -312,33 +216,13 @@ function renderOrUpdateVocabModalDOM(userAnswer = null, isCorrect = false) {
   dock.style.display = 'none';
   modal.style.display = 'flex';
 
-  if (!currentVocabQuestion) {
-    modal.innerHTML = `
-      <div class="card" style="padding: 2rem; text-align: center; max-width: 500px;">
-        <p>Đang tải câu hỏi từ vựng thích ứng AI...</p>
-        <button class="btn btn-primary" onclick="window.nextVocabModalQuestion()">Bắt đầu ngay</button>
-      </div>
-    `;
-    return;
-  }
-
-  const q = currentVocabQuestion;
-  const w = currentVocabWord;
-  const levelInfo = getVocabLevelBadge(w.level || 1, w.masteryScore || 0);
-  const formatLabel = getVocabFormatBadge(q.format);
-  const percent = vocabSessionStats.totalAnswered > 0 ? Math.round((vocabSessionStats.correct / vocabSessionStats.totalAnswered) * 100) : 0;
-
   modal.innerHTML = `
-    <div class="card" style="width: 100%; max-width: 780px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; background: var(--bg-card); border-radius: var(--radius-lg); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-top: 5px solid ${levelInfo.color}; padding: 0;">
+    <div class="card" style="width: 100%; max-width: 960px; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; background: var(--bg-card); border-radius: var(--radius-lg); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); border: 1px solid var(--border-color); border-top: 5px solid var(--primary); padding: 0;">
       <!-- Modal Header -->
-      <div style="padding: 1.25rem 1.5rem; background: var(--bg-muted); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <span class="badge" style="background: ${levelInfo.bg}; color: ${levelInfo.color}; font-weight: 700; font-size: 0.825rem; border: 1px solid ${levelInfo.color}40;">
-            ${levelInfo.icon} ${levelInfo.text} (${w.masteryScore || 0}đ)
-          </span>
-          <span class="badge badge-secondary" style="font-size: 0.8rem;">
-            ${formatLabel}
-          </span>
+      <div style="padding: 1rem 1.5rem; background: var(--bg-muted); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="badge badge-primary" style="font-weight: 700;">Học & Kiểm Tra Từ Vựng</span>
+          <span style="font-size: 0.95rem; font-weight: 800; color: var(--primary);">Hệ Thống Gói Flashcard VSTEP B1</span>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -346,126 +230,20 @@ function renderOrUpdateVocabModalDOM(userAnswer = null, isCorrect = false) {
             <i data-lucide="minimize-2"></i>
             <span>Ẩn Xuống Nền</span>
           </button>
-          <button class="btn btn-secondary btn-sm btn-icon" title="Đóng bài test" onclick="window.closeVocabTestModal()">
+          <button class="btn btn-secondary btn-sm btn-icon" title="Đóng cửa sổ" onclick="window.closeVocabTestModal()">
             <i data-lucide="x"></i>
           </button>
         </div>
       </div>
 
-      <!-- Question Body -->
-      <div style="padding: 2rem 1.75rem; overflow-y: auto; flex: 1;">
-        <!-- Top prompt & audio -->
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
-          <div style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">
-            ${q.prompt}
-          </div>
-          <button class="btn btn-secondary btn-icon btn-sm" onclick="window.speakVocab('${w.word}')" title="Nghe phát âm chuẩn" style="border-radius: var(--radius-full);">
-            <i data-lucide="volume-2"></i>
-          </button>
-        </div>
-
-        <!-- Highlight Core Area (Word / Phrase / Cloze) -->
-        <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem; line-height: 1.4; font-family: var(--font-heading);">
-          ${q.highlight || w.word}
-        </div>
-
-        <!-- SubText / Phonetic hints -->
-        ${q.subText ? `
-          <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.75rem; font-style: italic;">
-            ${q.subText}
-          </div>
-        ` : (w.phonetic ? `
-          <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.75rem; font-family: var(--font-mono);">
-            /${w.phonetic}/ ${w.pos ? `(${w.pos})` : ''}
-          </div>
-        ` : '<div style="margin-bottom: 1.25rem;"></div>')}
-
-        <!-- Multiple Choice Options -->
-        ${q.type === 'multiple_choice' ? `
-          <div class="review-options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
-            ${q.options.map((opt, optIdx) => {
-              let btnStyle = 'background: var(--bg-surface); border: 1.5px solid var(--border-color); color: var(--text-primary);';
-
-              if (isVocabAnswered) {
-                if (opt === q.correctAnswer) {
-                  btnStyle = 'background: rgba(16, 185, 129, 0.15); border: 2px solid var(--success); color: var(--success-text); font-weight: 700;';
-                } else if (opt === userAnswer && !isCorrect) {
-                  btnStyle = 'background: rgba(239, 68, 68, 0.15); border: 2px solid var(--danger); color: var(--danger-text); font-weight: 700;';
-                } else {
-                  btnStyle = 'opacity: 0.55; background: var(--bg-muted); border: 1px solid var(--border-color);';
-                }
-              }
-
-              return `
-                <button class="btn btn-secondary review-option-btn" 
-                        style="padding: 1rem 1.25rem; text-align: left; justify-content: flex-start; font-size: 0.975rem; font-weight: 600; border-radius: var(--radius-md); transition: all 0.2s ease; ${btnStyle}"
-                        ${isVocabAnswered ? 'disabled' : ''}
-                        onclick="window.submitVocabModalChoice('${opt.replace(/'/g, "\\'")}', ${optIdx})">
-                  <span style="background: var(--bg-muted); border-radius: 4px; padding: 0.15rem 0.45rem; font-size: 0.75rem; margin-right: 0.65rem; font-family: var(--font-mono); color: var(--text-muted);">${optIdx + 1}</span>
-                  <span>${opt}</span>
-                </button>
-              `;
-            }).join('')}
-          </div>
-        ` : `
-          <div style="display: flex; gap: 0.75rem; max-width: 500px; margin-bottom: 1rem;">
-            <input type="text" id="vocab-modal-spelling-input" class="search-input" 
-                   placeholder="Gõ từ tiếng Anh vào đây..." 
-                   autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                   ${isVocabAnswered ? 'disabled' : ''}
-                   onkeydown="if (event.key === 'Enter') window.submitVocabModalTextInput()"
-                   style="font-size: 1.1rem; padding: 0.85rem 1rem; font-weight: 700; color: var(--primary);" />
-            <button class="btn btn-primary" ${isVocabAnswered ? 'disabled' : ''} onclick="window.submitVocabModalTextInput()" style="font-weight: 700; padding: 0 1.5rem;">
-              Kiểm Tra
-            </button>
-          </div>
-        `}
-
-        <!-- Detailed Feedback Area Unfolded After Answer -->
-        ${isVocabAnswered ? `
-          <div class="card animate-fade-in" style="margin-top: 1.25rem; border-left: 5px solid ${isCorrect ? 'var(--success, #10b981)' : 'var(--danger, #ef4444)'}; padding: 1.25rem 1.5rem; background: ${isCorrect ? 'rgba(16, 185, 129, 0.05)' : 'rgba(239, 68, 68, 0.05)'};">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <i data-lucide="${isCorrect ? 'check-circle' : 'alert-circle'}" style="width: 22px; height: 22px; color: ${isCorrect ? 'var(--success, #10b981)' : 'var(--danger, #ef4444)'};"></i>
-                <strong style="font-size: 1.05rem; color: ${isCorrect ? 'var(--success-text, #059669)' : 'var(--danger-text, #dc2626)'};">
-                  ${isCorrect ? 'Chính Xác!' : 'Chưa Chính Xác!'}
-                </strong>
-              </div>
-              <span style="font-size: 0.85rem; color: var(--text-muted);">
-                Đã làm: <strong>${vocabSessionStats.totalAnswered}</strong> • Đúng: <strong style="color: var(--success);">${vocabSessionStats.correct}</strong> (${percent}%)
-              </span>
-            </div>
-
-            <div style="font-size: 0.925rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.6;">
-              ${q.explanation || `${w.word}: ${w.meaningVn}`}
-              ${w.example ? `<div style="margin-top: 0.4rem; color: var(--text-secondary); font-style: italic;"><strong>Ví dụ:</strong> "${w.example}"</div>` : ''}
-              ${w.exampleVn ? `<div style="color: var(--text-muted); font-size: 0.85rem;">➔ ${w.exampleVn}</div>` : ''}
-              ${w.collocations ? `<div style="margin-top: 0.3rem; color: var(--secondary); font-weight: 600; font-size: 0.85rem;"><strong>Collocations:</strong> ${w.collocations}</div>` : ''}
-            </div>
-
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
-              <button class="btn btn-secondary btn-sm" onclick="window.speakVocab('${w.word}')" style="display: inline-flex; align-items: center; gap: 0.4rem;">
-                <i data-lucide="volume-2" style="width: 15px; height: 15px;"></i> Nghe Phát Âm (/ ${w.phonetic || w.word} /)
-              </button>
-
-              <button class="btn btn-primary" onclick="window.nextVocabModalQuestion()" style="font-weight: 700; padding: 0.65rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-md);">
-                <span>Câu Tiếp Theo</span>
-                <kbd style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem;">Enter ↵</kbd>
-              </button>
-            </div>
-          </div>
-        ` : ''}
+      <!-- Modal Content Body -->
+      <div style="padding: 1.5rem 1.75rem; overflow-y: auto; flex: 1;">
+        ${FlashcardTestComponent.render()}
       </div>
     </div>
   `;
 
   if (window.lucide) window.lucide.createIcons();
-  if (q.type === 'text_input' && !isVocabAnswered) {
-    setTimeout(() => {
-      const input = document.getElementById('vocab-modal-spelling-input');
-      if (input) input.focus();
-    }, 50);
-  }
 }
 
 function renderTopicsTab(currentTopic) {
