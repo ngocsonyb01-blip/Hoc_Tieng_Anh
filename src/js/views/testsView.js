@@ -473,17 +473,17 @@ function renderExamSelectionLobby() {
       <!-- Section Title & Instructions -->
       <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
         <div>
-          <h2 style="margin: 0; color: var(--text-primary); font-size: 1.5rem;">Danh Sách Đề</h2>
-          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">
-            Chọn một bộ đề bên dưới để bắt đầu làm bài thi mô phỏng 4 kỹ năng VSTEP.
+          <h2 style="margin: 0; color: var(--text-primary); font-size: 1.4rem;">Danh Sách Đề Thi</h2>
+          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.875rem;">
+            Chọn đề thi 4 kỹ năng chuẩn định dạng VSTEP.
           </p>
         </div>
-        <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-          <button class="btn btn-secondary btn-sm" onclick="window.openPracticeHistoryModal()" style="display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; padding: 0.45rem 0.95rem;">
-            <i data-lucide="history" style="width: 15px; height: 15px;"></i>
-            <span>Lịch Sử Luyện Tập (${allHistory.length})</span>
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.openPracticeHistoryModal()" style="display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; padding: 0.4rem 0.85rem;">
+            <i data-lucide="history" style="width: 14px; height: 14px;"></i>
+            <span>Lịch Sử (${allHistory.length})</span>
           </button>
-          <span class="badge badge-secondary" style="font-size: 0.9rem; font-weight: 700;">${authenticVstepExams.length} Bộ Đề Chuẩn Hóa</span>
+          <span class="badge badge-secondary" style="font-size: 0.85rem; font-weight: 700;">${authenticVstepExams.length} Đề</span>
         </div>
       </div>
 

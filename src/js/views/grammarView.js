@@ -91,8 +91,8 @@ export function renderGrammarView(selectedTopicId = null) {
     <div class="grammar-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Giáo Trình Ngữ Pháp Tiếng Anh VSTEP B1 (14 Chuyên Đề Toàn Diện)</h2>
-          <p>Lý thuyết bài bản, công thức cấu trúc màu sắc, bảng tra cứu ngữ pháp, sơ đồ câu và ví dụ song ngữ chi tiết</p>
+          <h2>Ngữ Pháp</h2>
+          <p>14 chuyên đề ngữ pháp trọng tâm kèm ví dụ và bài tập</p>
         </div>
       </div>
 
@@ -440,7 +440,7 @@ function renderSpecificGrammarModule(topic) {
           </ol>
         </div>
 
-        <h4 style="color: var(--secondary); margin-bottom: 1rem;">Ma Trận Chuyển Đổi Bị Động Toàn Diện Các Thì (Tense Matrix)</h4>
+        <h4 style="color: var(--secondary); margin-bottom: 1rem;">Chuyển Đổi Bị Động Theo Các Thì</h4>
         <div style="overflow-x: auto; margin-bottom: 1.5rem;">
           <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
             <thead>

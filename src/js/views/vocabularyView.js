@@ -102,15 +102,15 @@ export function renderVocabularyView() {
     <div class="vocabulary-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Bách Khoa Toàn Thư Từ Vựng VSTEP B1 (3.700+ Mục Từ)</h2>
-          <p>42 Chủ Điểm 2.940 từ, 400 Động từ Bất quy tắc, 150 Phrasal Verbs, 180 Collocations & 130 Word Families</p>
+          <h2>Từ Vựng</h2>
+          <p>Từ vựng theo chủ điểm, động từ bất quy tắc, cụm động từ và gia đình từ</p>
         </div>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
           <button class="btn ${activeTab === 'topics' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleVocabTabChange('topics')">
-            <i data-lucide="grid"></i> 42 Chủ Điểm (${allVocabulary.length})
+            <i data-lucide="grid"></i> Chủ Điểm (${allVocabulary.length})
           </button>
           <button class="btn ${activeTab === 'irregular' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleVocabTabChange('irregular')">
-            <i data-lucide="zap"></i> Động Từ Bất Quy Tắc (${irregularVerbs.length})
+            <i data-lucide="zap"></i> Bất Quy Tắc (${irregularVerbs.length})
           </button>
           <button class="btn ${activeTab === 'phrasal' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleVocabTabChange('phrasal')">
             Phrasal Verbs (${phrasalVerbs.length})
@@ -297,8 +297,8 @@ function renderPhrasalTab() {
   return `
     <div>
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>175 Cụm Động Từ (Phrasal Verbs) Xuất Hiện Trong VSTEP B1</h3>
-        <p>Tổng hợp các cụm động từ quan trọng nhất cho kỹ năng Listening, Reading và Writing</p>
+        <h3>Cụm Động Từ (Phrasal Verbs)</h3>
+        <p>Các cụm động từ thường gặp trong bài thi VSTEP</p>
       </div>
       <div class="grid-auto">
         ${phrasalVerbs.map(pv => `
@@ -325,8 +325,8 @@ function renderCollocationsTab() {
   return `
     <div>
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>280 Cụm Từ Cố Định (Collocations) Chuẩn B1</h3>
-        <p>Giúp câu văn tự nhiên, chính xác và đạt điểm tối đa trong Writing & Speaking</p>
+        <h3>Cụm Từ Cố Định (Collocations)</h3>
+        <p>Các cụm từ cố định giúp diễn đạt tự nhiên trong bài thi</p>
       </div>
       <div class="grid-auto">
         ${collocations.map(col => `
@@ -352,8 +352,8 @@ function renderFamiliesTab() {
   return `
     <div>
       <div class="card" style="margin-bottom: 1.5rem;">
-        <h3>130 Gia Đình Từ (Word Families) VSTEP B1</h3>
-        <p>Bảng biến đổi từ Noun - Verb - Adjective - Adverb để làm tốt phần điền từ và đọc hiểu</p>
+        <h3>Gia Đình Từ (Word Families)</h3>
+        <p>Bảng biến đổi dạng Noun - Verb - Adjective - Adverb</p>
       </div>
       <div class="card" style="overflow-x: auto; padding: 0;">
         <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
@@ -457,10 +457,10 @@ function renderIrregularTab() {
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
           <div>
             <h3 style="color: var(--primary); margin: 0 0 0.25rem 0; font-size: 1.35rem;">
-              Bảng 400 Động Từ Bất Quy Tắc Tiếng Anh Toàn Diện (V1 - V2 - V3)
+              Động Từ Bất Quy Tắc (V1 - V2 - V3)
             </h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.925rem;">
-              Tra cứu nhanh chóng, có phiên âm IPA quốc tế, phát âm audio từng thì & ví dụ câu ngữ cảnh VSTEP B1-B2.
+            <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">
+              Tra cứu 3 dạng thì kèm phiên âm IPA và audio phát âm.
             </p>
           </div>
 

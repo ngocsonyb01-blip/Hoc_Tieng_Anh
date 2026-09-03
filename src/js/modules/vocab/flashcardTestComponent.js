@@ -359,22 +359,22 @@ export class FlashcardTestComponent {
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <span class="badge badge-primary" style="font-weight: 700;">Học & Kiểm Tra Thích Ứng</span>
-                <span class="badge badge-success">Không Trùng Lặp Từ</span>
+                <span class="badge badge-primary" style="font-weight: 700;">Ôn Tập & Kiểm Tra</span>
+                <span class="badge badge-success">Flashcard Thích Ứng</span>
               </div>
-              <h3 style="color: var(--primary); margin: 0 0 0.4rem 0; font-size: 1.55rem;">
-                Gói Flashcard Ôn Tập & Kiểm Tra Kiến Thức VSTEP B1
+              <h3 style="color: var(--primary); margin: 0 0 0.35rem 0; font-size: 1.4rem;">
+                Flashcard & Kiểm Tra Từ Vựng
               </h3>
-              <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
-                Tạo gói từ vựng ngẫu nhiên theo chủ đề bạn chọn, lật thẻ flashcard 3D để ghi nhớ và làm bài kiểm tra trắc nghiệm đánh giá trình độ.
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+                Tạo gói từ ngẫu nhiên theo chủ đề để lật thẻ và làm bài kiểm tra trắc nghiệm.
               </p>
             </div>
 
             <!-- Action: Create Pack Button -->
-            <button class="btn btn-primary" style="padding: 0.85rem 1.6rem; font-weight: 700; font-size: 1rem; border-radius: var(--radius-full); box-shadow: 0 8px 20px rgba(37,99,235,0.35); display: inline-flex; align-items: center; gap: 0.5rem;"
+            <button class="btn btn-primary" style="padding: 0.75rem 1.4rem; font-weight: 700; font-size: 0.95rem; border-radius: var(--radius-full); box-shadow: 0 8px 20px rgba(37,99,235,0.35); display: inline-flex; align-items: center; gap: 0.4rem;"
                     onclick="window.openCreatePackView()">
               <i data-lucide="plus-circle"></i>
-              <span>Tạo Gói Flashcard Mới</span>
+              <span>Tạo Gói Mới</span>
             </button>
           </div>
 

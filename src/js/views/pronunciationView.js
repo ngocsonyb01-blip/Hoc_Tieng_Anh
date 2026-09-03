@@ -45,21 +45,21 @@ export function renderPronunciationView() {
     <div class="pronunciation-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Ngữ Âm Chuẩn Hóa & Ngữ Điệu Quốc Tế (Phonetics & IPA)</h2>
-          <p>Hệ thống 44 âm IPA chuẩn quốc tế, 10 quy tắc trọng âm từ bất biến, 5 hiện tượng nối âm thực chiến & khắc phục 10 lỗi phát âm kinh điển</p>
+          <h2>Phát Âm & Ngữ Âm</h2>
+          <p>Học phát âm 44 âm IPA, trọng âm, nối âm và sửa lỗi phát âm</p>
         </div>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
           <button class="btn ${activePronTab === 'ipa' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handlePronTabChange('ipa')">
-            <i data-lucide="grid"></i> Bảng 44 Âm IPA
+            <i data-lucide="grid"></i> Bảng IPA (44)
           </button>
           <button class="btn ${activePronTab === 'stress' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handlePronTabChange('stress')">
-            <i data-lucide="zap"></i> 10 Quy Tắc Trọng Âm & Ngữ Điệu
+            <i data-lucide="zap"></i> Trọng Âm
           </button>
           <button class="btn ${activePronTab === 'connected' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handlePronTabChange('connected')">
-            <i data-lucide="link"></i> 5 Hiện Tượng Nối Âm
+            <i data-lucide="link"></i> Nối Âm
           </button>
           <button class="btn ${activePronTab === 'mistakes' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handlePronTabChange('mistakes')">
-            <i data-lucide="alert-triangle"></i> Sửa 10 Lỗi Người Việt
+            <i data-lucide="alert-triangle"></i> Lỗi Phát Âm
           </button>
         </div>
       </div>

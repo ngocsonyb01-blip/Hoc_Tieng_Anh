@@ -91,17 +91,17 @@ export function renderDashboard() {
       <!-- Hero Section -->
       <div class="hero-card">
         <div style="max-width: 750px;">
-          <span class="badge badge-warning" style="margin-bottom: 1rem;">Hệ Thống Giáo Trình Điện Tử VSTEP B1</span>
-          <h1 style="font-size: 2.3rem; margin-bottom: 1rem; font-weight: 800;">Luyện Thi & Nắm Vững Toàn Diện Tiếng Anh VSTEP B1</h1>
-          <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.75rem;">
-            Chương trình đào tạo toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết cùng Ngữ pháp, Phát âm IPA và 2.940+ từ vựng trọng tâm theo chuẩn Khung năng lực 6 bậc Việt Nam.
+          <span class="badge badge-warning" style="margin-bottom: 0.75rem;">Luyện Thi VSTEP</span>
+          <h1 style="font-size: 2rem; margin-bottom: 0.75rem; font-weight: 800;">Luyện Thi Tiếng Anh VSTEP</h1>
+          <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 1.5rem; line-height: 1.6;">
+            Ôn luyện toàn diện Ngữ pháp, Từ vựng, 4 kỹ năng Nghe - Nói - Đọc - Viết và thi thử trực tuyến.
           </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a href="#vocabulary" class="btn btn-primary" style="background: #ffffff; color: var(--primary);">
-              <i data-lucide="book-open"></i> Học 2.940+ Từ Vựng
+              <i data-lucide="book-open"></i> Học Từ Vựng
             </a>
             <a href="#tests" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">
-              <i data-lucide="award"></i> Thi Thử Mock Test
+              <i data-lucide="award"></i> Thi Thử
             </a>
           </div>
         </div>
@@ -152,8 +152,8 @@ export function renderDashboard() {
             <i data-lucide="book-marked" style="width: 26px; height: 26px;"></i>
           </div>
           <div>
-            <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-heading);">Bản Đồ Ngữ Pháp</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">14 Chuyên Đề Cốt Lõi B1</div>
+            <div style="font-size: 1.2rem; font-weight: 800; font-family: var(--font-heading);">Ngữ Pháp</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">14 Chuyên Đề</div>
           </div>
         </div>
 
@@ -162,8 +162,8 @@ export function renderDashboard() {
             <i data-lucide="sparkles" style="width: 26px; height: 26px;"></i>
           </div>
           <div>
-            <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-heading);">Bách Khoa Từ Vựng</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">2.940+ Từ • 42 Chủ Điểm</div>
+            <div style="font-size: 1.2rem; font-weight: 800; font-family: var(--font-heading);">Từ Vựng</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">42 Chủ Điểm</div>
           </div>
         </div>
 
@@ -172,8 +172,8 @@ export function renderDashboard() {
             <i data-lucide="volume-2" style="width: 26px; height: 26px;"></i>
           </div>
           <div>
-            <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-heading);">Ngữ Âm Chuẩn Hóa</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">44 Âm IPA & Ngữ Điệu</div>
+            <div style="font-size: 1.2rem; font-weight: 800; font-family: var(--font-heading);">Phát Âm</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">44 Âm IPA</div>
           </div>
         </div>
 
@@ -182,20 +182,20 @@ export function renderDashboard() {
             <i data-lucide="award" style="width: 26px; height: 26px;"></i>
           </div>
           <div>
-            <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-heading);">Phòng Thi VSTEP</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">4 Kỹ Năng Chuẩn Bộ GD&ĐT</div>
+            <div style="font-size: 1.2rem; font-weight: 800; font-family: var(--font-heading);">Thi Thử</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">4 Kỹ Năng</div>
           </div>
         </div>
       </div>
 
       <!-- 4 Skills Specification Section -->
       <div class="card" style="margin-bottom: 2rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
           <div>
-            <h2 style="font-size: 1.5rem;">Cấu Trúc & Thang Điểm Đề Thi VSTEP B1 (Bậc 3/6)</h2>
-            <p style="margin: 0;">Quy chuẩn theo Bộ Giáo dục và Đào tạo - Khung Năng lực Ngoại ngữ 6 bậc Việt Nam</p>
+            <h2 style="font-size: 1.4rem;">Cấu Trúc Đề Thi VSTEP</h2>
+            <p style="margin: 0; font-size: 0.875rem;">Cấu trúc 4 kỹ năng theo định dạng chuẩn VSTEP</p>
           </div>
-          <span class="badge badge-success">Điểm B1: 4.0 - 5.5 / 10.0</span>
+          <span class="badge badge-success">Thang điểm: 10.0</span>
         </div>
 
         <div class="grid-2">
