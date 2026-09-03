@@ -5,6 +5,7 @@ import { AnalyticsStore } from '../modules/analytics/analyticsStore.js';
 let activeReadingTab = 'passages'; // 'passages' | 'strategies'
 let selectedPassageIndex = 0;
 let readingUserAnswers = {};
+let passageSubmitted = {}; // { [passageIndex]: boolean }
 
 export function renderReadingView() {
   window.handleReadingTabChange = (tab) => {
@@ -14,37 +15,95 @@ export function renderReadingView() {
 
   window.handlePassageSelect = (idx) => {
     selectedPassageIndex = idx;
-    readingUserAnswers = {};
     window.app.renderCurrentView();
   };
 
-  window.selectReadingAnswer = (qId, optionKey, correctKey) => {
+  // Chọn đáp án: chỉ đánh dấu đã chọn, KHÔNG chấm đúng sai ngay lập tức
+  window.selectReadingAnswer = (qId, optionKey) => {
+    if (passageSubmitted[selectedPassageIndex]) return; // Đã nộp bài thì không đổi
+
     readingUserAnswers[qId] = optionKey;
+
+    // Cập nhật DOM tại chỗ nhanh chóng, không giật màn hình
     const qCard = document.getElementById(`rq-${qId}`);
     if (qCard) {
       const options = qCard.querySelectorAll('.quiz-option');
       options.forEach(opt => {
         const key = opt.getAttribute('data-key');
-        opt.className = 'quiz-option';
-        if (key === correctKey) opt.classList.add('correct');
-        if (key === optionKey && optionKey !== correctKey) opt.classList.add('incorrect');
-      });
-      const exp = qCard.querySelector('.quiz-explanation');
-      if (exp) exp.style.display = 'block';
-
-      // Check if all questions in active passage are answered to record session accuracy (quân bình)
-      const currentPassage = (practicePassages && practicePassages[selectedPassageIndex]) || (practicePassages && practicePassages[0]) || {};
-      const pQuestions = currentPassage.questions || [];
-      const answeredCount = pQuestions.filter(q => readingUserAnswers[q.id] !== undefined).length;
-      if (pQuestions.length > 0 && answeredCount === pQuestions.length) {
-        const correctCount = pQuestions.filter(q => readingUserAnswers[q.id] === q.correctAnswer).length;
-        const percent = Math.round((correctCount / pQuestions.length) * 100);
-        AnalyticsStore.recordSession('reading', percent, { source: 'reading_practice', passageIndex: selectedPassageIndex, correctCount, total: pQuestions.length });
-        if (window.showToast) {
-          window.showToast(`🎉 Hoàn thành bài đọc ${selectedPassageIndex + 1}: ${correctCount}/${pQuestions.length} (${percent}%)!`, 'success');
+        if (key === optionKey) {
+          opt.classList.add('selected');
+        } else {
+          opt.classList.remove('selected');
         }
-      }
+      });
     }
+
+    // Cập nhật nút trong bảng điều hướng câu hỏi
+    const navBtn = document.getElementById(`nav-rq-${qId}`);
+    if (navBtn) {
+      navBtn.classList.add('active');
+    }
+
+    // Cập nhật số câu đã chọn trên nút nộp bài
+    const submitBtn = document.getElementById('btn-submit-reading-top');
+    const submitBtnBtm = document.getElementById('btn-submit-reading-btm');
+    const currentPassage = (practicePassages && practicePassages[selectedPassageIndex]) || (practicePassages && practicePassages[0]) || {};
+    const pQuestions = currentPassage.questions || [];
+    const answeredCount = pQuestions.filter(q => readingUserAnswers[q.id] !== undefined).length;
+    if (submitBtn) submitBtn.innerText = `Nộp bài (${answeredCount}/${pQuestions.length})`;
+    if (submitBtnBtm) submitBtnBtm.innerText = `Nộp bài (${answeredCount}/${pQuestions.length})`;
+  };
+
+  // Nộp bài đọc: chỉ khi bấm Nộp mới chấm điểm và hiện giải thích
+  window.submitReadingPassage = () => {
+    const currentPassage = (practicePassages && practicePassages[selectedPassageIndex]) || (practicePassages && practicePassages[0]) || {};
+    const questions = currentPassage.questions || [];
+    const answeredCount = questions.filter(q => readingUserAnswers[q.id] !== undefined).length;
+
+    if (answeredCount === 0) {
+      if (window.showToast) window.showToast('Vui lòng chọn đáp án trước khi nộp bài!', 'warning');
+      return;
+    }
+
+    passageSubmitted[selectedPassageIndex] = true;
+
+    // Tính điểm số thực tế
+    let correctCount = 0;
+    questions.forEach(q => {
+      if (readingUserAnswers[q.id] === q.correctAnswer) {
+        correctCount += 1;
+      }
+    });
+    const percent = Math.round((correctCount / questions.length) * 100);
+
+    // Ghi nhận điểm quân bình vào bản đồ năng lực
+    AnalyticsStore.recordSession('reading', percent, {
+      source: 'reading_practice',
+      passageIndex: selectedPassageIndex,
+      correctCount,
+      total: questions.length
+    });
+
+    if (window.showToast) {
+      window.showToast(`🎉 Kết quả: ${correctCount}/${questions.length} câu đúng (${percent}%)`, 'success');
+    }
+
+    window.app.renderCurrentView(true);
+  };
+
+  // Làm lại bài đọc này
+  window.retryReadingPassage = () => {
+    delete passageSubmitted[selectedPassageIndex];
+    const currentPassage = (practicePassages && practicePassages[selectedPassageIndex]) || (practicePassages && practicePassages[0]) || {};
+    (currentPassage.questions || []).forEach(q => {
+      delete readingUserAnswers[q.id];
+    });
+
+    if (window.showToast) {
+      window.showToast('Đã làm mới bài đọc, bạn có thể làm lại từ đầu.', 'info');
+    }
+
+    window.app.renderCurrentView(true);
   };
 
   // Initialize In-Text Quick Lookup when passage is displayed
@@ -88,6 +147,15 @@ export function renderReadingView() {
 function renderPassagesTab(passage) {
   const paragraphs = passage.paragraphs || (passage.text ? passage.text.split('\n').filter(p => p.trim()) : []);
   const questions = passage.questions || [];
+  const isSubmitted = !!passageSubmitted[selectedPassageIndex];
+  const answeredCount = questions.filter(q => readingUserAnswers[q.id] !== undefined).length;
+  let correctCount = 0;
+  if (isSubmitted) {
+    questions.forEach(q => {
+      if (readingUserAnswers[q.id] === q.correctAnswer) correctCount += 1;
+    });
+  }
+  const percent = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
 
   return `
     <div>
@@ -160,28 +228,68 @@ function renderPassagesTab(passage) {
         <!-- Right Column: Interactive Questions & Trap Analysis -->
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           
-          <!-- Question Quick Navigator -->
+          <!-- Question Quick Navigator & Submit Bar -->
           <div class="card" style="padding: 1rem 1.25rem; background: var(--bg-accent); border-left: 4px solid var(--primary);">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
               <div>
                 <h4 style="margin: 0; font-size: 1rem; color: var(--primary);">Bảng Câu Hỏi (${questions.length} câu)</h4>
-                <span style="font-size: 0.8rem; color: var(--text-secondary);">Nhấp vào số câu để chuyển nhanh</span>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">
+                  ${isSubmitted 
+                    ? `Kết quả: <strong style="color: var(--primary);">${correctCount}/${questions.length} đúng (${percent}%)</strong>`
+                    : `Đã chọn: <strong>${answeredCount}/${questions.length}</strong>`}
+                </span>
               </div>
-              <div style="display: flex; gap: 0.35rem;">
-                ${questions.map((q, qIdx) => `
-                  <button class="tab-btn" style="padding: 0.3rem 0.65rem; font-size: 0.8rem; font-weight: 700;" onclick="window.scrollToQuestion('${q.id}')">
-                    Q${qIdx + 1}
+
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <div style="display: flex; gap: 0.25rem; flex-wrap: wrap;">
+                  ${questions.map((q, qIdx) => {
+                    const hasAnswered = readingUserAnswers[q.id] !== undefined;
+                    const isRight = isSubmitted && readingUserAnswers[q.id] === q.correctAnswer;
+                    const isWrong = isSubmitted && hasAnswered && readingUserAnswers[q.id] !== q.correctAnswer;
+                    let btnColorStyle = '';
+                    if (isSubmitted) {
+                      btnColorStyle = isRight ? 'background: var(--success); color: #fff;' : (isWrong ? 'background: var(--danger); color: #fff;' : '');
+                    } else if (hasAnswered) {
+                      btnColorStyle = 'background: var(--primary); color: #fff;';
+                    }
+                    return `
+                      <button id="nav-rq-${q.id}" class="tab-btn" 
+                              style="padding: 0.25rem 0.55rem; font-size: 0.775rem; font-weight: 700; ${btnColorStyle}" 
+                              onclick="window.scrollToQuestion('${q.id}')">
+                        Q${qIdx + 1}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+
+                ${isSubmitted ? `
+                  <button class="btn btn-secondary btn-sm" onclick="window.retryReadingPassage()" style="font-weight: 600; white-space: nowrap;">
+                    Làm lại
                   </button>
-                `).join('')}
+                ` : `
+                  <button id="btn-submit-reading-top" class="btn btn-primary btn-sm" onclick="window.submitReadingPassage()" style="font-weight: 700; white-space: nowrap;">
+                    Nộp bài ${answeredCount > 0 ? `(${answeredCount}/${questions.length})` : ''}
+                  </button>
+                `}
               </div>
             </div>
           </div>
 
           <!-- Question Cards -->
-          ${questions.map((q, qIdx) => `
-            <div class="card" id="rq-${q.id}" style="padding: 1.75rem; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+          ${questions.map((q, qIdx) => {
+            const userAnswer = readingUserAnswers[q.id];
+            const isCorrect = isSubmitted && userAnswer === q.correctAnswer;
+            const isIncorrect = isSubmitted && userAnswer && userAnswer !== q.correctAnswer;
+
+            return `
+            <div class="card" id="rq-${q.id}" style="padding: 1.75rem; border: 1px solid var(--border-color); ${isSubmitted ? (isCorrect ? 'border-left: 4px solid var(--success);' : 'border-left: 4px solid var(--danger);') : ''} transition: all 0.3s ease;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <span class="badge badge-primary" style="font-weight: 700;">Câu Hỏi ${qIdx + 1}</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="badge badge-primary" style="font-weight: 700;">Câu Hỏi ${qIdx + 1}</span>
+                  ${isSubmitted ? (isCorrect 
+                    ? '<span class="badge badge-success" style="font-weight: 700;">✓ Đúng</span>' 
+                    : '<span class="badge badge-danger" style="font-weight: 700;">✗ Sai</span>') : ''}
+                </div>
                 ${q.questionType ? `<span class="badge badge-muted">${q.questionType}</span>` : ''}
               </div>
 
@@ -191,17 +299,36 @@ function renderPassagesTab(passage) {
 
               <!-- Options List -->
               <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.25rem;">
-                ${(q.options || []).map(opt => `
-                  <div class="quiz-option" data-key="${opt.key}" onclick="window.selectReadingAnswer('${q.id}', '${opt.key}', '${q.correctAnswer}')" 
-                       style="cursor: pointer; padding: 0.85rem 1.15rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.95rem; display: flex; align-items: flex-start; gap: 0.75rem; transition: all var(--transition-fast);">
-                    <span style="font-weight: 800; color: var(--primary); font-family: var(--font-mono);">${opt.key}.</span>
-                    <span style="color: var(--text-primary); line-height: 1.4;">${opt.text}</span>
-                  </div>
-                `).join('')}
+                ${(q.options || []).map(opt => {
+                  let optionClass = 'quiz-option';
+                  let inlineStyle = 'cursor: pointer; padding: 0.85rem 1.15rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.95rem; display: flex; align-items: flex-start; gap: 0.75rem; transition: all var(--transition-fast);';
+
+                  if (isSubmitted) {
+                    inlineStyle += ' cursor: default;';
+                    if (opt.key === q.correctAnswer) {
+                      optionClass += ' correct';
+                    } else if (userAnswer === opt.key && opt.key !== q.correctAnswer) {
+                      optionClass += ' incorrect';
+                    }
+                  } else {
+                    if (userAnswer === opt.key) {
+                      optionClass += ' selected';
+                    }
+                  }
+
+                  return `
+                    <div class="${optionClass}" data-key="${opt.key}" 
+                         ${!isSubmitted ? `onclick="window.selectReadingAnswer('${q.id}', '${opt.key}')"` : ''}
+                         style="${inlineStyle}">
+                      <span style="font-weight: 800; color: var(--primary); font-family: var(--font-mono);">${opt.key}.</span>
+                      <span style="color: var(--text-primary); line-height: 1.4;">${opt.text}</span>
+                    </div>
+                  `;
+                }).join('')}
               </div>
 
-              <!-- Detailed Explanation & Trap Analysis -->
-              <div class="quiz-explanation" style="display: none; background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--success); padding: 1.25rem; border-radius: var(--radius-md); font-size: 0.9rem; line-height: 1.7;">
+              <!-- Detailed Explanation & Trap Analysis (Chỉ hiện khi đã bấm Nộp bài) -->
+              <div class="quiz-explanation" style="${isSubmitted ? 'display: block;' : 'display: none;'} background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--success); padding: 1.25rem; border-radius: var(--radius-md); font-size: 0.9rem; line-height: 1.7;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                   <span class="badge badge-success" style="font-size: 0.85rem;">Đáp Án Đúng: ${q.correctAnswer}</span>
                 </div>
@@ -223,7 +350,33 @@ function renderPassagesTab(passage) {
                 ` : ''}
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
+
+          <!-- Bottom Submit / Result Bar -->
+          <div style="margin-top: 0.5rem; padding: 1.25rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div style="font-weight: 800; font-size: 1rem; color: var(--text-primary);">
+                ${isSubmitted 
+                  ? `Kết quả: ${correctCount}/${questions.length} câu đúng (${percent}%)` 
+                  : `Đã hoàn thành ${answeredCount}/${questions.length} câu hỏi`}
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem;">
+                ${isSubmitted ? 'Bấm "Làm lại" để luyện tập lại từ đầu bài đọc này' : 'Kiểm tra kỹ các đáp án trước khi nộp bài'}
+              </div>
+            </div>
+
+            ${isSubmitted ? `
+              <button class="btn btn-secondary" onclick="window.retryReadingPassage()" style="font-weight: 700; padding: 0.65rem 1.4rem;">
+                Làm lại
+              </button>
+            ` : `
+              <button id="btn-submit-reading-btm" class="btn btn-primary" onclick="window.submitReadingPassage()" style="font-weight: 700; padding: 0.65rem 1.6rem;">
+                Nộp bài ${answeredCount > 0 ? `(${answeredCount}/${questions.length})` : ''}
+              </button>
+            `}
+          </div>
+
         </div>
       </div>
     </div>
