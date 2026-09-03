@@ -114,20 +114,17 @@ function renderPracticeTab() {
           `).join('')}
         </div>
 
-        <!-- Sticky Master Audio Player (Phát toàn bộ bài thi liên tục từ đầu đến cuối) -->
-        <div style="position: sticky; top: 10px; z-index: 99; margin-bottom: 2rem; background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #38bdf8; border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; color: #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.35);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;"><i data-lucide="disc"></i> BĂNG GHI ÂM GỐC VSTEP</span>
-              <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 600;">(Phát liên tục từ đầu đến cuối • 1 giọng chuẩn phòng thi)</span>
-            </div>
+        <!-- Sticky Master Audio Player -->
+        <div style="position: sticky; top: 10px; z-index: 99; margin-bottom: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1rem 1.25rem; box-shadow: var(--shadow-md);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="badge badge-primary"><i data-lucide="disc"></i> Audio Đề ${selectedTestSetIndex + 1}</span>
             <div style="display: flex; gap: 0.35rem;">
-              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p1-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 1 (1-8)</button>
-              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p2-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 2 (9-20)</button>
-              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p3-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem; color: #fff; border-color: rgba(255,255,255,0.2);">Part 3 (21-35)</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p1-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem;">Part 1</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p2-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem;">Part 2</button>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('p3-block').scrollIntoView({behavior: 'smooth'})" style="font-size: 0.75rem; padding: 0.2rem 0.55rem;">Part 3</button>
             </div>
           </div>
-          ${renderAudioPlayerComponent(`lview-full-master-${selectedTestSetIndex}`, testSet.audioUrl, 'Băng Nghe Toàn Bộ Bài Thi (35 Phút)', testSet.audioUrl)}
+          ${renderAudioPlayerComponent(`lview-full-master-${selectedTestSetIndex}`, testSet.audioUrl, `Audio Đề ${selectedTestSetIndex + 1}`, testSet.audioUrl)}
         </div>
 
         <!-- Hiển thị liền mạch toàn bộ 35 câu từ Part 1 đến Part 3 -->

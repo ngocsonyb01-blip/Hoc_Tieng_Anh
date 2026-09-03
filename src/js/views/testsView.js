@@ -923,24 +923,13 @@ function renderExamListening(listening) {
 
   return `
     <div style="display: flex; flex-direction: column; gap: 2rem;">
-      <!-- BĂNG PHÁT TOÀN BỘ BÀI THI NGHE VSTEP CHUẨN PHÒNG THI -->
-      <div class="card" style="background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border-left: 5px solid #38bdf8; padding: 1.5rem 1.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+      <!-- BĂNG PHÁT BÀI THI NGHE VSTEP -->
+      <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-sm);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-              <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;">FORMAT PHÒNG THI CHÍNH THỨC</span>
-            </div>
-            <h4 style="margin: 0; font-size: 1.25rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <i data-lucide="radio" style="color: #38bdf8;"></i>
-              Băng Nghe Toàn Bộ Bài Thi VSTEP
-            </h4>
-          </div>
-          <span style="font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">Tổng 35 Câu • 3 Parts</span>
+          <span class="badge badge-primary"><i data-lucide="disc"></i> Audio Bài Thi Nghe</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">35 Câu • 3 Parts</span>
         </div>
-        <p style="margin: 0 0 1rem 0; font-size: 0.875rem; color: #cbd5e1; line-height: 1.6;">
-          Phát liên tục từ lời giới thiệu chung của giám khảo, quy chế thi, hiệu lệnh đọc đề, âm hiệu kết thúc từng Part như khi ngồi trong phòng thi chính thức tại các trường Đại học.
-        </p>
-        ${renderAudioPlayerComponent('master-listening-full', VstepAudioDirector.buildMasterExamFullAudioScript(currentExam), 'Phát Toàn Bộ Băng Thi Nghe VSTEP (40 Phút)')}
+        ${renderAudioPlayerComponent('master-listening-full', VstepAudioDirector.buildMasterExamFullAudioScript(currentExam), 'Audio Bài Thi Nghe')}
       </div>
 
       <!-- Part 1 -->
