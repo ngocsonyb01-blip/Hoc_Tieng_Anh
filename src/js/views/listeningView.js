@@ -59,15 +59,15 @@ export function renderListeningView() {
     <div class="listening-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Luyện Kỹ Năng Nghe VSTEP B1 (Listening Arena)</h2>
-          <p>Trình phát Audio có thanh thời gian & tạm dừng, 12 kỹ năng vi mô, bài luyện nghe thực tế Part 1, 2, 3 kèm Transcript song ngữ</p>
+          <h2>Luyện Kỹ Năng Nghe</h2>
+          <p>Luyện nghe Part 1, 2, 3 theo cấu trúc VSTEP kèm audio và transcript</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeListeningTab === 'practice' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleListeningTabChange('practice')">
-            <i data-lucide="play-circle"></i> Luyện Đề Thực Chiến (${(listeningPracticeTests.testSets || []).length} Bộ Đề)
+            <i data-lucide="play-circle"></i> Luyện Đề (${(listeningPracticeTests.testSets || []).length})
           </button>
           <button class="btn ${activeListeningTab === 'skills' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleListeningTabChange('skills')">
-            <i data-lucide="compass"></i> 12 Kỹ Năng Vi Mô
+            <i data-lucide="compass"></i> 12 Kỹ Năng
           </button>
         </div>
       </div>
@@ -87,11 +87,11 @@ function renderPracticeTab() {
   return `
     <div>
       <!-- Test Set Selector Carousel -->
-      <div class="tabs-header" style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+      <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">
         ${sets.map((s, idx) => `
-          <button class="tab-btn ${selectedTestSetIndex === idx ? 'active' : ''}" onclick="window.handleListeningSetChange(${idx})" style="white-space: nowrap; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
-            <i data-lucide="disc"></i>
-            <span>${s.title}</span>
+          <button class="tab-btn ${selectedTestSetIndex === idx ? 'active' : ''}" onclick="window.handleListeningSetChange(${idx})" style="white-space: nowrap; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem;">
+            <i data-lucide="disc" style="width: 15px; height: 15px;"></i>
+            <span>Đề ${idx + 1}</span>
           </button>
         `).join('')}
       </div>
@@ -99,13 +99,13 @@ function renderPracticeTab() {
       <!-- Part Selector Carousel -->
       <div class="tabs-header" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; overflow-x: auto;">
         <button class="tab-btn ${selectedPart === 'part1' ? 'active' : ''}" onclick="window.handleListeningPartChange('part1')" style="font-weight: 700; white-space: nowrap;">
-          <i data-lucide="radio"></i> Part 1: 8 Thông Báo Ngắn
+          <i data-lucide="radio"></i> Part 1 (8 câu)
         </button>
         <button class="tab-btn ${selectedPart === 'part2' ? 'active' : ''}" onclick="window.handleListeningPartChange('part2')" style="font-weight: 700; white-space: nowrap;">
-          <i data-lucide="messages-square"></i> Part 2: 3 Hội Thoại Dài (12 Câu)
+          <i data-lucide="messages-square"></i> Part 2 (12 câu)
         </button>
         <button class="tab-btn ${selectedPart === 'part3' ? 'active' : ''}" onclick="window.handleListeningPartChange('part3')" style="font-weight: 700; white-space: nowrap;">
-          <i data-lucide="mic"></i> Part 3: 3 Bài Thuyết Trình (15 Câu)
+          <i data-lucide="mic"></i> Part 3 (15 câu)
         </button>
       </div>
 

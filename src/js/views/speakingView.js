@@ -226,21 +226,21 @@ export function renderSpeakingView() {
     <div class="speaking-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Xưởng Luyện Nói VSTEP B1 Toàn Diện (Speaking Workshop)</h2>
-          <p>Yêu cầu đề thi chuẩn hóa, luyện thu âm riêng từng câu và bài nói mẫu hoàn chỉnh kèm bản dịch tiếng Việt</p>
+          <h2>Luyện Kỹ Năng Nói</h2>
+          <p>Luyện phát âm, thu âm và thi nói theo 3 phần chuẩn đề VSTEP</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeSpeakingPart === 'part1' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleSpeakingPartChange('part1')">
-            <i data-lucide="message-circle"></i> Part 1: Tương Tác Xã Hội (${part1Social.length} Chủ Đề)
+            <i data-lucide="message-circle"></i> Part 1 (${part1Social.length})
           </button>
           <button class="btn ${activeSpeakingPart === 'part2' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleSpeakingPartChange('part2')">
-            <i data-lucide="git-pull-request"></i> Part 2: Thảo Luận Giải Pháp (${part2Solution.length} Tình Huống)
+            <i data-lucide="git-pull-request"></i> Part 2 (${part2Solution.length})
           </button>
           <button class="btn ${activeSpeakingPart === 'part3' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleSpeakingPartChange('part3')">
-            <i data-lucide="share-2"></i> Part 3: Phát Triển Chủ Đề (${part3TopicDev.length} Mind Maps)
+            <i data-lucide="share-2"></i> Part 3 (${part3TopicDev.length})
           </button>
           <button class="btn ${activeSpeakingPart === 'formulas' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleSpeakingPartChange('formulas')">
-            <i data-lucide="sparkles"></i> Bộ Mẫu Câu Phản Xạ
+            <i data-lucide="sparkles"></i> Mẫu Câu
           </button>
         </div>
       </div>

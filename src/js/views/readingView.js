@@ -59,15 +59,15 @@ export function renderReadingView() {
     <div class="reading-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Luyện Kỹ Năng Đọc Hiểu VSTEP B1 (Reading Arena)</h2>
-          <p>Giao diện phân chia 2 cột chuẩn bài thi: Bài đọc học thuật có đánh số đoạn & Bộ câu hỏi phân tích bẫy chi tiết</p>
+          <h2>Luyện Kỹ Năng Đọc</h2>
+          <p>Luyện đọc hiểu theo định dạng bài thi VSTEP kèm phân tích câu hỏi</p>
         </div>
         <div style="display: flex; gap: 0.5rem;">
           <button class="btn ${activeReadingTab === 'passages' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleReadingTabChange('passages')">
-            <i data-lucide="book-open"></i> Bài Đọc Thực Chiến (${practicePassages.length} Bài)
+            <i data-lucide="book-open"></i> Bài Đọc (${practicePassages.length})
           </button>
           <button class="btn ${activeReadingTab === 'strategies' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleReadingTabChange('strategies')">
-            <i data-lucide="crosshair"></i> 9 Chiến Thuật Đọc B1
+            <i data-lucide="crosshair"></i> 9 Chiến Thuật
           </button>
         </div>
       </div>
@@ -84,12 +84,12 @@ function renderPassagesTab(passage) {
   return `
     <div>
       <!-- Passage Selector Carousel -->
-      <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
+      <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">
         ${(practicePassages || []).map((p, idx) => `
           <button class="tab-btn ${idx === selectedPassageIndex ? 'active' : ''}" 
-                  style="white-space: nowrap; font-size: 0.875rem;"
+                  style="white-space: nowrap; font-size: 0.875rem; font-weight: 700;"
                   onclick="window.handlePassageSelect(${idx})">
-            Bài Đọc ${idx + 1}: ${(p.title || '').replace(/^Passage \d+:\s*/, '').substring(0, 30)}...
+            Bài ${idx + 1}
           </button>
         `).join('')}
       </div>

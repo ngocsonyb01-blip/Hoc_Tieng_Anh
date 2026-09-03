@@ -151,18 +151,18 @@ export function renderWritingView() {
     <div class="writing-page animate-fade-in">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2>Xưởng Luyện Viết VSTEP B1 Toàn Diện (Writing Workshop)</h2>
-          <p>Giáo trình điện tử học viết chuẩn: Bài mẫu Task 1 & Task 2 phân tích cú pháp từng câu, cấu trúc liên kết & từ vựng học thuật</p>
+          <h2>Luyện Kỹ Năng Viết</h2>
+          <p>Luyện viết Task 1 (Thư/Email) và Task 2 (Bài luận) theo chuẩn VSTEP</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeWritingTab === 'task1' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleWritingTabChange('task1')">
-            <i data-lucide="mail"></i> Task 1: Thư & Email (${task1Letters.length} Bài Mẫu)
+            <i data-lucide="mail"></i> Task 1: Thư (${task1Letters.length})
           </button>
           <button class="btn ${activeWritingTab === 'task2' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleWritingTabChange('task2')">
-            <i data-lucide="file-text"></i> Task 2: Bài Luận 42 Chủ Đề (${task2Essays.length} Bài)
+            <i data-lucide="file-text"></i> Task 2: Bài Luận (${task2Essays.length})
           </button>
           <button class="btn ${activeWritingTab === 'criteria' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleWritingTabChange('criteria')">
-            <i data-lucide="award"></i> 4 Tiêu Chí Chấm Điểm B1
+            <i data-lucide="award"></i> Tiêu Chí Chấm
           </button>
         </div>
       </div>
