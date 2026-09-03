@@ -695,7 +695,7 @@ export class PartPracticeComponent {
               <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
             </div>
             <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-              ${renderAudioPlayerComponent('p-part1-master-tape', VstepAudioDirector.buildPart1FullAudioScript(p1), 'Phát Toàn Bộ Băng Part 1 (Có Lời Dẫn Giám Khảo & Chime)')}
+              ${renderAudioPlayerComponent('p-part1-master-tape', VstepAudioDirector.buildPart1FullAudioScript(p1), 'Audio Part 1')}
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2rem;">
@@ -722,7 +722,7 @@ export class PartPracticeComponent {
               <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
             </div>
             <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-              ${renderAudioPlayerComponent('p-part2-master-tape', VstepAudioDirector.buildPart2FullAudioScript(p2), 'Phát Toàn Bộ Băng Part 2 (Có Lời Dẫn Giám Khảo & 3 Hội Thoại)')}
+              ${renderAudioPlayerComponent('p-part2-master-tape', VstepAudioDirector.buildPart2FullAudioScript(p2), 'Audio Part 2')}
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2.5rem;">
@@ -733,7 +733,7 @@ export class PartPracticeComponent {
               return `
                 <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
                   <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${conv.title} (Câu ${startQ} - ${endQ})</h4>
-                  ${renderAudioPlayerComponent(`p-lconv-${conv.id}`, script, `Audio ${conv.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                  ${renderAudioPlayerComponent(`p-lconv-${conv.id}`, script, `Audio ${conv.title}`)}
                   <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
                     ${(conv.questions || []).map(q => {
                       qIdx++;
@@ -765,7 +765,7 @@ export class PartPracticeComponent {
               <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
             </div>
             <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-              ${renderAudioPlayerComponent('p-part3-master-tape', VstepAudioDirector.buildPart3FullAudioScript(p3), 'Phát Toàn Bộ Băng Part 3 (Có Lời Dẫn Giám Khảo & 3 Bài Giảng)')}
+              ${renderAudioPlayerComponent('p-part3-master-tape', VstepAudioDirector.buildPart3FullAudioScript(p3), 'Audio Part 3')}
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2.5rem;">
@@ -776,7 +776,7 @@ export class PartPracticeComponent {
               return `
                 <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
                   <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${talk.title} (Câu ${startQ} - ${endQ})</h4>
-                  ${renderAudioPlayerComponent(`p-ltalk-${talk.id}`, script, `Audio ${talk.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                  ${renderAudioPlayerComponent(`p-ltalk-${talk.id}`, script, `Audio ${talk.title}`)}
                   <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
                     ${(talk.questions || []).map(q => {
                       qIdx++;

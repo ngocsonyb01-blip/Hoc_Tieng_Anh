@@ -198,7 +198,7 @@ function renderPart1Section(part1) {
           <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Phát Toàn Bộ Băng Part 1 (Có Lời Dẫn Giám Khảo & Chime)')}
+          ${renderAudioPlayerComponent('lview-p1-master', VstepAudioDirector.buildPart1FullAudioScript(part1), 'Audio Part 1')}
         </div>
       </div>
 
@@ -265,7 +265,7 @@ function renderPart2Section(part2) {
           <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Phát Toàn Bộ Băng Part 2 (Có Lời Dẫn Giám Khảo & 3 Hội Thoại)')}
+          ${renderAudioPlayerComponent('lview-p2-master', VstepAudioDirector.buildPart2FullAudioScript(part2), 'Audio Part 2')}
         </div>
       </div>
 
@@ -330,7 +330,7 @@ function renderPart3Section(part3) {
           <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
         </div>
         <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Phát Toàn Bộ Băng Part 3 (Có Lời Dẫn Giám Khảo & 3 Bài Giảng)')}
+          ${renderAudioPlayerComponent('lview-p3-master', VstepAudioDirector.buildPart3FullAudioScript(part3), 'Audio Part 3')}
         </div>
       </div>
 

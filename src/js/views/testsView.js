@@ -929,11 +929,10 @@ function renderExamListening(listening) {
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
               <span class="badge" style="background: #38bdf8; color: #0f172a; font-weight: 800;">FORMAT PHÒNG THI CHÍNH THỨC</span>
-              <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">Có Lời Dẫn Giám Khảo & Chime Báo</span>
             </div>
             <h4 style="margin: 0; font-size: 1.25rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
               <i data-lucide="radio" style="color: #38bdf8;"></i>
-              Băng Nghe Toàn Bộ Bài Thi VSTEP (Official Master Audio Track)
+              Băng Nghe Toàn Bộ Bài Thi VSTEP
             </h4>
           </div>
           <span style="font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">Tổng 35 Câu • 3 Parts</span>
@@ -956,7 +955,7 @@ function renderExamListening(listening) {
             <span class="badge badge-secondary">8 Câu Hỏi (1 - 8)</span>
           </div>
           <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-            ${renderAudioPlayerComponent('part1-master-tape', VstepAudioDirector.buildPart1FullAudioScript(listening.part1), 'Phát Băng Nghe Part 1 (Có Lời Dẫn Giám Khảo & Câu 1-8)')}
+            ${renderAudioPlayerComponent('part1-master-tape', VstepAudioDirector.buildPart1FullAudioScript(listening.part1), 'Audio Part 1')}
           </div>
         </div>
 
@@ -977,7 +976,7 @@ function renderExamListening(listening) {
             <span class="badge badge-secondary">12 Câu Hỏi (9 - 20)</span>
           </div>
           <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-            ${renderAudioPlayerComponent('part2-master-tape', VstepAudioDirector.buildPart2FullAudioScript(listening.part2), 'Phát Băng Nghe Part 2 (Có Lời Dẫn Giám Khảo & 3 Hội Thoại)')}
+            ${renderAudioPlayerComponent('part2-master-tape', VstepAudioDirector.buildPart2FullAudioScript(listening.part2), 'Audio Part 2')}
           </div>
         </div>
 
@@ -989,7 +988,7 @@ function renderExamListening(listening) {
             const convHtml = `
               <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
                 <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${conv.title} (Câu ${startQ} - ${endQ})</h4>
-                ${renderAudioPlayerComponent(`lconv-${conv.id}`, script, `Audio ${conv.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                ${renderAudioPlayerComponent(`lconv-${conv.id}`, script, `Audio ${conv.title}`)}
                 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
                   ${conv.questions.map(q => {
@@ -1016,7 +1015,7 @@ function renderExamListening(listening) {
             <span class="badge badge-secondary">15 Câu Hỏi (21 - 35)</span>
           </div>
           <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color);">
-            ${renderAudioPlayerComponent('part3-master-tape', VstepAudioDirector.buildPart3FullAudioScript(listening.part3), 'Phát Băng Nghe Part 3 (Có Lời Dẫn Giám Khảo & 3 Bài Giảng)')}
+            ${renderAudioPlayerComponent('part3-master-tape', VstepAudioDirector.buildPart3FullAudioScript(listening.part3), 'Audio Part 3')}
           </div>
         </div>
 
@@ -1028,7 +1027,7 @@ function renderExamListening(listening) {
             const talkHtml = `
               <div style="background: var(--bg-muted); padding: 1.5rem; border-radius: var(--radius-lg);">
                 <h4 style="color: var(--primary); margin: 0 0 1rem 0;">${talk.title} (Câu ${startQ} - ${endQ})</h4>
-                ${renderAudioPlayerComponent(`ltalk-${talk.id}`, script, `Audio ${talk.title} (Có Lời Dẫn Chuẩn VSTEP)`)}
+                ${renderAudioPlayerComponent(`ltalk-${talk.id}`, script, `Audio ${talk.title}`)}
                 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
                   ${talk.questions.map(q => {
