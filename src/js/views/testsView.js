@@ -514,8 +514,7 @@ function renderExamSelectionLobby() {
                 </div>
               </div>
 
-              <h3 style="color: var(--text-primary); font-size: 1.25rem; margin: 0 0 0.5rem 0; line-height: 1.4;">Đề Thi Số 0${idx + 1}</h3>
-              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;">Đề thi 4 kỹ năng chuẩn định dạng VSTEP (Nghe 35 câu, Đọc 40 câu, Viết 2 bài, Nói 3 phần).</p>
+              <h3 style="color: var(--text-primary); font-size: 1.25rem; margin: 0 0 1rem 0; line-height: 1.4;">Đề Thi Số 0${idx + 1}</h3>
 
               <!-- Skill Structure Badges -->
               <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
