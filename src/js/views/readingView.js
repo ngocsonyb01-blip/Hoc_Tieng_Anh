@@ -177,7 +177,7 @@ function renderPassagesTab(passage) {
         <div class="card" style="padding: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: var(--shadow-md); position: sticky; top: 1rem; max-height: calc(100vh - 120px); overflow-y: auto;">
           <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-              <span class="badge badge-primary" style="font-weight: 700;">VSTEP B1 Reading • Passage ${selectedPassageIndex + 1}</span>
+              <span class="badge badge-primary" style="font-weight: 700;">Bài Đọc ${selectedPassageIndex + 1}</span>
               <span class="badge badge-secondary">${passage.genre || 'Academic Text'}</span>
             </div>
             <h3 style="font-size: 1.35rem; color: var(--text-primary); margin: 0 0 0.5rem 0; line-height: 1.4;">

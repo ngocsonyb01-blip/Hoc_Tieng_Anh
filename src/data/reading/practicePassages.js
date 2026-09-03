@@ -8,7 +8,7 @@ export const READING_PASSAGES_DATA = {
   "passages": [
   {
     "id": "reading-p1",
-    "title": "Passage 1: The Revolution of Artificial Intelligence in Modern Healthcare",
+    "title": "The Revolution of Artificial Intelligence in Modern Healthcare",
     "genre": "Academic & Technological Article",
     "level": "VSTEP B1",
     "wordCount": 380,
@@ -98,7 +98,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t2-p1",
-    "title": "Đề 2 • Bài 1: William Henry Perkin: The Father of Synthetic Dyes",
+    "title": "William Henry Perkin: The Father of Synthetic Dyes",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 633,
@@ -381,7 +381,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t2-p2",
-    "title": "Đề 2 • Bài 2: Understanding Narcolepsy and Sleep Disorders",
+    "title": "Understanding Narcolepsy and Sleep Disorders",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 297,
@@ -678,7 +678,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t2-p3",
-    "title": "Đề 2 • Bài 3: Early Cinema and the Evolution of Motion Pictures",
+    "title": "Early Cinema and the Evolution of Motion Pictures",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 684,
@@ -953,7 +953,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t2-p4",
-    "title": "Đề 2 • Bài 4: Desert Formation: Causes and Environmental Threats",
+    "title": "Desert Formation: Causes and Environmental Threats",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 750,
@@ -1229,7 +1229,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t3-p1",
-    "title": "Đề 3 • Bài 1: Internet Jobs and the Remote Work Revolution",
+    "title": "Internet Jobs and the Remote Work Revolution",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 445,
@@ -1529,7 +1529,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t3-p2",
-    "title": "Đề 3 • Bài 2: If Statues Could Talk: The Enigma of Easter Island",
+    "title": "If Statues Could Talk: The Enigma of Easter Island",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 437,
@@ -1830,7 +1830,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t3-p3",
-    "title": "Đề 3 • Bài 3: Culture and Society: Human Behavior and Adaptation",
+    "title": "Culture and Society: Human Behavior and Adaptation",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 418,
@@ -2127,7 +2127,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t3-p4",
-    "title": "Đề 3 • Bài 4: Artisans and Industrialization: The Transformation of Labor",
+    "title": "Artisans and Industrialization: The Transformation of Labor",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 680,
@@ -2427,7 +2427,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t4-p1",
-    "title": "Đề 4 • Bài 1: The Evolution of Environmental Conservation",
+    "title": "The Evolution of Environmental Conservation",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 494,
@@ -2725,7 +2725,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t4-p2",
-    "title": "Đề 4 • Bài 2: The Rise and Characteristics of Human Civilization",
+    "title": "The Rise and Characteristics of Human Civilization",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 463,
@@ -3023,7 +3023,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t4-p3",
-    "title": "Đề 4 • Bài 3: The Story of Silk: Ancient Trade and Production Secrets",
+    "title": "The Story of Silk: Ancient Trade and Production Secrets",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 462,
@@ -3323,7 +3323,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t4-p4",
-    "title": "Đề 4 • Bài 4: Modern Communication and Cognitive Psychology",
+    "title": "Modern Communication and Cognitive Psychology",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 522,
@@ -3621,7 +3621,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t5-p1",
-    "title": "Đề 5 • Bài 1: Education and Identification of Gifted Students",
+    "title": "Education and Identification of Gifted Students",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 348,
@@ -3919,7 +3919,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t5-p2",
-    "title": "Đề 5 • Bài 2: Land Diving: The Ancient Ritual of Pentecost Island",
+    "title": "Land Diving: The Ancient Ritual of Pentecost Island",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 487,
@@ -4222,7 +4222,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t5-p3",
-    "title": "Đề 5 • Bài 3: Agricultural Expansion: Clearing Land for Modern Farms",
+    "title": "Agricultural Expansion: Clearing Land for Modern Farms",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 495,
@@ -4523,7 +4523,7 @@ export const READING_PASSAGES_DATA = {
   },
   {
     "id": "reading-t5-p4",
-    "title": "Đề 5 • Bài 4: The Perfect Wedding: Cultural Customs and Celebrations",
+    "title": "The Perfect Wedding: Cultural Customs and Celebrations",
     "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
     "level": "VSTEP B1-B2",
     "wordCount": 607,
