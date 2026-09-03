@@ -103,7 +103,6 @@ export function renderVocabularyView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Từ Vựng</h2>
-          <p>Từ vựng theo chủ điểm, động từ bất quy tắc, cụm động từ và gia đình từ</p>
         </div>
         <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
           <button class="btn ${activeTab === 'topics' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleVocabTabChange('topics')">

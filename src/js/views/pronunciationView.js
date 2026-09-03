@@ -46,7 +46,6 @@ export function renderPronunciationView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Phát Âm & Ngữ Âm</h2>
-          <p>Học phát âm 44 âm IPA, trọng âm, nối âm và sửa lỗi phát âm</p>
         </div>
         <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
           <button class="btn ${activePronTab === 'ipa' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handlePronTabChange('ipa')">

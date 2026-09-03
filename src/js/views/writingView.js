@@ -153,7 +153,6 @@ export function renderWritingView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Luyện Kỹ Năng Viết</h2>
-          <p>Luyện viết Task 1 (Thư/Email) và Task 2 (Bài luận) theo chuẩn VSTEP</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeWritingTab === 'task1' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleWritingTabChange('task1')">

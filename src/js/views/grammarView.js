@@ -95,7 +95,6 @@ export function renderGrammarView(selectedTopicId = null) {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Ngữ Pháp</h2>
-          <p>14 chuyên đề ngữ pháp trọng tâm kèm ví dụ và bài tập</p>
         </div>
       </div>
 

@@ -127,7 +127,6 @@ export function renderReadingView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Luyện Kỹ Năng Đọc</h2>
-          <p>Luyện đọc hiểu theo định dạng bài thi VSTEP kèm phân tích câu hỏi</p>
         </div>
         <div style="display: flex; gap: 0.5rem;">
           <button class="btn ${activeReadingTab === 'passages' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleReadingTabChange('passages')">

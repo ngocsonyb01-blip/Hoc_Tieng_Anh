@@ -73,7 +73,6 @@ export function renderListeningView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Luyện Kỹ Năng Nghe</h2>
-          <p>Luyện nghe Part 1, 2, 3 theo cấu trúc VSTEP kèm audio và transcript</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeListeningTab === 'practice' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleListeningTabChange('practice')">

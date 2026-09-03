@@ -225,7 +225,6 @@ export function renderSpeakingView() {
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h2>Luyện Kỹ Năng Nói</h2>
-          <p>Luyện phát âm, thu âm và thi nói theo 3 phần chuẩn đề VSTEP</p>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button class="btn ${activeSpeakingPart === 'part1' ? 'btn-primary' : 'btn-secondary'}" onclick="window.handleSpeakingPartChange('part1')">
