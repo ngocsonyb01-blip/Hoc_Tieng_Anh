@@ -1,6 +1,6 @@
 /**
  * src/data/reading/practicePassages.js
- * Tuyển tập 20 Bài Đọc Hiểu VSTEP B1-B2 Chuẩn Hóa
+ * Tuyển tập 17 Bài Đọc Hiểu VSTEP B1-B2 Chuẩn Hóa
  * Trích xuất từ Bộ Đề Thi Thật ĐHQG & Sư Phạm (7 VSTEP Tests & 5 Bộ Đề Tháng 5)
  */
 export const READING_PASSAGES_DATA = {
@@ -99,10 +99,11 @@ export const READING_PASSAGES_DATA = {
   {
     "id": "reading-t2-p1",
     "title": "William Henry Perkin: The Father of Synthetic Dyes",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 633,
+    "wordCount": 603,
     "paragraphs": [
+      "William Henry Perkin",
       "The man who invented synthetic dyes",
       "William Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin’s curiosity prompted early interests in the arts, sciences, photography, and engineering.",
       "As a student at the City of London School, Perkin became interested in the study of chemistry. His talent and devotion to the subject were perceived by his teacher, Thomas Hall, who encouraged him to attend a series of lectures given by the scientist Michael Faraday. Those speeches fired the young chemist’s enthusiasm further, and he later went on to attend the Royal College of Chemistry in 1853, at the age of 15.",
@@ -112,14 +113,9 @@ export const READING_PASSAGES_DATA = {
       "Historically, textile dyes were made from such natural sources as plants and animal excretions. Some of these were difficult to obtain and very expensive. Indeed, the purple colour extracted from a snail was once so costly that in society at the time only the rich could afford it. Further, natural dyes tended to be muddy in hue and fade quickly. These are different from the color Perkin had produced.",
       "Perkin quickly realized that his purple solution could be used to colour fabric, thus making it the world’s first synthetic dye.   Perkin originally named his dye Tyrian Purple, but it later became commonly known as mauve (from the French for the plant used to make the colour violet). He asked advice of Scottish dye works owner Robert Pullar, who assured him that manufacturing the dye would be well worth it if the colour would not fade and the cost was relatively low. So, he left college to give birth to the modern chemical industry.",
       "With the help of his father and brother, Perkin set up a factory not far from London.  The company received a commercial boost from a businesswoman from France, Empress Eugenie. Very soon, mauve was the necessary shade for all the fashionable ladies in that country.",
-      "Although Perkin’s fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin’s green. The dyes also became vital to medical research in many different ways. For instance, they were used to stain previously invisible bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today, especially in their current use in the search for a vaccine against malaria.",
-      "What is true about Perkin's childhood?",
-      "A. He hated science",
-      "B. He was forced to go to school by his parents",
-      "C. He was an orphan",
-      "D. He was soon keen on science"
+      "Although Perkin’s fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin’s green. The dyes also became vital to medical research in many different ways. For instance, they were used to stain previously invisible bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today, especially in their current use in the search for a vaccine against malaria."
     ],
-    "text": "The man who invented synthetic dyes\n\nWilliam Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin’s curiosity prompted early interests in the arts, sciences, photography, and engineering.\n\nAs a student at the City of London School, Perkin became interested in the study of chemistry. His talent and devotion to the subject were perceived by his teacher, Thomas Hall, who encouraged him to attend a series of lectures given by the scientist Michael Faraday. Those speeches fired the young chemist’s enthusiasm further, and he later went on to attend the Royal College of Chemistry in 1853, at the age of 15.\n\nAt the time of Perkin’s enrolment, the Royal College of Chemistry was headed by the German chemist August Wilhelm Hofmann. Perkin’s scientific talent soon caught Hofmann’s attention and, within two years, he became Hofmann’s youngest assistant. Not long after that, Perkin made the scientific breakthrough that would bring him both fame and fortune.\n\nAt the time, quinine was the only medical treatment for malaria. The drug is derived from the bark of a native tree in South America, and by 1856 demand for the drug was surpassing the available supply. Thus, when Hofmann made some passing comments about the need of a synthetic substitute for quinine, it was unsurprising that Perkin was moved to take up the challenge.\n\nDuring his vacation in 1856, Perkin spent his time in the laboratory on the top floor of his family’s house. He was attempting to manufacture quinine from aniline. Despite his best efforts, however, he did not make quinine. Instead, he produced a mysterious dark sludge. Luckily, Perkin’s scientific training and nature prompted him to investigate the substance further. He finally produced a deep purple solution. And, Perkin saw the potential of his unexpected find.\n\nHistorically, textile dyes were made from such natural sources as plants and animal excretions. Some of these were difficult to obtain and very expensive. Indeed, the purple colour extracted from a snail was once so costly that in society at the time only the rich could afford it. Further, natural dyes tended to be muddy in hue and fade quickly. These are different from the color Perkin had produced.\n\nPerkin quickly realized that his purple solution could be used to colour fabric, thus making it the world’s first synthetic dye.   Perkin originally named his dye Tyrian Purple, but it later became commonly known as mauve (from the French for the plant used to make the colour violet). He asked advice of Scottish dye works owner Robert Pullar, who assured him that manufacturing the dye would be well worth it if the colour would not fade and the cost was relatively low. So, he left college to give birth to the modern chemical industry.\n\nWith the help of his father and brother, Perkin set up a factory not far from London.  The company received a commercial boost from a businesswoman from France, Empress Eugenie. Very soon, mauve was the necessary shade for all the fashionable ladies in that country.\n\nAlthough Perkin’s fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin’s green. The dyes also became vital to medical research in many different ways. For instance, they were used to stain previously invisible bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today, especially in their current use in the search for a vaccine against malaria.\n\nWhat is true about Perkin's childhood?\n\nA. He hated science\n\nB. He was forced to go to school by his parents\n\nC. He was an orphan\n\nD. He was soon keen on science",
+    "text": "William Henry Perkin\n\nThe man who invented synthetic dyes\n\nWilliam Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin’s curiosity prompted early interests in the arts, sciences, photography, and engineering.\n\nAs a student at the City of London School, Perkin became interested in the study of chemistry. His talent and devotion to the subject were perceived by his teacher, Thomas Hall, who encouraged him to attend a series of lectures given by the scientist Michael Faraday. Those speeches fired the young chemist’s enthusiasm further, and he later went on to attend the Royal College of Chemistry in 1853, at the age of 15.\n\nAt the time of Perkin’s enrolment, the Royal College of Chemistry was headed by the German chemist August Wilhelm Hofmann. Perkin’s scientific talent soon caught Hofmann’s attention and, within two years, he became Hofmann’s youngest assistant. Not long after that, Perkin made the scientific breakthrough that would bring him both fame and fortune.\n\nAt the time, quinine was the only medical treatment for malaria. The drug is derived from the bark of a native tree in South America, and by 1856 demand for the drug was surpassing the available supply. Thus, when Hofmann made some passing comments about the need of a synthetic substitute for quinine, it was unsurprising that Perkin was moved to take up the challenge.\n\nDuring his vacation in 1856, Perkin spent his time in the laboratory on the top floor of his family’s house. He was attempting to manufacture quinine from aniline. Despite his best efforts, however, he did not make quinine. Instead, he produced a mysterious dark sludge. Luckily, Perkin’s scientific training and nature prompted him to investigate the substance further. He finally produced a deep purple solution. And, Perkin saw the potential of his unexpected find.\n\nHistorically, textile dyes were made from such natural sources as plants and animal excretions. Some of these were difficult to obtain and very expensive. Indeed, the purple colour extracted from a snail was once so costly that in society at the time only the rich could afford it. Further, natural dyes tended to be muddy in hue and fade quickly. These are different from the color Perkin had produced.\n\nPerkin quickly realized that his purple solution could be used to colour fabric, thus making it the world’s first synthetic dye.   Perkin originally named his dye Tyrian Purple, but it later became commonly known as mauve (from the French for the plant used to make the colour violet). He asked advice of Scottish dye works owner Robert Pullar, who assured him that manufacturing the dye would be well worth it if the colour would not fade and the cost was relatively low. So, he left college to give birth to the modern chemical industry.\n\nWith the help of his father and brother, Perkin set up a factory not far from London.  The company received a commercial boost from a businesswoman from France, Empress Eugenie. Very soon, mauve was the necessary shade for all the fashionable ladies in that country.\n\nAlthough Perkin’s fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin’s green. The dyes also became vital to medical research in many different ways. For instance, they were used to stain previously invisible bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today, especially in their current use in the search for a vaccine against malaria.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -145,6 +141,32 @@ export const READING_PASSAGES_DATA = {
     "questions": [
       {
         "id": 1,
+        "question": "What is true about Perkin's childhood?",
+        "options": [
+          {
+            "key": "A",
+            "text": "He hated science"
+          },
+          {
+            "key": "B",
+            "text": "He was forced to go to school by his parents"
+          },
+          {
+            "key": "C",
+            "text": "He was an orphan"
+          },
+          {
+            "key": "D",
+            "text": "He was soon keen on science"
+          }
+        ],
+        "correctAnswer": "D",
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "William Henry Perkin...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
+      },
+      {
+        "id": 2,
         "question": "What is Perkin's favorite subject?",
         "options": [
           {
@@ -153,11 +175,11 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Chemistry"
           },
           {
             "key": "C",
-            "text": ""
+            "text": "Biology"
           },
           {
             "key": "D",
@@ -165,12 +187,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
         "evidence": "The man who invented synthetic dyes...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 2,
+        "id": 3,
         "question": "Who introduced Perkin to Michael Faraday's lectures?",
         "options": [
           {
@@ -183,7 +205,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "August Wilhelm Hofmann"
           },
           {
             "key": "D",
@@ -191,12 +213,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "William Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin’s curiosity prompted early interes...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "William Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin’s curiosity prompted early interests in the arts, sciences, phot...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 3,
+        "id": 4,
         "question": "What did the scientific breakthrough bring to Perkin?",
         "options": [
           {
@@ -209,46 +231,46 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "A good job"
           },
           {
             "key": "D",
-            "text": ""
+            "text": "A reward"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "As a student at the City of London School, Perkin became interested in the study of chemistry. His talent and devotion t...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "As a student at the City of London School, Perkin became interested in the study of chemistry. His talent and devotion to the subject were perceived b...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 4,
+        "id": 5,
         "question": "What does the word “malaria” in the 4th paragraph refer to?",
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "A kind of animal"
           },
           {
             "key": "B",
-            "text": ""
+            "text": "A disease"
           },
           {
             "key": "C",
-            "text": ""
+            "text": "A species of tree"
           },
           {
             "key": "D",
-            "text": ""
+            "text": "A species of fungus"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "At the time of Perkin’s enrolment, the Royal College of Chemistry was headed by the German chemist August Wilhelm Hofman...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "At the time of Perkin’s enrolment, the Royal College of Chemistry was headed by the German chemist August Wilhelm Hofmann. Perkin’s scientific talent ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 5,
+        "id": 6,
         "question": "What is true about the 5th paragraph",
         "options": [
           {
@@ -269,12 +291,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "At the time, quinine was the only medical treatment for malaria. The drug is derived from the bark of a native tree in S...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "At the time, quinine was the only medical treatment for malaria. The drug is derived from the bark of a native tree in South America, and by 1856 dema...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 6,
+        "id": 7,
         "question": "Why is Perkin's color different?",
         "options": [
           {
@@ -295,12 +317,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "During his vacation in 1856, Perkin spent his time in the laboratory on the top floor of his family’s house. He was atte...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "During his vacation in 1856, Perkin spent his time in the laboratory on the top floor of his family’s house. He was attempting to manufacture quinine ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 7,
+        "id": 8,
         "question": "What was Perkin's first color?",
         "options": [
           {
@@ -321,12 +343,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Historically, textile dyes were made from such natural sources as plants and animal excretions. Some of these were diffi...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Historically, textile dyes were made from such natural sources as plants and animal excretions. Some of these were difficult to obtain and very expens...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 8,
+        "id": 9,
         "question": "What is true about the Perkin factory?",
         "options": [
           {
@@ -347,12 +369,12 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Perkin quickly realized that his purple solution could be used to colour fabric, thus making it the world’s first synthe...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Perkin quickly realized that his purple solution could be used to colour fabric, thus making it the world’s first synthetic dye.   Perkin originally n...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
-        "id": 9,
+        "id": 10,
         "question": "What is true about the last paragraph?",
         "options": [
           {
@@ -373,16 +395,16 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "With the help of his father and brother, Perkin set up a factory not far from London.  The company received a commercial...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "With the help of his father and brother, Perkin set up a factory not far from London.  The company received a commercial boost from a businesswoman fr...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t2-p2",
     "title": "Understanding Narcolepsy and Sleep Disorders",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
     "wordCount": 297,
     "paragraphs": [
@@ -436,9 +458,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Narcolepsy is a disease characterized by malfunctioning sleep mechanics. It can consist of a sudden and uncontrollable b...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Narcolepsy is a disease characterized by malfunctioning sleep mechanics. It can consist of a sudden and uncontrollable bout of sleep during daylight h...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -462,9 +484,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "At least a half million Americans are believed to be affected by narcolepsy. Narcolepsy can take a number of forms durin...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "At least a half million Americans are believed to be affected by narcolepsy. Narcolepsy can take a number of forms during daylight hours. One common s...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -488,9 +510,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -514,9 +536,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -540,9 +562,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -554,7 +576,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Automatic behavior"
           },
           {
             "key": "C",
@@ -566,9 +588,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -576,11 +598,11 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Cataplexy"
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Automatic behavior"
           },
           {
             "key": "C",
@@ -592,9 +614,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -618,9 +640,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -636,7 +658,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "After getting up"
           },
           {
             "key": "D",
@@ -644,9 +666,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -654,11 +676,11 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Cure for Narcolepsy"
           },
           {
             "key": "B",
-            "text": ""
+            "text": "A Good Night's Sleep"
           },
           {
             "key": "C",
@@ -666,23 +688,24 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": ""
+            "text": "An Unusual Sleep Disturbance"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precede...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "During sleep hours, narcolepsy can also manifest itself in a variety of ways. During the transitional phase that precedes the onset of sleep, it is co...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t2-p3",
     "title": "Early Cinema and the Evolution of Motion Pictures",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 684,
+    "wordCount": 686,
     "paragraphs": [
+      "EARLY CINEMA",
       "The cinema did not emerge as a form of mass consumption until its technology evolved from the initial \"peepshow\" format to the point where images were projected on a screen in a darkened theater. In the peepshow format, a film was viewed through a small opening in a machine that was created for that purpose.",
       "Thomas Edison's peepshow device, the Kinetoscope, was introduced to the public in 1894. It was designed for use in Kinetoscope parlors, or arcades, which contained only a few individual machines and permitted only one customer to view a short, 50-foot film at any one time. The first Kinetoscope parlors contained five machines. For the price of 25 cents (or 5 cents per machine), customers moved from machine to machine to watch five different films (or, in the case of famous prizefights, successive rounds of a single fight).",
       "These Kinetoscope arcades were modeled on phonograph parlors, which had proven successful for Edison several years earlier. In the phonograph parlors, customers listened to recordings through individual ear tubes, moving from one machine to the next to hear different recorded speeches or pieces of music. The Kinetoscope parlors functioned in a similar way. Edison was more interested in the sale of Kinetoscopes (for roughly $1,000 apiece) to these parlors than in the films that would be run in them (which cost approximately $10 to $15 each). He refused to develop projection technology, reasoning that if he made and sold projectors, then exhibitors would purchase only one machine — a projector — from him instead of several.",
@@ -691,7 +714,7 @@ export const READING_PASSAGES_DATA = {
       "Although early exhibitors regularly accompanied movies with live acts, the substance of the movies themselves is mass-produced, prerecorded material that can easily be reproduced by theaters with little or no active participation by the exhibitor. Even though early exhibitors shaped their film programs by mixing films and other entertainments together in whichever way they thought would be most attractive to audiences or by accompanying them with lectures, their creative control remained limited. What audiences came to see was the technological marvel of the movies; the lifelike reproduction of the commonplace motion of trains, of waves striking the shore, and of people walking in the street; and the magic made possible by trick photography and the manipulation of the camera.",
       "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earlier peepshow devices such as the Kinetoscope and the Mutoscope, which was a similar machine that reproduced motion by means of successive images on individual photographic cards instead of on strips of celluloid. It suddenly became public - an experience that the viewer shared with dozens, scores, and even hundreds of others. At the same time, the image that the spectator looked at expanded from the minuscule peepshow dimensions of 1or 2 inches (in height) to the life-size proportions of 6 or 9 feet."
     ],
-    "text": "The cinema did not emerge as a form of mass consumption until its technology evolved from the initial \"peepshow\" format to the point where images were projected on a screen in a darkened theater. In the peepshow format, a film was viewed through a small opening in a machine that was created for that purpose.\n\nThomas Edison's peepshow device, the Kinetoscope, was introduced to the public in 1894. It was designed for use in Kinetoscope parlors, or arcades, which contained only a few individual machines and permitted only one customer to view a short, 50-foot film at any one time. The first Kinetoscope parlors contained five machines. For the price of 25 cents (or 5 cents per machine), customers moved from machine to machine to watch five different films (or, in the case of famous prizefights, successive rounds of a single fight).\n\nThese Kinetoscope arcades were modeled on phonograph parlors, which had proven successful for Edison several years earlier. In the phonograph parlors, customers listened to recordings through individual ear tubes, moving from one machine to the next to hear different recorded speeches or pieces of music. The Kinetoscope parlors functioned in a similar way. Edison was more interested in the sale of Kinetoscopes (for roughly $1,000 apiece) to these parlors than in the films that would be run in them (which cost approximately $10 to $15 each). He refused to develop projection technology, reasoning that if he made and sold projectors, then exhibitors would purchase only one machine — a projector — from him instead of several.\n\n[A] Exhibitors, however, wanted to maximize their profits, which they could do more readily by projecting a handful of films to hundreds of customers at a time (rather than one at a time) and by charging 25 to 50 cents admission. [B] About a year after the opening of the first Kinetoscope parlor in 1894, showmen such as Louis and Auguste Lumiere, Thomas Armat and Charles Francis Jenkins, and Orville and Woodville Latham (with the assistance of Edison's former assistant, William Dickson) perfected projection devices. [C] These early projection devices were used in vaudeville theaters, legitimate theaters, local town halls, makeshift storefront theaters, fairgrounds, and amusement parks to show films to a mass audience. [D]\n\nWith the advent of projection in 1895-1896, motion pictures became the ultimate form of mass consumption. Previously, large audiences had viewed spectacles at the theater, where vaudeville, popular dramas, musical and minstrel shows, classical plays, lectures, and slide-and-lantern shows had been presented to several hundred spectators at a time. But the movies differed significantly from these other forms of entertainment, which depended on either live performance or (in the case of the slide and-lantern shows) the active involvement of a master of ceremonies who assembled the final program.\n\nAlthough early exhibitors regularly accompanied movies with live acts, the substance of the movies themselves is mass-produced, prerecorded material that can easily be reproduced by theaters with little or no active participation by the exhibitor. Even though early exhibitors shaped their film programs by mixing films and other entertainments together in whichever way they thought would be most attractive to audiences or by accompanying them with lectures, their creative control remained limited. What audiences came to see was the technological marvel of the movies; the lifelike reproduction of the commonplace motion of trains, of waves striking the shore, and of people walking in the street; and the magic made possible by trick photography and the manipulation of the camera.\n\nWith the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earlier peepshow devices such as the Kinetoscope and the Mutoscope, which was a similar machine that reproduced motion by means of successive images on individual photographic cards instead of on strips of celluloid. It suddenly became public - an experience that the viewer shared with dozens, scores, and even hundreds of others. At the same time, the image that the spectator looked at expanded from the minuscule peepshow dimensions of 1or 2 inches (in height) to the life-size proportions of 6 or 9 feet.",
+    "text": "EARLY CINEMA\n\nThe cinema did not emerge as a form of mass consumption until its technology evolved from the initial \"peepshow\" format to the point where images were projected on a screen in a darkened theater. In the peepshow format, a film was viewed through a small opening in a machine that was created for that purpose.\n\nThomas Edison's peepshow device, the Kinetoscope, was introduced to the public in 1894. It was designed for use in Kinetoscope parlors, or arcades, which contained only a few individual machines and permitted only one customer to view a short, 50-foot film at any one time. The first Kinetoscope parlors contained five machines. For the price of 25 cents (or 5 cents per machine), customers moved from machine to machine to watch five different films (or, in the case of famous prizefights, successive rounds of a single fight).\n\nThese Kinetoscope arcades were modeled on phonograph parlors, which had proven successful for Edison several years earlier. In the phonograph parlors, customers listened to recordings through individual ear tubes, moving from one machine to the next to hear different recorded speeches or pieces of music. The Kinetoscope parlors functioned in a similar way. Edison was more interested in the sale of Kinetoscopes (for roughly $1,000 apiece) to these parlors than in the films that would be run in them (which cost approximately $10 to $15 each). He refused to develop projection technology, reasoning that if he made and sold projectors, then exhibitors would purchase only one machine — a projector — from him instead of several.\n\n[A] Exhibitors, however, wanted to maximize their profits, which they could do more readily by projecting a handful of films to hundreds of customers at a time (rather than one at a time) and by charging 25 to 50 cents admission. [B] About a year after the opening of the first Kinetoscope parlor in 1894, showmen such as Louis and Auguste Lumiere, Thomas Armat and Charles Francis Jenkins, and Orville and Woodville Latham (with the assistance of Edison's former assistant, William Dickson) perfected projection devices. [C] These early projection devices were used in vaudeville theaters, legitimate theaters, local town halls, makeshift storefront theaters, fairgrounds, and amusement parks to show films to a mass audience. [D]\n\nWith the advent of projection in 1895-1896, motion pictures became the ultimate form of mass consumption. Previously, large audiences had viewed spectacles at the theater, where vaudeville, popular dramas, musical and minstrel shows, classical plays, lectures, and slide-and-lantern shows had been presented to several hundred spectators at a time. But the movies differed significantly from these other forms of entertainment, which depended on either live performance or (in the case of the slide and-lantern shows) the active involvement of a master of ceremonies who assembled the final program.\n\nAlthough early exhibitors regularly accompanied movies with live acts, the substance of the movies themselves is mass-produced, prerecorded material that can easily be reproduced by theaters with little or no active participation by the exhibitor. Even though early exhibitors shaped their film programs by mixing films and other entertainments together in whichever way they thought would be most attractive to audiences or by accompanying them with lectures, their creative control remained limited. What audiences came to see was the technological marvel of the movies; the lifelike reproduction of the commonplace motion of trains, of waves striking the shore, and of people walking in the street; and the magic made possible by trick photography and the manipulation of the camera.\n\nWith the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earlier peepshow devices such as the Kinetoscope and the Mutoscope, which was a similar machine that reproduced motion by means of successive images on individual photographic cards instead of on strips of celluloid. It suddenly became public - an experience that the viewer shared with dozens, scores, and even hundreds of others. At the same time, the image that the spectator looked at expanded from the minuscule peepshow dimensions of 1or 2 inches (in height) to the life-size proportions of 6 or 9 feet.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -737,9 +760,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The cinema did not emerge as a form of mass consumption until its technology evolved from the initial \"peepshow\" format ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "EARLY CINEMA...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -763,9 +786,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Thomas Edison's peepshow device, the Kinetoscope, was introduced to the public in 1894. It was designed for use in Kinet...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The cinema did not emerge as a form of mass consumption until its technology evolved from the initial \"peepshow\" format to the point where images were...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -789,9 +812,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "These Kinetoscope arcades were modeled on phonograph parlors, which had proven successful for Edison several years earli...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Thomas Edison's peepshow device, the Kinetoscope, was introduced to the public in 1894. It was designed for use in Kinetoscope parlors, or arcades, wh...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -815,9 +838,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "[A] Exhibitors, however, wanted to maximize their profits, which they could do more readily by projecting a handful of f...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "These Kinetoscope arcades were modeled on phonograph parlors, which had proven successful for Edison several years earlier. In the phonograph parlors,...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -841,9 +864,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "With the advent of projection in 1895-1896, motion pictures became the ultimate form of mass consumption. Previously, la...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "[A] Exhibitors, however, wanted to maximize their profits, which they could do more readily by projecting a handful of films to hundreds of customers ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -867,9 +890,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Although early exhibitors regularly accompanied movies with live acts, the substance of the movies themselves is mass-pr...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "With the advent of projection in 1895-1896, motion pictures became the ultimate form of mass consumption. Previously, large audiences had viewed spect...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -893,9 +916,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earli...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Although early exhibitors regularly accompanied movies with live acts, the substance of the movies themselves is mass-produced, prerecorded material t...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -919,9 +942,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earli...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earlier peepshow devices such as th...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -932,32 +955,33 @@ export const READING_PASSAGES_DATA = {
             "text": "small in size"
           },
           {
-            "key": "A",
-            "text": "["
-          },
-          {
             "key": "B",
             "text": "unfocused"
           },
           {
-            "key": "B",
-            "text": "["
+            "key": "C",
+            "text": "inexpensive to create"
+          },
+          {
+            "key": "D",
+            "text": "limited in subject matter"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earli...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "With the advent of projection, the viewer's relationship with the image was no longer private, as it had been with earlier peepshow devices such as th...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t2-p4",
     "title": "Desert Formation: Causes and Environmental Threats",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 750,
+    "wordCount": 752,
     "paragraphs": [
+      "DESERT FORMATION",
       "The deserts, which already occupy approximately a fourth of the Earth's land surface, have in recent decades been increasing at an alarming pace. The expansion of desert-like conditions into areas where they did not previously exist is called desertification. It has been estimated that an additional one-fourth of the Earth's land surface is threatened by this process.",
       "Desertification is accomplished primarily through the loss of stabilizing natural vegetation and the subsequent accelerated erosion of the soil by wind and water. In some cases the loose soil is blown completely away, leaving a stony surface. In other cases, the finer particles may be removed, while the sand-sized particles are accumulated to form mobile hills or ridges of sand.",
       "Even in the areas that retain a soil cover, the reduction of vegetation typically results in the loss of the soil's ability to absorb substantial quantities of water. The impact of raindrops on the loose soil tends to transfer fine clay particles into the tiniest soil spaces, sealing them and producing a surface that allows very little water penetration. Water absorption is greatly reduced, consequently runoff is increased, resulting in accelerated erosion rates. The gradual drying of the soil caused by its diminished ability to absorb water results in the further loss of vegetation, so that a cycle of progressive surface deterioration is established.",
@@ -967,7 +991,7 @@ export const READING_PASSAGES_DATA = {
       "Firewood is the chief fuel used for cooking and heating in many countries. The increased pressures of expanding populations have led to the removal of woody plants so that many cities and towns are surrounded by large areas completely lacking in trees and shrubs. The increasing use of dried animal waste as a substitute fuel has also hurt the soil because this valuable soil conditioner and source of plant nutrients is no longer being returned to the land.",
       "The final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from irrigation sinks down into the water table. If no drainage system exists, the water table rises, bringing dissolved salts to the surface. The water evaporates and the salts are left behind, creating a white crustal layer that prevents air and water from reaching the underlying soil. The extreme seriousness of desertification results from the vast areas of land and the tremendous numbers of people affected, as well as from the great difficulty Of reversing or even slowing the process. Once the soil has been removed by erosion, only the passage of centuries or millennia will enable new soil to form. In areas where considerable soil still remains, though, a rigorously enforced program of land protection and cover-crop planting may make it possible to reverse the present deterioration of the surface."
     ],
-    "text": "The deserts, which already occupy approximately a fourth of the Earth's land surface, have in recent decades been increasing at an alarming pace. The expansion of desert-like conditions into areas where they did not previously exist is called desertification. It has been estimated that an additional one-fourth of the Earth's land surface is threatened by this process.\n\nDesertification is accomplished primarily through the loss of stabilizing natural vegetation and the subsequent accelerated erosion of the soil by wind and water. In some cases the loose soil is blown completely away, leaving a stony surface. In other cases, the finer particles may be removed, while the sand-sized particles are accumulated to form mobile hills or ridges of sand.\n\nEven in the areas that retain a soil cover, the reduction of vegetation typically results in the loss of the soil's ability to absorb substantial quantities of water. The impact of raindrops on the loose soil tends to transfer fine clay particles into the tiniest soil spaces, sealing them and producing a surface that allows very little water penetration. Water absorption is greatly reduced, consequently runoff is increased, resulting in accelerated erosion rates. The gradual drying of the soil caused by its diminished ability to absorb water results in the further loss of vegetation, so that a cycle of progressive surface deterioration is established.\n\nIn some regions, the increase in desert areas is occurring largely as the result of a trend toward drier climatic conditions. Continued gradual global warming has produced an increase in aridity for some areas over the past few thousand years. The process may be accelerated in subsequent decades if global warming resulting from air pollution seriously increases.\n\nThere is little doubt, however, that desertification in most areas results primarily from human activities rather than natural processes. The semiarid lands bordering the deserts exist in a delicate ecological balance and are limited in their potential to adjust to increased environmental pressures. Expanding populations are subjecting the land to increasing pressures to provide them with food and fuel. In wet periods, the land may be able to respond to these stresses. During the dry periods that are common phenomena along the desert margins, though, the pressure on the land is often far in excess of its diminished capacity, and desertification results. Four specific activities have been identified as major contributors to the desertification processes: over-cultivation, over-grazing, firewood gathering, and over-irrigation. The cultivation of crops has expanded into progressively drier regions as population densities have grown. These regions are especially likely to have periods of severe dryness, so that crop failures are common. Since the raising of most crops necessitates the prior removal of the natural vegetation, crop failures leave extensive tracts of land devoid of a plant cover and susceptible to wind and water erosion.\n\nThe raising of livestock is a major economic activity in semiarid lands, where grasses are generally the dominant type of natural vegetation. The consequences of an excessive number of livestock grazing in an area are the reduction of the vegetation cover and the trampling and pulverization of the soil. This is usually followed by the drying of the soil and accelerated erosion.\n\nFirewood is the chief fuel used for cooking and heating in many countries. The increased pressures of expanding populations have led to the removal of woody plants so that many cities and towns are surrounded by large areas completely lacking in trees and shrubs. The increasing use of dried animal waste as a substitute fuel has also hurt the soil because this valuable soil conditioner and source of plant nutrients is no longer being returned to the land.\n\nThe final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from irrigation sinks down into the water table. If no drainage system exists, the water table rises, bringing dissolved salts to the surface. The water evaporates and the salts are left behind, creating a white crustal layer that prevents air and water from reaching the underlying soil. The extreme seriousness of desertification results from the vast areas of land and the tremendous numbers of people affected, as well as from the great difficulty Of reversing or even slowing the process. Once the soil has been removed by erosion, only the passage of centuries or millennia will enable new soil to form. In areas where considerable soil still remains, though, a rigorously enforced program of land protection and cover-crop planting may make it possible to reverse the present deterioration of the surface.",
+    "text": "DESERT FORMATION\n\nThe deserts, which already occupy approximately a fourth of the Earth's land surface, have in recent decades been increasing at an alarming pace. The expansion of desert-like conditions into areas where they did not previously exist is called desertification. It has been estimated that an additional one-fourth of the Earth's land surface is threatened by this process.\n\nDesertification is accomplished primarily through the loss of stabilizing natural vegetation and the subsequent accelerated erosion of the soil by wind and water. In some cases the loose soil is blown completely away, leaving a stony surface. In other cases, the finer particles may be removed, while the sand-sized particles are accumulated to form mobile hills or ridges of sand.\n\nEven in the areas that retain a soil cover, the reduction of vegetation typically results in the loss of the soil's ability to absorb substantial quantities of water. The impact of raindrops on the loose soil tends to transfer fine clay particles into the tiniest soil spaces, sealing them and producing a surface that allows very little water penetration. Water absorption is greatly reduced, consequently runoff is increased, resulting in accelerated erosion rates. The gradual drying of the soil caused by its diminished ability to absorb water results in the further loss of vegetation, so that a cycle of progressive surface deterioration is established.\n\nIn some regions, the increase in desert areas is occurring largely as the result of a trend toward drier climatic conditions. Continued gradual global warming has produced an increase in aridity for some areas over the past few thousand years. The process may be accelerated in subsequent decades if global warming resulting from air pollution seriously increases.\n\nThere is little doubt, however, that desertification in most areas results primarily from human activities rather than natural processes. The semiarid lands bordering the deserts exist in a delicate ecological balance and are limited in their potential to adjust to increased environmental pressures. Expanding populations are subjecting the land to increasing pressures to provide them with food and fuel. In wet periods, the land may be able to respond to these stresses. During the dry periods that are common phenomena along the desert margins, though, the pressure on the land is often far in excess of its diminished capacity, and desertification results. Four specific activities have been identified as major contributors to the desertification processes: over-cultivation, over-grazing, firewood gathering, and over-irrigation. The cultivation of crops has expanded into progressively drier regions as population densities have grown. These regions are especially likely to have periods of severe dryness, so that crop failures are common. Since the raising of most crops necessitates the prior removal of the natural vegetation, crop failures leave extensive tracts of land devoid of a plant cover and susceptible to wind and water erosion.\n\nThe raising of livestock is a major economic activity in semiarid lands, where grasses are generally the dominant type of natural vegetation. The consequences of an excessive number of livestock grazing in an area are the reduction of the vegetation cover and the trampling and pulverization of the soil. This is usually followed by the drying of the soil and accelerated erosion.\n\nFirewood is the chief fuel used for cooking and heating in many countries. The increased pressures of expanding populations have led to the removal of woody plants so that many cities and towns are surrounded by large areas completely lacking in trees and shrubs. The increasing use of dried animal waste as a substitute fuel has also hurt the soil because this valuable soil conditioner and source of plant nutrients is no longer being returned to the land.\n\nThe final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from irrigation sinks down into the water table. If no drainage system exists, the water table rises, bringing dissolved salts to the surface. The water evaporates and the salts are left behind, creating a white crustal layer that prevents air and water from reaching the underlying soil. The extreme seriousness of desertification results from the vast areas of land and the tremendous numbers of people affected, as well as from the great difficulty Of reversing or even slowing the process. Once the soil has been removed by erosion, only the passage of centuries or millennia will enable new soil to form. In areas where considerable soil still remains, though, a rigorously enforced program of land protection and cover-crop planting may make it possible to reverse the present deterioration of the surface.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -1013,9 +1037,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The deserts, which already occupy approximately a fourth of the Earth's land surface, have in recent decades been increa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "DESERT FORMATION...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -1039,9 +1063,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Desertification is accomplished primarily through the loss of stabilizing natural vegetation and the subsequent accelera...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The deserts, which already occupy approximately a fourth of the Earth's land surface, have in recent decades been increasing at an alarming pace. The ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -1065,9 +1089,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Even in the areas that retain a soil cover, the reduction of vegetation typically results in the loss of the soil's abil...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Desertification is accomplished primarily through the loss of stabilizing natural vegetation and the subsequent accelerated erosion of the soil by win...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -1091,9 +1115,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "In some regions, the increase in desert areas is occurring largely as the result of a trend toward drier climatic condit...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Even in the areas that retain a soil cover, the reduction of vegetation typically results in the loss of the soil's ability to absorb substantial quan...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -1117,9 +1141,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "There is little doubt, however, that desertification in most areas results primarily from human activities rather than n...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "In some regions, the increase in desert areas is occurring largely as the result of a trend toward drier climatic conditions. Continued gradual global...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -1143,9 +1167,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The raising of livestock is a major economic activity in semiarid lands, where grasses are generally the dominant type o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "There is little doubt, however, that desertification in most areas results primarily from human activities rather than natural processes. The semiarid...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -1169,9 +1193,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Firewood is the chief fuel used for cooking and heating in many countries. The increased pressures of expanding populati...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The raising of livestock is a major economic activity in semiarid lands, where grasses are generally the dominant type of natural vegetation. The cons...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -1195,9 +1219,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from ir...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Firewood is the chief fuel used for cooking and heating in many countries. The increased pressures of expanding populations have led to the removal of...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -1208,32 +1232,33 @@ export const READING_PASSAGES_DATA = {
             "text": "The spread of deserts is considered a very serious problem that can be solved only if large numbers of people in various countries are involved in the effort."
           },
           {
-            "key": "A",
-            "text": ""
-          },
-          {
             "key": "B",
             "text": "Slowing down the process of desertification is difficult because of population growth that has spread over large areas of land."
           },
           {
-            "key": "B",
-            "text": ""
+            "key": "C",
+            "text": "Desertification is a significant problem because it is so hard to reverse and affects large areas of land and great numbers of people."
+          },
+          {
+            "key": "D",
+            "text": "The factors influencing desertification occur in cycles and will change in the future"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "The final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from ir...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The final major human cause of desertification is soil salinization resulting from over-irrigation. Excess water from irrigation sinks down into the w...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t3-p1",
     "title": "Internet Jobs and the Remote Work Revolution",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 445,
+    "wordCount": 447,
     "paragraphs": [
+      "Internet Jobs",
       "Contrary to popular belief, one does not have to be a trained programmer to work online. Of course there are plenty of jobs available for people with high-tech computer skills, but the growth of new media has opened up a wide range of Internet career opportunities requiring only a minimal level of technical expertise. Probably one of the most well-known online job opportunities is the job of webmaster. However, it is hard to define one basic job description for this position. The qualifications and responsibilities depend on what tasks a particular organization needs a webmaster to perform.",
       "To specify the job description of a webmaster, one needs to identify the hardware and software that the website the webmaster will manage is running on. Different types of hardware and software require different skill sets to manage them. Another key factor is whether the website will be running internally (at the firm itself) or externally (renting shared space on the company servers). Finally, the responsibilities of a webmaster also depend on whether he or she will be working independently, or whether the firm will provide people to help. All of these factors need to be considered before one can create an accurate webmaster job description.",
       "Webmaster is one type of internet career requiring in-depth knowledge of the latest computer applications. However, there are also online jobs available for which traditional skills remain in high demand. Content jobs require excellent writing skills and a good sense of the web as a \"new media.\"",
@@ -1241,7 +1266,7 @@ export const READING_PASSAGES_DATA = {
       "Additionally, many of today's Internet careers are becoming paid-by-the-job professions. With many companies having to downsize in tough economic times, the outsourcing and contracting of freelance workers online has become common business practice. The Internet provides an infinite pool of buyers from around the world with whom freelancers can contract their services. An added benefit to such online jobs is that freelancers are able to work on projects with companies outside their own country of residence.",
       "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There are many companies willing to pay people with technical Internet skills salaries well above $70,000 a year. Generally, webmasters start at about $30,000 per year, but salaries can vary greatly. Freelance writers working online have been known to make between $40,000 and $70,000 per year."
     ],
-    "text": "Contrary to popular belief, one does not have to be a trained programmer to work online. Of course there are plenty of jobs available for people with high-tech computer skills, but the growth of new media has opened up a wide range of Internet career opportunities requiring only a minimal level of technical expertise. Probably one of the most well-known online job opportunities is the job of webmaster. However, it is hard to define one basic job description for this position. The qualifications and responsibilities depend on what tasks a particular organization needs a webmaster to perform.\n\nTo specify the job description of a webmaster, one needs to identify the hardware and software that the website the webmaster will manage is running on. Different types of hardware and software require different skill sets to manage them. Another key factor is whether the website will be running internally (at the firm itself) or externally (renting shared space on the company servers). Finally, the responsibilities of a webmaster also depend on whether he or she will be working independently, or whether the firm will provide people to help. All of these factors need to be considered before one can create an accurate webmaster job description.\n\nWebmaster is one type of internet career requiring in-depth knowledge of the latest computer applications. However, there are also online jobs available for which traditional skills remain in high demand. Content jobs require excellent writing skills and a good sense of the web as a \"new media.\"\n\nThe term \"new media\" is difficult to define because it encompasses a constantly growing set of new technologies and skills. Specifically, it includes websites, email, Internet telephony, CD-ROM, DVD, streaming audio and video, interactive multimedia presentations, e-books, digital music, computer illustration, video games, virtual reality, and computer artistry.\n\nAdditionally, many of today's Internet careers are becoming paid-by-the-job professions. With many companies having to downsize in tough economic times, the outsourcing and contracting of freelance workers online has become common business practice. The Internet provides an infinite pool of buyers from around the world with whom freelancers can contract their services. An added benefit to such online jobs is that freelancers are able to work on projects with companies outside their own country of residence.\n\nHow much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There are many companies willing to pay people with technical Internet skills salaries well above $70,000 a year. Generally, webmasters start at about $30,000 per year, but salaries can vary greatly. Freelance writers working online have been known to make between $40,000 and $70,000 per year.",
+    "text": "Internet Jobs\n\nContrary to popular belief, one does not have to be a trained programmer to work online. Of course there are plenty of jobs available for people with high-tech computer skills, but the growth of new media has opened up a wide range of Internet career opportunities requiring only a minimal level of technical expertise. Probably one of the most well-known online job opportunities is the job of webmaster. However, it is hard to define one basic job description for this position. The qualifications and responsibilities depend on what tasks a particular organization needs a webmaster to perform.\n\nTo specify the job description of a webmaster, one needs to identify the hardware and software that the website the webmaster will manage is running on. Different types of hardware and software require different skill sets to manage them. Another key factor is whether the website will be running internally (at the firm itself) or externally (renting shared space on the company servers). Finally, the responsibilities of a webmaster also depend on whether he or she will be working independently, or whether the firm will provide people to help. All of these factors need to be considered before one can create an accurate webmaster job description.\n\nWebmaster is one type of internet career requiring in-depth knowledge of the latest computer applications. However, there are also online jobs available for which traditional skills remain in high demand. Content jobs require excellent writing skills and a good sense of the web as a \"new media.\"\n\nThe term \"new media\" is difficult to define because it encompasses a constantly growing set of new technologies and skills. Specifically, it includes websites, email, Internet telephony, CD-ROM, DVD, streaming audio and video, interactive multimedia presentations, e-books, digital music, computer illustration, video games, virtual reality, and computer artistry.\n\nAdditionally, many of today's Internet careers are becoming paid-by-the-job professions. With many companies having to downsize in tough economic times, the outsourcing and contracting of freelance workers online has become common business practice. The Internet provides an infinite pool of buyers from around the world with whom freelancers can contract their services. An added benefit to such online jobs is that freelancers are able to work on projects with companies outside their own country of residence.\n\nHow much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There are many companies willing to pay people with technical Internet skills salaries well above $70,000 a year. Generally, webmasters start at about $30,000 per year, but salaries can vary greatly. Freelance writers working online have been known to make between $40,000 and $70,000 per year.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -1287,9 +1312,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Contrary to popular belief, one does not have to be a trained programmer to work online. Of course there are plenty of j...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Internet Jobs...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -1313,9 +1338,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "To specify the job description of a webmaster, one needs to identify the hardware and software that the website the webm...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Contrary to popular belief, one does not have to be a trained programmer to work online. Of course there are plenty of jobs available for people with ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -1339,9 +1364,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Webmaster is one type of internet career requiring in-depth knowledge of the latest computer applications. However, ther...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "To specify the job description of a webmaster, one needs to identify the hardware and software that the website the webmaster will manage is running o...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -1365,9 +1390,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The term \"new media\" is difficult to define because it encompasses a constantly growing set of new technologies and skil...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Webmaster is one type of internet career requiring in-depth knowledge of the latest computer applications. However, there are also online jobs availab...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -1391,9 +1416,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Additionally, many of today's Internet careers are becoming paid-by-the-job professions. With many companies having to d...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The term \"new media\" is difficult to define because it encompasses a constantly growing set of new technologies and skills. Specifically, it includes ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -1417,9 +1442,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Additionally, many of today's Internet careers are becoming paid-by-the-job professions. With many companies having to downsize in tough economic time...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -1443,9 +1468,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -1469,9 +1494,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -1495,9 +1520,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -1521,19 +1546,20 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "How much can a person make in these kinds of careers? As with many questions related to today's evolving technology, there is no simple answer. There ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t3-p2",
     "title": "If Statues Could Talk: The Enigma of Easter Island",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 437,
+    "wordCount": 441,
     "paragraphs": [
+      "IF STATUES COULD TALK",
       "How did the Easter Island statues move? Archaeologists are still trying to work out how - and what their story really means.",
       "On a winter night last June, José Antonio Tuki, a 30-year-old artist on Easter Island, sat on Anakena beach and stared at the enormous human statues there – the moai. The statues are from 4 feet tall to 33 feet tall. Some weigh more than 80 tons. They were carved, a long time ago, with stone tools and then they were moved up to 11 miles to the beach. Tuki stares at their faces and he feels a connection. ‘This is something that was produced by my ancestors,’ he says. ‘How did they do it?’",
       "The first Polynesians arrived at Rapa Nui (Easter Island), probably by canoe, hundreds of years ago. The island is 2,150 miles west of South America and 1,300 miles east of its nearest inhabited neighbour, Pitcairn. Nowadays 12 flights arrive every week from Chile, Peru and Tahiti. In 2011, 50,000 tourists – ten times the island’s population – flew to Easter Island. Almost all of the jobs on Easter Island depend on tourism. And the tourists go there for only one thing: the moai.",
@@ -1542,7 +1568,7 @@ export const READING_PASSAGES_DATA = {
       "On the other hand, archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University Long Beach have a more positive view of the island’s history. They suggest that the inhabitants actually pioneered a type of sustainable farming – they built thousands of circular stone walls, called manavai, and grew food inside them. And their theory about how the moai were moved is that they were ‘walked’ along using a system of only ropes and a few people.",
       "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know the truth,’ he says, ‘but maybe knowing everything would take its power away.’"
     ],
-    "text": "How did the Easter Island statues move? Archaeologists are still trying to work out how - and what their story really means.\n\nOn a winter night last June, José Antonio Tuki, a 30-year-old artist on Easter Island, sat on Anakena beach and stared at the enormous human statues there – the moai. The statues are from 4 feet tall to 33 feet tall. Some weigh more than 80 tons. They were carved, a long time ago, with stone tools and then they were moved up to 11 miles to the beach. Tuki stares at their faces and he feels a connection. ‘This is something that was produced by my ancestors,’ he says. ‘How did they do it?’\n\nThe first Polynesians arrived at Rapa Nui (Easter Island), probably by canoe, hundreds of years ago. The island is 2,150 miles west of South America and 1,300 miles east of its nearest inhabited neighbour, Pitcairn. Nowadays 12 flights arrive every week from Chile, Peru and Tahiti. In 2011, 50,000 tourists – ten times the island’s population – flew to Easter Island. Almost all of the jobs on Easter Island depend on tourism. And the tourists go there for only one thing: the moai.\n\nPeople around the world became curious about the statues after the Norwegian adventurer Thor Heyerdahl made Easter Island famous, and there are different theories about how the statues were moved to the beach. Many researchers think the statues were pulled along the ground using ropes and wood.\n\nPulitzer Prize winner Jared Diamond has suggested that many people were needed to build and move the moai. As a result, the island’s trees were cut down for wood and to create farming land. This open land was fragile and it was soon eroded by the strong winds, so it was very difficult to grow food. The situation was an early example of an ecological disaster, according to Diamond.\n\nOn the other hand, archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University Long Beach have a more positive view of the island’s history. They suggest that the inhabitants actually pioneered a type of sustainable farming – they built thousands of circular stone walls, called manavai, and grew food inside them. And their theory about how the moai were moved is that they were ‘walked’ along using a system of only ropes and a few people.\n\nAs José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know the truth,’ he says, ‘but maybe knowing everything would take its power away.’",
+    "text": "IF STATUES COULD TALK\n\nHow did the Easter Island statues move? Archaeologists are still trying to work out how - and what their story really means.\n\nOn a winter night last June, José Antonio Tuki, a 30-year-old artist on Easter Island, sat on Anakena beach and stared at the enormous human statues there – the moai. The statues are from 4 feet tall to 33 feet tall. Some weigh more than 80 tons. They were carved, a long time ago, with stone tools and then they were moved up to 11 miles to the beach. Tuki stares at their faces and he feels a connection. ‘This is something that was produced by my ancestors,’ he says. ‘How did they do it?’\n\nThe first Polynesians arrived at Rapa Nui (Easter Island), probably by canoe, hundreds of years ago. The island is 2,150 miles west of South America and 1,300 miles east of its nearest inhabited neighbour, Pitcairn. Nowadays 12 flights arrive every week from Chile, Peru and Tahiti. In 2011, 50,000 tourists – ten times the island’s population – flew to Easter Island. Almost all of the jobs on Easter Island depend on tourism. And the tourists go there for only one thing: the moai.\n\nPeople around the world became curious about the statues after the Norwegian adventurer Thor Heyerdahl made Easter Island famous, and there are different theories about how the statues were moved to the beach. Many researchers think the statues were pulled along the ground using ropes and wood.\n\nPulitzer Prize winner Jared Diamond has suggested that many people were needed to build and move the moai. As a result, the island’s trees were cut down for wood and to create farming land. This open land was fragile and it was soon eroded by the strong winds, so it was very difficult to grow food. The situation was an early example of an ecological disaster, according to Diamond.\n\nOn the other hand, archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University Long Beach have a more positive view of the island’s history. They suggest that the inhabitants actually pioneered a type of sustainable farming – they built thousands of circular stone walls, called manavai, and grew food inside them. And their theory about how the moai were moved is that they were ‘walked’ along using a system of only ropes and a few people.\n\nAs José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know the truth,’ he says, ‘but maybe knowing everything would take its power away.’",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -1588,9 +1614,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "How did the Easter Island statues move? Archaeologists are still trying to work out how - and what their story really me...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "IF STATUES COULD TALK...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -1614,9 +1640,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "On a winter night last June, José Antonio Tuki, a 30-year-old artist on Easter Island, sat on Anakena beach and stared a...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "How did the Easter Island statues move? Archaeologists are still trying to work out how - and what their story really means....",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -1640,9 +1666,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The first Polynesians arrived at Rapa Nui (Easter Island), probably by canoe, hundreds of years ago. The island is 2,150...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "On a winter night last June, José Antonio Tuki, a 30-year-old artist on Easter Island, sat on Anakena beach and stared at the enormous human statues t...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -1650,7 +1676,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": "is part of the South"
+            "text": "is part of the South American continent."
           },
           {
             "key": "B",
@@ -1666,9 +1692,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "People around the world became curious about the statues after the Norwegian adventurer Thor Heyerdahl made Easter Islan...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The first Polynesians arrived at Rapa Nui (Easter Island), probably by canoe, hundreds of years ago. The island is 2,150 miles west of South America a...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -1692,9 +1718,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Pulitzer Prize winner Jared Diamond has suggested that many people were needed to build and move the moai. As a result, ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "People around the world became curious about the statues after the Norwegian adventurer Thor Heyerdahl made Easter Island famous, and there are differ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -1718,9 +1744,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "On the other hand, archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University Lo...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Pulitzer Prize winner Jared Diamond has suggested that many people were needed to build and move the moai. As a result, the island’s trees were cut do...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -1744,9 +1770,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "On the other hand, archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University Long Beach have a more positive ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -1770,9 +1796,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -1796,9 +1822,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -1822,16 +1848,16 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "As José Tuki contemplates these enormous statues, he doesn’t mind that there are no definite answers about the history of his island. ‘I want to know ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t3-p3",
     "title": "Culture and Society: Human Behavior and Adaptation",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
     "wordCount": 418,
     "paragraphs": [
@@ -1885,9 +1911,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Culture is a word in common use with complex meanings, and is derived, like the term broadcasting, from the treatment an...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Culture is a word in common use with complex meanings, and is derived, like the term broadcasting, from the treatment and care of the soil and of what...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -1911,9 +1937,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Distinctions have consequently been drawn between primitive and advanced culture and cultures, between elite and popular...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Distinctions have consequently been drawn between primitive and advanced culture and cultures, between elite and popular culture, between popular and ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -1937,9 +1963,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -1963,9 +1989,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -1989,9 +2015,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -2015,9 +2041,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -2025,11 +2051,11 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Anthropology and sociology have tried to limit the references to culture."
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Distinctions have been drawn between culture and civilization."
           },
           {
             "key": "C",
@@ -2041,9 +2067,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -2067,9 +2093,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -2093,9 +2119,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -2119,19 +2145,20 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unprobl...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The multiplicity of meanings attached to the word made and will make it difficult to define. There is no single, unproblematic definition, although ma...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t3-p4",
     "title": "Artisans and Industrialization: The Transformation of Labor",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 680,
+    "wordCount": 683,
     "paragraphs": [
+      "ARTISANS AND INDUSTRIALIZATION",
       "Before 1815 manufacturing in the United States had been done in homes or shops by skilled artisans. As master craftworkers, they imparted the knowledge of their trades to apprentices and journeymen. In addition, women often worked in their homes part time, making finished articles from raw material supplied by merchant capitalists. After 1815 this older form of manufacturing began to give way to factories with machinery tended by unskilled or semiskilled laborers. Cheap transportation networks, the rise of cities, and the availability of capital and credit all stimulated the shift to factory production.",
       "The creation of a labor force that was accustomed to working in factories did not occur easily. Before the rise of the factory, artisans had worked within the home. Apprentices were considered part of the family, and masters were responsible not only for teaching their apprentices a trade but also for providing them some education ans for supervising their moral behaviors.Journeymen knew that if they perfected their skill, they could become respected master artisans with their own shops. Also, skilled artisans did not work by the clock, at a steady pace, but rather in bursts of intense labor alternating with more leisurely time.",
       "The factory changed that. Goods produced by factories were not as finished or elegant as those done by hand, and pride in craftsmanship gave way to the pressure to increase rates of productivity. The new methods of doing business involved a new and stricter sense of time. Factory life necessitated a more regimented schedule, where work began at the sound of a bell and workers kept machines going at a constant pace. At the same time, workers were required to discard old habits, for industrialism demanded a worker who was alert, dependable, and self-disciplined. Absenteeism and lateness hurt productivity and, since work was specialized, disrupted the regular factory routine. Industrialization not only produced a fundamental change in the way work was organized; it transformed the very nature of work.",
@@ -2139,7 +2166,7 @@ export const READING_PASSAGES_DATA = {
       "In this newly emerging economic order, workers sometimes organized to protect their rights and traditional ways of life. Craft workers such as carpenters, printers, and tailors formed unions, and in 1834 individual unions came together in the National Trades’ Union. The labor movement gathered some momentum in the decade before the Panic of 1837, but in the depression that followed, labor’s strength collapsed. During hard times, few workers were willing to strike or engage in collective action. And skilled craftworkers, who spearheaded the union movement, did not feel a particularly strong bond with semiskilled factory workers and unskilled laborers. More than a decade of agitation did finally bring a workday shortened to 10 hours to most industries by the 1850’s, and the courts also recognized workers’ right to strike, but these gains had little immediate impact.",
       "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, conflicting religious perspectives, occupational differences, political party loyalties, and disagreements over tactics. For them, the factory and industrialism were not agents of opportunity but reminders of their loss of independence and a measure of control over their lives. As United States society became more specialized and differentiated, greater extremes of wealth began to appear. And as the new markets created fortunes for the few, the factory system lowered the wages of workers by dividing labor into smaller, less skilled tasks."
     ],
-    "text": "Before 1815 manufacturing in the United States had been done in homes or shops by skilled artisans. As master craftworkers, they imparted the knowledge of their trades to apprentices and journeymen. In addition, women often worked in their homes part time, making finished articles from raw material supplied by merchant capitalists. After 1815 this older form of manufacturing began to give way to factories with machinery tended by unskilled or semiskilled laborers. Cheap transportation networks, the rise of cities, and the availability of capital and credit all stimulated the shift to factory production.\n\nThe creation of a labor force that was accustomed to working in factories did not occur easily. Before the rise of the factory, artisans had worked within the home. Apprentices were considered part of the family, and masters were responsible not only for teaching their apprentices a trade but also for providing them some education ans for supervising their moral behaviors.Journeymen knew that if they perfected their skill, they could become respected master artisans with their own shops. Also, skilled artisans did not work by the clock, at a steady pace, but rather in bursts of intense labor alternating with more leisurely time.\n\nThe factory changed that. Goods produced by factories were not as finished or elegant as those done by hand, and pride in craftsmanship gave way to the pressure to increase rates of productivity. The new methods of doing business involved a new and stricter sense of time. Factory life necessitated a more regimented schedule, where work began at the sound of a bell and workers kept machines going at a constant pace. At the same time, workers were required to discard old habits, for industrialism demanded a worker who was alert, dependable, and self-disciplined. Absenteeism and lateness hurt productivity and, since work was specialized, disrupted the regular factory routine. Industrialization not only produced a fundamental change in the way work was organized; it transformed the very nature of work.\n\nThe first generation to experience these changes did not adopt the new attitudes easily. The factory clock became the symbol of the new work rules. One mill worker who finally quit complained revealingly about “obedience to the ding-dong of the bell - just as though we are so many living machines.” With the loss of personal freedom also came the loss of standing in the community. Unlike artisan workshops in which apprentices worked closely with the masters supervising them, factories sharply separated workers from management. Few workers rose through the ranks to supervisory positions, and even fewer could achieve the artisan’s dream of setting up one’s own business. Even well-paid workers sensed their decline in status.\n\nIn this newly emerging economic order, workers sometimes organized to protect their rights and traditional ways of life. Craft workers such as carpenters, printers, and tailors formed unions, and in 1834 individual unions came together in the National Trades’ Union. The labor movement gathered some momentum in the decade before the Panic of 1837, but in the depression that followed, labor’s strength collapsed. During hard times, few workers were willing to strike or engage in collective action. And skilled craftworkers, who spearheaded the union movement, did not feel a particularly strong bond with semiskilled factory workers and unskilled laborers. More than a decade of agitation did finally bring a workday shortened to 10 hours to most industries by the 1850’s, and the courts also recognized workers’ right to strike, but these gains had little immediate impact.\n\nWorkers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, conflicting religious perspectives, occupational differences, political party loyalties, and disagreements over tactics. For them, the factory and industrialism were not agents of opportunity but reminders of their loss of independence and a measure of control over their lives. As United States society became more specialized and differentiated, greater extremes of wealth began to appear. And as the new markets created fortunes for the few, the factory system lowered the wages of workers by dividing labor into smaller, less skilled tasks.",
+    "text": "ARTISANS AND INDUSTRIALIZATION\n\nBefore 1815 manufacturing in the United States had been done in homes or shops by skilled artisans. As master craftworkers, they imparted the knowledge of their trades to apprentices and journeymen. In addition, women often worked in their homes part time, making finished articles from raw material supplied by merchant capitalists. After 1815 this older form of manufacturing began to give way to factories with machinery tended by unskilled or semiskilled laborers. Cheap transportation networks, the rise of cities, and the availability of capital and credit all stimulated the shift to factory production.\n\nThe creation of a labor force that was accustomed to working in factories did not occur easily. Before the rise of the factory, artisans had worked within the home. Apprentices were considered part of the family, and masters were responsible not only for teaching their apprentices a trade but also for providing them some education ans for supervising their moral behaviors.Journeymen knew that if they perfected their skill, they could become respected master artisans with their own shops. Also, skilled artisans did not work by the clock, at a steady pace, but rather in bursts of intense labor alternating with more leisurely time.\n\nThe factory changed that. Goods produced by factories were not as finished or elegant as those done by hand, and pride in craftsmanship gave way to the pressure to increase rates of productivity. The new methods of doing business involved a new and stricter sense of time. Factory life necessitated a more regimented schedule, where work began at the sound of a bell and workers kept machines going at a constant pace. At the same time, workers were required to discard old habits, for industrialism demanded a worker who was alert, dependable, and self-disciplined. Absenteeism and lateness hurt productivity and, since work was specialized, disrupted the regular factory routine. Industrialization not only produced a fundamental change in the way work was organized; it transformed the very nature of work.\n\nThe first generation to experience these changes did not adopt the new attitudes easily. The factory clock became the symbol of the new work rules. One mill worker who finally quit complained revealingly about “obedience to the ding-dong of the bell - just as though we are so many living machines.” With the loss of personal freedom also came the loss of standing in the community. Unlike artisan workshops in which apprentices worked closely with the masters supervising them, factories sharply separated workers from management. Few workers rose through the ranks to supervisory positions, and even fewer could achieve the artisan’s dream of setting up one’s own business. Even well-paid workers sensed their decline in status.\n\nIn this newly emerging economic order, workers sometimes organized to protect their rights and traditional ways of life. Craft workers such as carpenters, printers, and tailors formed unions, and in 1834 individual unions came together in the National Trades’ Union. The labor movement gathered some momentum in the decade before the Panic of 1837, but in the depression that followed, labor’s strength collapsed. During hard times, few workers were willing to strike or engage in collective action. And skilled craftworkers, who spearheaded the union movement, did not feel a particularly strong bond with semiskilled factory workers and unskilled laborers. More than a decade of agitation did finally bring a workday shortened to 10 hours to most industries by the 1850’s, and the courts also recognized workers’ right to strike, but these gains had little immediate impact.\n\nWorkers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, conflicting religious perspectives, occupational differences, political party loyalties, and disagreements over tactics. For them, the factory and industrialism were not agents of opportunity but reminders of their loss of independence and a measure of control over their lives. As United States society became more specialized and differentiated, greater extremes of wealth began to appear. And as the new markets created fortunes for the few, the factory system lowered the wages of workers by dividing labor into smaller, less skilled tasks.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -2185,9 +2212,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Before 1815 manufacturing in the United States had been done in homes or shops by skilled artisans. As master craftworke...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "ARTISANS AND INDUSTRIALIZATION...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -2211,9 +2238,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "The creation of a labor force that was accustomed to working in factories did not occur easily. Before the rise of the f...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Before 1815 manufacturing in the United States had been done in homes or shops by skilled artisans. As master craftworkers, they imparted the knowledg...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -2237,9 +2264,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The factory changed that. Goods produced by factories were not as finished or elegant as those done by hand, and pride i...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The creation of a labor force that was accustomed to working in factories did not occur easily. Before the rise of the factory, artisans had worked wi...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -2263,9 +2290,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The first generation to experience these changes did not adopt the new attitudes easily. The factory clock became the sy...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The factory changed that. Goods produced by factories were not as finished or elegant as those done by hand, and pride in craftsmanship gave way to th...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -2289,9 +2316,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "In this newly emerging economic order, workers sometimes organized to protect their rights and traditional ways of life....",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The first generation to experience these changes did not adopt the new attitudes easily. The factory clock became the symbol of the new work rules. On...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -2315,9 +2342,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and rac...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "In this newly emerging economic order, workers sometimes organized to protect their rights and traditional ways of life. Craft workers such as carpent...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -2341,9 +2368,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and rac...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, confl...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -2367,9 +2394,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and rac...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, confl...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -2393,9 +2420,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and rac...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, confl...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -2415,20 +2442,20 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": "agents of opportunity PHÂN LOẠI ĐỘ KHÓ CÂU HỎI ĐÁP ÁN"
+            "text": "agents of opportunity"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and rac...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Workers were united in resenting the industrial system and their loss of status, but they were divided by ethnic and racial antagonisms, gender, confl...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t4-p1",
     "title": "The Evolution of Environmental Conservation",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
     "wordCount": 494,
     "paragraphs": [
@@ -2479,13 +2506,13 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": "How"
+            "text": "How Cooper competed with AT& T"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Since the dawn of time, people have found ways to communicate with one another. Smoke signals and tribal drums were some...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Since the dawn of time, people have found ways to communicate with one another. Smoke signals and tribal drums were some of the earliest forms of comm...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -2493,7 +2520,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Drums"
           },
           {
             "key": "B",
@@ -2509,9 +2536,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "For you, a cell phone is probably just a device that you and your friends use to keep in touch with family and friends, ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "For you, a cell phone is probably just a device that you and your friends use to keep in touch with family and friends, take pictures, play games, or ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -2535,9 +2562,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Walkie - talkies, telephones and cell phones are duplex communication devices: They make it possible for two people to t...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Walkie - talkies, telephones and cell phones are duplex communication devices: They make it possible for two people to talk to each other. Cell phones...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -2561,9 +2588,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -2587,9 +2614,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -2613,9 +2640,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -2639,9 +2666,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -2665,9 +2692,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -2691,9 +2718,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -2705,7 +2732,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": "reported on"
+            "text": "reported on AT& T"
           },
           {
             "key": "C",
@@ -2717,25 +2744,25 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general pub...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "After the invention of his cell phone, Cooper began thinking of ways to make the cell phone available to the general public. After a decade, Motorola ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t4-p2",
     "title": "The Rise and Characteristics of Human Civilization",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 463,
+    "wordCount": 329,
     "paragraphs": [
-      "Between 4000 and 3000 B.C.,significant technological developments began to transform the Neolithic towns. The invention of writing enabled records to be kept, and the use of metals marked a new level of human control over the environment and its resources. Already before 4000 B.C.,craftspeople had discovered that metal-bearing rocks could be heated to liquefy metals, which could then be cast in molds to produce tools and weapons that were more useful than stone instruments. Although copper was the first metal to be utilized in producing tools, after 4000 B.C.craftspeople in western Asia discovered that a combination of copper and tin produced bronze, a much harder and more durable metal than copper. Its widespread use has led historians to speak of a Bronze Age from around 3000 to 1200 B.C.,when bronze was increasingly replaced by iron.",
+      "Civilization",
       "At first, Neolithic settlements were hardly more than villages. But as their inhabitants mastered the art of farming, they gradually began to give birth to more complex human societies. As wealth increased, such societies began to develop armies and to build walled cities. By the beginning of the Bronze Age, the concentration of larger numbers of people in the river valleys of Mesopotamia and Egypt was leading to a whole new pattern for human life.",
       "As we have seen, early human beings formed small groups that developed a simple culture that enabled them to survive. As human societies grew and developed greater complexity, a new form of human existence-called civilization-came into being. A civilization is a complex culture in which large numbersof human beings share a number of common elements. Historians have identified a number of basic characteristics of civilization, most of which are; evident in the Mesopotamian and Egyptian civilizations.These include (1) an urban revolution; (2) a distinct religious structure; the gods were deemed crucial to the community’s success, and professional priestly classes, as stewards of the gods’ property, regulated relations with the gods, (3) new political and military structures; (4) a new social structure based on economic power; while kings and an upper class of priests, political leaders, and warriors dominated, there also existed large groups of free people (farmers, artisans, craftspeople) and at the very bottom, socially, a class of slaves, (5) the development of writing;and (6) new forms of significant artistic and intellectual activity, occupied a prominent place in urban environments.",
       "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested. Some scholars have adhered to a material explanation. Material forces, such as the growth of food surpluses, made possible the specialization of labor and development of large communities with bureaucratic organization.Some historians have argued that nonmaterial forces, primarily religious provided the sense of unity and purpose that made such organized activities possible."
     ],
-    "text": "Between 4000 and 3000 B.C.,significant technological developments began to transform the Neolithic towns. The invention of writing enabled records to be kept, and the use of metals marked a new level of human control over the environment and its resources. Already before 4000 B.C.,craftspeople had discovered that metal-bearing rocks could be heated to liquefy metals, which could then be cast in molds to produce tools and weapons that were more useful than stone instruments. Although copper was the first metal to be utilized in producing tools, after 4000 B.C.craftspeople in western Asia discovered that a combination of copper and tin produced bronze, a much harder and more durable metal than copper. Its widespread use has led historians to speak of a Bronze Age from around 3000 to 1200 B.C.,when bronze was increasingly replaced by iron.\n\nAt first, Neolithic settlements were hardly more than villages. But as their inhabitants mastered the art of farming, they gradually began to give birth to more complex human societies. As wealth increased, such societies began to develop armies and to build walled cities. By the beginning of the Bronze Age, the concentration of larger numbers of people in the river valleys of Mesopotamia and Egypt was leading to a whole new pattern for human life.\n\nAs we have seen, early human beings formed small groups that developed a simple culture that enabled them to survive. As human societies grew and developed greater complexity, a new form of human existence-called civilization-came into being. A civilization is a complex culture in which large numbersof human beings share a number of common elements. Historians have identified a number of basic characteristics of civilization, most of which are; evident in the Mesopotamian and Egyptian civilizations.These include (1) an urban revolution; (2) a distinct religious structure; the gods were deemed crucial to the community’s success, and professional priestly classes, as stewards of the gods’ property, regulated relations with the gods, (3) new political and military structures; (4) a new social structure based on economic power; while kings and an upper class of priests, political leaders, and warriors dominated, there also existed large groups of free people (farmers, artisans, craftspeople) and at the very bottom, socially, a class of slaves, (5) the development of writing;and (6) new forms of significant artistic and intellectual activity, occupied a prominent place in urban environments.\n\nWhy early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested. Some scholars have adhered to a material explanation. Material forces, such as the growth of food surpluses, made possible the specialization of labor and development of large communities with bureaucratic organization.Some historians have argued that nonmaterial forces, primarily religious provided the sense of unity and purpose that made such organized activities possible.",
+    "text": "Civilization\n\nAt first, Neolithic settlements were hardly more than villages. But as their inhabitants mastered the art of farming, they gradually began to give birth to more complex human societies. As wealth increased, such societies began to develop armies and to build walled cities. By the beginning of the Bronze Age, the concentration of larger numbers of people in the river valleys of Mesopotamia and Egypt was leading to a whole new pattern for human life.\n\nAs we have seen, early human beings formed small groups that developed a simple culture that enabled them to survive. As human societies grew and developed greater complexity, a new form of human existence-called civilization-came into being. A civilization is a complex culture in which large numbersof human beings share a number of common elements. Historians have identified a number of basic characteristics of civilization, most of which are; evident in the Mesopotamian and Egyptian civilizations.These include (1) an urban revolution; (2) a distinct religious structure; the gods were deemed crucial to the community’s success, and professional priestly classes, as stewards of the gods’ property, regulated relations with the gods, (3) new political and military structures; (4) a new social structure based on economic power; while kings and an upper class of priests, political leaders, and warriors dominated, there also existed large groups of free people (farmers, artisans, craftspeople) and at the very bottom, socially, a class of slaves, (5) the development of writing;and (6) new forms of significant artistic and intellectual activity, occupied a prominent place in urban environments.\n\nWhy early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested. Some scholars have adhered to a material explanation. Material forces, such as the growth of food surpluses, made possible the specialization of labor and development of large communities with bureaucratic organization.Some historians have argued that nonmaterial forces, primarily religious provided the sense of unity and purpose that made such organized activities possible.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -2773,7 +2800,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "An agricultural community"
           },
           {
             "key": "D",
@@ -2781,9 +2808,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Between 4000 and 3000 B.C.,significant technological developments began to transform the Neolithic towns. The invention ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Civilization...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -2807,9 +2834,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "At first, Neolithic settlements were hardly more than villages. But as their inhabitants mastered the art of farming, th...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "At first, Neolithic settlements were hardly more than villages. But as their inhabitants mastered the art of farming, they gradually began to give bir...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -2833,9 +2860,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "As we have seen, early human beings formed small groups that developed a simple culture that enabled them to survive. As...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "As we have seen, early human beings formed small groups that developed a simple culture that enabled them to survive. As human societies grew and deve...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -2859,9 +2886,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -2885,9 +2912,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -2895,7 +2922,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "An upper class and a lower class"
           },
           {
             "key": "B",
@@ -2903,7 +2930,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "A king, an army, and slaves"
           },
           {
             "key": "D",
@@ -2911,9 +2938,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -2929,7 +2956,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": ""
+            "text": "Civilizations in Mesopotamia and Egypt were identified by historians who were studying the characteristics of early cultures."
           },
           {
             "key": "D",
@@ -2937,9 +2964,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -2963,9 +2990,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -2989,9 +3016,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -3015,19 +3042,20 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of ci...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Why early civilizations developed remains difficult to explain. A number of possible explanations of the beginning of civilization have been suggested...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t4-p3",
     "title": "The Story of Silk: Ancient Trade and Production Secrets",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 462,
+    "wordCount": 466,
     "paragraphs": [
+      "The Story of Silk",
       "The history of the world’s most luxurious fabric, from ancient China to the present day.",
       "Silk is a fine, smooth material produced from the cocoons - soft protective shells - that are made by mulberry silkworms. Legend has it that it was Lei Tzu, wife of the Yellow Emperor, ruler of China in about 3000 BC, who discovered silkworms. While it is unknown just how much of this is true, it is certainly known that silk cultivation has existed in China for several millennia.",
       "Originally, silkworm farming was solely restricted to women, and it was they who were responsible for the growing, harvesting and weaving. Silk quickly grew into a symbol of status, and originally, only royalty were entitled to have clothes made of silk. The rules were gradually relaxed over the years until finally during the Qing Dynasty (1644-1911 AD), even peasants, the lowest caste, were also entitled to wear silk. Sometime during the Han Dynasty (206 BC-220 AD), silk was so prized that it was also used as a unit of currency. Government officials were paid their salary in silk, and farmers paid their taxes in grain and silk. Silk was also used as diplomatic gifts by the emperor. Fishing lines, bowstrings, musical instruments and paper were all made using silk.",
@@ -3035,7 +3063,7 @@ export const READING_PASSAGES_DATA = {
       "With the mulberry silkworm being native to China, the country was the world’s sole producer of silk for many hundreds of years. The secret of silk-making eventually reached the rest of the world via the Byzantine Empire, which ruled over the Mediterranean region of southern Europe, North Africa and the Middle East during the period 330-1453 AD. In the seventh century, the Arabs conquered Persia, capturing their magnificent silks in the process. Silk production thus spread through Africa, Sicily and Spain as the Arabs swept through these lands.",
       "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilitated by the opening of the Suez Canal, was one of the many factors driving the trend. Then in the twentieth century, new manmade fibres, such as nylon, started to be used in what had traditionally been silk products, such as stockings and parachutes. Japan was to remain the world’s biggest producer of raw silk, and practically the only major exporter of raw silk, until the 1970s. However, in more recent decades, China has gradually recaptured its position as the world’s biggest producer and exporter of raw silk and silk yarn."
     ],
-    "text": "The history of the world’s most luxurious fabric, from ancient China to the present day.\n\nSilk is a fine, smooth material produced from the cocoons - soft protective shells - that are made by mulberry silkworms. Legend has it that it was Lei Tzu, wife of the Yellow Emperor, ruler of China in about 3000 BC, who discovered silkworms. While it is unknown just how much of this is true, it is certainly known that silk cultivation has existed in China for several millennia.\n\nOriginally, silkworm farming was solely restricted to women, and it was they who were responsible for the growing, harvesting and weaving. Silk quickly grew into a symbol of status, and originally, only royalty were entitled to have clothes made of silk. The rules were gradually relaxed over the years until finally during the Qing Dynasty (1644-1911 AD), even peasants, the lowest caste, were also entitled to wear silk. Sometime during the Han Dynasty (206 BC-220 AD), silk was so prized that it was also used as a unit of currency. Government officials were paid their salary in silk, and farmers paid their taxes in grain and silk. Silk was also used as diplomatic gifts by the emperor. Fishing lines, bowstrings, musical instruments and paper were all made using silk.\n\nDemand for this exotic fabric eventually created the lucrative trade route now known as the Silk Road, taking silk westward and bringing gold, silver and wool to the East. It was named the Silk Road after its most precious commodity, which was considered to be worth more than gold.\n\nWith the mulberry silkworm being native to China, the country was the world’s sole producer of silk for many hundreds of years. The secret of silk-making eventually reached the rest of the world via the Byzantine Empire, which ruled over the Mediterranean region of southern Europe, North Africa and the Middle East during the period 330-1453 AD. In the seventh century, the Arabs conquered Persia, capturing their magnificent silks in the process. Silk production thus spread through Africa, Sicily and Spain as the Arabs swept through these lands.\n\nThe nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilitated by the opening of the Suez Canal, was one of the many factors driving the trend. Then in the twentieth century, new manmade fibres, such as nylon, started to be used in what had traditionally been silk products, such as stockings and parachutes. Japan was to remain the world’s biggest producer of raw silk, and practically the only major exporter of raw silk, until the 1970s. However, in more recent decades, China has gradually recaptured its position as the world’s biggest producer and exporter of raw silk and silk yarn.",
+    "text": "The Story of Silk\n\nThe history of the world’s most luxurious fabric, from ancient China to the present day.\n\nSilk is a fine, smooth material produced from the cocoons - soft protective shells - that are made by mulberry silkworms. Legend has it that it was Lei Tzu, wife of the Yellow Emperor, ruler of China in about 3000 BC, who discovered silkworms. While it is unknown just how much of this is true, it is certainly known that silk cultivation has existed in China for several millennia.\n\nOriginally, silkworm farming was solely restricted to women, and it was they who were responsible for the growing, harvesting and weaving. Silk quickly grew into a symbol of status, and originally, only royalty were entitled to have clothes made of silk. The rules were gradually relaxed over the years until finally during the Qing Dynasty (1644-1911 AD), even peasants, the lowest caste, were also entitled to wear silk. Sometime during the Han Dynasty (206 BC-220 AD), silk was so prized that it was also used as a unit of currency. Government officials were paid their salary in silk, and farmers paid their taxes in grain and silk. Silk was also used as diplomatic gifts by the emperor. Fishing lines, bowstrings, musical instruments and paper were all made using silk.\n\nDemand for this exotic fabric eventually created the lucrative trade route now known as the Silk Road, taking silk westward and bringing gold, silver and wool to the East. It was named the Silk Road after its most precious commodity, which was considered to be worth more than gold.\n\nWith the mulberry silkworm being native to China, the country was the world’s sole producer of silk for many hundreds of years. The secret of silk-making eventually reached the rest of the world via the Byzantine Empire, which ruled over the Mediterranean region of southern Europe, North Africa and the Middle East during the period 330-1453 AD. In the seventh century, the Arabs conquered Persia, capturing their magnificent silks in the process. Silk production thus spread through Africa, Sicily and Spain as the Arabs swept through these lands.\n\nThe nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilitated by the opening of the Suez Canal, was one of the many factors driving the trend. Then in the twentieth century, new manmade fibres, such as nylon, started to be used in what had traditionally been silk products, such as stockings and parachutes. Japan was to remain the world’s biggest producer of raw silk, and practically the only major exporter of raw silk, until the 1970s. However, in more recent decades, China has gradually recaptured its position as the world’s biggest producer and exporter of raw silk and silk yarn.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -3065,7 +3093,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": "In"
+            "text": "In Asia"
           },
           {
             "key": "B",
@@ -3073,17 +3101,17 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "C",
-            "text": "In North"
+            "text": "In North Africa"
           },
           {
             "key": "D",
-            "text": "In"
+            "text": "In America"
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The history of the world’s most luxurious fabric, from ancient China to the present day....",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "The Story of Silk...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -3107,9 +3135,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Silk is a fine, smooth material produced from the cocoons - soft protective shells - that are made by mulberry silkworms...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The history of the world’s most luxurious fabric, from ancient China to the present day....",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -3133,9 +3161,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Originally, silkworm farming was solely restricted to women, and it was they who were responsible for the growing, harve...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Silk is a fine, smooth material produced from the cocoons - soft protective shells - that are made by mulberry silkworms. Legend has it that it was Le...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -3143,11 +3171,11 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": "Sometime during the Qing"
+            "text": "Sometime during the Qing Dynasty"
           },
           {
             "key": "B",
-            "text": "Sometime during the Han"
+            "text": "Sometime during the Han Dynasty"
           },
           {
             "key": "C",
@@ -3159,9 +3187,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Demand for this exotic fabric eventually created the lucrative trade route now known as the Silk Road, taking silk westw...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Originally, silkworm farming was solely restricted to women, and it was they who were responsible for the growing, harvesting and weaving. Silk quickl...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -3185,9 +3213,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "With the mulberry silkworm being native to China, the country was the world’s sole producer of silk for many hundreds of...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Demand for this exotic fabric eventually created the lucrative trade route now known as the Silk Road, taking silk westward and bringing gold, silver ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -3211,9 +3239,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trad...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "With the mulberry silkworm being native to China, the country was the world’s sole producer of silk for many hundreds of years. The secret of silk-mak...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -3237,9 +3265,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trad...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilit...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -3251,11 +3279,11 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": "The Persian conquered the"
+            "text": "The Persian conquered the Arabs."
           },
           {
             "key": "C",
-            "text": ""
+            "text": "China stopped trading silk."
           },
           {
             "key": "D",
@@ -3263,9 +3291,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trad...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilit...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -3277,11 +3305,11 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": "The opening of the Suez"
+            "text": "The opening of the Suez Canal"
           },
           {
             "key": "C",
-            "text": "The fact that the"
+            "text": "The fact that the Arabs swept through Africa and Sicily"
           },
           {
             "key": "D",
@@ -3289,9 +3317,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trad...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilit...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -3303,7 +3331,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": "products that"
+            "text": "products that China exports"
           },
           {
             "key": "C",
@@ -3315,16 +3343,16 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trad...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The nineteenth century and industrialization saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilit...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t4-p4",
     "title": "Modern Communication and Cognitive Psychology",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
     "wordCount": 522,
     "paragraphs": [
@@ -3363,7 +3391,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Difference between painting and sculpture"
           },
           {
             "key": "B",
@@ -3379,9 +3407,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Free-standing sculpture that is molded or carved is a type familiar to almost everyone Although certain free-standing fi...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Free-standing sculpture that is molded or carved is a type familiar to almost everyone Although certain free-standing figures or groups of figures can...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -3405,9 +3433,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Materials which can be sculpted do much to contribute to the artist’s imagination. Wood, stone, metal, and various types...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Materials which can be sculpted do much to contribute to the artist’s imagination. Wood, stone, metal, and various types of plastic and synthetics are...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -3431,9 +3459,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "While creating a statue, the artist depends on the appropriate lighting to develop the figure because the quality of the...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "While creating a statue, the artist depends on the appropriate lighting to develop the figure because the quality of the final product relies on the i...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -3457,9 +3485,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -3483,9 +3511,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -3509,9 +3537,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -3519,25 +3547,25 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "A painting does not need shading to be displayed."
           },
           {
             "key": "B",
-            "text": ""
+            "text": "A painting can be viewed from only one position."
           },
           {
             "key": "C",
-            "text": ""
+            "text": "A sculpture needs to have proper light."
           },
           {
             "key": "D",
-            "text": ""
+            "text": "Asculpture does not look good from all angles."
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -3561,9 +3589,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -3587,9 +3615,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -3597,7 +3625,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Carving and casting"
           },
           {
             "key": "B",
@@ -3609,29 +3637,30 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": "Stone and metal PHÂN LOẠI ĐỘ KHÓ CÂU HỎI ĐÁP ÁN"
+            "text": "Stone and metal"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mol...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "In addition to carving a work, sculptures can be cast. In the process of casting, a sculpture can be reproduced in a mold when a liquefied medium is p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t5-p1",
     "title": "Education and Identification of Gifted Students",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 348,
+    "wordCount": 352,
     "paragraphs": [
+      "Education of Gifted Students",
       "Education of Gifted Students is area in the field of special education concerned with the instruction of students who have exceptionally high abilities. The United States Department of Education describes“giftedness” as exceptionally advanced performance or the potential for outstanding performance in intellectual, creative, leadership, artistic, or specific academic fields. Children who demonstrate outstanding talents come from all social, cultural, and economic groups.",
       "Educators believe that gifted students require special education services because their learning needs differ significantly from those of the general population. They learn more rapidly and are able to understand more abstract and complex ideas. They are also able to transform existing knowledge into new and useful forms, and to create new knowledge recognized for its originality, complexity, and elegance. Special education services and facilities for gifted children may enhance these abilities. In addition, some gifted learners may require special counseling services to address social or emotional adjustment issues that are complicated by their exceptional abilities.",
       "Many regular elementary and secondary schools in the United States offer special programs designed specifically to meet the needs of gifted students. Some schools provide specialized education programs to gifted children exclusively. These schools offer advanced education in mathematics, science, technology, the arts, or other academic disciplines. Many school districts rely on intelligence tests to identify gifted students. However, most guidelines for determining giftedness recommend the use of a combination of standardized test scores, rating systems developed by individual schools, classroom observational records, and performance assessments.",
       "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adapting education programs so that students may progress through particular subject material quicker than usual. These modifications may take place within the regular classroom setting or they may involve changing the child’s placement in school. Some gifted children gain early entrance to kindergarten, skip grades, enter college earlier than usual, or take specific courses with older children. Ideal programs for gifted students consider the individual needs of children and offer multiple options for services. These programs generally involve both advanced course materials and acceleration."
     ],
-    "text": "Education of Gifted Students is area in the field of special education concerned with the instruction of students who have exceptionally high abilities. The United States Department of Education describes“giftedness” as exceptionally advanced performance or the potential for outstanding performance in intellectual, creative, leadership, artistic, or specific academic fields. Children who demonstrate outstanding talents come from all social, cultural, and economic groups.\n\nEducators believe that gifted students require special education services because their learning needs differ significantly from those of the general population. They learn more rapidly and are able to understand more abstract and complex ideas. They are also able to transform existing knowledge into new and useful forms, and to create new knowledge recognized for its originality, complexity, and elegance. Special education services and facilities for gifted children may enhance these abilities. In addition, some gifted learners may require special counseling services to address social or emotional adjustment issues that are complicated by their exceptional abilities.\n\nMany regular elementary and secondary schools in the United States offer special programs designed specifically to meet the needs of gifted students. Some schools provide specialized education programs to gifted children exclusively. These schools offer advanced education in mathematics, science, technology, the arts, or other academic disciplines. Many school districts rely on intelligence tests to identify gifted students. However, most guidelines for determining giftedness recommend the use of a combination of standardized test scores, rating systems developed by individual schools, classroom observational records, and performance assessments.\n\nGifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adapting education programs so that students may progress through particular subject material quicker than usual. These modifications may take place within the regular classroom setting or they may involve changing the child’s placement in school. Some gifted children gain early entrance to kindergarten, skip grades, enter college earlier than usual, or take specific courses with older children. Ideal programs for gifted students consider the individual needs of children and offer multiple options for services. These programs generally involve both advanced course materials and acceleration.",
+    "text": "Education of Gifted Students\n\nEducation of Gifted Students is area in the field of special education concerned with the instruction of students who have exceptionally high abilities. The United States Department of Education describes“giftedness” as exceptionally advanced performance or the potential for outstanding performance in intellectual, creative, leadership, artistic, or specific academic fields. Children who demonstrate outstanding talents come from all social, cultural, and economic groups.\n\nEducators believe that gifted students require special education services because their learning needs differ significantly from those of the general population. They learn more rapidly and are able to understand more abstract and complex ideas. They are also able to transform existing knowledge into new and useful forms, and to create new knowledge recognized for its originality, complexity, and elegance. Special education services and facilities for gifted children may enhance these abilities. In addition, some gifted learners may require special counseling services to address social or emotional adjustment issues that are complicated by their exceptional abilities.\n\nMany regular elementary and secondary schools in the United States offer special programs designed specifically to meet the needs of gifted students. Some schools provide specialized education programs to gifted children exclusively. These schools offer advanced education in mathematics, science, technology, the arts, or other academic disciplines. Many school districts rely on intelligence tests to identify gifted students. However, most guidelines for determining giftedness recommend the use of a combination of standardized test scores, rating systems developed by individual schools, classroom observational records, and performance assessments.\n\nGifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adapting education programs so that students may progress through particular subject material quicker than usual. These modifications may take place within the regular classroom setting or they may involve changing the child’s placement in school. Some gifted children gain early entrance to kindergarten, skip grades, enter college earlier than usual, or take specific courses with older children. Ideal programs for gifted students consider the individual needs of children and offer multiple options for services. These programs generally involve both advanced course materials and acceleration.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -3677,9 +3706,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Education of Gifted Students is area in the field of special education concerned with the instruction of students who ha...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Education of Gifted Students...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -3703,9 +3732,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Educators believe that gifted students require special education services because their learning needs differ significan...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Education of Gifted Students is area in the field of special education concerned with the instruction of students who have exceptionally high abilitie...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -3729,9 +3758,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Many regular elementary and secondary schools in the United States offer special programs designed specifically to meet ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Educators believe that gifted students require special education services because their learning needs differ significantly from those of the general ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -3755,9 +3784,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Many regular elementary and secondary schools in the United States offer special programs designed specifically to meet the needs of gifted students. ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -3781,9 +3810,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -3807,9 +3836,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -3833,9 +3862,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -3859,9 +3888,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -3885,9 +3914,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -3911,16 +3940,16 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Gifted children may study a specially modified curriculum or may progress through academic subjects at an accelerated pace. Acceleration involves adap...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t5-p2",
     "title": "Land Diving: The Ancient Ritual of Pentecost Island",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
     "wordCount": 487,
     "paragraphs": [
@@ -3980,9 +4009,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
         "evidence": "Becoming an Adult is Never Easy....",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -4006,9 +4035,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "For David, as growing up on Pentecost Island in the South Pacific, he had to become a land diver to prove his maturity. ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "For David, as growing up on Pentecost Island in the South Pacific, he had to become a land diver to prove his maturity. Land diving is a tradition on ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -4016,25 +4045,25 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Because she planned to give it to David after his jump."
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Because she used to like playing with it."
           },
           {
             "key": "C",
-            "text": ""
+            "text": "Because a car is the symbol of becoming an adult."
           },
           {
             "key": "D",
-            "text": ""
+            "text": "Because she planned to throw it away after his jump."
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Every year at a ceremony called Naghol, the men of the island jump off towers thirty metres tall, with long vines, not e...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Every year at a ceremony called Naghol, the men of the island jump off towers thirty metres tall, with long vines, not elastic, tied to their feet.A p...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -4058,9 +4087,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "As David climbed the tower, his mother watched from below. She was holding a toy car that he used to play with when he w...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "As David climbed the tower, his mother watched from below. She was holding a toy car that he used to play with when he was younger. After a boys first...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -4068,25 +4097,25 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Because this allowed him to become a man."
           },
           {
             "key": "B",
-            "text": ""
+            "text": "Because his mother could see him."
           },
           {
             "key": "C",
-            "text": ""
+            "text": "Because he wanted to be injured."
           },
           {
             "key": "D",
-            "text": ""
+            "text": "Because he knew that he wouldn't be seriously injured."
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "‘Before my jump, I felt very nervous,’ remembers fourteen-year- old David. ‘Every year someone would get an injury. For ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "‘Before my jump, I felt very nervous,’ remembers fourteen-year- old David. ‘Every year someone would get an injury. For a second, I panicked. I though...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -4110,9 +4139,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "David jumped. He fell head-first to the ground. Luckily, he landed safely and walked away with just a few bruises. And d...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "David jumped. He fell head-first to the ground. Luckily, he landed safely and walked away with just a few bruises. And does he feel like a man now? ‘W...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -4136,9 +4165,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "In the Amazon, the teenage boys of the SatereMawe tribe have to go through the terrible pain of the glove ceremony. A pa...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "In the Amazon, the teenage boys of the SatereMawe tribe have to go through the terrible pain of the glove ceremony. A pair of big ceremonial gloves ar...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -4162,9 +4191,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Fourteen-year-old Mari recently went through this extraordinary ceremony. ‘All my family was there with me, helping me a...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Fourteen-year-old Mari recently went through this extraordinary ceremony. ‘All my family was there with me, helping me and giving me advice,’ he remem...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -4188,9 +4217,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "So, is Mari now seen as an adult by the rest of his tribe? ‘Not yet,’ says Mari with an uncomfortable smile.‘I have to p...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "So, is Mari now seen as an adult by the rest of his tribe? ‘Not yet,’ says Mari with an uncomfortable smile.‘I have to put on the bullet ant gloves tw...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -4214,19 +4243,20 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "So, is Mari now seen as an adult by the rest of his tribe? ‘Not yet,’ says Mari with an uncomfortable smile.‘I have to p...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "So, is Mari now seen as an adult by the rest of his tribe? ‘Not yet,’ says Mari with an uncomfortable smile.‘I have to put on the bullet ant gloves tw...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t5-p3",
     "title": "Agricultural Expansion: Clearing Land for Modern Farms",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 495,
+    "wordCount": 499,
     "paragraphs": [
+      "Clearing Land for Farms",
       "Rainforests are disappearing in tropical areas around the world. They are being cut to burned, and damaged through a process called “deforestation.” This is a serious problem in developing countries within tropical regions. The impact of deforestation, though, also have vast global implications. It is, therefore, very important to find solutions to these problems. Unfortunately, progress in this area has been very slow.",
       "According to World Bank statistics, many developing countries, such as Brazil, Ecuador and Indonesia had lost almost half of their rainforests by 1991. Worldwide, in 1800 there were billion acres of tropical forests, while today there are only 3.5 billion acres. Recent statistics suggest that an area of tropical forest larger than North Korea is deforested every year.",
       "(A) Most importantly, though, the rainforests play an important role in the health of our environment. (B) Trees and other plants act as filters that clean pollutants out of the air and produce clean air. (C) With air pollution increasing as forests decline, the world is facing apotential crisis with regard to air quality. (D)",
@@ -4235,7 +4265,7 @@ export const READING_PASSAGES_DATA = {
       "Large companies contribute their own problems. Logging companies can do a great deal of damage on their own, but they also cause secondary damage through their effects on small farmers. Often, road construction companies hired by the government claim land that they clear during their projects, thus pushing small farmers further into the forest. In addition, the government might set low tax rates for agricultural production. Corporations and wealthy investors buy up land, and the small farmers are again forced to find plots in unclaimed areas of the forest.",
       "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus first on how poverty can be reduced. Any other solution can only be a temporary measure."
     ],
-    "text": "Rainforests are disappearing in tropical areas around the world. They are being cut to burned, and damaged through a process called “deforestation.” This is a serious problem in developing countries within tropical regions. The impact of deforestation, though, also have vast global implications. It is, therefore, very important to find solutions to these problems. Unfortunately, progress in this area has been very slow.\n\nAccording to World Bank statistics, many developing countries, such as Brazil, Ecuador and Indonesia had lost almost half of their rainforests by 1991. Worldwide, in 1800 there were billion acres of tropical forests, while today there are only 3.5 billion acres. Recent statistics suggest that an area of tropical forest larger than North Korea is deforested every year.\n\n(A) Most importantly, though, the rainforests play an important role in the health of our environment. (B) Trees and other plants act as filters that clean pollutants out of the air and produce clean air. (C) With air pollution increasing as forests decline, the world is facing apotential crisis with regard to air quality. (D)\n\nPoverty is one of the main forces behind deforestation in tropical countries, where many rely on farming as a way of life. The most practical method is “slash and burn” agriculture, in which a small area of trees is cut down and then burned to fertilize the soil. For a period of time, the soil can produce good crops, but rain gradually washes away the nutrients, reducing fertility and causing crops to grow at a slower rate. Eventually, the soil can no longer support crops, and farmers are often forced to abandon the land.\n\nGovernment policies also contribute to the destruction of rainforests. In countries like Brazil, much of the rainforest is owned by the state. However, the state does not have enough resources to control access to the forests. Therefore, the government allows people to claim areas of land within the forest. To do this, the people must clear the land that they want to claim. Small farmers, then, often clear plots and then sell them. They then move to a new area, clear it, and sell it again. While this is good for the farmers, it is highly destructive to the forest.\n\nLarge companies contribute their own problems. Logging companies can do a great deal of damage on their own, but they also cause secondary damage through their effects on small farmers. Often, road construction companies hired by the government claim land that they clear during their projects, thus pushing small farmers further into the forest. In addition, the government might set low tax rates for agricultural production. Corporations and wealthy investors buy up land, and the small farmers are again forced to find plots in unclaimed areas of the forest.\n\nThe problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus first on how poverty can be reduced. Any other solution can only be a temporary measure.",
+    "text": "Clearing Land for Farms\n\nRainforests are disappearing in tropical areas around the world. They are being cut to burned, and damaged through a process called “deforestation.” This is a serious problem in developing countries within tropical regions. The impact of deforestation, though, also have vast global implications. It is, therefore, very important to find solutions to these problems. Unfortunately, progress in this area has been very slow.\n\nAccording to World Bank statistics, many developing countries, such as Brazil, Ecuador and Indonesia had lost almost half of their rainforests by 1991. Worldwide, in 1800 there were billion acres of tropical forests, while today there are only 3.5 billion acres. Recent statistics suggest that an area of tropical forest larger than North Korea is deforested every year.\n\n(A) Most importantly, though, the rainforests play an important role in the health of our environment. (B) Trees and other plants act as filters that clean pollutants out of the air and produce clean air. (C) With air pollution increasing as forests decline, the world is facing apotential crisis with regard to air quality. (D)\n\nPoverty is one of the main forces behind deforestation in tropical countries, where many rely on farming as a way of life. The most practical method is “slash and burn” agriculture, in which a small area of trees is cut down and then burned to fertilize the soil. For a period of time, the soil can produce good crops, but rain gradually washes away the nutrients, reducing fertility and causing crops to grow at a slower rate. Eventually, the soil can no longer support crops, and farmers are often forced to abandon the land.\n\nGovernment policies also contribute to the destruction of rainforests. In countries like Brazil, much of the rainforest is owned by the state. However, the state does not have enough resources to control access to the forests. Therefore, the government allows people to claim areas of land within the forest. To do this, the people must clear the land that they want to claim. Small farmers, then, often clear plots and then sell them. They then move to a new area, clear it, and sell it again. While this is good for the farmers, it is highly destructive to the forest.\n\nLarge companies contribute their own problems. Logging companies can do a great deal of damage on their own, but they also cause secondary damage through their effects on small farmers. Often, road construction companies hired by the government claim land that they clear during their projects, thus pushing small farmers further into the forest. In addition, the government might set low tax rates for agricultural production. Corporations and wealthy investors buy up land, and the small farmers are again forced to find plots in unclaimed areas of the forest.\n\nThe problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus first on how poverty can be reduced. Any other solution can only be a temporary measure.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -4281,9 +4311,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Rainforests are disappearing in tropical areas around the world. They are being cut to burned, and damaged through a pro...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Clearing Land for Farms...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -4295,7 +4325,7 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "B",
-            "text": "to demonstrate that North Korean policy is favorable to that of"
+            "text": "to demonstrate that North Korean policy is favorable to that of Brazil."
           },
           {
             "key": "C",
@@ -4307,9 +4337,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "According to World Bank statistics, many developing countries, such as Brazil, Ecuador and Indonesia had lost almost hal...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Rainforests are disappearing in tropical areas around the world. They are being cut to burned, and damaged through a process called “deforestation.” T...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -4333,9 +4363,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "(A) Most importantly, though, the rainforests play an important role in the health of our environment. (B) Trees and oth...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "According to World Bank statistics, many developing countries, such as Brazil, Ecuador and Indonesia had lost almost half of their rainforests by 1991...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -4359,9 +4389,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Poverty is one of the main forces behind deforestation in tropical countries, where many rely on farming as a way of lif...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "(A) Most importantly, though, the rainforests play an important role in the health of our environment. (B) Trees and other plants act as filters that ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -4385,9 +4415,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Government policies also contribute to the destruction of rainforests. In countries like Brazil, much of the rainforest ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Poverty is one of the main forces behind deforestation in tropical countries, where many rely on farming as a way of life. The most practical method i...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -4411,9 +4441,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "Large companies contribute their own problems. Logging companies can do a great deal of damage on their own, but they al...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Government policies also contribute to the destruction of rainforests. In countries like Brazil, much of the rainforest is owned by the state. However...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -4437,9 +4467,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Large companies contribute their own problems. Logging companies can do a great deal of damage on their own, but they also cause secondary damage thro...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -4463,9 +4493,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus firs...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -4473,7 +4503,7 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": ""
+            "text": "Changing government policy"
           },
           {
             "key": "B",
@@ -4489,9 +4519,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus firs...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -4499,35 +4529,36 @@ export const READING_PASSAGES_DATA = {
         "options": [
           {
             "key": "A",
-            "text": "("
+            "text": "(A)"
           },
           {
             "key": "B",
-            "text": "("
+            "text": "(B)"
           },
           {
             "key": "C",
-            "text": "("
+            "text": "(C)"
           },
           {
             "key": "D",
-            "text": "("
+            "text": "(D)"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "The problem of deforestation is strongly affected by poverty in developing countries. Clearly, any long-term solution to deforestation must focus firs...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   },
   {
     "id": "reading-t5-p4",
     "title": "The Perfect Wedding: Cultural Customs and Celebrations",
-    "genre": "VSTEP Authentic Academic Text (Đề Thi Thật ĐHQG)",
+    "genre": "VSTEP Academic Text",
     "level": "VSTEP B1-B2",
-    "wordCount": 607,
+    "wordCount": 610,
     "paragraphs": [
+      "The Perfect Wedding",
       "What is it about weddings that make sensible people lose their heads? The mother of the bride, for example, dressed entirely in normal clothes for the rest of the year, is suddenly seized with the desire to dress like a fruit salad with a large coordinating hat. And brides - cool, intelligent girls in all other circumstances - throw out all their individual originality and try to dress like a princess in one of their childhood fairy stories.",
       "Two people meeting, falling in love and wanting to spend the rest of their lives together is an amazing thing - one of our great reasons for living. Weddings should reflect that, which is why I don’t feel that the typical enormous tent and wedding disc jockey are really what is needed. Driven to it by the number of awful weddings I have attended in the past and in the firm belief that they will one day come in handy for my own, I have been collecting a list of do’s and don’ts for weddings.",
       "To begin with, I think that far too many people are being invited to weddings these days. I have often found myself sitting in church thinking that I don’t really know the happy couple well enough to be witnessing this moving ceremony. If you reduce the number and scale of the event, you can instantly afford to increase the quality of everything else.",
@@ -4537,7 +4568,7 @@ export const READING_PASSAGES_DATA = {
       "A tea-time wedding appeals to me most of all. You can have a lot of fun with good cakes and sandwiches and they go very well with champagne and peach juice. Everyone has a good time because young and old can sit down wherever and whenever they want to. People can move around and nobody gets trapped at a table for an hour next to someone they neither know nor like. And flirting, half the point of a wedding, is always more successful in the afternoon.",
       "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time wedding allows you to go away in style, looking beautiful and feeling fabulous as everyone waves goodbye. Your family and guests can wait a while chatting and relaxing as the sun goes down, having spent a really lovely day with you."
     ],
-    "text": "What is it about weddings that make sensible people lose their heads? The mother of the bride, for example, dressed entirely in normal clothes for the rest of the year, is suddenly seized with the desire to dress like a fruit salad with a large coordinating hat. And brides - cool, intelligent girls in all other circumstances - throw out all their individual originality and try to dress like a princess in one of their childhood fairy stories.\n\nTwo people meeting, falling in love and wanting to spend the rest of their lives together is an amazing thing - one of our great reasons for living. Weddings should reflect that, which is why I don’t feel that the typical enormous tent and wedding disc jockey are really what is needed. Driven to it by the number of awful weddings I have attended in the past and in the firm belief that they will one day come in handy for my own, I have been collecting a list of do’s and don’ts for weddings.\n\nTo begin with, I think that far too many people are being invited to weddings these days. I have often found myself sitting in church thinking that I don’t really know the happy couple well enough to be witnessing this moving ceremony. If you reduce the number and scale of the event, you can instantly afford to increase the quality of everything else.\n\nHere’s how to do it properly. Have a morning or afternoon wedding so that the reception can be at the right time for either lunch or tea. So far, so normal, I know. I'm not trying to re-invent the wheel here, just to simplify things. Try to get married in a small church and invite only those people whom you truly love, not everyone you’ve ever met.\n\nThink about the lighting and the flowers. No lighting is best in summer when the sun will be pouring through magnificent stained glass windows. Flowers should be heavily perfumed and traditionally should contain some orange blossom or jasmine. Individual potted rose trees are always very pretty and can be rented.\n\nWeddings should be calm affairs and in this respect benefit enormously from being a daytime extent. Try to organize things so that they go straight into the meal without lots of standing around for all the guests while those dreadful posed photographs are being taken. If the meal is lunch, base it on one of those Italian wedding lunches you see in films: one long table crowded with friends and family sharing the celebration of this delightful occasion. The typical British wedding in a tent can so easily turn into a mess of round tables, with awkward seating arrangements, dull food and even duller music.\n\nA tea-time wedding appeals to me most of all. You can have a lot of fun with good cakes and sandwiches and they go very well with champagne and peach juice. Everyone has a good time because young and old can sit down wherever and whenever they want to. People can move around and nobody gets trapped at a table for an hour next to someone they neither know nor like. And flirting, half the point of a wedding, is always more successful in the afternoon.\n\nAnd then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time wedding allows you to go away in style, looking beautiful and feeling fabulous as everyone waves goodbye. Your family and guests can wait a while chatting and relaxing as the sun goes down, having spent a really lovely day with you.",
+    "text": "The Perfect Wedding\n\nWhat is it about weddings that make sensible people lose their heads? The mother of the bride, for example, dressed entirely in normal clothes for the rest of the year, is suddenly seized with the desire to dress like a fruit salad with a large coordinating hat. And brides - cool, intelligent girls in all other circumstances - throw out all their individual originality and try to dress like a princess in one of their childhood fairy stories.\n\nTwo people meeting, falling in love and wanting to spend the rest of their lives together is an amazing thing - one of our great reasons for living. Weddings should reflect that, which is why I don’t feel that the typical enormous tent and wedding disc jockey are really what is needed. Driven to it by the number of awful weddings I have attended in the past and in the firm belief that they will one day come in handy for my own, I have been collecting a list of do’s and don’ts for weddings.\n\nTo begin with, I think that far too many people are being invited to weddings these days. I have often found myself sitting in church thinking that I don’t really know the happy couple well enough to be witnessing this moving ceremony. If you reduce the number and scale of the event, you can instantly afford to increase the quality of everything else.\n\nHere’s how to do it properly. Have a morning or afternoon wedding so that the reception can be at the right time for either lunch or tea. So far, so normal, I know. I'm not trying to re-invent the wheel here, just to simplify things. Try to get married in a small church and invite only those people whom you truly love, not everyone you’ve ever met.\n\nThink about the lighting and the flowers. No lighting is best in summer when the sun will be pouring through magnificent stained glass windows. Flowers should be heavily perfumed and traditionally should contain some orange blossom or jasmine. Individual potted rose trees are always very pretty and can be rented.\n\nWeddings should be calm affairs and in this respect benefit enormously from being a daytime extent. Try to organize things so that they go straight into the meal without lots of standing around for all the guests while those dreadful posed photographs are being taken. If the meal is lunch, base it on one of those Italian wedding lunches you see in films: one long table crowded with friends and family sharing the celebration of this delightful occasion. The typical British wedding in a tent can so easily turn into a mess of round tables, with awkward seating arrangements, dull food and even duller music.\n\nA tea-time wedding appeals to me most of all. You can have a lot of fun with good cakes and sandwiches and they go very well with champagne and peach juice. Everyone has a good time because young and old can sit down wherever and whenever they want to. People can move around and nobody gets trapped at a table for an hour next to someone they neither know nor like. And flirting, half the point of a wedding, is always more successful in the afternoon.\n\nAnd then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time wedding allows you to go away in style, looking beautiful and feeling fabulous as everyone waves goodbye. Your family and guests can wait a while chatting and relaxing as the sun goes down, having spent a really lovely day with you.",
     "vocabularyHighlights": [
       {
         "word": "significant impact",
@@ -4583,9 +4614,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "What is it about weddings that make sensible people lose their heads? The mother of the bride, for example, dressed enti...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "The Perfect Wedding...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 2,
@@ -4609,9 +4640,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Two people meeting, falling in love and wanting to spend the rest of their lives together is an amazing thing - one of o...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "What is it about weddings that make sensible people lose their heads? The mother of the bride, for example, dressed entirely in normal clothes for the...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 3,
@@ -4635,9 +4666,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "To begin with, I think that far too many people are being invited to weddings these days. I have often found myself sitt...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "Two people meeting, falling in love and wanting to spend the rest of their lives together is an amazing thing - one of our great reasons for living. W...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 4,
@@ -4661,9 +4692,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "Here’s how to do it properly. Have a morning or afternoon wedding so that the reception can be at the right time for eit...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "To begin with, I think that far too many people are being invited to weddings these days. I have often found myself sitting in church thinking that I ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 5,
@@ -4687,9 +4718,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "C",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là C.",
-        "evidence": "Think about the lighting and the flowers. No lighting is best in summer when the sun will be pouring through magnificent...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là C.",
+        "evidence": "Here’s how to do it properly. Have a morning or afternoon wedding so that the reception can be at the right time for either lunch or tea. So far, so n...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 6,
@@ -4713,9 +4744,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "Weddings should be calm affairs and in this respect benefit enormously from being a daytime extent. Try to organize thin...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "Think about the lighting and the flowers. No lighting is best in summer when the sun will be pouring through magnificent stained glass windows. Flower...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 7,
@@ -4739,9 +4770,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "A tea-time wedding appeals to me most of all. You can have a lot of fun with good cakes and sandwiches and they go very ...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "Weddings should be calm affairs and in this respect benefit enormously from being a daytime extent. Try to organize things so that they go straight in...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 8,
@@ -4765,9 +4796,9 @@ export const READING_PASSAGES_DATA = {
           }
         ],
         "correctAnswer": "A",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là A.",
-        "evidence": "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time we...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là A.",
+        "evidence": "A tea-time wedding appeals to me most of all. You can have a lot of fun with good cakes and sandwiches and they go very well with champagne and peach ...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 9,
@@ -4787,13 +4818,13 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": "a \ttea with everyone standing and moving round"
+            "text": "a  tea with everyone standing and moving round"
           }
         ],
         "correctAnswer": "D",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là D.",
-        "evidence": "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time we...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là D.",
+        "evidence": "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time wedding allows you to go away in...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       },
       {
         "id": 10,
@@ -4813,13 +4844,13 @@ export const READING_PASSAGES_DATA = {
           },
           {
             "key": "D",
-            "text": "painful PHÂN LOẠI ĐỘ KHÓ CÂU HỎI ĐÁP ÁN"
+            "text": "painful"
           }
         ],
         "correctAnswer": "B",
-        "explanation": "Căn cứ theo tài liệu đáp án chính thức Bộ đề thi VSTEP B1-B2. Phương án đúng là B.",
-        "evidence": "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time we...",
-        "trapAnalysis": "Lưu ý đọc kỹ từ khóa chính trong câu hỏi để loại bỏ các phương án đánh lạc hướng."
+        "explanation": "Căn cứ vào dữ liệu bài đọc và đáp án chuẩn Bộ đề thi VSTEP ĐHQG. Đáp án chính xác là B.",
+        "evidence": "And then it’s time to put on your going-away outfit, one of the best moments of the wedding. A lunch-time or tea-time wedding allows you to go away in...",
+        "trapAnalysis": "Lưu ý đối chiếu kỹ thông tin trong đoạn văn tương ứng để loại trừ các phương án gây nhiễu."
       }
     ]
   }
