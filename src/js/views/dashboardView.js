@@ -74,6 +74,14 @@ if (typeof window !== 'undefined' && !window._vstepScoreListenerAttached) {
 }
 
 export function renderDashboard() {
+  window.resetCompetencyScores = () => {
+    if (confirm('Bạn có muốn đặt lại toàn bộ điểm số Bản đồ năng lực về 0% để bắt đầu ghi nhận lại từ đầu?')) {
+      AnalyticsStore.resetScores();
+      if (window.showToast) window.showToast('Đã đặt lại điểm bản đồ năng lực về 0%', 'info');
+      updateDashboardRadarDOM();
+    }
+  };
+
   setTimeout(() => {
     updateDashboardRadarDOM();
   }, 20);
@@ -102,12 +110,18 @@ export function renderDashboard() {
       <!-- Realtime Competency Radar Chart & Analytics Section -->
       <div class="grid-2" style="margin-bottom: 2rem; align-items: stretch;">
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
             <div>
               <h3 style="font-size: 1.25rem; margin: 0 0 0.25rem 0; color: var(--text-primary);">Bản Đồ Năng Lực VSTEP B1 Realtime</h3>
               <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Biểu đồ mạng nhện 6 trục tự động đồng bộ theo tiến độ luyện tập</p>
             </div>
-            <span class="badge badge-primary" style="font-size: 0.75rem; font-weight: 700;">6 Trụ Cột</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge badge-primary" style="font-size: 0.75rem; font-weight: 700;">6 Trụ Cột</span>
+              <button class="btn btn-secondary btn-sm" onclick="window.resetCompetencyScores()" title="Đặt lại toàn bộ điểm về 0%" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; display: inline-flex; align-items: center; gap: 0.3rem;">
+                <i data-lucide="rotate-ccw" style="width: 13px; height: 13px;"></i>
+                <span>Đặt Lại</span>
+              </button>
+            </div>
           </div>
 
           <div id="competency-radar-chart" style="display: flex; justify-content: center; align-items: center; min-height: 320px; padding: 0.5rem 0;">

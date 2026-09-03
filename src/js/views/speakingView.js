@@ -141,7 +141,6 @@ export function renderSpeakingView() {
       if (statusEl) statusEl.innerHTML = '<span style="color: var(--success); font-weight: 600;">✅ Đã ghi âm xong! Nghe lại bên dưới hoặc nhấn "Chấm Điểm AI".</span>';
       if (window.lucide) window.lucide.createIcons();
 
-      AnalyticsStore.updateSkillScore('speaking', +4);
       if (window.showToast) window.showToast('Đã lưu bản ghi âm câu trả lời', 'info');
     }
   };
@@ -173,7 +172,12 @@ export function renderSpeakingView() {
 
     const result = await evaluateSpeakingWithGemini(activeSpeakingPart, promptText, transcribed);
     itemAiResults[itemId] = result;
-    AnalyticsStore.updateSkillScore('speaking', +6);
+    
+    // Chỉ cộng điểm Speaking khi có kết quả chấm điểm thực tế từ AI
+    const speakingDelta = Math.round((result.overallScore / 10) * 4); // tối đa +4 điểm theo chất lượng
+    if (speakingDelta > 0) {
+      AnalyticsStore.updateSkillScore('speaking', speakingDelta);
+    }
 
     if (statusEl) statusEl.innerHTML = '<span style="color: var(--success); font-weight: 600;">🎉 Đã hoàn tất đánh giá AI chuẩn VSTEP!</span>';
 
