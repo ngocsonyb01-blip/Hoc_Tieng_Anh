@@ -48,9 +48,22 @@ export function renderListeningView() {
       const exp = qCard.querySelector('.quiz-explanation');
       if (exp) exp.style.display = 'block';
 
-      // Update analytics score on correct answer
-      if (optionKey === correctKey) {
-        AnalyticsStore.updateSkillScore('listening', +2);
+      // Check if all questions in active part are answered to record session accuracy (quân bình)
+      const sets = listeningPracticeTests.testSets || [];
+      const testSet = sets[selectedTestSetIndex] || sets[0] || {};
+      const partObj = testSet[selectedPart] || {};
+      const partQuestions = selectedPart === 'part1' 
+        ? (partObj.questions || []) 
+        : (selectedPart === 'part2' ? (partObj.conversations || []).flatMap(c => c.questions || []) : (partObj.talks || []).flatMap(t => t.questions || []));
+      
+      const answeredCount = partQuestions.filter(q => userAnswers[q.id] !== undefined).length;
+      if (partQuestions.length > 0 && answeredCount === partQuestions.length) {
+        const correctCount = partQuestions.filter(q => userAnswers[q.id] === q.correctAnswer).length;
+        const percent = Math.round((correctCount / partQuestions.length) * 100);
+        AnalyticsStore.recordSession('listening', percent, { source: 'listening_practice', setIndex: selectedTestSetIndex, part: selectedPart, correctCount, total: partQuestions.length });
+        if (window.showToast) {
+          window.showToast(`🎉 Hoàn thành ${selectedPart.toUpperCase()}: ${correctCount}/${partQuestions.length} (${percent}%)!`, 'success');
+        }
       }
     }
   };

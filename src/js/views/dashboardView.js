@@ -27,15 +27,23 @@ function updateDashboardRadarDOM() {
     let totalScore = 0;
     barsContainer.innerHTML = items.map(item => {
       const score = Math.round(scores[item.key] ?? 0);
+      const detail = AnalyticsStore.getSkillDetail(item.key);
       totalScore += score;
       return `
         <div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.825rem; font-weight: 600; margin-bottom: 0.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.825rem; font-weight: 600; margin-bottom: 0.25rem;">
             <span style="display: flex; align-items: center; gap: 0.35rem; color: var(--text-primary);">
               <i data-lucide="${item.icon}" style="width: 14px; height: 14px; color: ${item.color};"></i>
               ${item.label}
             </span>
-            <span style="font-family: var(--font-mono); font-weight: 700; color: ${score > 0 ? item.color : 'var(--text-muted)'};">${score}%</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.725rem; color: var(--text-muted); font-weight: 500;">
+                ${detail.count > 0 ? `${detail.count} lần làm` : 'Chưa làm'}
+              </span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: ${detail.count > 0 ? item.color : 'var(--text-muted)'}; min-width: 40px; text-align: right;">
+                ${detail.count > 0 ? `${score}%` : '-'}
+              </span>
+            </div>
           </div>
           <div style="height: 6px; background: var(--bg-muted); border-radius: var(--radius-full); overflow: hidden;">
             <div style="height: 100%; width: ${score}%; background: ${item.color}; transition: width 0.5s ease;"></div>
@@ -49,14 +57,14 @@ function updateDashboardRadarDOM() {
     if (assessmentEl) {
       if (totalScore === 0) {
         assessmentEl.innerHTML = `
-          <strong>Trạng thái ban đầu:</strong> Bạn chưa bắt đầu làm bài luyện tập nào. Hãy bắt đầu học ngữ pháp, từ vựng hoặc làm bài tập Nghe, Nói, Đọc, Viết để hệ thống tự động ghi nhận và vẽ biểu đồ tiến bộ!
+          <strong>Trạng thái:</strong> Bạn chưa có dữ liệu làm bài nào. Điểm số bản đồ năng lực sẽ tự động tính quân bình (trung bình cộng kết quả thực tế) sau mỗi phiên bạn luyện tập hoặc thi thử!
         `;
       } else {
         const sorted = [...items].sort((a, b) => (scores[b.key] || 0) - (scores[a.key] || 0));
         const highest = sorted[0];
         const lowest = sorted[sorted.length - 1];
         assessmentEl.innerHTML = `
-          <strong>Đánh giá thực tế:</strong> Bạn đang làm tốt nhất ở phần <strong>${highest.label} (${scores[highest.key]}%)</strong>. Hãy tiếp tục củng cố thêm <strong>${lowest.label} (${scores[lowest.key]}%)</strong> để nâng đều cả 4 kỹ năng VSTEP B1!
+          <strong>Đánh giá thực tế:</strong> Điểm năng lực được tính <strong>quân bình từ kết quả các lần làm bài</strong>. Kỹ năng đang đạt cao nhất: <strong>${highest.label} (${scores[highest.key]}%)</strong>. Cần tăng cường: <strong>${lowest.label} (${scores[lowest.key]}%)</strong>.
         `;
       }
     }
@@ -112,8 +120,8 @@ export function renderDashboard() {
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
             <div>
-              <h3 style="font-size: 1.25rem; margin: 0 0 0.25rem 0; color: var(--text-primary);">Bản Đồ Năng Lực VSTEP B1 Realtime</h3>
-              <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Biểu đồ mạng nhện 6 trục tự động đồng bộ theo tiến độ luyện tập</p>
+              <h3 style="font-size: 1.2rem; margin: 0 0 0.25rem 0; color: var(--text-primary);">Bản Đồ Năng Lực</h3>
+              <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Tính quân bình kết quả các lần làm bài luyện tập & thi thử</p>
             </div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <span class="badge badge-primary" style="font-size: 0.75rem; font-weight: 700;">6 Trụ Cột</span>
@@ -127,12 +135,16 @@ export function renderDashboard() {
           <div id="competency-radar-chart" style="display: flex; justify-content: center; align-items: center; min-height: 320px; padding: 0.5rem 0;">
             <!-- Radar SVG will be rendered here dynamically -->
           </div>
+
+          <div id="competency-assessment-text" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: var(--bg-muted); border-radius: var(--radius-sm); line-height: 1.5;">
+            <!-- Dynamic assessment text -->
+          </div>
         </div>
 
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-              <h3 style="font-size: 1.25rem; margin: 0; color: var(--text-primary);">Chi Tiết Chỉ Số 6 Kỹ Năng</h3>
+              <h3 style="font-size: 1.2rem; margin: 0; color: var(--text-primary);">Điểm Quân Bình 6 Kỹ Năng</h3>
               <a href="#vocab-review" class="btn btn-primary btn-sm" style="font-size: 0.775rem;">
                 <i data-lucide="brain-circuit"></i> Luyện Tập Ngay
               </a>

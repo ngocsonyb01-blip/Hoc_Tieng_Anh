@@ -134,11 +134,12 @@ export function renderWritingView() {
     if (window.showToast) window.showToast('Gemini AI đang chấm bài...', 'info');
 
     // Perform Comprehensive AI Evaluation with Gemini
-    modalEvaluationResult = await evaluateWritingWithGemini(activeModalTaskType, taskPrompt, text);
-    AnalyticsStore.updateSkillScore('writing', words >= minWords ? 8 : 4);
+    // Ghi nhận điểm bài viết thực tế vào bản đồ năng lực (quân bình)
+    const writingPercent = Math.round((modalEvaluationResult.overallScore / 10) * 100);
+    AnalyticsStore.recordSession('writing', writingPercent, { source: 'writing_workshop', taskType: activeModalTaskType, score: modalEvaluationResult.overallScore });
 
     if (window.showToast) {
-      window.showToast(`Đã chấm điểm: ${modalEvaluationResult.overallScore}/10`, 'success');
+      window.showToast(`Đã chấm điểm: ${modalEvaluationResult.overallScore}/10 (${writingPercent}%)`, 'success');
     }
 
     renderOrUpdateWritingModalDOM();

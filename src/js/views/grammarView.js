@@ -60,14 +60,17 @@ export function renderGrammarView(selectedTopicId = null) {
       isCorrect: isCorrect
     };
 
-    if (isCorrect) {
-      AnalyticsStore.updateSkillScore('grammar', +2);
+    const answeredList = questions.filter(q => grammarQuizState[q.id] !== undefined);
+    if (answeredList.length === questions.length) {
+      const correctCount = questions.filter(q => grammarQuizState[q.id]?.isCorrect).length;
+      const percent = Math.round((correctCount / questions.length) * 100);
+      AnalyticsStore.recordSession('grammar', percent, { source: 'grammar_quiz', topicId, correctCount, total: questions.length });
       if (window.showToast) {
-        window.showToast('🎉 Chính xác! +2 điểm Nền Tảng Ngữ Pháp', 'success');
+        window.showToast(`🎉 Hoàn thành trắc nghiệm: ${correctCount}/${questions.length} (${percent}%)!`, 'success');
       }
     } else {
       if (window.showToast) {
-        window.showToast('⚠️ Chưa chính xác. Hãy xem lời giải chi tiết!', 'warning');
+        window.showToast(isCorrect ? '🎉 Chính xác!' : '⚠️ Chưa chính xác. Xem giải thích bên dưới.', isCorrect ? 'success' : 'warning');
       }
     }
 

@@ -32,9 +32,17 @@ export function renderReadingView() {
       const exp = qCard.querySelector('.quiz-explanation');
       if (exp) exp.style.display = 'block';
 
-      // Update analytics score on correct answer
-      if (optionKey === correctKey) {
-        AnalyticsStore.updateSkillScore('reading', +2);
+      // Check if all questions in active passage are answered to record session accuracy (quân bình)
+      const currentPassage = (practicePassages && practicePassages[selectedPassageIndex]) || (practicePassages && practicePassages[0]) || {};
+      const pQuestions = currentPassage.questions || [];
+      const answeredCount = pQuestions.filter(q => readingUserAnswers[q.id] !== undefined).length;
+      if (pQuestions.length > 0 && answeredCount === pQuestions.length) {
+        const correctCount = pQuestions.filter(q => readingUserAnswers[q.id] === q.correctAnswer).length;
+        const percent = Math.round((correctCount / pQuestions.length) * 100);
+        AnalyticsStore.recordSession('reading', percent, { source: 'reading_practice', passageIndex: selectedPassageIndex, correctCount, total: pQuestions.length });
+        if (window.showToast) {
+          window.showToast(`🎉 Hoàn thành bài đọc ${selectedPassageIndex + 1}: ${correctCount}/${pQuestions.length} (${percent}%)!`, 'success');
+        }
       }
     }
   };

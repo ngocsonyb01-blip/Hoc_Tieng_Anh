@@ -173,11 +173,9 @@ export function renderSpeakingView() {
     const result = await evaluateSpeakingWithGemini(activeSpeakingPart, promptText, transcribed);
     itemAiResults[itemId] = result;
     
-    // Chỉ cộng điểm Speaking khi có kết quả chấm điểm thực tế từ AI
-    const speakingDelta = Math.round((result.overallScore / 10) * 4); // tối đa +4 điểm theo chất lượng
-    if (speakingDelta > 0) {
-      AnalyticsStore.updateSkillScore('speaking', speakingDelta);
-    }
+    // Ghi nhận điểm bài nói thực tế vào bản đồ năng lực (quân bình)
+    const speakingPercent = Math.round((result.overallScore / 10) * 100);
+    AnalyticsStore.recordSession('speaking', speakingPercent, { source: 'speaking_workshop', part: activeSpeakingPart, score: result.overallScore });
 
     if (statusEl) statusEl.innerHTML = '<span style="color: var(--success); font-weight: 600;">🎉 Đã hoàn tất đánh giá AI chuẩn VSTEP!</span>';
 

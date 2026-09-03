@@ -190,8 +190,7 @@ export class FlashcardTestComponent {
       if (updatedPack) {
         activePack = updatedPack;
         if (mastered) {
-          AnalyticsStore.updateSkillScore('vocabulary', +2);
-          if (window.showToast) window.showToast('✅ Đã nhớ từ vựng này! (+2 điểm từ vựng)', 'success');
+          if (window.showToast) window.showToast('✅ Đã nhớ từ vựng này!', 'success');
         } else {
           if (window.showToast) window.showToast('Đã đánh dấu cần ôn lại từ này.', 'info');
         }
@@ -245,7 +244,13 @@ export class FlashcardTestComponent {
         if (updated) activePack = updated;
       }
 
-      AnalyticsStore.updateSkillScore('vocabulary', Math.round(correctCount * 1.5));
+      // Ghi nhận điểm bài kiểm tra từ vựng vào bản đồ năng lực (quân bình)
+      AnalyticsStore.recordSession('vocabulary', percent, { 
+        source: 'flashcard_quiz', 
+        packId: activePack?.id, 
+        correctCount, 
+        total 
+      });
 
       quizResult = {
         correctCount,

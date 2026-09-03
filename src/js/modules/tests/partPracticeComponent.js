@@ -213,9 +213,9 @@ export class PartPracticeComponent {
         result
       };
 
-      // Cộng điểm năng lực tương ứng
-      const delta = Math.round((result.overallScore / 10) * 4);
-      if (delta > 0) AnalyticsStore.updateSkillScore('writing', delta);
+      // Ghi nhận điểm thực tế bài viết vào bản đồ năng lực (quân bình)
+      const writingPercent = Math.round((result.overallScore / 10) * 100);
+      AnalyticsStore.recordSession('writing', writingPercent, { source: 'part_practice_writing', examIndex: selectedExamIdx });
 
       if (onStateChange) onStateChange();
       showToast(`Đã chấm điểm AI: ${result.overallScore.toFixed(1)}/10`, 'success');
@@ -236,8 +236,9 @@ export class PartPracticeComponent {
           feedback: evalResult.generalFeedback
         };
 
-        const delta = Math.round((evalResult.overallScore / 10) * 3);
-        if (delta > 0) AnalyticsStore.updateSkillScore('speaking', delta);
+        // Ghi nhận điểm thực tế bài nói vào bản đồ năng lực (quân bình)
+        const speakingPercent = Math.round((evalResult.overallScore / 10) * 100);
+        AnalyticsStore.recordSession('speaking', speakingPercent, { source: 'part_practice_speaking', examIndex: selectedExamIdx });
 
         if (onStateChange) onStateChange();
         showToast('Đã chấm điểm phát âm AI', 'success');
@@ -432,12 +433,12 @@ export class PartPracticeComponent {
     });
 
     if (lTotal > 0) {
-      const delta = Math.round((lCorrect / lTotal) * 4);
-      if (delta > 0) AnalyticsStore.updateSkillScore('listening', delta);
+      const lPercent = Math.round((lCorrect / lTotal) * 100);
+      AnalyticsStore.recordSession('listening', lPercent, { source: 'part_practice_listening', examIndex: selectedExamIdx, correct: lCorrect, total: lTotal });
     }
     if (rTotal > 0) {
-      const delta = Math.round((rCorrect / rTotal) * 4);
-      if (delta > 0) AnalyticsStore.updateSkillScore('reading', delta);
+      const rPercent = Math.round((rCorrect / rTotal) * 100);
+      AnalyticsStore.recordSession('reading', rPercent, { source: 'part_practice_reading', examIndex: selectedExamIdx, correct: rCorrect, total: rTotal });
     }
   }
 

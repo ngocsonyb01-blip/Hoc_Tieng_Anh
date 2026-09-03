@@ -5,6 +5,7 @@ import { evaluateWritingWithGemini, evaluateSpeakingWithGemini } from '../servic
 import { PartPracticeComponent } from '../modules/tests/partPracticeComponent.js';
 import { VstepAudioDirector } from '../modules/listening/vstepAudioDirector.js';
 import { PracticeHistoryService } from '../modules/tests/practiceHistoryService.js';
+import { AnalyticsStore } from '../modules/analytics/analyticsStore.js';
 
 let isExamActive = false; // false = Show Exam Selection Lobby; true = In Exam Paper
 let isHistoryModalOpen = false; // Toggle Practice History Modal
@@ -413,6 +414,12 @@ export function renderTestsView() {
           writingScore: wScore,
           speakingScore: sScore
         });
+
+        // Ghi nhận điểm thực tế của 4 kỹ năng vào bản đồ năng lực (quân bình)
+        AnalyticsStore.recordSession('listening', Math.round((lCorrect / 35) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
+        AnalyticsStore.recordSession('reading', Math.round((rCorrect / 40) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
+        AnalyticsStore.recordSession('writing', Math.round(parseFloat(wScore) * 10), { source: 'full_exam', examIndex: selectedExamIndex });
+        AnalyticsStore.recordSession('speaking', Math.round(parseFloat(sScore) * 10), { source: 'full_exam', examIndex: selectedExamIndex });
 
         window.app.renderCurrentView();
         window.scrollTo({ top: 0, behavior: 'smooth' });
