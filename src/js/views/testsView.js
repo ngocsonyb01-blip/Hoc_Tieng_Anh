@@ -121,8 +121,8 @@ function startActiveExamTimer() {
 
 export function renderTestsView() {
   // Bind PartPracticeComponent actions
-  PartPracticeComponent.initWindowBindings(() => {
-    if (window.app) window.app.renderCurrentView();
+  PartPracticeComponent.initWindowBindings((preserveScroll = false) => {
+    if (window.app) window.app.renderCurrentView(preserveScroll);
   });
 
   window.openPracticeHistoryModal = () => {
@@ -548,13 +548,32 @@ function renderExamSelectionLobby() {
                 <i data-lucide="play-circle"></i> Vào Thi
               </button>
             `}
+
+            <!-- Ô Thi Từng Phần Ngay Dưới Nút Thi Thử -->
+            <div style="margin-top: 0.85rem; padding: 0.75rem 0.85rem; background: var(--bg-muted); border-radius: var(--radius-md); border: 1.5px dashed var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;">
+              <div>
+                <div style="font-size: 0.825rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.35rem;">
+                  <i data-lucide="layers" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                  <span>Thi Từng Phần (Theo Part)</span>
+                </div>
+                <div style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.1rem;">
+                  Luyện riêng Nghe, Đọc, Viết hoặc Nói
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-sm" 
+                      style="padding: 0.4rem 0.85rem; font-weight: 700; font-size: 0.8rem; white-space: nowrap; border-color: var(--primary); color: var(--primary);"
+                      onclick="window.openExamPartPracticeModal(${idx})">
+                <i data-lucide="check-square" style="width: 13px; height: 13px;"></i>
+                <span>Chọn Part</span>
+              </button>
+            </div>
           </div>
         `;
         }).join('')}
       </div>
 
-      <!-- VSTEP Sectional / Part-by-Part Practice Section -->
-      ${PartPracticeComponent.renderLobbySection()}
+      <!-- Modal Chọn Part Thi Từng Phần Cho Từng Đề -->
+      ${PartPracticeComponent.renderPartSelectionModal()}
 
       <!-- Modal Lịch Sử Luyện Tập -->
       ${isHistoryModalOpen ? renderPracticeHistoryModal() : ''}

@@ -68,6 +68,7 @@ export const ALL_PARTS_FLAT = VSTEP_PARTS_CONFIG.flatMap(g => g.parts.map(p => (
 // Component State
 let selectedExamIdx = 0;
 let selectedPartIds = ['listening_part1', 'reading_p1'];
+let isPartSelectionModalOpen = false;
 let isPracticing = false;
 let isSubmitted = false;
 let userAnswers = {};
@@ -83,9 +84,23 @@ export class PartPracticeComponent {
    * Đăng ký các hàm window global cho các thao tác giao diện
    */
   static initWindowBindings(onStateChange) {
+    window.openExamPartPracticeModal = (idx) => {
+      selectedExamIdx = parseInt(idx, 10) || 0;
+      isPartSelectionModalOpen = true;
+      if (selectedPartIds.length === 0) {
+        selectedPartIds = ALL_PARTS_FLAT.map(p => p.id);
+      }
+      if (onStateChange) onStateChange(true);
+    };
+
+    window.closeExamPartPracticeModal = () => {
+      isPartSelectionModalOpen = false;
+      if (onStateChange) onStateChange(true);
+    };
+
     window.changePartPracticeExam = (idx) => {
       selectedExamIdx = parseInt(idx, 10) || 0;
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(true);
     };
 
     window.togglePartSelection = (partId) => {
@@ -94,17 +109,17 @@ export class PartPracticeComponent {
       } else {
         selectedPartIds = [...selectedPartIds, partId];
       }
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(true);
     };
 
     window.selectAllParts = () => {
       selectedPartIds = ALL_PARTS_FLAT.map(p => p.id);
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(true);
     };
 
     window.deselectAllParts = () => {
       selectedPartIds = [];
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(true);
     };
 
     window.selectPartsBySkill = (skill) => {
@@ -114,7 +129,7 @@ export class PartPracticeComponent {
         return item && item.skill !== skill;
       });
       selectedPartIds = [...new Set([...otherParts, ...partsOfSkill])];
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(true);
     };
 
     window.startPartPractice = () => {
@@ -123,6 +138,7 @@ export class PartPracticeComponent {
         return;
       }
 
+      isPartSelectionModalOpen = false;
       isPracticing = true;
       isSubmitted = false;
       userAnswers = {};
@@ -139,7 +155,7 @@ export class PartPracticeComponent {
       remainingSeconds = totalMins * 60;
 
       PartPracticeComponent.startTimer(onStateChange);
-      if (onStateChange) onStateChange();
+      if (onStateChange) onStateChange(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       showToast(`Bắt đầu luyện tập ${selectedPartIds.length} phần đã chọn`, 'info');
     };
@@ -430,9 +446,11 @@ export class PartPracticeComponent {
   }
 
   /**
-   * 1. Render mục "Thi Từng Phần" tại trang Lobby
+   * Render Modal chọn các Part thi cho một đề cụ thể
    */
-  static renderLobbySection() {
+  static renderPartSelectionModal() {
+    if (!isPartSelectionModalOpen) return '';
+
     const currentExam = authenticVstepExams[selectedExamIdx] || authenticVstepExams[0];
     const totalEstMins = selectedPartIds.reduce((acc, id) => {
       const found = ALL_PARTS_FLAT.find(p => p.id === id);
@@ -440,92 +458,43 @@ export class PartPracticeComponent {
     }, 0);
 
     return `
-      <div id="vstep-sectional-practice-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px dashed var(--border-color);">
-        <!-- Section Header -->
-        <div class="card" style="background: linear-gradient(135deg, var(--bg-card), var(--bg-muted)); border-left: 5px solid var(--secondary); padding: 1.75rem 2rem; margin-bottom: 2rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div class="modal-backdrop animate-fade-in" style="position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 10600; display: flex; align-items: center; justify-content: center; padding: 1rem;" onclick="if(event.target === this) window.closeExamPartPracticeModal()">
+        <div class="modal-card" style="background: var(--bg-card); border-radius: var(--radius-lg); max-width: 900px; width: 100%; max-height: 90vh; display: flex; flex-direction: column; box-shadow: var(--shadow-xl); border: 1px solid var(--border-color); overflow: hidden;">
+          
+          <!-- Modal Header -->
+          <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: var(--bg-muted); flex-wrap: wrap; gap: 0.5rem;">
             <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <span class="badge badge-secondary" style="font-weight: 700;">Chế Độ Mới</span>
-                <span class="badge badge-primary">Thi Từng Phần Linh Hoạt</span>
-                <span class="badge badge-success">Đúng Chuẩn VSTEP 4 Kỹ Năng</span>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                <span class="badge badge-secondary" style="font-weight: 700;">Luyện Từng Phần</span>
+                <span class="badge badge-primary">Đề Số 0${selectedExamIdx + 1}</span>
               </div>
-              <h3 style="color: var(--primary); margin: 0 0 0.4rem 0; font-size: 1.55rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i data-lucide="layers"></i>
-                Luyện Thi Từng Phần Của Đề (VSTEP Sectional Practice)
-              </h3>
-              <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 800px;">
-                Chọn một bộ đề và tích chọn chính xác các phần bạn muốn rèn luyện (Listening Parts, Reading Passages, Writing Tasks, Speaking Parts). Giúp bạn tập trung cải thiện kỹ năng còn yếu mà không cần làm toàn bộ đề dài!
-              </p>
+              <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-primary);">${currentExam.name}</h3>
             </div>
-
-            <!-- Quick Action Button -->
-            <button class="btn btn-primary" 
-                    ${selectedPartIds.length === 0 ? 'disabled' : ''}
-                    style="padding: 0.85rem 1.75rem; font-weight: 700; font-size: 1rem; border-radius: var(--radius-full); box-shadow: 0 8px 20px rgba(37,99,235,0.35); display: inline-flex; align-items: center; gap: 0.5rem;"
-                    onclick="window.startPartPractice()">
-              <i data-lucide="play"></i>
-              <span>Luyện Tập (${selectedPartIds.length} Phần Đã Chọn)</span>
+            <button class="btn btn-secondary btn-sm" onclick="window.closeExamPartPracticeModal()" style="border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">
+              ✕
             </button>
           </div>
-        </div>
 
-        <!-- Step 1: Chọn Bộ Đề -->
-        <div class="card" style="margin-bottom: 1.5rem; padding: 1.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <span style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem;">
-                1
-              </span>
-              <div>
-                <strong style="color: var(--text-primary); font-size: 1.05rem;">Chọn Bộ Đề VSTEP Muốn Luyện:</strong>
-                <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Các câu hỏi và nội dung luyện tập sẽ lấy chính xác từ đề thi này</p>
-              </div>
-            </div>
-
-            <div style="min-width: 320px; flex: 1; max-width: 500px;">
-              <select class="form-select" 
-                      style="width: 100%; padding: 0.65rem 1rem; border-radius: var(--radius-md); border: 2px solid var(--primary); font-weight: 700; background: var(--bg-surface); color: var(--text-primary); cursor: pointer;"
-                      onchange="window.changePartPracticeExam(this.value)">
-                ${authenticVstepExams.map((ex, i) => `
-                  <option value="${i}" ${i === selectedExamIdx ? 'selected' : ''}>
-                    Đề Số 0${i + 1}: ${ex.name}
-                  </option>
-                `).join('')}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2: Tích chọn các Part theo cấu trúc chuẩn VSTEP -->
-        <div class="card" style="margin-bottom: 1.5rem; padding: 1.75rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <span style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem;">
-                2
-              </span>
-              <div>
-                <strong style="color: var(--text-primary); font-size: 1.05rem;">Tích Chọn Các Phần Theo Cấu Trúc Đề:</strong>
-                <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Tích chọn 1 hoặc nhiều part bất kỳ. Tích xong bấm nút "Luyện Tập" bên dưới</p>
-              </div>
-            </div>
-
-            <!-- Quick Filter Toolbar -->
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+          <!-- Quick Filter Toolbar -->
+          <div style="padding: 0.75rem 1.5rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-secondary);">
+              Tích chọn phần bạn muốn làm:
+            </span>
+            <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
               <button class="btn btn-secondary btn-sm" onclick="window.selectAllParts()">
-                ✓ Chọn Tất Cả (12 Phần)
+                ✓ Tất Cả (12)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="window.selectPartsBySkill('listening')">
-                🎧 Chỉ Nghe
+                🎧 Nghe
               </button>
               <button class="btn btn-secondary btn-sm" onclick="window.selectPartsBySkill('reading')">
-                📖 Chỉ Đọc
+                📖 Đọc
               </button>
               <button class="btn btn-secondary btn-sm" onclick="window.selectPartsBySkill('writing')">
-                ✍️ Chỉ Viết
+                ✍️ Viết
               </button>
               <button class="btn btn-secondary btn-sm" onclick="window.selectPartsBySkill('speaking')">
-                🗣️ Chỉ Nói
+                🗣️ Nói
               </button>
               <button class="btn btn-secondary btn-sm" onclick="window.deselectAllParts()" style="color: var(--danger);">
                 Bỏ Chọn
@@ -533,86 +502,94 @@ export class PartPracticeComponent {
             </div>
           </div>
 
-          <!-- 4 Skill Sections Grid -->
-          <div class="grid-2" style="gap: 1.5rem;">
-            ${VSTEP_PARTS_CONFIG.map(group => `
-              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; border-top: 4px solid ${group.color};">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                  <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 800; color: var(--text-primary); font-size: 1.05rem;">
-                    <i data-lucide="${group.icon}" style="width: 18px; height: 18px; color: ${group.color};"></i>
-                    <span>${group.skillLabel}</span>
+          <!-- Body: Grid of 12 parts in 4 skills -->
+          <div style="padding: 1.25rem 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="grid-2" style="gap: 1.25rem;">
+              ${VSTEP_PARTS_CONFIG.map(group => `
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem; border-top: 4px solid ${group.color};">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: var(--text-primary); font-size: 0.95rem;">
+                      <i data-lucide="${group.icon}" style="width: 16px; height: 16px; color: ${group.color};"></i>
+                      <span>${group.skillLabel}</span>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" style="font-size: 0.7rem; padding: 0.15rem 0.5rem;" onclick="window.selectPartsBySkill('${group.skill}')">
+                      Chọn nhóm
+                    </button>
                   </div>
-                  <button class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.2rem 0.55rem;" onclick="window.selectPartsBySkill('${group.skill}')">
-                    Chọn nhóm này
-                  </button>
-                </div>
 
-                <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-                  ${group.parts.map(part => {
-                    const isChecked = selectedPartIds.includes(part.id);
-                    const partStat = PracticeHistoryService.getPartStats(selectedExamIdx, part.id);
-                    return `
-                      <div style="background: ${isChecked ? group.bgLight : 'var(--bg-muted)'}; border: 2px solid ${isChecked ? group.color : 'transparent'}; border-radius: var(--radius-sm); padding: 0.75rem 1rem; cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;"
-                           onclick="window.togglePartSelection('${part.id}')">
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
-                          <input type="checkbox" ${isChecked ? 'checked' : ''} 
-                                 style="cursor: pointer; width: 18px; height: 18px; accent-color: ${group.color};" 
-                                 onclick="event.stopPropagation(); window.togglePartSelection('${part.id}');" />
-                          <div>
-                            <div style="font-weight: 700; font-size: 0.925rem; color: var(--text-primary);">
-                              <span style="color: ${group.color}; font-family: var(--font-mono); margin-right: 0.35rem;">[${part.code}]</span>
-                              ${part.name}
-                            </div>
-                            <div style="font-size: 0.785rem; color: var(--text-secondary); margin-top: 0.15rem;">
-                              ${part.desc}
-                            </div>
-                            <div style="margin-top: 0.25rem;">
-                              ${partStat.timesCount > 0 ? `
-                                <span class="badge badge-success" style="font-size: 0.685rem; font-weight: 700; padding: 0.12rem 0.45rem;">
-                                  ✓ Đã làm: ${partStat.timesCount} lần
-                                </span>
-                              ` : `
-                                <span style="font-size: 0.685rem; color: var(--text-muted);">Chưa làm</span>
-                              `}
+                  <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    ${group.parts.map(part => {
+                      const isChecked = selectedPartIds.includes(part.id);
+                      const partStat = PracticeHistoryService.getPartStats(selectedExamIdx, part.id);
+                      return `
+                        <div style="background: ${isChecked ? group.bgLight : 'var(--bg-muted)'}; border: 2px solid ${isChecked ? group.color : 'transparent'}; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;"
+                             onclick="window.togglePartSelection('${part.id}')">
+                          <div style="display: flex; align-items: center; gap: 0.65rem;">
+                            <input type="checkbox" ${isChecked ? 'checked' : ''} 
+                                   style="cursor: pointer; width: 17px; height: 17px; accent-color: ${group.color};" 
+                                   onclick="event.stopPropagation(); window.togglePartSelection('${part.id}');" />
+                            <div>
+                              <div style="font-weight: 700; font-size: 0.875rem; color: var(--text-primary);">
+                                <span style="color: ${group.color}; font-family: var(--font-mono); margin-right: 0.25rem;">[${part.code}]</span>
+                                ${part.name}
+                              </div>
+                              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.1rem;">
+                                ${part.desc}
+                              </div>
+                              <div style="margin-top: 0.2rem;">
+                                ${partStat.timesCount > 0 ? `
+                                  <span class="badge badge-success" style="font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.4rem;">
+                                    ✓ Đã làm: ${partStat.timesCount} lần
+                                  </span>
+                                ` : `
+                                  <span style="font-size: 0.65rem; color: var(--text-muted);">Chưa làm</span>
+                                `}
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; flex-shrink: 0;">
-                          <span class="badge ${isChecked ? 'badge-primary' : 'badge-secondary'}" style="font-size: 0.725rem; font-weight: 700;">
-                            ${part.countLabel}
-                          </span>
-                          <span style="font-size: 0.725rem; color: var(--text-muted); font-family: var(--font-mono);">
-                            ~${part.defaultMins} phút
-                          </span>
+                          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.15rem; flex-shrink: 0;">
+                            <span class="badge ${isChecked ? 'badge-primary' : 'badge-secondary'}" style="font-size: 0.7rem; font-weight: 700;">
+                              ${part.countLabel}
+                            </span>
+                            <span style="font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono);">
+                              ~${part.defaultMins}p
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    `;
-                  }).join('')}
+                      `;
+                    }).join('')}
+                  </div>
                 </div>
-              </div>
-            `).join('')}
+              `).join('')}
+            </div>
           </div>
 
-          <!-- Bottom Summary & Launch Bar -->
-          <div style="margin-top: 1.5rem; padding: 1.25rem 1.5rem; background: var(--bg-muted); border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <!-- Footer Summary & Launch Button -->
+          <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: var(--bg-muted); flex-wrap: wrap; gap: 0.75rem;">
             <div>
-              <div style="font-size: 1.05rem; font-weight: 800; color: var(--primary);">
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary);">
                 🎯 Đang chọn: ${selectedPartIds.length} phần của đề
               </div>
-              <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">
-                Đề: <strong>${currentExam.name}</strong> • Tổng thời gian dự kiến: <strong>~${totalEstMins} phút</strong>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.1rem;">
+                Ước tính: <strong>~${totalEstMins} phút làm bài</strong>
               </div>
             </div>
 
-            <button class="btn btn-primary" 
-                    ${selectedPartIds.length === 0 ? 'disabled' : ''}
-                    style="padding: 0.9rem 2.25rem; font-weight: 800; font-size: 1.05rem; border-radius: var(--radius-full); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; gap: 0.5rem;"
-                    onclick="window.startPartPractice()">
-              <i data-lucide="play-circle"></i>
-              <span>🚀 Bắt Đầu Luyện Tập (${selectedPartIds.length} Phần)</span>
-            </button>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-sm" onclick="window.closeExamPartPracticeModal()">
+                Đóng
+              </button>
+              <button class="btn btn-primary" 
+                      ${selectedPartIds.length === 0 ? 'disabled' : ''}
+                      style="padding: 0.55rem 1.4rem; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.4rem;"
+                      onclick="window.startPartPractice()">
+                <i data-lucide="play"></i>
+                <span>Bắt Đầu Luyện Tập (${selectedPartIds.length} Phần)</span>
+              </button>
+            </div>
           </div>
+
         </div>
       </div>
     `;

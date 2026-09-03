@@ -184,9 +184,12 @@ class App {
     });
   }
 
-  renderCurrentView() {
+  renderCurrentView(preserveScroll = false) {
     const contentEl = document.getElementById('main-content');
     if (!contentEl) return;
+
+    const prevScrollX = window.scrollX;
+    const prevScrollY = window.scrollY;
 
     try {
       switch (this.currentRoute) {
@@ -234,8 +237,12 @@ class App {
       `;
     }
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top only on new route navigation, preserve on state updates
+    if (!preserveScroll) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ left: prevScrollX, top: prevScrollY, behavior: 'instant' });
+    }
 
     // Initialize Lucide Icons
     if (window.lucide) {
