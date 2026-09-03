@@ -4,8 +4,10 @@ import { showConfirmModal, showAlertModal, showToast } from '../utils/modal.js';
 import { evaluateWritingWithGemini, evaluateSpeakingWithGemini } from '../services/geminiService.js';
 import { PartPracticeComponent } from '../modules/tests/partPracticeComponent.js';
 import { VstepAudioDirector } from '../modules/listening/vstepAudioDirector.js';
+import { PracticeHistoryService } from '../modules/tests/practiceHistoryService.js';
 
 let isExamActive = false; // false = Show Exam Selection Lobby; true = In Exam Paper
+let isHistoryModalOpen = false; // Toggle Practice History Modal
 let selectedSkill = 'listening'; // 'listening' | 'reading' | 'writing' | 'speaking'
 let selectedExamIndex = 0;
 let userAnswers = {};
@@ -122,6 +124,30 @@ export function renderTestsView() {
   PartPracticeComponent.initWindowBindings(() => {
     if (window.app) window.app.renderCurrentView();
   });
+
+  window.openPracticeHistoryModal = () => {
+    isHistoryModalOpen = true;
+    if (window.app) window.app.renderCurrentView();
+  };
+
+  window.closePracticeHistoryModal = () => {
+    isHistoryModalOpen = false;
+    if (window.app) window.app.renderCurrentView();
+  };
+
+  window.clearAllPracticeHistory = () => {
+    showConfirmModal({
+      title: 'Xóa Toàn Bộ Lịch Sử',
+      message: 'Bạn có chắc chắn muốn xóa toàn bộ lịch sử thi thử và luyện tập đã lưu?',
+      confirmText: 'Xóa Hết',
+      confirmClass: 'btn-danger',
+      onConfirm: () => {
+        PracticeHistoryService.clearHistory();
+        if (window.app) window.app.renderCurrentView();
+        showToast('Đã xóa toàn bộ lịch sử luyện tập!', 'info');
+      }
+    });
+  };
 
   window.startExam = (idx) => {
     const saved = getSavedExamProgress(idx);
@@ -356,9 +382,41 @@ export function renderTestsView() {
       onConfirm: () => {
         isExamSubmitted = true;
         if (examTimerInterval) clearInterval(examTimerInterval);
+
+        // Lưu phiên làm bài vào lịch sử
+        const exam = authenticVstepExams[selectedExamIndex] || authenticVstepExams[0];
+        let lCorrect = 0, rCorrect = 0;
+        const lQuestions = [
+          ...(exam.listening?.part1?.questions || []),
+          ...(exam.listening?.part2?.conversations?.flatMap(c => c.questions) || []),
+          ...(exam.listening?.part3?.talks?.flatMap(t => t.questions) || [])
+        ];
+        lQuestions.forEach(q => { if (userAnswers[q.id] === q.correctAnswer) lCorrect++; });
+        const rQuestions = (exam.reading?.passages || []).flatMap(p => p.questions || []);
+        rQuestions.forEach(q => { if (userAnswers[q.id] === q.correctAnswer) rCorrect++; });
+        const lScore = ((lCorrect / 35) * 10).toFixed(1);
+        const rScore = ((rCorrect / 40) * 10).toFixed(1);
+        const w1 = aiWritingEvaluations.task1 ? parseFloat(aiWritingEvaluations.task1.overall) : 7.0;
+        const w2 = aiWritingEvaluations.task2 ? parseFloat(aiWritingEvaluations.task2.overall) : 7.0;
+        const wScore = (((w1 * 1/3) + (w2 * 2/3))).toFixed(1);
+        const sScore = '8.0';
+        const avg = (((parseFloat(lScore) + parseFloat(rScore) + parseFloat(wScore) + parseFloat(sScore)) / 4)).toFixed(1);
+        const level = avg >= 8.5 ? 'C1' : (avg >= 6.0 ? 'B2' : (avg >= 4.0 ? 'B1' : 'A2'));
+
+        PracticeHistoryService.recordFullExamSession({
+          examIndex: selectedExamIndex,
+          examName: exam.name,
+          overallScore: avg,
+          vstepLevel: level,
+          listeningCorrect: lCorrect,
+          readingCorrect: rCorrect,
+          writingScore: wScore,
+          speakingScore: sScore
+        });
+
         window.app.renderCurrentView();
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        showToast('Đã nộp bài thành công! Bảng điểm chi tiết đã sẵn sàng.', 'success');
+        showToast('Đã nộp bài thành công và lưu vào lịch sử!', 'success');
       }
     });
   };
@@ -408,6 +466,8 @@ export function renderTestsView() {
  * 1. Exam Selection Lobby (Sảnh Chọn Đề Thi VSTEP)
  */
 function renderExamSelectionLobby() {
+  const allHistory = PracticeHistoryService.getHistory();
+
   return `
     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
       <!-- Section Title & Instructions -->
@@ -418,7 +478,13 @@ function renderExamSelectionLobby() {
             Chọn một bộ đề bên dưới để bắt đầu làm bài thi mô phỏng 4 kỹ năng VSTEP.
           </p>
         </div>
-        <span class="badge badge-secondary" style="font-size: 0.9rem; font-weight: 700;">${authenticVstepExams.length} Bộ Đề Chuẩn Hóa</span>
+        <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.openPracticeHistoryModal()" style="display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; padding: 0.45rem 0.95rem;">
+            <i data-lucide="history" style="width: 15px; height: 15px;"></i>
+            <span>Lịch Sử Luyện Tập (${allHistory.length})</span>
+          </button>
+          <span class="badge badge-secondary" style="font-size: 0.9rem; font-weight: 700;">${authenticVstepExams.length} Bộ Đề Chuẩn Hóa</span>
+        </div>
       </div>
 
       <!-- Exam Cards Grid -->
@@ -428,19 +494,27 @@ function renderExamSelectionLobby() {
           const answeredCount = saved ? Object.keys(saved.userAnswers || {}).length : 0;
           const hasWritten = saved && saved.essayInputs && (saved.essayInputs.task1 || saved.essayInputs.task2);
           const isUnfinished = saved && !saved.isExamSubmitted && (answeredCount > 0 || hasWritten);
+          const stats = PracticeHistoryService.getExamStats(idx);
 
           return `
           <div class="card exam-card-lobby" style="padding: 1.75rem; border-top: 5px solid ${isUnfinished ? 'var(--warning, #f59e0b)' : 'var(--primary)'}; display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-card); transition: all 0.3s ease; box-shadow: var(--shadow-md);">
             <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.35rem;">
                 <span class="badge badge-primary" style="font-weight: 800; font-size: 0.85rem;">ĐỀ THI SỐ 0${idx + 1}</span>
-                ${isUnfinished ? `
-                  <span class="badge badge-warning" style="font-weight: 700;">
-                    <i data-lucide="clock" style="width: 12px; height: 12px; vertical-align: middle;"></i> Đang Làm Dở (${answeredCount}/75 câu)
-                  </span>
-                ` : `
-                  <span class="badge badge-secondary" style="font-weight: 600;">${exam.badge || 'Chuẩn Quốc Gia'}</span>
-                `}
+                <div style="display: flex; align-items: center; gap: 0.35rem;">
+                  ${stats.timesCount > 0 ? `
+                    <span class="badge badge-success" style="font-size: 0.725rem; font-weight: 700;">
+                      ✓ Đã thi: ${stats.timesCount} lần (Cao nhất: ${stats.bestScore})
+                    </span>
+                  ` : `
+                    <span class="badge badge-secondary" style="font-size: 0.725rem;">Chưa thi</span>
+                  `}
+                  ${isUnfinished ? `
+                    <span class="badge badge-warning" style="font-weight: 700; font-size: 0.725rem;">
+                      <i data-lucide="clock" style="width: 11px; height: 11px; vertical-align: middle;"></i> Đang Dở (${answeredCount}/75)
+                    </span>
+                  ` : ''}
+                </div>
               </div>
 
               <h3 style="color: var(--text-primary); font-size: 1.25rem; margin: 0 0 0.5rem 0; line-height: 1.4;">${exam.name}</h3>
@@ -481,6 +555,87 @@ function renderExamSelectionLobby() {
 
       <!-- VSTEP Sectional / Part-by-Part Practice Section -->
       ${PartPracticeComponent.renderLobbySection()}
+
+      <!-- Modal Lịch Sử Luyện Tập -->
+      ${isHistoryModalOpen ? renderPracticeHistoryModal() : ''}
+    </div>
+  `;
+}
+
+/**
+ * Modal hiển thị lịch sử làm bài ngắn gọn
+ */
+function renderPracticeHistoryModal() {
+  const history = PracticeHistoryService.getHistory();
+
+  return `
+    <div class="modal-backdrop animate-fade-in" style="position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 10500; display: flex; align-items: center; justify-content: center; padding: 1rem;" onclick="if(event.target === this) window.closePracticeHistoryModal()">
+      <div class="modal-card" style="background: var(--bg-card); border-radius: var(--radius-lg); max-width: 720px; width: 100%; max-height: 85vh; display: flex; flex-direction: column; box-shadow: var(--shadow-xl); border: 1px solid var(--border-color); overflow: hidden;">
+        
+        <!-- Header -->
+        <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: var(--bg-muted);">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="history" style="color: var(--primary);"></i>
+            <h3 style="margin: 0; font-size: 1.2rem; color: var(--text-primary);">Lịch Sử Luyện Tập & Thi Thử</h3>
+            <span class="badge badge-primary">${history.length} Phiên</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="window.closePracticeHistoryModal()" style="border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">
+            ✕
+          </button>
+        </div>
+
+        <!-- Body / List of Sessions -->
+        <div style="padding: 1.25rem 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 0.85rem;">
+          ${history.length === 0 ? `
+            <div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
+              <i data-lucide="inbox" style="width: 40px; height: 40px; stroke-width: 1.5; margin-bottom: 0.5rem; opacity: 0.5;"></i>
+              <p style="margin: 0; font-size: 0.95rem;">Chưa có phiên luyện tập nào được lưu lại.</p>
+              <p style="margin: 0.35rem 0 0 0; font-size: 0.825rem; color: var(--text-muted);">Hãy bắt đầu làm bài thi thử hoặc luyện từng part để xem kết quả tại đây.</p>
+            </div>
+          ` : `
+            ${history.map((s, idx) => `
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.15rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                    <span class="badge ${s.type === 'full_exam' ? 'badge-primary' : 'badge-secondary'}" style="font-size: 0.725rem; font-weight: 800;">
+                      ${s.type === 'full_exam' ? 'THI TOÀN ĐỀ' : 'LUYỆN PART'}
+                    </span>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem;">${s.examName}</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">${s.dateStr}</span>
+                  </div>
+
+                  <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                    ${s.type === 'full_exam' ? `
+                      <span>Kết quả: <strong style="color: var(--primary); font-size: 1rem;">${s.overallScore}/10</strong> (${s.vstepLevel})</span>
+                      <span style="margin-left: 0.5rem; color: var(--text-muted);">• Nghe: ${s.listeningCorrect}/35 • Đọc: ${s.readingCorrect}/40</span>
+                    ` : `
+                      <span>Đúng: <strong style="color: var(--success-text); font-size: 0.95rem;">${s.correctCount}/${s.totalQuestions} câu</strong> (${s.accuracyPercent}%)</span>
+                      <span style="margin-left: 0.5rem; color: var(--text-muted); font-size: 0.8rem;">• Phần: ${(s.partNames || []).join(', ')}</span>
+                    `}
+                  </div>
+                </div>
+
+                <span class="badge badge-success" style="font-size: 0.8rem; font-weight: 700;">
+                  ${s.type === 'full_exam' ? `${s.vstepLevel} (${s.overallScore}đ)` : `${s.accuracyPercent}%`}
+                </span>
+              </div>
+            `).join('')}
+          `}
+        </div>
+
+        <!-- Footer Actions -->
+        <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: var(--bg-muted);">
+          ${history.length > 0 ? `
+            <button class="btn btn-secondary btn-sm" onclick="window.clearAllPracticeHistory()" style="color: var(--danger, #ef4444); display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i> Xóa Lịch Sử
+            </button>
+          ` : '<div></div>'}
+          <button class="btn btn-primary btn-sm" onclick="window.closePracticeHistoryModal()" style="padding: 0.45rem 1.25rem;">
+            Đóng
+          </button>
+        </div>
+
+      </div>
     </div>
   `;
 }

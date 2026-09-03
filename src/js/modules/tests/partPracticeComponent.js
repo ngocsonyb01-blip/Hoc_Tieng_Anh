@@ -9,6 +9,7 @@ import { showConfirmModal, showAlertModal, showToast } from '../../utils/modal.j
 import { evaluateWritingWithGemini, evaluateSpeakingWithGemini } from '../../services/geminiService.js';
 import { AnalyticsStore } from '../analytics/analyticsStore.js';
 import { VstepAudioDirector } from '../listening/vstepAudioDirector.js';
+import { PracticeHistoryService } from './practiceHistoryService.js';
 
 export const VSTEP_PARTS_CONFIG = [
   {
@@ -267,9 +268,47 @@ export class PartPracticeComponent {
           // Tự động cộng điểm các kỹ năng trắc nghiệm vào AnalyticsStore
           PartPracticeComponent.updateCompetencyScoresOnSubmit();
 
+          // Lưu vào lịch sử luyện tập
+          const exam = authenticVstepExams[selectedExamIdx] || authenticVstepExams[0];
+          const activeParts = ALL_PARTS_FLAT.filter(p => selectedPartIds.includes(p.id));
+          let totalQ = 0, totalCorrect = 0;
+          const breakdown = activeParts.map(part => {
+            let qList = [];
+            if (part.id === 'listening_part1') qList = exam.listening?.part1?.questions || [];
+            else if (part.id === 'listening_part2') qList = exam.listening?.part2?.conversations?.flatMap(c => c.questions) || [];
+            else if (part.id === 'listening_part3') qList = exam.listening?.part3?.talks?.flatMap(t => t.questions) || [];
+            else if (part.id.startsWith('reading_p')) {
+              const pNum = parseInt(part.id.replace('reading_p', ''), 10) - 1;
+              qList = exam.reading?.passages?.[pNum]?.questions || [];
+            }
+            let cCount = 0;
+            qList.forEach(q => { if (userAnswers[q.id] === q.correctAnswer) cCount++; });
+            if (qList.length > 0) {
+              totalQ += qList.length;
+              totalCorrect += cCount;
+            }
+            return {
+              partId: part.id,
+              name: part.name,
+              correct: cCount,
+              total: qList.length
+            };
+          });
+
+          PracticeHistoryService.recordPartPracticeSession({
+            examIndex: selectedExamIdx,
+            examName: exam.name,
+            partIds: selectedPartIds,
+            partNames: activeParts.map(p => p.name),
+            totalQuestions: totalQ,
+            correctCount: totalCorrect,
+            accuracyPercent: totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 100,
+            partsBreakdown: breakdown
+          });
+
           if (onStateChange) onStateChange();
           window.scrollTo({ top: 0, behavior: 'smooth' });
-          showToast('Đã nộp bài luyện tập thành công!', 'success');
+          showToast('Đã nộp bài và lưu vào lịch sử luyện tập!', 'success');
         }
       });
     };
@@ -511,6 +550,7 @@ export class PartPracticeComponent {
                 <div style="display: flex; flex-direction: column; gap: 0.65rem;">
                   ${group.parts.map(part => {
                     const isChecked = selectedPartIds.includes(part.id);
+                    const partStat = PracticeHistoryService.getPartStats(selectedExamIdx, part.id);
                     return `
                       <div style="background: ${isChecked ? group.bgLight : 'var(--bg-muted)'}; border: 2px solid ${isChecked ? group.color : 'transparent'}; border-radius: var(--radius-sm); padding: 0.75rem 1rem; cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;"
                            onclick="window.togglePartSelection('${part.id}')">
@@ -525,6 +565,15 @@ export class PartPracticeComponent {
                             </div>
                             <div style="font-size: 0.785rem; color: var(--text-secondary); margin-top: 0.15rem;">
                               ${part.desc}
+                            </div>
+                            <div style="margin-top: 0.25rem;">
+                              ${partStat.timesCount > 0 ? `
+                                <span class="badge badge-success" style="font-size: 0.685rem; font-weight: 700; padding: 0.12rem 0.45rem;">
+                                  ✓ Đã làm: ${partStat.timesCount} lần
+                                </span>
+                              ` : `
+                                <span style="font-size: 0.685rem; color: var(--text-muted);">Chưa làm</span>
+                              `}
                             </div>
                           </div>
                         </div>
