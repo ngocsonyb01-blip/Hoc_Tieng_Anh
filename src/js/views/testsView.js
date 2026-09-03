@@ -381,45 +381,35 @@ export function renderTestsView() {
       confirmClass: 'btn-success',
       cancelText: 'Kiểm Tra Lại',
       onConfirm: () => {
+        clearInterval(examTimerInterval);
         isExamSubmitted = true;
-        if (examTimerInterval) clearInterval(examTimerInterval);
+        saveCurrentExamProgress();
 
-        // Lưu phiên làm bài vào lịch sử
         const exam = authenticVstepExams[selectedExamIndex] || authenticVstepExams[0];
-        let lCorrect = 0, rCorrect = 0;
-        const lQuestions = [
-          ...(exam.listening?.part1?.questions || []),
-          ...(exam.listening?.part2?.conversations?.flatMap(c => c.questions) || []),
-          ...(exam.listening?.part3?.talks?.flatMap(t => t.questions) || [])
-        ];
-        lQuestions.forEach(q => { if (userAnswers[q.id] === q.correctAnswer) lCorrect++; });
-        const rQuestions = (exam.reading?.passages || []).flatMap(p => p.questions || []);
-        rQuestions.forEach(q => { if (userAnswers[q.id] === q.correctAnswer) rCorrect++; });
-        const lScore = ((lCorrect / 35) * 10).toFixed(1);
-        const rScore = ((rCorrect / 40) * 10).toFixed(1);
-        const w1 = aiWritingEvaluations.task1 ? parseFloat(aiWritingEvaluations.task1.overall) : 7.0;
-        const w2 = aiWritingEvaluations.task2 ? parseFloat(aiWritingEvaluations.task2.overall) : 7.0;
-        const wScore = (((w1 * 1/3) + (w2 * 2/3))).toFixed(1);
-        const sScore = '8.0';
-        const avg = (((parseFloat(lScore) + parseFloat(rScore) + parseFloat(wScore) + parseFloat(sScore)) / 4)).toFixed(1);
-        const level = avg >= 8.5 ? 'C1' : (avg >= 6.0 ? 'B2' : (avg >= 4.0 ? 'B1' : 'A2'));
+        const res = calculateExamResults(exam);
 
         PracticeHistoryService.recordFullExamSession({
           examIndex: selectedExamIndex,
           examName: exam.name,
-          overallScore: avg,
-          vstepLevel: level,
-          listeningCorrect: lCorrect,
-          readingCorrect: rCorrect,
-          writingScore: wScore,
-          speakingScore: sScore
+          overallScore: res.avg.toFixed(1),
+          vstepLevel: res.level,
+          listeningCorrect: res.lCorrect,
+          readingCorrect: res.rCorrect,
+          writingScore: res.hasDoneWriting ? res.wScore.toFixed(1) : '0.0',
+          speakingScore: res.hasDoneSpeaking ? res.sScore.toFixed(1) : '0.0'
         });
 
-        // Ghi nhận điểm thực tế của 4 kỹ năng vào bản đồ năng lực (quân bình)
-        AnalyticsStore.recordSession('listening', Math.round((lCorrect / 35) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
-        AnalyticsStore.recordSession('reading', Math.round((rCorrect / 40) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
-        AnalyticsStore.recordSession('writing', Math.round(parseFloat(wScore) * 10), { source: 'full_exam', examIndex: selectedExamIndex });
-        AnalyticsStore.recordSession('speaking', Math.round(parseFloat(sScore) * 10), { source: 'full_exam', examIndex: selectedExamIndex });
+        // Ghi nhận điểm thực tế của các kỹ năng đã làm vào bản đồ năng lực (quân bình)
+        AnalyticsStore.recordSession('listening', Math.round((res.lCorrect / 35) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
+        AnalyticsStore.recordSession('reading', Math.round((res.rCorrect / 40) * 100), { source: 'full_exam', examIndex: selectedExamIndex });
+        
+        // Chỉ ghi nhận viết và nói vào bản đồ năng lực nếu thí sinh thực sự đã làm bài
+        if (res.hasDoneWriting) {
+          AnalyticsStore.recordSession('writing', Math.round(res.wScore * 10), { source: 'full_exam', examIndex: selectedExamIndex });
+        }
+        if (res.hasDoneSpeaking) {
+          AnalyticsStore.recordSession('speaking', Math.round(res.sScore * 10), { source: 'full_exam', examIndex: selectedExamIndex });
+        }
 
         window.app.renderCurrentView();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -742,62 +732,134 @@ function renderActiveExamPaper(exam) {
   `;
 }
 
-function renderScoreReport(exam) {
-  let listeningCorrect = 0;
-  let readingCorrect = 0;
-
+/**
+ * Hàm tính điểm thực tế 4 kỹ năng chuẩn VSTEP
+ * Tuyệt đối không tự bịa điểm nếu thí sinh chưa làm bài!
+ */
+function calculateExamResults(exam) {
+  // 1. Listening (35 câu)
+  let lCorrect = 0;
   const lQuestions = [
-    ...exam.listening.part1.questions,
-    ...(exam.listening.part2.conversations.flatMap(c => c.questions)),
-    ...(exam.listening.part3.talks.flatMap(t => t.questions))
+    ...(exam.listening?.part1?.questions || []),
+    ...(exam.listening?.part2?.conversations?.flatMap(c => c.questions) || []),
+    ...(exam.listening?.part3?.talks?.flatMap(t => t.questions) || [])
   ];
   lQuestions.forEach(q => {
-    if (userAnswers[q.id] === q.correctAnswer) listeningCorrect++;
+    if (userAnswers[q.id] === q.correctAnswer) lCorrect++;
   });
+  const lScore = parseFloat(((lCorrect / 35) * 10).toFixed(1));
 
-  const rQuestions = exam.reading.passages.flatMap(p => p.questions);
+  // 2. Reading (40 câu)
+  let rCorrect = 0;
+  const rQuestions = (exam.reading?.passages || []).flatMap(p => p.questions || []);
   rQuestions.forEach(q => {
-    if (userAnswers[q.id] === q.correctAnswer) readingCorrect++;
+    if (userAnswers[q.id] === q.correctAnswer) rCorrect++;
   });
+  const rScore = parseFloat(((rCorrect / 40) * 10).toFixed(1));
 
-  const listeningScore10 = ((listeningCorrect / 35) * 10).toFixed(1);
-  const readingScore10 = ((readingCorrect / 40) * 10).toFixed(1);
-  
-  const w1 = aiWritingEvaluations.task1 ? parseFloat(aiWritingEvaluations.task1.overall) : 8.0;
-  const w2 = aiWritingEvaluations.task2 ? parseFloat(aiWritingEvaluations.task2.overall) : 8.5;
-  const writingScore10 = (((w1 * 1/3) + (w2 * 2/3))).toFixed(1);
-  const speakingScore10 = 8.5;
-
-  const avgScore = (((parseFloat(listeningScore10) + parseFloat(readingScore10) + parseFloat(writingScore10) + parseFloat(speakingScore10)) / 4)).toFixed(1);
-
-  let levelText = 'Chưa đạt (A2)';
-  let levelClass = 'badge-danger';
-  let levelDesc = 'Bạn cần ôn tập thêm để đạt mức tối thiểu 4.0 điểm.';
-  if (avgScore >= 8.5) {
-    levelText = 'XUẤT SẮC: ĐẠT CHUẨN C1 (BẬC 5)';
-    levelClass = 'badge-success';
-    levelDesc = 'Năng lực sử dụng tiếng Anh thành thạo, linh hoạt trong môi trường học thuật chuyên sâu và công việc quốc tế.';
-  } else if (avgScore >= 6.0) {
-    levelText = 'GIỎI: ĐẠT CHUẨN B2 (BẬC 4)';
-    levelClass = 'badge-primary';
-    levelDesc = 'Năng lực giao tiếp độc lập, viết luận chặt chẽ và hiểu thấu đáo các văn bản học thuật phức tạp.';
-  } else if (avgScore >= 4.0) {
-    levelText = 'ĐẠT YÊU CẦU: ĐẠT CHUẨN VSTEP B1 (BẬC 3)';
-    levelClass = 'badge-success';
-    levelDesc = 'Đạt chuẩn đầu ra Đại học & Cao học theo Khung Năng Lực Ngoại Ngữ 6 Bậc Việt Nam của Bộ GD&ĐT.';
+  // 3. Writing (Task 1 chiếm 1/3, Task 2 chiếm 2/3)
+  let w1 = 0;
+  const t1Text = (essayInputs.task1 || '').trim();
+  if (aiWritingEvaluations.task1 && aiWritingEvaluations.task1.overall) {
+    w1 = parseFloat(aiWritingEvaluations.task1.overall);
+  } else if (t1Text.length > 0) {
+    const words1 = t1Text.split(/\s+/).length;
+    if (words1 >= 120) w1 = 6.0;
+    else if (words1 >= 60) w1 = 4.0;
+    else w1 = 2.0;
   }
+
+  let w2 = 0;
+  const t2Text = (essayInputs.task2 || '').trim();
+  if (aiWritingEvaluations.task2 && aiWritingEvaluations.task2.overall) {
+    w2 = parseFloat(aiWritingEvaluations.task2.overall);
+  } else if (t2Text.length > 0) {
+    const words2 = t2Text.split(/\s+/).length;
+    if (words2 >= 250) w2 = 6.0;
+    else if (words2 >= 120) w2 = 4.0;
+    else w2 = 2.0;
+  }
+
+  const hasDoneWriting = (w1 > 0 || w2 > 0);
+  const wScore = hasDoneWriting ? parseFloat(((w1 * (1/3)) + (w2 * (2/3))).toFixed(1)) : 0.0;
+
+  // 4. Speaking (3 Parts)
+  const speechKeys = Object.keys(aiSpeechEvaluations || {});
+  let totalSpeaking = 0;
+  let speakingCount = 0;
+  speechKeys.forEach(k => {
+    const item = aiSpeechEvaluations[k];
+    if (item && item.score) {
+      const match = item.score.match(/([0-9.]+)\s*\//);
+      if (match) {
+        totalSpeaking += parseFloat(match[1]);
+        speakingCount++;
+      }
+    }
+  });
+  const hasDoneSpeaking = speakingCount > 0;
+  const sScore = hasDoneSpeaking ? parseFloat((totalSpeaking / speakingCount).toFixed(1)) : 0.0;
+
+  // Điểm trung bình cộng 4 kỹ năng (VSTEP Official Average)
+  const avg = parseFloat(((lScore + rScore + wScore + sScore) / 4).toFixed(1));
+
+  let level = 'Chưa đạt (Dưới B1)';
+  let levelClass = 'badge-danger';
+  let levelDesc = 'Điểm số chưa đạt mức tối thiểu B1 (4.0/10). Hãy hoàn thành đầy đủ cả 4 kỹ năng Nghe, Đọc, Viết và Nói!';
+
+  if (avg >= 8.5) {
+    level = 'C1 (BẬC 5)';
+    levelClass = 'badge-success';
+    levelDesc = 'Xuất sắc: Năng lực sử dụng tiếng Anh thành thạo, linh hoạt trong môi trường học thuật chuyên sâu và công việc quốc tế.';
+  } else if (avg >= 6.0) {
+    level = 'B2 (BẬC 4)';
+    levelClass = 'badge-primary';
+    levelDesc = 'Giỏi: Giao tiếp độc lập, viết luận chặt chẽ và xử lý tốt các tình huống học thuật phức tạp.';
+  } else if (avg >= 4.0) {
+    level = 'B1 (BẬC 3)';
+    levelClass = 'badge-success';
+    levelDesc = 'Đạt yêu cầu: Đạt chuẩn đầu ra Đại học & Cao học theo Khung Năng Lực Ngoại Ngữ 6 Bậc Việt Nam của Bộ GD&ĐT.';
+  } else if (avg >= 2.5) {
+    level = 'A2 (BẬC 2)';
+    levelClass = 'badge-warning';
+    levelDesc = 'Cần ôn tập và làm đầy đủ các bài thi Viết và Nói để nâng điểm lên chuẩn B1 (tối thiểu 4.0/10).';
+  }
+
+  return {
+    lCorrect,
+    rCorrect,
+    lScore,
+    rScore,
+    w1,
+    w2,
+    wScore,
+    sScore,
+    hasDoneWriting,
+    hasDoneSpeaking,
+    speakingCount,
+    avg,
+    level,
+    levelClass,
+    levelDesc
+  };
+}
+
+function renderScoreReport(exam) {
+  const res = calculateExamResults(exam);
 
   return `
     <div class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(16,185,129,0.08), var(--bg-card)); border: 2px solid var(--success); padding: 2rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <span class="badge ${levelClass}" style="font-size: 0.95rem; font-weight: 800; padding: 0.4rem 0.85rem;">${levelText}</span>
+          <span class="badge ${res.levelClass}" style="font-size: 0.95rem; font-weight: 800; padding: 0.4rem 0.85rem;">${res.level}</span>
           <h3 style="margin: 0.5rem 0 0 0; color: var(--text-primary); font-size: 1.5rem;">BẢNG ĐIỂM TỔNG KẾT VSTEP 4 KỸ NĂNG</h3>
-          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">${levelDesc}</p>
+          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">${res.levelDesc}</p>
         </div>
         <div style="text-align: right; background: var(--bg-surface); padding: 0.75rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
           <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">ĐIỂM TRUNG BÌNH 4 KỸ NĂNG</div>
-          <div style="font-size: 2.5rem; font-weight: 900; color: var(--success-text); font-family: var(--font-mono);">${avgScore} / 10.0</div>
+          <div style="font-size: 2.5rem; font-weight: 900; color: ${res.avg >= 4.0 ? 'var(--success-text)' : 'var(--danger, #ef4444)'}; font-family: var(--font-mono);">
+            ${res.avg.toFixed(1)} / 10.0
+          </div>
         </div>
       </div>
 
@@ -806,45 +868,49 @@ function renderScoreReport(exam) {
         <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">🎧 NGHE</span>
-            <span class="badge badge-primary">${listeningScore10}/10</span>
+            <span class="badge badge-primary">${res.lScore.toFixed(1)}/10</span>
           </div>
           <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">
-            ${listeningCorrect} / 35 câu
+            ${res.lCorrect} / 35 câu
           </div>
-          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Đúng ${Math.round((listeningCorrect/35)*100)}%</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Đúng ${Math.round((res.lCorrect / 35) * 100)}%</p>
         </div>
 
         <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--secondary);">📖 ĐỌC</span>
-            <span class="badge badge-secondary">${readingScore10}/10</span>
+            <span class="badge badge-secondary">${res.rScore.toFixed(1)}/10</span>
           </div>
           <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">
-            ${readingCorrect} / 40 câu
+            ${res.rCorrect} / 40 câu
           </div>
-          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Đúng ${Math.round((readingCorrect/40)*100)}%</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Đúng ${Math.round((res.rCorrect / 40) * 100)}%</p>
         </div>
 
         <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">✍️ VIẾT</span>
-            <span class="badge badge-primary">${writingScore10}/10</span>
+            <span class="badge ${res.hasDoneWriting ? 'badge-primary' : 'badge-danger'}">${res.wScore.toFixed(1)}/10</span>
           </div>
           <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">
-            2 Bài (Task 1 & 2)
+            ${res.hasDoneWriting ? `T1: ${res.w1.toFixed(1)}đ • T2: ${res.w2.toFixed(1)}đ` : 'Chưa làm (0đ)'}
           </div>
-          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">AI Rubric 4 Tiêu Chí</p>
+          <p style="font-size: 0.8rem; color: ${res.hasDoneWriting ? 'var(--text-secondary)' : 'var(--danger, #ef4444)'}; margin: 0;">
+            ${res.hasDoneWriting ? 'Đã phân tích AI rubric' : 'Chưa nộp bài viết'}
+          </p>
         </div>
 
         <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--success-text);">🗣️ NÓI</span>
-            <span class="badge badge-success">${speakingScore10}/10</span>
+            <span class="badge ${res.hasDoneSpeaking ? 'badge-success' : 'badge-danger'}">${res.sScore.toFixed(1)}/10</span>
           </div>
           <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.25rem;">
-            3 Phần Giao Tiếp
+            ${res.hasDoneSpeaking ? `${res.speakingCount} câu đã thu âm` : 'Chưa thu âm (0đ)'}
           </div>
-          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">IPA AI Speech Engine</p>
+          <p style="font-size: 0.8rem; color: ${res.hasDoneSpeaking ? 'var(--text-secondary)' : 'var(--danger, #ef4444)'}; margin: 0;">
+            ${res.hasDoneSpeaking ? 'Đã phân tích âm vị IPA' : 'Chưa thu âm câu nào'}
+          </p>
         </div>
       </div>
     </div>
