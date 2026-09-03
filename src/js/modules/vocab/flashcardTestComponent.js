@@ -401,16 +401,12 @@ export class FlashcardTestComponent {
 
         <!-- Pack List Grid -->
         ${packs.length === 0 ? `
-          <div class="card" style="padding: 4rem 2rem; text-align: center; background: var(--bg-surface); border: 2px dashed var(--border-color); border-radius: var(--radius-lg);">
+          <div class="card" style="padding: 3.5rem 2rem; text-align: center; background: var(--bg-surface); border: 2px dashed var(--border-color); border-radius: var(--radius-lg);">
             <i data-lucide="package-open" style="width: 56px; height: 56px; color: var(--text-muted); margin: 0 auto 1.25rem auto;"></i>
             <h4 style="font-size: 1.25rem; color: var(--text-primary); margin: 0 0 0.5rem 0;">Chưa có gói flashcard nào</h4>
-            <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 1.75rem auto; font-size: 0.95rem; line-height: 1.6;">
-              Hãy bấm nút dưới đây để tạo gói đầu tiên. Bạn có thể chọn số lượng từ (10, 20, 50 từ...) và chọn các chủ đề mong muốn. Hệ thống sẽ bốc ngẫu nhiên và đảm bảo không bao giờ trùng từ với các gói sau!
+            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
+              Nhấn nút <strong>"Tạo Gói Flashcard Mới"</strong> ở góc trên bên phải để chọn số lượng từ và tích chọn chủ đề cần học. Hệ thống sẽ bốc ngẫu nhiên và đảm bảo không bao giờ trùng từ với các gói đã tạo!
             </p>
-            <button class="btn btn-primary" onclick="window.openCreatePackView()" style="font-weight: 700; padding: 0.75rem 1.75rem;">
-              <i data-lucide="plus-circle"></i>
-              <span>Tạo Gói Flashcard Đầu Tiên</span>
-            </button>
           </div>
         ` : `
           <div class="grid-2" style="gap: 1.5rem;">
