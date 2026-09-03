@@ -208,13 +208,13 @@ function renderSoundModalContent(sound) {
         ✕
       </button>
 
-      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <div style="font-size: 3rem; font-weight: 900; color: var(--primary); font-family: var(--font-mono); background: var(--bg-muted); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md);">
+      <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem;">
+        <div style="font-size: 2rem; font-weight: 900; color: var(--primary); font-family: var(--font-mono); background: var(--bg-muted); min-width: 80px; height: 72px; padding: 0 0.85rem; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-md); border: 2px solid var(--primary); white-space: nowrap; line-height: 1; flex-shrink: 0; box-sizing: border-box;">
           /${sound.symbol}/
         </div>
         <div>
-          <h3 style="margin: 0; font-size: 1.4rem; color: var(--text-primary);">${sound.name || sound.type}</h3>
-          <span class="badge badge-secondary" style="margin-top: 0.25rem;">${sound.type || sound.voicing || 'IPA Sound'}</span>
+          <h3 style="margin: 0 0 0.35rem 0; font-size: 1.45rem; font-weight: 800; color: var(--text-primary);">${sound.name || sound.type}</h3>
+          <span class="badge badge-secondary" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">${sound.type || sound.voicing || 'IPA Sound'}</span>
         </div>
       </div>
 
