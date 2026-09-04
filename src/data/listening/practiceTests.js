@@ -1,4 +1,7 @@
 import { exam07 } from '../tests/exam07.js';
+import { exam08 } from '../tests/exam08.js';
+import { exam09 } from '../tests/exam09.js';
+import { exam10 } from '../tests/exam10.js';
 import { authenticVstepExams } from '../tests/authenticVstepExams.js';
 
 export const LISTENING_PRACTICE_DATA = {
@@ -5202,6 +5205,30 @@ export const LISTENING_PRACTICE_DATA = {
       "part1": exam07.listening.part1,
       "part2": exam07.listening.part2,
       "part3": exam07.listening.part3
+    },
+    {
+      "id": "set-08",
+      "title": "Bộ Đề Luyện Nghe Số 08 (Định Dạng ĐH Sư Phạm TP.HCM - 35 Câu)",
+      "badge": "Đề Chuẩn B1-B2",
+      "part1": exam08.listening.part1,
+      "part2": exam08.listening.part2,
+      "part3": exam08.listening.part3
+    },
+    {
+      "id": "set-09",
+      "title": "Bộ Đề Luyện Nghe Số 09 (Định Dạng Đại Học Hà Nội HANU - 35 Câu)",
+      "badge": "Đề Chuẩn Format",
+      "part1": exam09.listening.part1,
+      "part2": exam09.listening.part2,
+      "part3": exam09.listening.part3
+    },
+    {
+      "id": "set-10",
+      "title": "Bộ Đề Luyện Nghe Số 10 (Bộ Đề Tổng Hợp Về Đích ĐHQG Hà Nội - 35 Câu)",
+      "badge": "Đề Về Đích ĐHQG",
+      "part1": exam10.listening.part1,
+      "part2": exam10.listening.part2,
+      "part3": exam10.listening.part3
     }
   ]
 };
