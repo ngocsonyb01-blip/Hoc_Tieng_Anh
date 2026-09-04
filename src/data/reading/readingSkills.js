@@ -139,7 +139,7 @@ export const READING_SKILLS_DATA = {
       ],
       sampleExcerpt: "Although the endangered mountain gorilla population has modestly rebounded from 600 to 1,000 individuals, continuous agricultural encroachment into their forest habitat threatens long-term genetic diversity.",
       demonstration: "➔ Bài viết: 'rừng bị xâm lấn đe dọa sự đa dạng gen' ➔ Suy luận hợp lý: 'Mặc dù số lượng tăng, loài khỉ đột vẫn chưa thoát khỏi nguy cơ tuyệt chủng trong tương lai' (The species remains vulnerable despite population growth).",
-      proTip: "Quy tắc vàng: Đáp án suy luận đúng thường sử dụng ngôn ngữ mềm dẻo, cẩn trọng (may, might, could, suggest, tend to), tránh các từ tuyệt đối (definitely, impossible, everyone)."
+      proTip: "Quy tắc: Ưu tiên đáp án dùng từ cẩn trọng (may, might, could), tránh từ tuyệt đối (definitely, impossible)."
     },
     {
       id: 8,

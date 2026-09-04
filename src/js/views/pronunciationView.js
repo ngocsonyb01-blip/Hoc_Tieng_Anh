@@ -287,7 +287,7 @@ function renderStressTab() {
       <div class="card" style="padding: 2rem;">
         <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
           <span class="badge badge-primary">PHẦN 1: TRỌNG ÂM TỪ</span>
-          <h3 style="margin: 0.35rem 0 0 0; color: var(--primary); font-size: 1.35rem;">10 Quy Tắc Trọng Âm</h3>
+          <h3 style="margin: 0.35rem 0 0 0; color: var(--primary); font-size: 1.35rem;">Quy Tắc Trọng Âm</h3>
           <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">Quy tắc xác định trọng âm theo số âm tiết, hậu tố và từ loại.</p>
         </div>
 
@@ -327,7 +327,7 @@ function renderStressTab() {
       <div class="card" style="padding: 2rem;">
         <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
           <span class="badge badge-secondary">PHẦN 2: NGỮ ĐIỆU CÂU</span>
-          <h3 style="margin: 0.35rem 0 0 0; color: var(--secondary); font-size: 1.35rem;">4 Quy Tắc Ngữ Điệu Câu</h3>
+          <h3 style="margin: 0.35rem 0 0 0; color: var(--secondary); font-size: 1.35rem;">Quy Tắc Ngữ Điệu</h3>
           <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">Quy tắc lên xuống giọng theo loại câu.</p>
         </div>
 
@@ -442,7 +442,7 @@ function renderMistakesTab() {
 
             ${m.rulesSummary ? `
               <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.7;">
-                <strong style="color: var(--primary);">Quy tắc ghi nhớ nhanh:</strong>
+                <strong style="color: var(--primary);">Quy tắc:</strong>
                 <ul style="margin: 0.35rem 0 0 0; padding-left: 1.25rem;">
                   ${m.rulesSummary.map(r => `<li>${r}</li>`).join('')}
                 </ul>

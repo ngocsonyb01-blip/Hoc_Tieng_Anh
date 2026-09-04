@@ -203,7 +203,7 @@ function renderLetterStructureGuideSection(letter) {
       <!-- Tone and Style Rules Box -->
       <div style="background: var(--bg-muted); padding: 0.85rem 1.15rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border-left: 3px solid var(--primary);">
         <strong style="color: var(--primary); font-size: 0.9rem; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.4rem;">
-          <i data-lucide="check-square" style="width: 15px; height: 15px;"></i> Quy tắc: ${guide.toneRule.badge}
+          <i data-lucide="check-square" style="width: 15px; height: 15px;"></i> Quy tắc
         </strong>
         <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
           ${guide.toneRule.rules.map(r => `<div>• ${r}</div>`).join('')}

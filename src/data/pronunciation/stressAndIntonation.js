@@ -1,7 +1,7 @@
 // Master Stress and Intonation Corpus
 export const STRESS_AND_INTONATION_DATA = {
   "wordStress": {
-    "title": "10 Quy Tắc Trọng Âm Từ Bất Biến (Word Stress Rules)",
+    "title": "Quy Tắc Trọng Âm",
     "rules": [
       {
         "id": "ws-1",
@@ -440,7 +440,7 @@ export const STRESS_AND_INTONATION_DATA = {
     ]
   },
   "intonation": {
-    "title": "4 Quy Tắc Ngữ Điệu Câu Chuẩn Bản Ngữ (Sentence Intonation)",
+    "title": "Quy Tắc Ngữ Điệu",
     "patterns": [
       {
         "id": "int-1",

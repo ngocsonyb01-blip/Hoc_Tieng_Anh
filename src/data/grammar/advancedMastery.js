@@ -7,7 +7,7 @@
 export const SUBJECT_VERB_AGREEMENT_DATA = {
   id: "subject-verb-agreement",
   title: "Sự Hòa Hợp Giữa Chủ Ngữ & Động Từ (Subject-Verb Agreement)",
-  description: "Quy tắc cốt lõi giúp tránh bẫy ngữ pháp trong bài thi Đọc, Viết và Nghe VSTEP B1: Chủ ngữ số ít, số nhiều, danh từ tập hợp, đại từ bất định, từ nối tương quan và các cấu trúc chêm.",
+  description: "Quy tắc hòa hợp giữa chủ ngữ và động từ: Số ít, số nhiều, danh từ tập hợp, đại từ bất định và từ nối tương quan.",
   rules: [
     {
       group: "1. Các Trường Hợp Động Từ LUÔN CHIA SỐ ÍT (Singular Verb)",
@@ -70,7 +70,7 @@ export const SUBJECT_VERB_AGREEMENT_DATA = {
       ]
     },
     {
-      group: "3. Quy Tắc Chia Theo Chủ Ngữ Gần / Xa Nhất (Special Correlative Rules)",
+      group: "3. Quy Tắc Chia Theo Chủ Ngữ Gần / Xa Nhất",
       items: [
         {
           rule: "Nối bởi: Either... or, Neither... nor, Not only... but also (Chia theo S2 - gần động từ nhất)",

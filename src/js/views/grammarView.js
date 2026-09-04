@@ -435,7 +435,7 @@ function renderSpecificGrammarModule(topic) {
   else if (topic.id === 'passive-voice') {
     html += `
       <div class="card" style="margin-bottom: 2rem;">
-        <h3 style="color: var(--primary); margin-bottom: 1rem;">Quy Tắc Câu Bị Động</h3>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">Quy Tắc Bị Động</h3>
         <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
           <ol style="padding-left: 1.25rem; font-size: 0.925rem; line-height: 1.8;">
             ${topic.rules.map(r => `<li>${r}</li>`).join('')}
@@ -489,7 +489,7 @@ function renderSpecificGrammarModule(topic) {
   else if (topic.id === 'reported-speech') {
     html += `
       <div class="card" style="margin-bottom: 2rem;">
-        <h3 style="color: var(--primary); margin-bottom: 1rem;">1. Bảng Quy Tắc Lùi Thì (Tense Backshift Table)</h3>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">1. Bảng Lùi Thì</h3>
         <div style="overflow-x: auto; margin-bottom: 1.5rem;">
           <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
             <thead>
@@ -623,7 +623,7 @@ function renderSpecificGrammarModule(topic) {
           </div>
         </div>
 
-        <h3 style="color: var(--primary); margin-bottom: 1rem;">3. 3 Quy Tắc Rút Gọn Mệnh Đề Quan Hệ (Reduced Relative Clauses)</h3>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">3. Quy Tắc Rút Gọn</h3>
         <div style="display: flex; flex-direction: column; gap: 1rem;">
           ${(topic.reducedClauses || []).map(r => `
             <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--success); border-radius: var(--radius-md); padding: 1.25rem;">
@@ -719,7 +719,7 @@ function renderSpecificGrammarModule(topic) {
   else if (topic.id === 'subject-verb-agreement') {
     html += `
       <div class="card" style="margin-bottom: 2rem;">
-        <h3 style="color: var(--primary); margin-bottom: 1.25rem;">Bộ Quy Tắc Sự Hòa Hợp Chủ Ngữ & Động Từ (Subject-Verb Agreement)</h3>
+        <h3 style="color: var(--primary); margin-bottom: 1.25rem;">Hòa Hợp Chủ Ngữ & Động Từ</h3>
         <div style="display: flex; flex-direction: column; gap: 2rem;">
           ${(topic.rules || []).map(grp => `
             <div>
