@@ -26,19 +26,19 @@ export const LISTENING_PRACTICE_DATA = {
                 "text": "Thursday"
               },
               {
-                "key": "B",
-                "text": "big trees"
-              },
-              {
                 "key": "C",
                 "text": "Friday"
+              },
+              {
+                "key": "D",
+                "text": "Tuesday"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "correctAnswer": "B",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "appointment (cuộc hẹn)",
+              "schedule (lịch trình)"
             ]
           },
           {
@@ -52,7 +52,7 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "B",
-                "text": "Lựa chọn B"
+                "text": "a pretty village with big trees"
               },
               {
                 "key": "C",
@@ -60,14 +60,14 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "a pretty village on the hills"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "correctAnswer": "C",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "postcard (bưu thiếp)",
+              "village (ngôi làng)"
             ]
           },
           {
@@ -81,22 +81,22 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "B",
-                "text": "07:15 c. 08 15"
+                "text": "07:15"
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "08:15"
               },
               {
                 "key": "D",
-                "text": "a pretty village on the hills"
+                "text": "06:15"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "correctAnswer": "C",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "departure time (giờ khởi hành)",
+              "flight to Milan (chuyến bay đến Milan)"
             ]
           },
           {
@@ -110,7 +110,7 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "B",
-                "text": "music"
+                "text": "music CD"
               },
               {
                 "key": "C",
@@ -118,14 +118,14 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "notebook"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "correctAnswer": "C",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C (pen).",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "present (món quà)",
+              "bought (đã mua)"
             ]
           },
           {
@@ -147,14 +147,14 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "D",
-                "text": "notebook"
+                "text": "fifty past four"
               }
             ],
             "correctAnswer": "C",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "baking (nướng bánh)",
+              "twenty past five (5 giờ 20)"
             ]
           },
           {
@@ -172,18 +172,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "fifteen past five"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "four thirty"
               }
             ],
-            "correctAnswer": "A",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "correctAnswer": "B",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "swimming lesson (buổi học bơi)",
+              "fifteen to five (5 giờ kém 15)"
             ]
           },
           {
@@ -201,18 +201,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "sports"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "design"
               }
             ],
-            "correctAnswer": "B",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+            "correctAnswer": "C",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "favorite subject (môn học yêu thích)",
+              "sports (thể thao)"
             ]
           },
           {
@@ -233,15 +233,15 @@ export const LISTENING_PRACTICE_DATA = {
                 "text": "a long-sleeved T-shirt"
               },
               {
-                "key": "C",
-                "text": "fifteen past five"
+                "key": "D",
+                "text": "a sleeveless white T-shirt"
               }
             ],
             "correctAnswer": "A",
-            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+            "explanation": "Căn cứ theo băng ghi âm gốc và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "short-sleeved (ngắn tay)",
+              "round neck (cổ tròn)"
             ]
           }
         ]
@@ -254,7 +254,7 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-1-conv-1",
             "title": "Hội thoại 1",
-            "scenario": "Cuộc hội thoại đầu tiên",
+            "scenario": "Cuộc hội thoại giữa Kate và George về vấn đề sức khỏe",
             "audioText": "Authentic conversation 1 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
@@ -265,51 +265,56 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "She has coughs ho"
+                    "text": "She has coughs."
                   },
+                  {
+                    "key": "B",
+                    "text": "She has headache."
+                  },
+                  {
+                    "key": "C",
+                    "text": "She has toothache."
+                  },
+                  {
+                    "key": "D",
+                    "text": "She has stomach ache."
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là A.",
+                "keyVocab": [
+                  "coughs (bị ho)",
+                  "health problem (vấn đề sức khỏe)"
+                ]
+              },
+              {
+                "id": 10,
+                "audioText": "VSTEP Authentic Audio Track - Question 10",
+                "question": "How does Kate's problem affect her classmates?",
+                "options": [
                   {
                     "key": "A",
                     "text": "It makes them funny."
                   },
                   {
-                    "key": "A",
-                    "text": "She had coughs"
-                  },
-                  {
-                    "key": "A",
-                    "text": "She has backache"
-                  }
-                ],
-                "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
-                "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
-                ]
-              },
-              {
-                "id": 10,
-                "question": "Question 10",
-                "options": [
-                  {
-                    "key": "A",
-                    "text": "Option A"
-                  },
-                  {
                     "key": "B",
-                    "text": "Option B"
+                    "text": "It makes them annoyed."
                   },
                   {
                     "key": "C",
-                    "text": "Option C"
+                    "text": "It makes them happy."
                   },
                   {
                     "key": "D",
-                    "text": "Option D"
+                    "text": "It makes them excited."
                   }
                 ],
                 "correctAnswer": "B",
-                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là B."
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là B.",
+                "keyVocab": [
+                  "annoyed (bực mình, khó chịu)",
+                  "affect (ảnh hưởng)"
+                ]
               },
               {
                 "id": 11,
@@ -318,26 +323,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "She had coughs"
+                    "text": "She had coughs."
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "She had headache."
                   },
                   {
                     "key": "C",
-                    "text": "She had a fall off her bike"
+                    "text": "She had a fall off her bike."
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "She had stomach ache."
                   }
                 ],
                 "correctAnswer": "C",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "fall off bike (ngã xe đạp)",
+                  "injury (chấn thương)"
                 ]
               },
               {
@@ -347,26 +352,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "She has backache"
+                    "text": "She has backache."
                   },
                   {
                     "key": "B",
-                    "text": "It makes them annoyed."
+                    "text": "She has headache."
                   },
                   {
-                    "key": "B",
-                    "text": "She had headache"
+                    "key": "C",
+                    "text": "She has toothache."
                   },
                   {
-                    "key": "B",
-                    "text": "She has headache"
+                    "key": "D",
+                    "text": "She has temperature."
                   }
                 ],
                 "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "temperature / fever (bị sốt)",
+                  "symptoms (triệu chứng)"
                 ]
               }
             ]
@@ -374,37 +379,37 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-1-conv-2",
             "title": "Hội thoại 2",
-            "scenario": "Cuộc hội thoại thứ hai",
+            "scenario": "Cuộc trò chuyện giữa người đàn ông và người phụ nữ ở nhà",
             "audioText": "Authentic conversation 2 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
               {
                 "id": 13,
                 "audioText": "VSTEP Authentic Audio Track - Question 13",
-                "question": "Why does the man want to gout out?",
+                "question": "Why does the man want to go out?",
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because he feels bored staying at home."
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "Because he feels safe staying at home."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because he feels cold staying at home."
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "Because he feels hot staying at home."
                   }
                 ],
                 "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "bored (buồn chán)",
+                  "stay at home (ở nhà)"
                 ]
               },
               {
@@ -414,26 +419,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because she has coughs."
                   },
                   {
                     "key": "B",
-                    "text": ""
-                  },
-                  {
-                    "key": "B",
-                    "text": ""
+                    "text": "Because she feels tired."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because she has toothache."
+                  },
+                  {
+                    "key": "D",
+                    "text": "Because she has stomach ache."
                   }
                 ],
                 "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "tired (mệt mỏi)",
+                  "rest (nghỉ ngơi)"
                 ]
               },
               {
@@ -443,26 +448,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because she is short of money."
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Because she is serious about it."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because she's afraid she will fall asleep watching it."
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Because she has stomach ache."
                   }
                 ],
                 "correctAnswer": "C",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "fall asleep (ngủ quên)",
+                  "subtitles (phụ đề)"
                 ]
               },
               {
@@ -472,26 +477,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because she feels too busy to watch it."
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Because she feels too serious to watch it."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because she doesn't want to watch it the third time."
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Because she doesn't want to watch it the second time."
                   }
                 ],
                 "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "watch again (xem lại)",
+                  "second time (lần thứ hai)"
                 ]
               }
             ]
@@ -499,7 +504,7 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-1-conv-3",
             "title": "Hội thoại 3",
-            "scenario": "Cuộc hội thoại thứ ba",
+            "scenario": "Cuộc trò chuyện giữa Lisa và Ben về kỳ nghỉ",
             "audioText": "Authentic conversation 3 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
@@ -525,11 +530,11 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "It may be very expensive."
                   }
                 ],
-                "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "correctAnswer": "A",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "good holiday (kỳ nghỉ tuyệt vời)",
+                  "cheap (chi phí rẻ)"
                 ]
               },
               {
@@ -539,26 +544,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because he feels too hot to do it."
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Because he finds it hard to do it."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because he doesn't like hard work."
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Because she doesn't like the sounds of people walking."
                   }
                 ],
-                "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "correctAnswer": "B",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "hard to do (khó thực hiện)",
+                  "exhausting (kiệt sức)"
                 ]
               },
               {
@@ -572,22 +577,22 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "It is good."
                   },
                   {
                     "key": "C",
-                    "text": "It is not good. 3. It is good."
+                    "text": "It is not good."
                   },
                   {
                     "key": "D",
                     "text": "It is clean and cheap."
                   }
                 ],
-                "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "correctAnswer": "C",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "Youth Hostels (nhà trọ thanh niên)",
+                  "food quality (chất lượng đồ ăn)"
                 ]
               },
               {
@@ -612,11 +617,11 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "enjoy his holiday home"
                   }
                 ],
-                "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ theo băng ghi âm gốc. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "holiday at home (nghỉ dưỡng tại nhà)",
+                  "decision (quyết định)"
                 ]
               }
             ]
@@ -625,14 +630,14 @@ export const LISTENING_PRACTICE_DATA = {
       },
       "part3": {
         "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
-        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "instructions": "Nghe 3 bài nói hoặc bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
         "audioUrl": "./audio/listening/test1.mp3",
-        "talks": [
+        "lectures": [
           {
-            "id": "auth-1-talk-1",
-            "title": "Bài giảng 1",
-            "topic": "Bài nói học thuật thứ nhất",
-            "audioText": "Authentic talk 1 from original test tape.",
+            "id": "auth-1-lec-1",
+            "title": "Bài thuyết trình 1",
+            "topic": "Một cô gái chia sẻ về cuộc sống từ khi rời Việt Nam sang Mỹ",
+            "audioText": "Authentic lecture 1 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
               {
@@ -650,18 +655,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "There wasnt always someone to go shopping with her."
+                    "text": "There wasn't always someone to go shopping with her."
                   },
                   {
                     "key": "D",
                     "text": "Her mother could speak a little English."
                   }
                 ],
-                "correctAnswer": "C",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "shopping assistance (hỗ trợ mua sắm)",
+                  "language barrier (rào cản ngôn ngữ)"
                 ]
               },
               {
@@ -686,11 +691,11 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "He couldn't get used to the working style."
                   }
                 ],
-                "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "factory job (công việc nhà máy)",
+                  "qualification (trình độ chuyên môn)"
                 ]
               },
               {
@@ -704,11 +709,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "They look more"
+                    "text": "They look more American."
                   },
                   {
                     "key": "C",
-                    "text": "They speak with"
+                    "text": "They speak with American accents."
                   },
                   {
                     "key": "D",
@@ -718,8 +723,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "American accent (giọng Mỹ)",
+                  "fortunate (may mắn hơn)"
                 ]
               },
               {
@@ -747,8 +752,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "forgotten (lãng quên)",
+                  "community connection (gắn kết cộng đồng)"
                 ]
               },
               {
@@ -762,41 +767,41 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Her parents haven't adopted an"
+                    "text": "Her parents haven't adopted an American way of life."
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "Her parents only know how to cook Vietnamese food."
                   },
                   {
                     "key": "D",
                     "text": "Her parents do not speak English well."
                   }
                 ],
-                "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "cultural difference (khác biệt văn hóa)",
+                  "lifestyle (lối sống)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-1-talk-2",
-            "title": "Bài giảng 2",
-            "topic": "Bài nói học thuật thứ hai",
-            "audioText": "Authentic talk 2 from original test tape.",
+            "id": "auth-1-lec-2",
+            "title": "Bài thuyết trình 2",
+            "topic": "Học sinh nam và nữ trong các trường học tại Mỹ",
+            "audioText": "Authentic lecture 2 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
               {
                 "id": 26,
                 "audioText": "VSTEP Authentic Audio Track - Question 26",
-                "question": "What happened in American schools before 1972? A Girls didn't go to school.",
+                "question": "What happened in American schools before 1972?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "Lựa chọn A"
+                    "text": "Girls didn't go to school."
                   },
                   {
                     "key": "B",
@@ -804,18 +809,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Boys could learn what they wanted."
                   },
                   {
                     "key": "D",
                     "text": "They didn't teach girls some subjects."
                   }
                 ],
-                "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "gender segregation (phân tách giới tính)",
+                  "curriculum restriction (hạn chế môn học)"
                 ]
               },
               {
@@ -833,18 +838,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "A law gave girls an equal chance to learn."
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Boys and girls behave better in such classes."
                   }
                 ],
-                "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "correctAnswer": "C",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "equal chance (cơ hội bình đẳng)",
+                  "educational law (luật giáo dục)"
                 ]
               },
               {
@@ -854,26 +859,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "Because the teacher doesn't ask them questions"
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Because boys are louder and often talk first"
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because boys know the correct answers"
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Because girls are often shy."
                   }
                 ],
-                "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "classroom dynamics (tương tác lớp học)",
+                  "participation (sự tham gia phát biểu)"
                 ]
               },
               {
@@ -887,22 +892,22 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Boys learn differently than girls."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Boys and girls can bother each other."
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Boys and girls like different things."
                   }
                 ],
-                "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "correctAnswer": "A",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "reconsidering (xem xét lại)",
+                  "separating classes (tách lớp học)"
                 ]
               },
               {
@@ -927,20 +932,20 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "Physical Education"
                   }
                 ],
-                "correctAnswer": "C",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "Physical Education (thể dục)",
+                  "academic subjects (môn học thuật)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-1-talk-3",
-            "title": "Bài giảng 3",
-            "topic": "Bài nói học thuật thứ ba",
-            "audioText": "Authentic talk 3 from original test tape.",
+            "id": "auth-1-lec-3",
+            "title": "Bài thuyết trình 3",
+            "topic": "Ngôn ngữ hình thể (Body language) trong văn hóa Mỹ",
+            "audioText": "Authentic lecture 3 from original test tape.",
             "audioUrl": "./audio/listening/test1.mp3",
             "questions": [
               {
@@ -954,7 +959,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "new international students"
                   },
                   {
                     "key": "C",
@@ -962,14 +967,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "all first-year students in the college"
                   }
                 ],
-                "correctAnswer": "D",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "correctAnswer": "B",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "orientation talk (buổi định hướng)",
+                  "international students (sinh viên quốc tế)"
                 ]
               },
               {
@@ -983,22 +988,22 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "new international students"
-                  },
-                  {
-                    "key": "B",
                     "text": "to deal with all international students' problems."
                   },
                   {
                     "key": "C",
                     "text": "to inform the importance of using English in class."
+                  },
+                  {
+                    "key": "D",
+                    "text": "to introduce common problems in non-verbal communication."
                   }
                 ],
-                "correctAnswer": "B",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "non-verbal communication (giao tiếp phi ngôn ngữ)",
+                  "cultural adaptation (thích nghi văn hóa)"
                 ]
               },
               {
@@ -1008,7 +1013,7 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "les the use of verb tenses and modals."
+                    "text": "It's the use of verb tenses and modals."
                   },
                   {
                     "key": "B",
@@ -1023,11 +1028,11 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "It's the language of movements and facial expressions."
                   }
                 ],
-                "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "body language (ngôn ngữ cơ thể)",
+                  "movements and facial expressions (cử chỉ và biểu cảm gương mặt)"
                 ]
               },
               {
@@ -1041,32 +1046,32 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "making eye contact is a sign of disrespect."
+                    "text": "Making eye contact is a sign of disrespect."
                   },
                   {
                     "key": "C",
-                    "text": "people don't look in others' eyes while talking."
+                    "text": "People don't look in others' eyes while talking."
                   },
                   {
                     "key": "D",
-                    "text": "eye contact is considered as a sign Of honesty."
+                    "text": "Eye contact is considered as a sign of honesty."
                   }
                 ],
-                "correctAnswer": "A",
-                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
+                "correctAnswer": "D",
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "eye contact (giao tiếp bằng mắt)",
+                  "sign of honesty (dấu hiệu của sự trung thực)"
                 ]
               },
               {
                 "id": 35,
                 "audioText": "VSTEP Authentic Audio Track - Question 35",
-                "question": "According to thüöéaker, what is TRUE about handshakes in American Culture?",
+                "question": "According to the speaker, what is TRUE about handshakes in American Culture?",
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "A handshake shouldn't be too strong."
                   },
                   {
                     "key": "B",
@@ -1078,14 +1083,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "Shaking hands is not 'important."
+                    "text": "Shaking hands is not important."
                   }
                 ],
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "firm handshake (cái bắt tay chặt, dứt khoát)",
+                  "etiquette (phép lịch sự)"
                 ]
               }
             ]
@@ -1107,44 +1112,40 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": 1,
             "audioText": "VSTEP Authentic Audio Track - Question 1",
-            "question": "You will hear a journalist interviewing Geoff Thompson, a British sportsman. 9. Where was Geoff Thompson born?",
+            "question": "What colour is Mary's coat?",
             "options": [
               {
                 "key": "A",
-                "text": "In London."
+                "text": "yellow"
               },
               {
-                "key": "A",
-                "text": "He discovered karate by himself."
+                "key": "B",
+                "text": "blue"
               },
               {
-                "key": "A",
-                "text": "In 1972."
+                "key": "C",
+                "text": "brown"
               },
               {
-                "key": "A",
-                "text": "Two times."
+                "key": "D",
+                "text": "black"
               }
             ],
             "correctAnswer": "A",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "coat (áo khoác)",
+              "yellow (màu vàng)"
             ]
           },
           {
             "id": 2,
             "audioText": "VSTEP Authentic Audio Track - Question 2",
-            "question": "What did the woman repair? chair",
+            "question": "What did the woman repair?",
             "options": [
               {
                 "key": "A",
-                "text": "Lựa chọn A"
-              },
-              {
-                "key": "B",
-                "text": "blue"
+                "text": "chair"
               },
               {
                 "key": "B",
@@ -1152,14 +1153,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "desk"
+              },
+              {
+                "key": "D",
+                "text": "bed"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "repair / fix (sửa chữa)",
+              "shelf (giá sách, kệ)"
             ]
           },
           {
@@ -1173,22 +1178,22 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "B",
-                "text": "Lựa chọn B"
+                "text": "a plant"
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "some chocolates"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "candies"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "buy present (mua quà tặng)",
+              "plant (chậu cây)"
             ]
           },
           {
@@ -1201,48 +1206,53 @@ export const LISTENING_PRACTICE_DATA = {
                 "text": "mobile phone"
               },
               {
-                "key": "A",
-                "text": "waterskiing"
+                "key": "B",
+                "text": "purse"
               },
               {
-                "key": "A",
-                "text": "his grandmother"
+                "key": "C",
+                "text": "pen"
               },
               {
-                "key": "A",
-                "text": "suitcase"
+                "key": "D",
+                "text": "bag"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "lost item (đồ bị mất)",
+              "purse (ví tiền)"
             ]
           },
           {
             "id": 5,
-            "question": "Question 5",
+            "audioText": "VSTEP Authentic Audio Track - Question 5",
+            "question": "Which sport will the boy do soon at the centre?",
             "options": [
               {
                 "key": "A",
-                "text": "Option A"
+                "text": "waterskiing"
               },
               {
                 "key": "B",
-                "text": "Option B"
+                "text": "diving"
               },
               {
                 "key": "C",
-                "text": "Option C"
+                "text": "sailing"
               },
               {
                 "key": "D",
-                "text": "Option D"
+                "text": "swimming"
               }
             ],
             "correctAnswer": "C",
-            "explanation": "Căn cứ theo băng ghi âm gốc Đề 5. Đáp án đúng là C."
+            "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+            "keyVocab": [
+              "sports centre (trung tâm thể thao)",
+              "sailing (chèo thuyền buồm)"
+            ]
           },
           {
             "id": 6,
@@ -1259,18 +1269,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "his sister"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "his mother"
               }
             ],
             "correctAnswer": "A",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "live with (sống cùng)",
+              "grandmother (bà)"
             ]
           },
           {
@@ -1288,18 +1298,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "backpack"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "overhead bag"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "holiday luggage (hành lý du lịch)",
+              "sports bag (túi thể thao)"
             ]
           },
           {
@@ -1317,18 +1327,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "brown"
+                "text": "park"
               },
               {
-                "key": "C",
-                "text": "desk"
+                "key": "D",
+                "text": "library"
               }
             ],
             "correctAnswer": "A",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "destination (điểm đến)",
+              "cinema (rạp chiếu phim)"
             ]
           }
         ]
@@ -1341,7 +1351,7 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-2-conv-1",
             "title": "Hội thoại 1",
-            "scenario": "Cuộc hội thoại đầu tiên",
+            "scenario": "Phỏng vấn vận động viên karate người Anh Geoff Thompson",
             "audioText": "Authentic conversation 1 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
@@ -1355,48 +1365,53 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "In London."
                   },
                   {
-                    "key": "A",
-                    "text": "He discovered karate by himself."
+                    "key": "B",
+                    "text": "In the North of England."
                   },
                   {
-                    "key": "A",
-                    "text": "In 1972."
+                    "key": "C",
+                    "text": "In the South of London."
                   },
                   {
-                    "key": "A",
-                    "text": "Two times."
+                    "key": "D",
+                    "text": "In Britain."
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "birthplace (nơi sinh)",
+                  "North of England (miền bắc nước Anh)"
                 ]
               },
               {
                 "id": 10,
-                "question": "Question 10",
+                "audioText": "VSTEP Authentic Audio Track - Question 10",
+                "question": "How did he know about karate?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "Option A"
+                    "text": "He discovered karate by himself."
                   },
                   {
                     "key": "B",
-                    "text": "Option B"
+                    "text": "He's interested in karate owing to a sports center during a school visit."
                   },
                   {
                     "key": "C",
-                    "text": "Option C"
+                    "text": "His friend introduced it to him."
                   },
                   {
                     "key": "D",
-                    "text": "Option D"
+                    "text": "He knew it when moving to London."
                   }
                 ],
                 "correctAnswer": "B",
-                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là B."
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
+                "keyVocab": [
+                  "sports center (trung tâm thể thao)",
+                  "school visit (chuyến đi dã ngoại trường học)"
+                ]
               },
               {
                 "id": 11,
@@ -1417,14 +1432,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "After starting training with a British coach."
                   }
                 ],
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "World Championships (giải vô địch thế giới)",
+                  "competition year (năm thi đấu)"
                 ]
               },
               {
@@ -1452,8 +1467,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "World Champion title (danh hiệu vô địch thế giới)",
+                  "five times (5 lần)"
                 ]
               }
             ]
@@ -1461,37 +1476,37 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-2-conv-2",
             "title": "Hội thoại 2",
-            "scenario": "Cuộc hội thoại thứ hai",
+            "scenario": "Cuộc gọi điện thoại xin việc làm tại khách sạn",
             "audioText": "Authentic conversation 2 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
               {
                 "id": 13,
                 "audioText": "VSTEP Authentic Audio Track - Question 13",
-                "question": "Which position does this hotel need? A A temporary' staff.",
+                "question": "Which position does this hotel need?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "Lựa chọn A"
+                    "text": "A temporary staff."
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "A stable staff."
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "A part-time receptionist."
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "A full-time waiter."
                   }
                 ],
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "temporary staff (nhân viên thời vụ)",
+                  "job position (vị trí tuyển dụng)"
                 ]
               },
               {
@@ -1505,22 +1520,22 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
-                  },
-                  {
-                    "key": "B",
                     "text": "There are two shifts and one day off."
                   },
                   {
                     "key": "C",
                     "text": "There's a day shift from 7 to 2 and a late shift from 4 till 11."
+                  },
+                  {
+                    "key": "D",
+                    "text": "There is only afternoon shift."
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "working shifts (ca làm việc)",
+                  "day off (ngày nghỉ)"
                 ]
               },
               {
@@ -1548,8 +1563,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "uniform requirement (quy định đồng phục)",
+                  "white shirt and dark trousers (áo sơ mi trắng, quần tối màu)"
                 ]
               },
               {
@@ -1559,7 +1574,7 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "At the end of May."
                   },
                   {
                     "key": "B",
@@ -1577,8 +1592,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "start date (ngày bắt đầu đi làm)",
+                  "28th of June (ngày 28 tháng 6)"
                 ]
               }
             ]
@@ -1586,7 +1601,7 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-2-conv-3",
             "title": "Hội thoại 3",
-            "scenario": "Cuộc hội thoại thứ ba",
+            "scenario": "Cuộc trao đổi tại thư viện trường đại học",
             "audioText": "Authentic conversation 3 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
@@ -1615,14 +1630,14 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "research paper (bài nghiên cứu)",
+                  "coal industry (ngành công nghiệp than đá)"
                 ]
               },
               {
                 "id": 18,
                 "audioText": "VSTEP Authentic Audio Track - Question 18",
-                "question": "What security prpcedures does the librarian tell the man he must follow?",
+                "question": "What security procedures does the librarian tell the man he must follow?",
                 "options": [
                   {
                     "key": "A",
@@ -1630,7 +1645,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Show her his I"
+                    "text": "Show her his ID card."
                   },
                   {
                     "key": "C",
@@ -1638,14 +1653,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Allow his ID card to be copied; sign in and out of the archives room."
                   }
                 ],
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "security procedures (thủ tục bảo an)",
+                  "archives room (phòng lưu trữ tư liệu)"
                 ]
               },
               {
@@ -1667,14 +1682,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "They are value books."
+                    "text": "They are valuable books."
                   }
                 ],
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "handle with gloves (cầm bằng găng tay bảo vệ)",
+                  "fragile pages (trang sách dễ rách)"
                 ]
               },
               {
@@ -1702,8 +1717,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "take a picture (chụp ảnh tài liệu)",
+                  "gather data (thu thập số liệu)"
                 ]
               }
             ]
@@ -1712,14 +1727,14 @@ export const LISTENING_PRACTICE_DATA = {
       },
       "part3": {
         "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
-        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "instructions": "Nghe 3 bài nói hoặc bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
         "audioUrl": "./audio/listening/test2.mp3",
-        "talks": [
+        "lectures": [
           {
-            "id": "auth-2-talk-1",
-            "title": "Bài giảng 1",
-            "topic": "Bài nói học thuật thứ nhất",
-            "audioText": "Authentic talk 1 from original test tape.",
+            "id": "auth-2-lec-1",
+            "title": "Bài thuyết trình 1",
+            "topic": "Văn hóa trang phục nơi công sở (Fashion at work)",
+            "audioText": "Authentic lecture 1 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
               {
@@ -1733,11 +1748,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "He wants to talk about different fashion trend."
+                    "text": "He wants to talk about different fashion trends."
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "The presentation is not formal."
                   },
                   {
                     "key": "D",
@@ -1747,8 +1762,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "suit (bộ com-lê)",
+                  "informal presentation (bài thuyết trình không trang trọng)"
                 ]
               },
               {
@@ -1762,11 +1777,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "A suit is necessary when meeting clients."
                   },
                   {
                     "key": "C",
-                    "text": "Wearing shorts is 0K, sometimes."
+                    "text": "Wearing shorts is OK, sometimes."
                   },
                   {
                     "key": "D",
@@ -1776,8 +1791,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "meeting clients (gặp gỡ khách hàng)",
+                  "professional attire (trang phục chuyên nghiệp)"
                 ]
               },
               {
@@ -1805,8 +1820,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "Dress-down Fridays (thứ sáu mặc trang phục thoải mái)",
+                  "informal attire (trang phục thường nhật)"
                 ]
               },
               {
@@ -1820,7 +1835,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "people working in banks."
+                    "text": "People working in banks."
                   },
                   {
                     "key": "C",
@@ -1828,14 +1843,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "people working with clients."
+                    "text": "People working with clients."
                   }
                 ],
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "IT workers (dân công nghệ thông tin)",
+                  "casual style (phong cách thoải mái)"
                 ]
               },
               {
@@ -1863,17 +1878,17 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "reassured (cảm thấy an tâm, tin tưởng)",
+                  "uniform impact (tác động của đồng phục)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-2-talk-2",
-            "title": "Bài giảng 2",
-            "topic": "Bài nói học thuật thứ hai",
-            "audioText": "Authentic talk 2 from original test tape.",
+            "id": "auth-2-lec-2",
+            "title": "Bài thuyết trình 2",
+            "topic": "Thói quen giấc ngủ và sức khỏe trí não (Sleeping habits)",
+            "audioText": "Authentic lecture 2 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
               {
@@ -1887,11 +1902,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "About fifteen"
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "1,400"
                   },
                   {
                     "key": "D",
@@ -1901,8 +1916,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "sleep recommendation (khuyến nghị thời lượng ngủ)",
+                  "ten hours (10 tiếng)"
                 ]
               },
               {
@@ -1916,7 +1931,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Brain can rest in a sleep."
                   },
                   {
                     "key": "C",
@@ -1930,8 +1945,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "brain recovery (sự hồi phục của não bộ)",
+                  "rest in sleep (nghỉ ngơi trong giấc ngủ)"
                 ]
               },
               {
@@ -1953,14 +1968,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "They can't pay attention very well."
                   }
                 ],
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "lack of focus (thiếu tập trung)",
+                  "pay attention (chú ý lắng nghe)"
                 ]
               },
               {
@@ -1982,14 +1997,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "They can't pay attention very well"
+                    "text": "exercising before sleep"
                   }
                 ],
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "poor sleep causes (nguyên nhân gây mất ngủ)",
+                  "exercise (tập thể dục)"
                 ]
               },
               {
@@ -2003,37 +2018,37 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "Drink some hot tea"
                   },
                   {
                     "key": "C",
-                    "text": "GO to bed at a regular time"
+                    "text": "Go to bed at a regular time"
                   },
                   {
                     "key": "D",
-                    "text": "relax with a TV show"
+                    "text": "Relax with a TV show"
                   }
                 ],
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "regular sleep schedule (lịch ngủ điều độ)",
+                  "routine (thói quen nhất quán)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-2-talk-3",
-            "title": "Bài giảng 3",
-            "topic": "Bài nói học thuật thứ ba",
-            "audioText": "Authentic talk 3 from original test tape.",
+            "id": "auth-2-lec-3",
+            "title": "Bài thuyết trình 3",
+            "topic": "Hiện tượng cực quang phương Bắc (Northern lights / Aurora borealis)",
+            "audioText": "Authentic lecture 3 from original test tape.",
             "audioUrl": "./audio/listening/test2.mp3",
             "questions": [
               {
                 "id": 31,
                 "audioText": "VSTEP Authentic Audio Track - Question 31",
-                "question": "Which is NOT the shape Of the northern lights?",
+                "question": "Which is NOT the shape of the northern lights?",
                 "options": [
                   {
                     "key": "A",
@@ -2055,8 +2070,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "aurora shape (hình dạng dải cực quang)",
+                  "oval shape (hình bầu dục)"
                 ]
               },
               {
@@ -2084,8 +2099,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "aurora borealis (bình minh phương bắc - northern dawn)",
+                  "Latin origin (nguồn gốc tiếng La-tinh)"
                 ]
               },
               {
@@ -2103,7 +2118,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Anywhere in Scandinavian countries"
                   },
                   {
                     "key": "D",
@@ -2113,14 +2128,14 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "northernmost point (điểm cực bắc Trái Đất)",
+                  "observation spot (địa điểm ngắm cảnh)"
                 ]
               },
               {
                 "id": 34,
                 "audioText": "VSTEP Authentic Audio Track - Question 34",
-                "question": "What is one Of the stories developed by people before modern science?",
+                "question": "What is one of the stories developed by people before modern science?",
                 "options": [
                   {
                     "key": "A",
@@ -2132,7 +2147,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "The liÉhts appeared when people."
+                    "text": "The lights appeared when people died."
                   },
                   {
                     "key": "D",
@@ -2142,8 +2157,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "folklore and myth (thần thoại dân gian)",
+                  "foxes (loài cáo phát sáng)"
                 ]
               },
               {
@@ -2153,7 +2168,7 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": ""
+                    "text": "A description of the lights"
                   },
                   {
                     "key": "B",
@@ -2165,14 +2180,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Beliefs about the lights"
                   }
                 ],
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "unmentioned detail (chi tiết không được nhắc đến)",
+                  "scientific explanation (giải thích khoa học)"
                 ]
               }
             ]
@@ -2206,18 +2221,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "passport"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "bag"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "forgotten item (vật phẩm bị bỏ quên)",
+              "camera (máy ảnh)"
             ]
           },
           {
@@ -2235,18 +2250,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "06.10"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "07.10"
               }
             ],
             "correctAnswer": "A",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "train timetable (giờ tàu chạy)",
+              "quarter past six (6 giờ 15)"
             ]
           },
           {
@@ -2264,18 +2279,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "Lựa chọn C"
+                "text": "by car"
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "by train"
               }
             ],
             "correctAnswer": "C",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "means of transport (phương tiện đi lại)",
+              "by car (bằng ô tô)"
             ]
           },
           {
@@ -2293,18 +2308,18 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "C",
-                "text": "passport c. 06.10"
+                "text": "by the door with the other rubbish"
               },
               {
-                "key": "C",
-                "text": "by car"
+                "key": "D",
+                "text": "under the table"
               }
             ],
             "correctAnswer": "C",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "shoes location (vị trí đôi giày)",
+              "by the door (ngay cạnh cửa)"
             ]
           },
           {
@@ -2332,18 +2347,18 @@ export const LISTENING_PRACTICE_DATA = {
             "correctAnswer": "C",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "grocery shopping (mua đồ thực phẩm)",
+              "carrots (cà rốt)"
             ]
           },
           {
             "id": 6,
             "audioText": "VSTEP Authentic Audio Track - Question 6",
-            "question": "How were they told to do their homework? write it in the books",
+            "question": "How were they told to do their homework?",
             "options": [
               {
                 "key": "A",
-                "text": "Lựa chọn A"
+                "text": "write it in the books"
               },
               {
                 "key": "B",
@@ -2361,8 +2376,8 @@ export const LISTENING_PRACTICE_DATA = {
             "correctAnswer": "A",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "homework submission (nộp bài tập về nhà)",
+              "write in the books (viết trực tiếp vào sách)"
             ]
           },
           {
@@ -2384,14 +2399,14 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "D",
-                "text": "Lựa chọn D"
+                "text": "hat"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "bought item (đồ đã mua)",
+              "sweater (áo len)"
             ]
           },
           {
@@ -2413,14 +2428,14 @@ export const LISTENING_PRACTICE_DATA = {
               },
               {
                 "key": "D",
-                "text": "hat"
+                "text": "walk"
               }
             ],
             "correctAnswer": "B",
             "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
             "keyVocab": [
-              "authentic recording (băng ghi âm gốc)",
-              "key point (thông tin then chốt)"
+              "offered a lift (được hàng xóm cho đi nhờ xe)",
+              "commute (đi làm)"
             ]
           }
         ]
@@ -2433,7 +2448,7 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-3-conv-1",
             "title": "Hội thoại 1",
-            "scenario": "Cuộc hội thoại đầu tiên",
+            "scenario": "Cuộc hội thoại giữa Tyrone và nhân viên tiếp tân về lịch làm việc",
             "audioText": "Authentic conversation 1 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
@@ -2447,77 +2462,87 @@ export const LISTENING_PRACTICE_DATA = {
                     "text": "Noon to 6 PM"
                   },
                   {
-                    "key": "A",
-                    "text": "Monday and Tuesday"
+                    "key": "B",
+                    "text": "8:15 AM to 5 PM"
                   },
                   {
-                    "key": "A",
-                    "text": "To discuss the importance of the job"
+                    "key": "C",
+                    "text": "7 AM to 12 PM"
                   },
                   {
-                    "key": "A",
-                    "text": "She enjoys sleeping late every morning."
+                    "key": "D",
+                    "text": "5 PM to 9 PM"
                   }
                 ],
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "working schedule (lịch làm việc)",
+                  "5 PM to 9 PM (5 giờ chiều đến 9 giờ tối)"
                 ]
               },
               {
                 "id": 10,
-                "question": "Question 10",
+                "audioText": "VSTEP Authentic Audio Track - Question 10",
+                "question": "On which two days does the speaker have the same schedule?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "Option A"
+                    "text": "Monday and Tuesday"
                   },
                   {
                     "key": "B",
-                    "text": "Option B"
+                    "text": "Wednesday and Thursday"
                   },
                   {
                     "key": "C",
-                    "text": "Option C"
+                    "text": "Tuesday and Thursday"
                   },
                   {
                     "key": "D",
-                    "text": "Option D"
+                    "text": "Thursday and Friday"
                   }
                 ],
                 "correctAnswer": "C",
-                "explanation": "Căn cứ theo băng ghi âm gốc Đề 10. Đáp án đúng là C."
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
+                "keyVocab": [
+                  "same schedule (trùng lịch làm việc)",
+                  "Tuesday and Thursday (thứ Ba và thứ Năm)"
+                ]
               },
               {
                 "id": 11,
-                "question": "Question 11",
+                "audioText": "VSTEP Authentic Audio Track - Question 11",
+                "question": "What is the main purpose of the speaker's talk?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "Option A"
+                    "text": "To discuss the importance of the job"
                   },
                   {
                     "key": "B",
-                    "text": "Option B"
+                    "text": "To compare the work of doctors and dentists"
                   },
                   {
                     "key": "C",
-                    "text": "Option C"
+                    "text": "To describe a typical week at work"
                   },
                   {
                     "key": "D",
-                    "text": "Option D"
+                    "text": "To explain the details of a day at work"
                   }
                 ],
                 "correctAnswer": "D",
-                "explanation": "Căn cứ theo băng ghi âm gốc Đề 11. Đáp án đúng là D."
+                "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
+                "keyVocab": [
+                  "main purpose (mục đích chính)",
+                  "explain details (giải thích chi tiết)"
+                ]
               },
               {
                 "id": 12,
                 "audioText": "VSTEP Authentic Audio Track - Question 12",
-                "question": "What does the speaker think Of her work?",
+                "question": "What does the speaker think of her work?",
                 "options": [
                   {
                     "key": "A",
@@ -2525,11 +2550,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "It is difficult to describe her schedule."
                   },
                   {
                     "key": "C",
-                    "text": "She enjoys helping the patients. 3. It is difficult to describe her schedule."
+                    "text": "She enjoys helping the patients."
                   },
                   {
                     "key": "D",
@@ -2539,8 +2564,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "opinion on work (đánh giá về công việc)",
+                  "difficult to describe (khó mô tả rõ ràng)"
                 ]
               }
             ]
@@ -2548,14 +2573,14 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-3-conv-2",
             "title": "Hội thoại 2",
-            "scenario": "Cuộc hội thoại thứ hai",
+            "scenario": "Cuộc thảo luận về thói quen chi tiêu thẻ tín dụng sinh viên",
             "audioText": "Authentic conversation 2 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
               {
                 "id": 13,
                 "audioText": "VSTEP Authentic Audio Track - Question 13",
-                "question": "According to the conversation, which item did the woman NOT purchase With her credit card?",
+                "question": "According to the conversation, which item did the woman NOT purchase with her credit card?",
                 "options": [
                   {
                     "key": "A",
@@ -2563,11 +2588,11 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": ""
+                    "text": "DVD player"
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "a TV"
                   },
                   {
                     "key": "D",
@@ -2577,8 +2602,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "unpurchased item (món đồ không mua)",
+                  "digital camera (máy ảnh kỹ thuật số)"
                 ]
               },
               {
@@ -2606,8 +2631,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "credit rating (điểm tín dụng)",
+                  "financial record (hồ sơ tài chính)"
                 ]
               },
               {
@@ -2625,7 +2650,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "SW II get a part-time job"
+                    "text": "She will get a part-time job"
                   },
                   {
                     "key": "D",
@@ -2635,8 +2660,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "debt resolution (giải quyết nợ nần)",
+                  "financial relief (trợ giúp tài chính)"
                 ]
               },
               {
@@ -2664,8 +2689,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "financial management plan (kế hoạch quản lý tài chính)",
+                  "budgeting (lập ngân sách)"
                 ]
               }
             ]
@@ -2673,14 +2698,14 @@ export const LISTENING_PRACTICE_DATA = {
           {
             "id": "auth-3-conv-3",
             "title": "Hội thoại 3",
-            "scenario": "Cuộc hội thoại thứ ba",
+            "scenario": "Cuộc gọi đặt món và phàn nàn giá cả tại nhà hàng",
             "audioText": "Authentic conversation 3 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
               {
                 "id": 17,
                 "audioText": "VSTEP Authentic Audio Track - Question 17",
-                "question": "Why does the Customer not buy the recommended sandwich at the beginning Of the conve 0 n ?",
+                "question": "Why does the customer not buy the recommended sandwich at the beginning of the conversation?",
                 "options": [
                   {
                     "key": "A",
@@ -2702,8 +2727,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "fear illness (sợ bị đau bụng/ngộ độc)",
+                  "refusal (từ chối món đề xuất)"
                 ]
               },
               {
@@ -2731,26 +2756,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "specialty drink (đồ uống đặc biệt)",
+                  "ingredients (nguyên liệu đa dạng)"
                 ]
               },
               {
                 "id": 19,
                 "audioText": "VSTEP Authentic Audio Track - Question 19",
-                "question": "Why was the man surprised by the price Of his meal?",
+                "question": "Why was the man surprised by the price of his meal?",
                 "options": [
                   {
                     "key": "A",
-                    "text": "He thought the drink should have been included. 3. He felt the meal was way overpriced."
+                    "text": "He thought the drink should have been included."
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "He felt the meal was way overpriced."
                   },
                   {
                     "key": "C",
-                    "text": "He was charged fortwo sandwiches instead of one."
+                    "text": "He was charged for two sandwiches instead of one."
                   },
                   {
                     "key": "D",
@@ -2760,8 +2785,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "overpriced (quá đắt đỏ)",
+                  "bill surprise (bất ngờ vì hóa đơn)"
                 ]
               },
               {
@@ -2779,7 +2804,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "He decides to 100k for another place to eat."
+                    "text": "He decides to look for another place to eat."
                   },
                   {
                     "key": "D",
@@ -2789,8 +2814,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "final decision (quyết định sau cùng)",
+                  "order from menu (chọn món trong thực đơn)"
                 ]
               }
             ]
@@ -2799,14 +2824,14 @@ export const LISTENING_PRACTICE_DATA = {
       },
       "part3": {
         "title": "Part 3: 3 Bài Giảng / Thuyết Trình Học Thuật Chuyên Sâu",
-        "instructions": "Nghe 3 bài nói/bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
+        "instructions": "Nghe 3 bài nói hoặc bài giảng và chọn đáp án chính xác cho các câu hỏi 21 - 35.",
         "audioUrl": "./audio/listening/test3.mp3",
-        "talks": [
+        "lectures": [
           {
-            "id": "auth-3-talk-1",
-            "title": "Bài giảng 1",
-            "topic": "Bài nói học thuật thứ nhất",
-            "audioText": "Authentic talk 1 from original test tape.",
+            "id": "auth-3-lec-1",
+            "title": "Bài thuyết trình 1",
+            "topic": "Sandy Duffy chia sẻ về nghề viết kịch bản trò chơi điện tử (Video Game Writer)",
+            "audioText": "Authentic lecture 1 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
               {
@@ -2816,26 +2841,26 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "a journalist _3. a musician"
+                    "text": "a journalist"
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "a musician"
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "A director"
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "A basketball player"
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "childhood dream (ước mơ thuở đi học)",
+                  "musician (nhạc sĩ, nghệ sĩ biểu diễn)"
                 ]
               },
               {
@@ -2853,18 +2878,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Technology"
                   },
                   {
-                    "key": "C",
-                    "text": "Technology"
+                    "key": "D",
+                    "text": "Art"
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "university major (chuyên ngành đại học)",
+                  "film making (sản xuất phim ảnh)"
                 ]
               },
               {
@@ -2892,8 +2917,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "first job opportunity (cơ hội việc làm đầu tiên)",
+                  "sent information / portfolio (gửi hồ sơ năng lực)"
                 ]
               },
               {
@@ -2921,8 +2946,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "favorite aspect (điều thích nhất)",
+                  "team colleagues (đồng nghiệp cùng cộng tác)"
                 ]
               },
               {
@@ -2950,23 +2975,23 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "job drawback (nhược điểm công việc)",
+                  "travel a lot (phải di chuyển đi công tác nhiều)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-3-talk-2",
-            "title": "Bài giảng 2",
-            "topic": "Bài nói học thuật thứ hai",
-            "audioText": "Authentic talk 2 from original test tape.",
+            "id": "auth-3-lec-2",
+            "title": "Bài thuyết trình 2",
+            "topic": "Hành trình đi bộ dã ngoại từ thiện (Charity trek)",
+            "audioText": "Authentic lecture 2 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
               {
                 "id": 26,
                 "audioText": "VSTEP Authentic Audio Track - Question 26",
-                "question": "HOW long does the trek last?",
+                "question": "How long does the trek last?",
                 "options": [
                   {
                     "key": "A",
@@ -2978,18 +3003,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "Lựa chọn C"
+                    "text": "five days"
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "a week"
                   }
                 ],
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "trek duration (thời lượng chuyến đi dã ngoại)",
+                  "five days (5 ngày)"
                 ]
               },
               {
@@ -3007,18 +3032,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": "five days"
+                    "text": "hospital"
                   },
                   {
-                    "key": "C",
-                    "text": "hospital"
+                    "key": "D",
+                    "text": "the old people"
                   }
                 ],
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "fundraising goal (mục tiêu gây quỹ)",
+                  "health care support (hỗ trợ chăm sóc sức khỏe)"
                 ]
               },
               {
@@ -3046,14 +3071,14 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "D",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là D.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "included expenses (chi phí bao gồm)",
+                  "food and accommodation (ăn uống và chỗ ở)"
                 ]
               },
               {
                 "id": 29,
                 "audioText": "VSTEP Authentic Audio Track - Question 29",
-                "question": "participants must",
+                "question": "Participants must",
                 "options": [
                   {
                     "key": "A",
@@ -3075,8 +3100,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "C",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là C.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "mandatory requirement (yêu cầu bắt buộc)",
+                  "agree to raise funds (cam kết quyên góp quỹ từ thiện)"
                 ]
               },
               {
@@ -3090,7 +3115,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "3rd Of November"
+                    "text": "3rd of November"
                   },
                   {
                     "key": "C",
@@ -3104,23 +3129,23 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "departure date (ngày khởi hành)",
+                  "3rd of November (ngày 3 tháng 11)"
                 ]
               }
             ]
           },
           {
-            "id": "auth-3-talk-3",
-            "title": "Bài giảng 3",
-            "topic": "Bài nói học thuật thứ ba",
-            "audioText": "Authentic talk 3 from original test tape.",
+            "id": "auth-3-lec-3",
+            "title": "Bài thuyết trình 3",
+            "topic": "Sự phát triển của cơ sở hạ tầng giao thông Ấn Độ (Changes of India)",
+            "audioText": "Authentic lecture 3 from original test tape.",
             "audioUrl": "./audio/listening/test3.mp3",
             "questions": [
               {
                 "id": 31,
                 "audioText": "VSTEP Authentic Audio Track - Question 31",
-                "question": "Where do many Of the rich people live?",
+                "question": "Where do many of the rich people live?",
                 "options": [
                   {
                     "key": "A",
@@ -3128,7 +3153,7 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "Lựa chọn B"
+                    "text": "in the cities."
                   },
                   {
                     "key": "C",
@@ -3136,14 +3161,14 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "D",
-                    "text": "Lựa chọn D"
+                    "text": "in isolated places."
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "residential area (khu vực sinh sống)",
+                  "in the cities (ở các đô thị, thành phố)"
                 ]
               },
               {
@@ -3157,22 +3182,22 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "B",
-                    "text": "in the cities."
-                  },
-                  {
-                    "key": "B",
                     "text": "6,000 kilometers"
                   },
                   {
                     "key": "C",
                     "text": "60,000 kilometres"
+                  },
+                  {
+                    "key": "D",
+                    "text": "60 miles"
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "highway length (chiều dài tuyến đường cao tốc)",
+                  "6,000 kilometers (6.000 km)"
                 ]
               },
               {
@@ -3200,8 +3225,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "traffic surveillance (hệ thống giám sát giao thông)",
+                  "vehicle tracking (theo dõi phương tiện và sự cố)"
                 ]
               },
               {
@@ -3229,8 +3254,8 @@ export const LISTENING_PRACTICE_DATA = {
                 "correctAnswer": "A",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là A.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "diversity of vehicles (đa dạng các loại xe)",
+                  "all types (mọi loại phương tiện)"
                 ]
               },
               {
@@ -3240,7 +3265,7 @@ export const LISTENING_PRACTICE_DATA = {
                 "options": [
                   {
                     "key": "A",
-                    "text": "because ifs the same shape as the country of India."
+                    "text": "because it's the same shape as the country of India."
                   },
                   {
                     "key": "B",
@@ -3248,18 +3273,18 @@ export const LISTENING_PRACTICE_DATA = {
                   },
                   {
                     "key": "C",
-                    "text": ""
+                    "text": "Because India has big population"
                   },
                   {
                     "key": "D",
-                    "text": ""
+                    "text": "Because India has lots of transport"
                   }
                 ],
                 "correctAnswer": "B",
                 "explanation": "Căn cứ nội dung bài nghe và đáp án chuẩn Bộ đề thi ĐHQG. Đáp án đúng là B.",
                 "keyVocab": [
-                  "authentic recording (băng ghi âm gốc)",
-                  "key point (thông tin then chốt)"
+                  "symbol of future (biểu tượng tương lai)",
+                  "economic growth (thúc đẩy tăng trưởng kinh tế)"
                 ]
               }
             ]
