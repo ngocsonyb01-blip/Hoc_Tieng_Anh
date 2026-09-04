@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hệ thống giáo trình điện tử học và ôn thi tiếng Anh VSTEP B1 toàn diện 4 kỹ năng">
+  <title>VSTEP B1 English Mastery — Giáo Trình Điện Tử Tổng Hợp Kiến Thức</title>
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheets -->
+  <script type="module" crossorigin src="./assets/index-C9V8nWHn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B6TcErMY.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Backdrop for Mobile -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop" onclick="window.app && window.app.closeMobileSidebar()"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-wrapper">
+          <div class="brand-icon">
+            <i data-lucide="zap" style="width: 22px; height: 22px; stroke-width: 2.5;"></i>
+          </div>
+          <div class="brand-text">
+            <h2 class="brand-title">VSTEP</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Tổng quan</div>
+        <a href="#dashboard" class="nav-item active" data-route="dashboard">
+          <div class="nav-icon-box"><i data-lucide="layout-dashboard"></i></div>
+          <span>Tổng Quan</span>
+        </a>
+
+        <div class="nav-label">Kiến thức nền tảng</div>
+        <a href="#grammar" class="nav-item" data-route="grammar">
+          <div class="nav-icon-box"><i data-lucide="book-marked"></i></div>
+          <span>Ngữ Pháp</span>
+        </a>
+        <a href="#vocabulary" class="nav-item" data-route="vocabulary">
+          <div class="nav-icon-box"><i data-lucide="sparkles"></i></div>
+          <span>Từ Vựng</span>
+        </a>
+        <a href="#pronunciation" class="nav-item" data-route="pronunciation">
+          <div class="nav-icon-box"><i data-lucide="volume-2"></i></div>
+          <span>Phát Âm (IPA)</span>
+        </a>
+
+        <div class="nav-label">4 Kỹ năng thực chiến</div>
+        <a href="#listening" class="nav-item" data-route="listening">
+          <div class="nav-icon-box"><i data-lucide="headphones"></i></div>
+          <span>Luyện Nghe</span>
+        </a>
+        <a href="#reading" class="nav-item" data-route="reading">
+          <div class="nav-icon-box"><i data-lucide="book-open"></i></div>
+          <span>Luyện Đọc</span>
+        </a>
+        <a href="#writing" class="nav-item" data-route="writing">
+          <div class="nav-icon-box"><i data-lucide="pen-tool"></i></div>
+          <span>Luyện Viết</span>
+        </a>
+        <a href="#speaking" class="nav-item" data-route="speaking">
+          <div class="nav-icon-box"><i data-lucide="mic"></i></div>
+          <span>Luyện Nói</span>
+        </a>
+
+        <div class="nav-label">Đánh giá & Khảo thí</div>
+        <a href="#tests" class="nav-item" data-route="tests">
+          <div class="nav-icon-box"><i data-lucide="award"></i></div>
+          <span>Thi Thử</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-pro-card">
+          <div class="pro-badge-row">
+            <span class="status-pulse-dot"></span>
+            <span class="pro-text">VSTEP Mastery</span>
+          </div>
+          <span class="pro-subtext">Khảo Thí Chuẩn B1</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Top Sticky Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button id="sidebar-toggle-btn" class="btn btn-secondary btn-icon" style="display: inline-flex; align-items: center; justify-content: center;" title="Ẩn / Hiện Thanh Điều Hướng (Ctrl+B)">
+            <i data-lucide="panel-left"></i>
+          </button>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="badge badge-primary">Khung Bậc 3/6 CEFR B1</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: none; @media(min-width: 768px){display:inline;}">Chuẩn Đào Tạo & Khảo Thí</span>
+          </div>
+        </div>
+
+        <div class="header-right" style="display: flex; align-items: center; gap: 0.5rem;">
+          <button id="settings-btn" class="btn btn-secondary btn-sm" onclick="window.openSettingsModal()" style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600;" title="Cài đặt hệ thống">
+            <i data-lucide="settings"></i>
+            <span>Cài Đặt</span>
+          </button>
+          <button id="theme-toggle" class="btn btn-secondary btn-icon" title="Chuyển đổi Chế độ Sáng / Tối">
+            <span id="theme-toggle-icon"><i data-lucide="moon"></i></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Page Content Outlet -->
+      <main id="main-content" class="page-content">
+        <!-- Views rendered here by App router -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App Entry -->
+</body>
+</html>
