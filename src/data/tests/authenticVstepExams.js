@@ -1,3 +1,5 @@
+import { exam07 } from './exam07.js';
+
 // Authentic VSTEP B1-B2-C1 Examination Corpus (Full 4 Skills)
 export const authenticVstepExams = [
   {
@@ -11929,5 +11931,6 @@ export const authenticVstepExams = [
         ]
       }
     }
-  }
+  },
+  exam07
 ];

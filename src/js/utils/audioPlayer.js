@@ -73,6 +73,31 @@ export function getAuthoritativeMaleVoice() {
   return getSelectedGlobalVoice();
 }
 
+/**
+ * Xử lý văn bản phát âm tự nhiên:
+ * - Thay thế các nhãn nhân vật đối thoại (Man:, Woman:, Doctor:, Student:...) thành khoảng ngắt nhịp thở (... )
+ *   giúp giọng đọc không phát âm 'Man hai chấm', 'Woman hai chấm' một cách cơ học.
+ * - Thêm nhịp thở cho các dấu chấm than, chấm hỏi, dấu gạch nối, dấu phẩy giúp giọng có ngữ điệu nhấn nhá tự nhiên.
+ */
+export function formatSpeechTextForNaturalIntonation(rawText) {
+  if (!rawText) return '';
+  let text = rawText;
+
+  // 1. Chuyển đổi nhãn người nói thành khoảng lặng chuyển lượt tự nhiên
+  text = text.replace(/(?:^|\n)\s*(?:Man|Woman|Speaker\s*\d+|Person\s*[A-Z]|Interviewer|Candidate|Male|Female|Host|Student|Professor|Doctor|Caller|Passenger|Officer|Agent|Guide|Elena|David|Alex|Sarah|John):\s*/gi, '\n... ');
+
+  // 2. Loại bỏ các chỉ dẫn bối cảnh trong ngoặc vuông không cần phát âm
+  text = text.replace(/\[(?:Context|Announcement|Music|Background|Dialogue|Setting)[^\]]*\]/gi, '... ');
+
+  // 3. Chuẩn hóa dấu ba chấm và khoảng lặng thở
+  text = text.replace(/\.{3,}/g, '... ');
+
+  // 4. Đảm bảo sau dấu câu kết thúc có khoảng trống tạo ngữ điệu xuống giọng/lên giọng chuẩn
+  text = text.replace(/([.?!])\s*([A-Z])/g, '$1 ... $2');
+
+  return text.trim();
+}
+
 class AudioController {
   constructor() {
     this.currentText = '';
@@ -122,19 +147,13 @@ class AudioController {
       this.htmlAudio.playbackRate = this.rate || 1.0;
 
       this.htmlAudio.onloadedmetadata = () => {
-        if (this.htmlAudio && this.htmlAudio.duration && !isNaN(this.htmlAudio.duration)) {
-          this.durationEstimate = Math.round(this.htmlAudio.duration);
-          this.updateProgressBar();
-        }
+        this.durationEstimate = Math.round(this.htmlAudio.duration) || 30;
+        this.updateUI();
       };
 
       this.htmlAudio.ontimeupdate = () => {
-        if (!this.htmlAudio) return;
         this.elapsedSeconds = Math.round(this.htmlAudio.currentTime);
-        if (this.htmlAudio.duration && !isNaN(this.htmlAudio.duration)) {
-          this.durationEstimate = Math.round(this.htmlAudio.duration);
-        }
-        this.updateProgressBar();
+        this.updateUI();
       };
 
       this.htmlAudio.onended = () => {
@@ -142,8 +161,10 @@ class AudioController {
       };
 
       this.htmlAudio.onerror = (e) => {
-        console.warn('HTML Audio playback notice:', e);
-        this.finishPlayback();
+        console.warn('Real audio file load notice, switching to TTS:', e);
+        this.htmlAudio = null;
+        this.currentAudioUrl = null;
+        this.playSpeech(id, text);
       };
 
       this.htmlAudio.play().catch(err => {
@@ -155,6 +176,10 @@ class AudioController {
     }
 
     // Fallback: Web Speech API TTS
+    this.playSpeech(id, text);
+  }
+
+  playSpeech(id, text) {
     if (!('speechSynthesis' in window)) {
       alert('Trình duyệt của bạn không hỗ trợ Web Speech API.');
       return;
@@ -179,7 +204,10 @@ class AudioController {
     const wordCount = text.split(/\s+/).filter(w => w.trim()).length;
     this.durationEstimate = Math.max(3, Math.round((wordCount / (130 * this.rate)) * 60));
 
-    this.utterance = new SpeechSynthesisUtterance(text);
+    // Áp dụng định dạng văn bản tạo ngữ điệu và ngắt nhịp tự nhiên
+    const naturalSpokenText = formatSpeechTextForNaturalIntonation(text);
+
+    this.utterance = new SpeechSynthesisUtterance(naturalSpokenText);
     this.utterance.lang = this.lang;
     this.utterance.rate = (this.rate || 1.0) * getGlobalRate();
     this.utterance.pitch = getGlobalPitch();
@@ -233,13 +261,14 @@ class AudioController {
       this.updateUI();
       return;
     }
-    const remainingText = this.currentText.slice(this.charIndex || 0).trim();
-    if (!remainingText) {
+    const remainingRaw = this.currentText.slice(this.charIndex || 0).trim();
+    if (!remainingRaw) {
       this.finishPlayback();
       return;
     }
 
-    this.utterance = new SpeechSynthesisUtterance(remainingText);
+    const naturalRemaining = formatSpeechTextForNaturalIntonation(remainingRaw);
+    this.utterance = new SpeechSynthesisUtterance(naturalRemaining);
     this.utterance.lang = this.lang;
     this.utterance.rate = (this.rate || 1.0) * getGlobalRate();
     this.utterance.pitch = getGlobalPitch();
