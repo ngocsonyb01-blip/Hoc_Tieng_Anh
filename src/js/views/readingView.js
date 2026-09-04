@@ -204,8 +204,8 @@ function renderPassagesTab(passage) {
           <!-- Key Vocabulary Drawer -->
           ${passage.vocabularyHighlights && passage.vocabularyHighlights.length > 0 ? `
             <div style="margin-top: 2rem; background: var(--bg-accent); border: 1px solid var(--border-color); padding: 1.25rem; border-radius: var(--radius-md);">
-              <h4 style="color: var(--primary); margin: 0 0 0.75rem 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i> Từ Vựng Học Thuật Cốt Lõi Trong Bài:
+              <h4 style="color: var(--primary); margin: 0 0 0.75rem 0; font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem;">
+                <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i> Từ vựng trong bài:
               </h4>
               <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem;">
                 ${passage.vocabularyHighlights.map(v => typeof v === 'object' ? `
@@ -415,8 +415,8 @@ function renderStrategiesTab() {
 
             <!-- Core Principle -->
             <div style="background: var(--bg-muted); border-radius: var(--radius-md); padding: 1.15rem 1.35rem; margin-bottom: 1.5rem;">
-              <strong style="color: var(--primary); font-size: 0.95rem; display: block; margin-bottom: 0.35rem;">
-                <i data-lucide="target" style="width: 16px; height: 16px; vertical-align: middle;"></i> Nguyên Lý Cốt Lõi:
+              <strong style="color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">
+                <i data-lucide="check-square" style="width: 15px; height: 15px; vertical-align: middle;"></i> Quy tắc:
               </strong>
               <p style="margin: 0; font-size: 0.95rem; line-height: 1.7; color: var(--text-primary);">${strat.corePrinciple}</p>
             </div>

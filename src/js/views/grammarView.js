@@ -435,7 +435,7 @@ function renderSpecificGrammarModule(topic) {
   else if (topic.id === 'passive-voice') {
     html += `
       <div class="card" style="margin-bottom: 2rem;">
-        <h3 style="color: var(--primary); margin-bottom: 1rem;">Quy Tắc Chuyển Đổi Bị Động Cốt Lõi</h3>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">Quy Tắc Câu Bị Động</h3>
         <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
           <ol style="padding-left: 1.25rem; font-size: 0.925rem; line-height: 1.8;">
             ${topic.rules.map(r => `<li>${r}</li>`).join('')}

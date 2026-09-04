@@ -287,8 +287,8 @@ function renderStressTab() {
       <div class="card" style="padding: 2rem;">
         <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
           <span class="badge badge-primary">PHẦN 1: TRỌNG ÂM TỪ</span>
-          <h3 style="margin: 0.35rem 0 0 0; color: var(--primary); font-size: 1.45rem;">10 Quy Tắc Đánh Trọng Âm Cốt Lõi VSTEP B1</h3>
-          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.925rem;">Các quy tắc nhận diện vị trí trọng âm dựa theo số âm tiết, hậu tố và loại từ.</p>
+          <h3 style="margin: 0.35rem 0 0 0; color: var(--primary); font-size: 1.35rem;">10 Quy Tắc Trọng Âm</h3>
+          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">Quy tắc xác định trọng âm theo số âm tiết, hậu tố và từ loại.</p>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
@@ -327,8 +327,8 @@ function renderStressTab() {
       <div class="card" style="padding: 2rem;">
         <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
           <span class="badge badge-secondary">PHẦN 2: NGỮ ĐIỆU CÂU</span>
-          <h3 style="margin: 0.35rem 0 0 0; color: var(--secondary); font-size: 1.45rem;">4 Quy Tắc Ngữ Điệu Câu Chuẩn Bản Ngữ</h3>
-          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.925rem;">Biến chuyển cao độ âm thanh giúp câu nói tự nhiên, truyền tải cảm xúc và thái độ chính xác.</p>
+          <h3 style="margin: 0.35rem 0 0 0; color: var(--secondary); font-size: 1.35rem;">4 Quy Tắc Ngữ Điệu Câu</h3>
+          <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.9rem;">Quy tắc lên xuống giọng theo loại câu.</p>
         </div>
 
         <div class="grid-2" style="gap: 1.5rem;">

@@ -27,31 +27,31 @@ export class WritingStructureGuide {
 
     const toneRule = isFormal
       ? {
-          badge: 'Văn Phong Trang Trọng (Formal)',
+          badge: 'Trang trọng (Formal)',
           styleColor: 'var(--primary)',
           rules: [
-            'KHÔNG dùng từ viết tắt (viết "I am" thay vì "I\'m", "do not" thay vì "don\'t").',
-            'Sử dụng các cấu trúc bị động và từ vựng lịch sự (e.g. "I would be grateful if...", "I would appreciate it...").',
-            'Chào mở đầu: "Dear Sir/Madam," hoặc "Dear [Họ và Tên/Chức danh],".',
-            'Kết thư chuẩn: "Yours faithfully," (khi không biết tên người nhận) hoặc "Yours sincerely," (khi biết tên).'
+            'Không dùng từ viết tắt (viết "I am", "do not").',
+            'Dùng câu bị động và từ ngữ trang trọng, lịch sự.',
+            'Mở đầu: "Dear Sir/Madam," hoặc "Dear [Họ tên],".',
+            'Kết thúc: "Yours faithfully," hoặc "Yours sincerely,".'
           ]
         }
       : {
-          badge: 'Văn Phong Thân Mật (Informal)',
+          badge: 'Thân mật (Informal)',
           styleColor: 'var(--success-text)',
           rules: [
-            'Được phép dùng từ viết tắt tự nhiên ("I\'m", "can\'t", "we\'ll") để tạo cảm giác gần gũi.',
-            'Dùng câu cảm thán, câu hỏi tương tác nhẹ nhàng ("How are you doing?", "Guess what!").',
-            'Chào mở đầu: "Dear [Tên bạn],", "Hi [Tên],".',
-            'Kết thư chuẩn: "Warm regards,", "Best wishes,", "All the best,", sau đó ký tên ở dòng dưới.'
+            'Được dùng từ viết tắt ("I\'m", "can\'t", "we\'ll").',
+            'Dùng câu hỏi thăm, cảm thán tự nhiên.',
+            'Mở đầu: "Dear [Tên],", "Hi [Tên],".',
+            'Kết thúc: "Warm regards,", "Best wishes,".'
           ]
         };
 
     const sections = [
       {
         step: 'Phần 1',
-        title: 'Lời Chào & Nêu Rõ Mục Đích Viết Thư (Salutation & Opening)',
-        description: 'Chiếm 1-2 câu đầu tiên. Tuyệt đối không vòng vo; phải nói ngay lý do vì sao bạn viết lá thư này.',
+        title: 'Mở bài: Lời chào & Nêu mục đích',
+        description: 'Nêu ngay lý do viết thư trong 1-2 câu đầu, không mở bài dài dòng.',
         sentences: isFormal ? [
           { en: 'I am writing to formally express my dissatisfaction regarding...', vn: 'Tôi viết thư này để chính thức bày tỏ sự không hài lòng về...' },
           { en: 'I am writing this letter to request further information about...', vn: 'Tôi viết thư này để yêu cầu thêm thông tin chi tiết về...' },
@@ -61,12 +61,12 @@ export class WritingStructureGuide {
           { en: 'I am writing this letter to invite you to visit my hometown during...', vn: 'Mình viết thư này để mời bạn về thăm quê hương mình vào dịp...' },
           { en: 'I am writing to let you know about some exciting news regarding...', vn: 'Mình viết thư này để chia sẻ với bạn một tin rất hào hứng về...' }
         ],
-        tip: 'Mẹo lấy điểm: Xác định ngay mục đích theo đề bài (invite, complain, apologize hay ask for information) và biến nó thành câu đầu tiên.'
+        tip: 'Quy tắc: Nêu đúng mục đích bài viết ngay câu đầu.'
       },
       {
         step: 'Phần 2',
-        title: 'Thân Bài 1: Giải Quyết Yêu Cầu Thứ Nhất & Thứ Hai Của Đề Bài',
-        description: 'Tập trung cung cấp thông tin cốt lõi, bối cảnh, thời gian hoặc chi tiết sự việc theo câu hỏi 1 và 2 trong đề.',
+        title: 'Thân bài 1: Trả lời ý 1 & 2 của đề',
+        description: 'Cung cấp thông tin chi tiết và bối cảnh sự việc theo yêu cầu đề bài.',
         sentences: isFormal ? [
           { en: 'First of all, I would like to highlight that the item was received with...', vn: 'Trước hết, tôi muốn chỉ rõ rằng sản phẩm được nhận trong tình trạng...' },
           { en: 'According to the receipt #12345, the product was guaranteed to be...', vn: 'Theo hóa đơn số #12345, sản phẩm được đảm bảo là...' }
@@ -74,12 +74,12 @@ export class WritingStructureGuide {
           { en: 'First of all, my hometown is extremely famous for its cool climate and...', vn: 'Trước hết, quê mình cực kỳ nổi tiếng với khí hậu mát mẻ và...' },
           { en: 'If you arrive next Saturday, we can easily participate in...', vn: 'Nếu bạn đến vào thứ Bảy tuần tới, chúng mình có thể cùng tham gia...' }
         ],
-        tip: 'Mẹo lấy điểm: Đề thi VSTEP luôn có 2-3 gạch đầu dòng nhiệm vụ. Thân bài 1 bắt buộc phải trả lời trọn vẹn 1-2 gạch đầu dòng đầu.'
+        tip: 'Quy tắc: Trả lời đầy đủ các gợi ý đầu tiên trong đề.'
       },
       {
         step: 'Phần 3',
-        title: 'Thân Bài 2: Giải Quyết Yêu Cầu Thứ Ba (Lời Khuyên, Đề Xuất, Yêu Cầu Hành Động)',
-        description: 'Đưa ra các hướng giải quyết, dặn dò chuẩn bị, hoặc yêu cầu đối phương thực hiện hành động cụ thể.',
+        title: 'Thân bài 2: Trả lời ý 3 (Lời khuyên / Đề xuất)',
+        description: 'Đưa ra hướng giải quyết, chuẩn bị hoặc yêu cầu hành động cụ thể.',
         sentences: isFormal ? [
           { en: 'Under these circumstances, I would insist on a full refund or an immediate replacement.', vn: 'Trong hoàn cảnh này, tôi yêu cầu hoàn tiền toàn bộ hoặc đổi mới ngay lập tức.' },
           { en: 'Could you please verify the schedule and confirm the exact fees at your earliest convenience?', vn: 'Xin vui lòng kiểm tra lịch trình và xác nhận mức phí chính xác sớm nhất có thể?' }
@@ -87,12 +87,12 @@ export class WritingStructureGuide {
           { en: 'Regarding what to prepare, you should definitely bring some warm clothes and comfortable shoes.', vn: 'Về đồ đạc cần chuẩn bị, bạn nhất định nên mang áo ấm và giày thoải mái.' },
           { en: 'Don\'t forget to pack an umbrella because the weather can be a bit unpredictable.', vn: 'Đừng quên mang theo một chiếc ô vì thời tiết đôi khi hơi thất thường.' }
         ],
-        tip: 'Mẹo lấy điểm: Dùng cấu trúc khuyên bảo ("You should...", "Make sure to...") hoặc yêu cầu lịch sự ("I would appreciate it if you could...").'
+        tip: 'Quy tắc: Dùng câu khuyên bảo hoặc đề xuất lịch sự.'
       },
       {
         step: 'Phần 4',
-        title: 'Kết Thư & Lời Chào Ký Tên (Closing & Sign-off)',
-        description: 'Tóm lược mong đợi phản hồi và ký tên theo đúng văn phong.',
+        title: 'Kết bài: Lời chào kết & Ký tên',
+        description: 'Tóm lược mong muốn nhận phản hồi và ký tên theo đúng văn phong.',
         sentences: isFormal ? [
           { en: 'Thank you for your time and prompt consideration of this matter.', vn: 'Cảm ơn quý công ty đã dành thời gian xem xét kịp thời vấn đề này.' },
           { en: 'I look forward to hearing from you in the near future.\n\nYours faithfully,\n[Tên của bạn]', vn: 'Tôi mong sớm nhận được phản hồi từ quý vị.\n\nTrân trọng,\n[Tên của bạn]' }
@@ -100,7 +100,7 @@ export class WritingStructureGuide {
           { en: 'I am really looking forward to seeing you soon in my hometown!', vn: 'Mình thực sự rất nóng lòng được gặp lại bạn tại quê hương mình!' },
           { en: 'Please let me know your decision as soon as possible.\n\nWarm regards,\n[Tên của bạn]', vn: 'Hãy cho mình biết quyết định của bạn sớm nhất nhé.\n\nThân ái,\n[Tên của bạn]' }
         ],
-        tip: 'Mẹo lấy điểm: Ký tên ở dòng riêng biệt. Tuyệt đối không dùng "Yours sincerely" nếu mở đầu bằng "Dear Alex".'
+        tip: 'Quy tắc: Ký tên ở dòng riêng biệt theo đúng văn phong.'
       }
     ];
 
@@ -109,10 +109,10 @@ export class WritingStructureGuide {
       toneRule,
       sections,
       scoringFormula: [
-        'Độ dài an toàn: 130 - 160 từ (Đề bài yêu cầu tối thiểu 120 từ, dưới 120 từ bị trừ nặng điểm).',
-        'Bám sát đề bài: Trả lời đủ 100% các ý trong đề (Task Achievement chiếm 25%).',
-        'Có ít nhất 4-5 từ nối: Furthermore, In addition, However, Therefore, Regarding...',
-        'Không sai chính tả các từ cơ bản trong lời chào và kết bài.'
+        'Độ dài: 130 - 160 từ (tối thiểu 120 từ).',
+        'Nội dung: Trả lời đủ các ý trong đề bài.',
+        'Từ nối: Dùng 4 - 5 liên từ (Furthermore, However, Therefore...).',
+        'Chính tả & ngữ pháp: Đúng lời chào và kết thư.'
       ]
     };
   }
@@ -140,9 +140,9 @@ export class WritingStructureGuide {
 
     const structureSteps = [
       {
-        part: 'ĐOẠN 1: MỞ BÀI (INTRODUCTION)',
+        part: 'Đoạn 1: Mở bài (Introduction)',
         targetLines: '2 - 3 câu (~45 - 55 từ)',
-        purpose: 'Dẫn nhập chủ đề, viết lại đề bài bằng từ ngữ của mình (Paraphrase) và nêu rõ Thesis Statement (Quan điểm của bạn).',
+        purpose: 'Paraphrase đề bài và nêu quan điểm (Thesis Statement).',
         formulas: [
           {
             name: 'Câu 1 (Dẫn nhập & Paraphrase đề bài):',
@@ -151,16 +151,16 @@ export class WritingStructureGuide {
           },
           {
             name: 'Câu 2 (Tuyên bố luận điểm chính - Thesis Statement):',
-            frame: 'While some people argue that [Mặt phản đối/thách thức], I firmly believe that [Quan điểm cốt lõi của bạn].',
+            frame: 'While some people argue that [Mặt phản đối/thách thức], I firmly believe that [Quan điểm của bạn].',
             vn: 'Mặc dù một số người cho rằng [Mặt trái], tôi kiên quyết tin rằng [Quan điểm của bạn] mang lại những tác động tích cực vượt trội hơn nhiều.'
           }
         ],
-        scoringTip: 'Tuyệt đối KHÔNG chép lại 100% câu chữ của đề bài. Hãy thay thế bằng từ đồng nghĩa (e.g. modern society, significant impact, vital role).'
+        scoringTip: 'Dùng từ đồng nghĩa, không chép lại nguyên văn đề bài.'
       },
       {
-        part: 'ĐOẠN 2: THÂN BÀI 1 (BODY 1 - THEO CẤU TRÚC P.E.E.L)',
+        part: 'Đoạn 2: Thân bài 1 (Body 1 - Cấu trúc P.E.E.L)',
         targetLines: '4 - 5 câu (~80 - 100 từ)',
-        purpose: 'Trình bày khía cạnh thứ nhất: Luận điểm 1 hoặc Mặt bất lợi / Quan điểm thứ nhất.',
+        purpose: 'Trình bày luận điểm 1 hoặc khía cạnh thứ nhất.',
         formulas: [
           {
             name: 'P - Point (Câu chủ đề Topic Sentence):',
@@ -183,12 +183,12 @@ export class WritingStructureGuide {
             vn: 'Do đó, giải quyết những tồn tại ban đầu này là điều tối cần thiết cho sự phát triển bền vững.'
           }
         ],
-        scoringTip: 'Cần có từ nối mở đoạn ("On the one hand, ...") và liên từ giải thích ("For instance, ... Therefore, ...").'
+        scoringTip: 'Dùng liên từ mở đoạn ("On the one hand") và liên từ giải thích/ví dụ.'
       },
       {
-        part: 'ĐOẠN 3: THÂN BÀI 2 (BODY 2 - LUẬN ĐIỂM CHỦ ĐẠO)',
+        part: 'Đoạn 3: Thân bài 2 (Body 2 - Luận điểm chủ đạo)',
         targetLines: '4 - 5 câu (~85 - 105 từ)',
-        purpose: 'Trình bày khía cạnh thứ hai: Những lợi ích to lớn / Giải pháp đột phá / Quan điểm bạn ủng hộ.',
+        purpose: 'Trình bày luận điểm 2 hoặc mặt tích cực bạn ủng hộ.',
         formulas: [
           {
             name: 'P - Point (Câu chủ đề Topic Sentence 2):',
@@ -211,12 +211,12 @@ export class WritingStructureGuide {
             vn: 'Hệ quả là, những kết quả tích cực này hoàn toàn vượt trội so với các thách thức đã nêu.'
           }
         ],
-        scoringTip: 'Đây là đoạn quyết định điểm số cao. Hãy dùng từ vựng học thuật B1/B2 (substantially, competence, foster, promising opportunities).'
+        scoringTip: 'Dùng từ vựng học thuật B1/B2 và liên từ đối lập ("On the other hand").'
       },
       {
-        part: 'ĐOẠN 4: KẾT BÀI (CONCLUSION)',
+        part: 'Đoạn 4: Kết bài (Conclusion)',
         targetLines: '2 câu (~40 - 50 từ)',
-        purpose: 'Tóm lược lại toàn bộ bài viết, khẳng định lại quan điểm và đưa ra thông điệp dự phóng tương lai.',
+        purpose: 'Khẳng định lại quan điểm chính, không đưa thêm ý mới.',
         formulas: [
           {
             name: 'Câu 1 (Khẳng định lại luận điểm - Rephrase Thesis):',
@@ -229,7 +229,7 @@ export class WritingStructureGuide {
             vn: 'Hướng tới tương lai, cả chính quyền và người dân nên chủ động phối hợp để tối đa hóa những cơ hội quý giá này.'
           }
         ],
-        scoringTip: 'Không bao giờ được đưa thêm ý tưởng hoàn toàn mới vào kết bài. Chỉ tóm tắt lại những gì đã chứng minh ở thân bài.'
+        scoringTip: 'Chỉ tóm tắt lại luận điểm, tuyệt đối không đưa ý mới vào kết bài.'
       }
     ];
 
@@ -237,10 +237,10 @@ export class WritingStructureGuide {
       essayCategory,
       structureSteps,
       scoringChecklist: [
-        'Độ dài tiêu chuẩn: 260 - 280 từ (Tối thiểu 250 từ, dưới 250 từ sẽ bị trừ điểm Task Fulfillment).',
-        'Bố cục 4 đoạn rõ ràng: Thụt đầu dòng hoặc cách dòng giữa các đoạn văn.',
-        'Sử dụng ít nhất 6-8 từ nối học thuật: Furthermore, Moreover, Consequently, On the one hand, On the other hand, In conclusion...',
-        'Có câu phức chứa mệnh đề quan hệ (which, who, that) hoặc liên từ phụ thuộc (although, whereas, because, if).'
+        'Độ dài: 260 - 280 từ (tối thiểu 250 từ).',
+        'Bố cục: Đủ 4 đoạn rõ ràng (Mở bài - 2 Thân bài - Kết bài).',
+        'Từ nối: Dùng 6 - 8 liên từ học thuật (Furthermore, However, Consequently...).',
+        'Ngữ pháp: Sử dụng câu phức (mệnh đề quan hệ, although, because, if).'
       ]
     };
   }

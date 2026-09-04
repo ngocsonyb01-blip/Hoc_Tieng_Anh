@@ -201,39 +201,39 @@ function renderLetterStructureGuideSection(letter) {
     <div class="card animate-fade-in" style="margin-bottom: 1.5rem; padding: 1.5rem 1.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
       
       <!-- Tone and Style Rules Box -->
-      <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border-left: 3px solid var(--primary);">
-        <strong style="color: var(--primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.5rem;">
-          <i data-lucide="info" style="width: 15px; height: 15px;"></i> Quy tắc văn phong: ${guide.toneRule.badge}
+      <div style="background: var(--bg-muted); padding: 0.85rem 1.15rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border-left: 3px solid var(--primary);">
+        <strong style="color: var(--primary); font-size: 0.9rem; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.4rem;">
+          <i data-lucide="check-square" style="width: 15px; height: 15px;"></i> Quy tắc: ${guide.toneRule.badge}
         </strong>
-        <div class="grid-2" style="gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+        <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
           ${guide.toneRule.rules.map(r => `<div>• ${r}</div>`).join('')}
         </div>
       </div>
 
-      <!-- 4-Stage Structural Guide with Plug-and-play Sentences -->
-      <h5 style="color: var(--text-primary); font-size: 1rem; margin: 0 0 1rem 0; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
-        <i data-lucide="layers" style="width: 16px; height: 16px; color: var(--secondary);"></i>
-        <span>Mẫu câu ăn điểm cho từng đoạn (Plug-and-play expressions):</span>
+      <!-- Structural Guide with Plug-and-play Sentences -->
+      <h5 style="color: var(--text-primary); font-size: 0.95rem; margin: 0 0 0.85rem 0; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+        <i data-lucide="layers" style="width: 15px; height: 15px; color: var(--secondary);"></i>
+        <span>Mẫu câu theo từng đoạn:</span>
       </h5>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem;">
         ${guide.sections.map((sec) => `
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.15rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.5rem;">
-              <strong style="color: var(--primary); font-size: 0.95rem;">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.4rem;">
+              <strong style="color: var(--primary); font-size: 0.9rem;">
                 ${sec.step}: ${sec.title}
               </strong>
               <span class="badge badge-secondary" style="font-size: 0.75rem;">${sec.tip}</span>
             </div>
             
-            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.5;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 0.5rem 0; line-height: 1.4;">
               ${sec.description}
             </p>
 
-            <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm);">
-              <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+            <div style="background: var(--bg-muted); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm);">
+              <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                 ${sec.sentences.map(st => `
-                  <div style="font-size: 0.875rem;">
+                  <div style="font-size: 0.85rem;">
                     <span style="font-weight: 600; color: var(--text-primary); white-space: pre-line;">"${st.en}"</span>
                     <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">➔ ${st.vn}</div>
                   </div>
@@ -244,12 +244,12 @@ function renderLetterStructureGuideSection(letter) {
         `).join('')}
       </div>
 
-      <!-- Scoring Checklist -->
-      <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid var(--success); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
-        <strong style="color: var(--success-text); font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-          <i data-lucide="check-circle-2" style="width: 15px; height: 15px;"></i> Checklist 4 Tiêu Chí Chấm Điểm Task 1:
+      <!-- Scoring Rules -->
+      <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid var(--success); border-radius: var(--radius-md); padding: 0.85rem 1.15rem;">
+        <strong style="color: var(--success-text); font-size: 0.875rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+          <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> Quy tắc chấm điểm Task 1:
         </strong>
-        <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-primary);">
+        <div class="grid-2" style="gap: 0.35rem; font-size: 0.825rem; color: var(--text-primary);">
           ${guide.scoringFormula.map(sf => `<div>✔ ${sf}</div>`).join('')}
         </div>
       </div>
@@ -264,33 +264,32 @@ function renderEssayStructureGuideSection(essay) {
   return `
     <div class="card animate-fade-in" style="margin-bottom: 1.5rem; padding: 1.5rem 1.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
       
-      <!-- 4-Stage Structural Guide with Plug-and-play Sentences -->
-      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem;">
         ${guide.structureSteps.map((step) => `
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.15rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.5rem;">
-              <strong style="color: var(--primary); font-size: 0.95rem;">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.4rem;">
+              <strong style="color: var(--primary); font-size: 0.9rem;">
                 ${step.part}
               </strong>
               <span class="badge badge-secondary" style="font-size: 0.75rem; font-weight: 600;">
-                Khuyến nghị: ${step.targetLines}
+                ${step.targetLines}
               </span>
             </div>
 
-            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.5;">
-              <strong>Mục tiêu:</strong> ${step.purpose}
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 0.5rem 0; line-height: 1.4;">
+              <strong>Yêu cầu:</strong> ${step.purpose}
             </p>
 
             <!-- Formulas & Frames -->
-            <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 0.6rem;">
-              <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem; text-transform: uppercase;">
-                ✍ Công thức mẫu câu ăn điểm:
+            <div style="background: var(--bg-muted); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); margin-bottom: 0.5rem;">
+              <div style="font-size: 0.775rem; font-weight: 700; color: var(--primary); margin-bottom: 0.35rem; text-transform: uppercase;">
+                ✍ Mẫu câu:
               </div>
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.45rem;">
                 ${step.formulas.map(f => `
                   <div>
                     <span style="font-weight: 700; color: var(--text-primary); font-size: 0.825rem;">${f.name}</span>
-                    <div style="font-weight: 600; color: var(--primary); font-size: 0.9rem; margin: 0.1rem 0;">
+                    <div style="font-weight: 600; color: var(--primary); font-size: 0.875rem; margin: 0.1rem 0;">
                       "${f.frame}"
                     </div>
                     <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">
@@ -303,18 +302,18 @@ function renderEssayStructureGuideSection(essay) {
 
             <div style="font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.35rem;">
               <i data-lucide="sparkles" style="width: 13px; height: 13px; color: var(--warning);"></i>
-              <span><strong>Mẹo giám khảo:</strong> ${step.scoringTip}</span>
+              <span><strong>Quy tắc:</strong> ${step.scoringTip}</span>
             </div>
           </div>
         `).join('')}
       </div>
 
-      <!-- Scoring Checklist for Task 2 -->
-      <div style="background: rgba(37, 99, 235, 0.06); border: 1px solid var(--primary); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
-        <strong style="color: var(--primary); font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-          <i data-lucide="check-circle-2" style="width: 15px; height: 15px;"></i> Checklist 4 Tiêu Chí Chấm Bài Luận VSTEP (250+ từ):
+      <!-- Scoring Rules for Task 2 -->
+      <div style="background: rgba(37, 99, 235, 0.06); border: 1px solid var(--primary); border-radius: var(--radius-md); padding: 0.85rem 1.15rem;">
+        <strong style="color: var(--primary); font-size: 0.875rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+          <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i> Quy tắc chấm điểm Task 2:
         </strong>
-        <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-primary);">
+        <div class="grid-2" style="gap: 0.35rem; font-size: 0.825rem; color: var(--text-primary);">
           ${guide.scoringChecklist.map(sc => `<div>✔ ${sc}</div>`).join('')}
         </div>
       </div>
