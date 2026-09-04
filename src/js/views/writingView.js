@@ -7,6 +7,8 @@ import { WritingStructureGuide } from '../modules/writing/writingStructureGuide.
 let activeWritingTab = 'task1'; // 'task1' | 'task2' | 'criteria'
 let selectedTask1Id = task1Letters[0]?.id || 'letter-01';
 let selectedTask2Id = task2Essays[0]?.id || 'essay-01';
+let activeTask1SubTab = 'model'; // 'model' | 'guide' | 'analysis'
+let activeTask2SubTab = 'model'; // 'model' | 'guide' | 'analysis'
 
 // Writing Modal State
 let isWritingModalOpen = false;
@@ -38,6 +40,16 @@ export function renderWritingView() {
 
   window.handleTask2Select = (id) => {
     selectedTask2Id = id;
+    window.app.renderCurrentView();
+  };
+
+  window.handleTask1SubTabChange = (sub) => {
+    activeTask1SubTab = sub;
+    window.app.renderCurrentView();
+  };
+
+  window.handleTask2SubTabChange = (sub) => {
+    activeTask2SubTab = sub;
     window.app.renderCurrentView();
   };
 
@@ -186,63 +198,44 @@ function renderLetterStructureGuideSection(letter) {
   const guide = WritingStructureGuide.getLetterGuide(letter);
 
   return `
-    <div class="card animate-fade-in" style="margin-bottom: 2rem; border-top: 4px solid var(--primary); padding: 1.75rem 2rem; background: var(--bg-card); box-shadow: var(--shadow-sm);">
+    <div class="card animate-fade-in" style="margin-bottom: 1.5rem; padding: 1.5rem 1.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
       
-      <!-- Section Header -->
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-color); padding-bottom: 1rem;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-            <span class="badge badge-primary" style="font-weight: 700;">Chiến Lược Cấu Trúc B1</span>
-            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: ${guide.toneRule.styleColor}; font-weight: 700; border: 1px solid currentColor;">
-              ${guide.toneRule.badge}
-            </span>
-          </div>
-          <h4 style="margin: 0; color: var(--primary); font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
-            <i data-lucide="book-open-check"></i>
-            <span>Hướng Dẫn Cấu Trúc Viết Thư Lấy Trọn Điểm: ${guide.categoryName}</span>
-          </h4>
-        </div>
-      </div>
-
       <!-- Tone and Style Rules Box -->
-      <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border-left: 4px solid var(--primary);">
-        <strong style="color: var(--primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.4rem;">
-          <i data-lucide="info" style="width: 16px; height: 16px;"></i> Quy tắc văn phong cốt lõi:
+      <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border-left: 3px solid var(--primary);">
+        <strong style="color: var(--primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.5rem;">
+          <i data-lucide="info" style="width: 15px; height: 15px;"></i> Quy tắc văn phong: ${guide.toneRule.badge}
         </strong>
-        <div class="grid-2" style="gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+        <div class="grid-2" style="gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
           ${guide.toneRule.rules.map(r => `<div>• ${r}</div>`).join('')}
         </div>
       </div>
 
       <!-- 4-Stage Structural Guide with Plug-and-play Sentences -->
-      <h5 style="color: var(--text-primary); font-size: 1.05rem; margin: 0 0 1rem 0; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
-        <i data-lucide="layers" style="width: 18px; height: 18px; color: var(--secondary);"></i>
-        <span>Khung Cấu Trúc 4 Phần & Mẫu Câu Áp Dụng Cho Mọi Đề Tương Tự:</span>
+      <h5 style="color: var(--text-primary); font-size: 1rem; margin: 0 0 1rem 0; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+        <i data-lucide="layers" style="width: 16px; height: 16px; color: var(--secondary);"></i>
+        <span>Mẫu câu ăn điểm cho từng đoạn (Plug-and-play expressions):</span>
       </h5>
 
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
-        ${guide.sections.map((sec, idx) => `
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-              <strong style="color: var(--primary); font-size: 1rem;">
+        ${guide.sections.map((sec) => `
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.5rem;">
+              <strong style="color: var(--primary); font-size: 0.95rem;">
                 ${sec.step}: ${sec.title}
               </strong>
               <span class="badge badge-secondary" style="font-size: 0.75rem;">${sec.tip}</span>
             </div>
             
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0 0 0.75rem 0; line-height: 1.5;">
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.5;">
               ${sec.description}
             </p>
 
             <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm);">
-              <div style="font-size: 0.8rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.4rem; text-transform: uppercase;">
-                ✍ Mẫu câu ăn điểm "Lắp ghép dùng ngay":
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.45rem;">
                 ${sec.sentences.map(st => `
-                  <div style="font-size: 0.9rem;">
+                  <div style="font-size: 0.875rem;">
                     <span style="font-weight: 600; color: var(--text-primary); white-space: pre-line;">"${st.en}"</span>
-                    <div style="font-size: 0.825rem; color: var(--text-muted); font-style: italic;">➔ ${st.vn}</div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">➔ ${st.vn}</div>
                   </div>
                 `).join('')}
               </div>
@@ -252,11 +245,11 @@ function renderLetterStructureGuideSection(letter) {
       </div>
 
       <!-- Scoring Checklist -->
-      <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid var(--success); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
-        <strong style="color: var(--success-text); font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-          <i data-lucide="check-circle-2" style="width: 16px; height: 16px;"></i> Checklist 4 Tiêu Chí Lấy Điểm Cao VSTEP Task 1:
+      <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid var(--success); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+        <strong style="color: var(--success-text); font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
+          <i data-lucide="check-circle-2" style="width: 15px; height: 15px;"></i> Checklist 4 Tiêu Chí Chấm Điểm Task 1:
         </strong>
-        <div class="grid-2" style="gap: 0.5rem; font-size: 0.875rem; color: var(--text-primary);">
+        <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-primary);">
           ${guide.scoringFormula.map(sf => `<div>✔ ${sf}</div>`).join('')}
         </div>
       </div>
@@ -269,52 +262,38 @@ function renderEssayStructureGuideSection(essay) {
   const guide = WritingStructureGuide.getEssayGuide(essay);
 
   return `
-    <div class="card animate-fade-in" style="margin-bottom: 2rem; border-top: 4px solid var(--secondary); padding: 1.75rem 2rem; background: var(--bg-card); box-shadow: var(--shadow-sm);">
+    <div class="card animate-fade-in" style="margin-bottom: 1.5rem; padding: 1.5rem 1.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
       
-      <!-- Section Header -->
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-color); padding-bottom: 1rem;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-            <span class="badge badge-secondary" style="font-weight: 700;">Chiến Thuật Bài Luận VSTEP B1/B2</span>
-            <span class="badge badge-primary" style="font-weight: 700;">Cấu Trúc P.E.E.L 4 Đoạn</span>
-          </div>
-          <h4 style="margin: 0; color: var(--secondary); font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
-            <i data-lucide="layout-template"></i>
-            <span>Hướng Dẫn Cấu Trúc Viết Luận Ăn Điểm: ${guide.essayCategory}</span>
-          </h4>
-        </div>
-      </div>
-
       <!-- 4-Stage Structural Guide with Plug-and-play Sentences -->
-      <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem;">
-        ${guide.structureSteps.map((step, idx) => `
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--secondary); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-              <strong style="color: var(--secondary); font-size: 1.05rem;">
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+        ${guide.structureSteps.map((step) => `
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.5rem;">
+              <strong style="color: var(--primary); font-size: 0.95rem;">
                 ${step.part}
               </strong>
-              <span class="badge badge-secondary" style="font-size: 0.8rem; font-weight: 600;">
+              <span class="badge badge-secondary" style="font-size: 0.75rem; font-weight: 600;">
                 Khuyến nghị: ${step.targetLines}
               </span>
             </div>
 
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0 0 0.85rem 0; line-height: 1.5;">
-              <strong>Mục tiêu đoạn:</strong> ${step.purpose}
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.5;">
+              <strong>Mục tiêu:</strong> ${step.purpose}
             </p>
 
             <!-- Formulas & Frames -->
-            <div style="background: var(--bg-muted); padding: 0.85rem 1.15rem; border-radius: var(--radius-sm); margin-bottom: 0.75rem;">
-              <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-transform: uppercase;">
-                ✍ Công thức mẫu câu ăn điểm cho đoạn này:
+            <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 0.6rem;">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem; text-transform: uppercase;">
+                ✍ Công thức mẫu câu ăn điểm:
               </div>
-              <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                 ${step.formulas.map(f => `
                   <div>
-                    <span style="font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${f.name}</span>
-                    <div style="font-weight: 600; color: var(--primary); font-size: 0.95rem; margin: 0.15rem 0;">
+                    <span style="font-weight: 700; color: var(--text-primary); font-size: 0.825rem;">${f.name}</span>
+                    <div style="font-weight: 600; color: var(--primary); font-size: 0.9rem; margin: 0.1rem 0;">
                       "${f.frame}"
                     </div>
-                    <div style="font-size: 0.825rem; color: var(--text-muted); font-style: italic;">
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">
                       ➔ ${f.vn}
                     </div>
                   </div>
@@ -322,8 +301,8 @@ function renderEssayStructureGuideSection(essay) {
               </div>
             </div>
 
-            <div style="font-size: 0.825rem; color: var(--warning-text); display: flex; align-items: center; gap: 0.35rem;">
-              <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="sparkles" style="width: 13px; height: 13px; color: var(--warning);"></i>
               <span><strong>Mẹo giám khảo:</strong> ${step.scoringTip}</span>
             </div>
           </div>
@@ -331,11 +310,11 @@ function renderEssayStructureGuideSection(essay) {
       </div>
 
       <!-- Scoring Checklist for Task 2 -->
-      <div style="background: rgba(37, 99, 235, 0.08); border: 1px solid var(--primary); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
-        <strong style="color: var(--primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-          <i data-lucide="check-circle-2" style="width: 16px; height: 16px;"></i> Checklist 4 Tiêu Chí Chấm Điểm Task 2 (250+ từ):
+      <div style="background: rgba(37, 99, 235, 0.06); border: 1px solid var(--primary); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+        <strong style="color: var(--primary); font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
+          <i data-lucide="check-circle-2" style="width: 15px; height: 15px;"></i> Checklist 4 Tiêu Chí Chấm Bài Luận VSTEP (250+ từ):
         </strong>
-        <div class="grid-2" style="gap: 0.5rem; font-size: 0.875rem; color: var(--text-primary);">
+        <div class="grid-2" style="gap: 0.4rem; font-size: 0.85rem; color: var(--text-primary);">
           ${guide.scoringChecklist.map(sc => `<div>✔ ${sc}</div>`).join('')}
         </div>
       </div>
@@ -346,6 +325,8 @@ function renderEssayStructureGuideSection(essay) {
 
 function renderTask1Section(letter) {
   const structure = letter.structure || {};
+  const guide = WritingStructureGuide.getLetterGuide(letter);
+
   return `
     <div>
       <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
@@ -353,126 +334,151 @@ function renderTask1Section(letter) {
           <button class="tab-btn ${l.id === selectedTask1Id ? 'active' : ''}" 
                   style="white-space: nowrap; font-size: 0.85rem;"
                   onclick="window.handleTask1Select('${l.id}')">
-            ${idx + 1}. ${(l.title || '').substring(0, 28)}...
+            ${idx + 1}. ${(l.title || '').substring(0, 26)}...
           </button>
         `).join('')}
       </div>
 
-      <!-- Letter Header & Prompt Card -->
-      <div class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-          <div>
-            <span class="badge badge-primary" style="margin-bottom: 0.35rem;">Task 1 • ${(letter.type || 'Letter').split(' - ')[0]}</span>
-            <h3 style="font-size: 1.45rem; color: var(--text-primary); margin: 0.25rem 0 0 0;">${letter.title}</h3>
+      <!-- Letter Header & Prompt Card (Gọn gàng, rõ ràng, không trùng lặp) -->
+      <div class="card" style="margin-bottom: 1.5rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-primary" style="font-weight: 700;">Task 1 • ${(letter.type || 'Letter').split(' - ')[0]}</span>
+            <span class="badge badge-secondary" style="font-weight: 600;">~${letter.wordCount || 140} từ</span>
+            <span class="badge" style="background: var(--bg-muted); color: var(--text-secondary); font-weight: 600;">${guide.toneRule.badge}</span>
           </div>
-          <span class="badge badge-success" style="font-weight: 700;">${letter.level || 'VSTEP B1 Target'}</span>
+          <button class="btn btn-primary btn-sm" onclick="window.openWritingTestModal('task1', '${letter.id}')" style="font-weight: 700; display: flex; align-items: center; gap: 0.35rem;">
+            <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i> Tập Viết Bài Này
+          </button>
         </div>
 
-        <div style="background: var(--bg-surface); padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.95rem; line-height: 1.7;">
-          <strong style="color: var(--primary); display: block; margin-bottom: 0.35rem;"><i data-lucide="mail" style="width: 15px; height: 15px; vertical-align: middle;"></i> Đề Bài Thi Thật (Exam Prompt):</strong>
-          <span style="color: var(--text-primary); font-weight: 500;">${letter.prompt}</span>
+        <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem;">
+          ${letter.title}
+        </div>
+
+        <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-size: 0.95rem; line-height: 1.7; color: var(--text-primary);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;"><i data-lucide="mail" style="width: 14px; height: 14px; vertical-align: middle;"></i> Đề bài:</strong>
+          <span>${letter.prompt}</span>
         </div>
       </div>
 
-      <!-- Cẩm Nang Hướng Dẫn Cấu Trúc Viết Thư & Mẫu Câu Ăn Điểm -->
-      ${renderLetterStructureGuideSection(letter)}
+      <!-- Sub-Tab Navigation Bar -->
+      <div class="tabs-header" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; overflow-x: auto;">
+        <button class="tab-btn ${activeTask1SubTab === 'model' ? 'active' : ''}" onclick="window.handleTask1SubTabChange('model')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="file-text" style="width: 15px; height: 15px;"></i> Bài Mẫu & Dàn Ý
+        </button>
+        <button class="tab-btn ${activeTask1SubTab === 'guide' ? 'active' : ''}" onclick="window.handleTask1SubTabChange('guide')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="compass" style="width: 15px; height: 15px;"></i> Mẫu Câu & Văn Phong
+        </button>
+        <button class="tab-btn ${activeTask1SubTab === 'analysis' ? 'active' : ''}" onclick="window.handleTask1SubTabChange('analysis')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i> Phân Tích Từng Câu (${(letter.lineByLineAnalysis || []).length})
+        </button>
+      </div>
 
-      <!-- 2-Column Presentation: Authentic Letter Paper + 4-Stage Blueprint -->
-      <div class="grid-2" style="gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
-        
-        <!-- Left: Formatted Letter Paper -->
-        <div class="card" style="padding: 2rem; background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
-            <h4 style="margin: 0; color: var(--primary); font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
-              <i data-lucide="mail-open" style="width: 18px; height: 18px;"></i> Văn Bản Thư / Email Chuẩn:
-            </h4>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">~${letter.wordCount || 140} words</span>
-          </div>
-
-          <div class="letter-paper" style="line-height: 2; font-size: 1rem; color: var(--text-primary);">
-            <p style="font-weight: 700; color: var(--primary); margin-bottom: 1rem;">${structure.greeting || ''}</p>
-            <p style="margin-bottom: 1.25rem; text-indent: 1.5rem; background: rgba(59, 130, 246, 0.05); padding: 0.5rem 0.75rem; border-left: 3px solid var(--primary); border-radius: 4px;">
-              ${structure.opening || ''}
-            </p>
-            <p style="margin-bottom: 1.25rem; text-indent: 1.5rem; background: rgba(16, 185, 129, 0.05); padding: 0.5rem 0.75rem; border-left: 3px solid var(--success); border-radius: 4px;">
-              ${structure.bodyParagraph1 || ''}
-            </p>
-            <p style="margin-bottom: 1.25rem; text-indent: 1.5rem; background: rgba(245, 158, 11, 0.05); padding: 0.5rem 0.75rem; border-left: 3px solid var(--warning); border-radius: 4px;">
-              ${structure.bodyParagraph2 || ''}
-            </p>
-            <p style="margin-bottom: 1.25rem; text-indent: 1.5rem; background: rgba(139, 92, 246, 0.05); padding: 0.5rem 0.75rem; border-left: 3px solid var(--secondary); border-radius: 4px;">
-              ${structure.closing || ''}
-            </p>
-            <p style="font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; white-space: pre-line;">${structure.signOff || ''}</p>
-          </div>
-        </div>
-
-        <!-- Right: 4-Stage Letter Blueprint -->
-        <div class="card" style="padding: 1.75rem;">
-          <h4 style="margin: 0 0 1.25rem 0; color: var(--secondary); font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
-            <i data-lucide="layers" style="width: 18px; height: 18px;"></i> Sơ Đồ Cấu Trúc 4 Phần Chuẩn B1:
-          </h4>
+      <!-- Sub-Tab Content -->
+      ${activeTask1SubTab === 'model' ? `
+        <!-- 2-Column: Authentic Letter Paper + 4-Stage Blueprint -->
+        <div class="grid-2" style="gap: 1.5rem; align-items: flex-start;">
           
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
-              <strong style="color: var(--primary);">1. Lời Chào & Mở Đầu (Salutation & Opening):</strong>
-              <p style="font-size: 0.875rem; margin: 0.35rem 0 0 0; color: var(--text-secondary); line-height: 1.6;">
-                Xác lập mối quan hệ thân mật/trang trọng và nêu rõ mục đích viết thư trong 1-2 câu đầu.
-              </p>
+          <!-- Left: Formatted Letter Paper -->
+          <div class="card" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+              <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 0.4rem;">
+                <i data-lucide="mail-open" style="width: 16px; height: 16px;"></i> Bài Viết Thư Mẫu:
+              </h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">~${letter.wordCount || 140} từ</span>
             </div>
 
-            <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); border-left: 4px solid var(--success);">
-              <strong style="color: var(--success-text);">2. Thân Bài 1 (Body Paragraph 1):</strong>
-              <p style="font-size: 0.875rem; margin: 0.35rem 0 0 0; color: var(--text-secondary); line-height: 1.6;">
-                Giải quyết trực tiếp yêu cầu thứ nhất của đề bài: Cung cấp chi tiết bối cảnh, sự kiện, thời gian.
+            <div class="letter-paper" style="line-height: 1.9; font-size: 0.98rem; color: var(--text-primary);">
+              <p style="font-weight: 700; color: var(--primary); margin-bottom: 0.75rem;">${structure.greeting || ''}</p>
+              <p style="margin-bottom: 1rem; text-indent: 1.25rem; background: rgba(59, 130, 246, 0.04); padding: 0.5rem 0.75rem; border-left: 3px solid var(--primary); border-radius: 4px;">
+                ${structure.opening || ''}
               </p>
+              <p style="margin-bottom: 1rem; text-indent: 1.25rem; background: rgba(16, 185, 129, 0.04); padding: 0.5rem 0.75rem; border-left: 3px solid var(--success); border-radius: 4px;">
+                ${structure.bodyParagraph1 || ''}
+              </p>
+              <p style="margin-bottom: 1rem; text-indent: 1.25rem; background: rgba(245, 158, 11, 0.04); padding: 0.5rem 0.75rem; border-left: 3px solid var(--warning); border-radius: 4px;">
+                ${structure.bodyParagraph2 || ''}
+              </p>
+              <p style="margin-bottom: 1rem; text-indent: 1.25rem; background: rgba(139, 92, 246, 0.04); padding: 0.5rem 0.75rem; border-left: 3px solid var(--secondary); border-radius: 4px;">
+                ${structure.closing || ''}
+              </p>
+              <p style="font-weight: 700; color: var(--text-primary); margin-top: 1.25rem; white-space: pre-line;">${structure.signOff || ''}</p>
             </div>
+          </div>
 
-            <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); border-left: 4px solid var(--warning-text);">
-              <strong style="color: var(--warning-text);">3. Thân Bài 2 (Body Paragraph 2):</strong>
-              <p style="font-size: 0.875rem; margin: 0.35rem 0 0 0; color: var(--text-secondary); line-height: 1.6;">
-                Đưa ra đề xuất, lời khuyên hoặc yêu cầu hành động tiếp theo của người nhận thư.
-              </p>
-            </div>
+          <!-- Right: 4-Stage Letter Blueprint -->
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="margin: 0 0 1rem 0; color: var(--secondary); font-size: 1.1rem; display: flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="layers" style="width: 16px; height: 16px;"></i> Dàn Ý 4 Phần Chuẩn B1:
+            </h4>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div style="background: var(--bg-muted); padding: 0.9rem 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                <strong style="color: var(--primary); font-size: 0.9rem;">1. Chào & Mở Đầu (Salutation & Opening):</strong>
+                <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--text-secondary); line-height: 1.5;">
+                  Xác lập mối quan hệ và nêu rõ mục đích viết thư trong 1-2 câu đầu.
+                </p>
+              </div>
 
-            <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
-              <strong style="color: var(--secondary);">4. Kết Luận & Ký Tên (Closing & Sign-off):</strong>
-              <p style="font-size: 0.875rem; margin: 0.35rem 0 0 0; color: var(--text-secondary); line-height: 1.6;">
-                Lời nhắn mong đợi phản hồi và lời chào kết phù hợp phong cách (Warm regards / Yours sincerely).
-              </p>
+              <div style="background: var(--bg-muted); padding: 0.9rem 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--success);">
+                <strong style="color: var(--success-text); font-size: 0.9rem;">2. Thân Bài 1 (Body Paragraph 1):</strong>
+                <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--text-secondary); line-height: 1.5;">
+                  Giải quyết yêu cầu thứ nhất của đề: cung cấp bối cảnh, chi tiết, thời gian.
+                </p>
+              </div>
+
+              <div style="background: var(--bg-muted); padding: 0.9rem 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--warning-text);">
+                <strong style="color: var(--warning-text); font-size: 0.9rem;">3. Thân Bài 2 (Body Paragraph 2):</strong>
+                <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--text-secondary); line-height: 1.5;">
+                  Đưa ra đề xuất, lời khuyên hoặc hướng dẫn chuẩn bị cho đối phương.
+                </p>
+              </div>
+
+              <div style="background: var(--bg-muted); padding: 0.9rem 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--secondary);">
+                <strong style="color: var(--secondary); font-size: 0.9rem;">4. Kết Luận & Ký Tên (Closing & Sign-off):</strong>
+                <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--text-secondary); line-height: 1.5;">
+                  Lời nhắn mong đợi phản hồi và lời chào kết hợp văn phong (Best wishes / Yours sincerely).
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ` : ''}
 
-      <!-- Line-by-Line Grammatical Breakdown Table -->
-      <div class="card" style="padding: 2rem;">
-        <h4 style="color: var(--primary); margin: 0 0 1.25rem 0; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
-          <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i> Phân Tích Cú Pháp & Điểm Ngữ Pháp Từng Câu (Line-by-Line Breakdown):
-        </h4>
+      ${activeTask1SubTab === 'guide' ? renderLetterStructureGuideSection(letter) : ''}
 
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          ${(letter.lineByLineAnalysis || []).map((item, idx) => `
-            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 1.25rem;">
-              <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.5;">
-                <span style="font-family: var(--font-mono); color: var(--primary);">[${idx + 1}]</span> "${item.sentence}"
+      ${activeTask1SubTab === 'analysis' ? `
+        <!-- Line-by-Line Grammatical Breakdown Table -->
+        <div class="card animate-fade-in" style="padding: 1.75rem;">
+          <h4 style="color: var(--primary); margin: 0 0 1.25rem 0; font-size: 1.15rem; display: flex; align-items: center; gap: 0.4rem;">
+            <i data-lucide="check-circle" style="width: 18px; height: 18px;"></i> Phân Tích Cú Pháp & Điểm Ngữ Pháp Từng Câu:
+          </h4>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+            ${(letter.lineByLineAnalysis || []).map((item, idx) => `
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 3px solid var(--primary); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem; line-height: 1.5;">
+                  <span style="font-family: var(--font-mono); color: var(--primary); font-size: 0.9rem;">[${idx + 1}]</span> "${item.sentence}"
+                </div>
+                <div style="background: var(--bg-muted); padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--secondary); margin-bottom: 0.4rem;">
+                  <strong>Điểm ngữ pháp:</strong> ${item.grammar}
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary); font-style: italic;">
+                  <strong>Dịch nghĩa:</strong> ${item.vietnamese}
+                </div>
               </div>
-              <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--secondary); margin-bottom: 0.5rem;">
-                <strong><i data-lucide="sparkles" style="width: 14px; height: 14px; vertical-align: middle;"></i> Điểm ngữ pháp B1:</strong> ${item.grammar}
-              </div>
-              <div style="font-size: 0.875rem; color: var(--text-secondary); font-style: italic;">
-                <strong>Bản dịch tiếng Việt:</strong> ${item.vietnamese}
-              </div>
-            </div>
-          `).join('')}
+            `).join('')}
+          </div>
         </div>
-      </div>
+      ` : ''}
     </div>
   `;
 }
 
 function renderTask2Section(essay) {
   const outline = essay.outline || {};
+
   return `
     <div>
       <div class="tabs-header" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
@@ -486,89 +492,112 @@ function renderTask2Section(essay) {
       </div>
 
       <!-- Essay Prompt Card -->
-      <div class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border-left: 5px solid var(--primary);">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-          <div>
-            <span class="badge badge-primary" style="margin-bottom: 0.35rem;">Task 2 Essay • Chủ Đề: ${essay.topicName}</span>
-            <h3 style="font-size: 1.45rem; color: var(--text-primary); margin: 0.25rem 0 0 0;">Dạng Bài: ${essay.essayType || 'Academic Essay'}</h3>
+      <div class="card" style="margin-bottom: 1.5rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-primary" style="font-weight: 700;">Task 2 • ${essay.essayType || 'Academic Essay'}</span>
+            <span class="badge badge-secondary" style="font-weight: 600;">~${essay.wordCount || 260} từ</span>
+            <span class="badge badge-success" style="font-weight: 600;">${essay.targetScore || 'Mục tiêu: B1/B2'}</span>
           </div>
-          <span class="badge badge-success" style="font-weight: 700;">${essay.targetScore || 'Target: 8.5/10'}</span>
+          <button class="btn btn-primary btn-sm" onclick="window.openWritingTestModal('task2', '${essay.id}')" style="font-weight: 700; display: flex; align-items: center; gap: 0.35rem;">
+            <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i> Tập Viết Luận
+          </button>
         </div>
 
-        <div style="background: var(--bg-surface); padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.95rem; line-height: 1.7;">
-          <strong style="color: var(--primary); display: block; margin-bottom: 0.35rem;"><i data-lucide="file-text" style="width: 15px; height: 15px; vertical-align: middle;"></i> Đề Bài Luận Học Thuật (Essay Prompt):</strong>
-          <span style="color: var(--text-primary); font-weight: 500;">${essay.prompt}</span>
+        <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem;">
+          Chủ đề: ${essay.topicName}
         </div>
-      </div>
 
-      <!-- 4-Stage Outline Mind Flow -->
-      <div class="card" style="margin-bottom: 2rem; padding: 1.75rem;">
-        <h4 style="margin: 0 0 1.25rem 0; color: var(--primary); font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
-          <i data-lucide="git-merge" style="width: 18px; height: 18px;"></i> Dàn Ý Luận 4 Đoạn Học Thuật (Academic Essay Outline):
-        </h4>
-
-        <div class="grid-2" style="gap: 1rem;">
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.35rem;">1. Mở Bài (Introduction):</div>
-            <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.6;">${outline.introduction || ''}</div>
-          </div>
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--success); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="font-weight: 700; color: var(--success-text); margin-bottom: 0.35rem;">2. Thân Bài 1 (Body 1):</div>
-            <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.6;">${outline.bodyParagraph1 || ''}</div>
-          </div>
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--warning-text); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="font-weight: 700; color: var(--warning-text); margin-bottom: 0.35rem;">3. Thân Bài 2 (Body 2):</div>
-            <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.6;">${outline.bodyParagraph2 || ''}</div>
-          </div>
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--secondary); border-radius: var(--radius-md); padding: 1.25rem;">
-            <div style="font-weight: 700; color: var(--secondary); margin-bottom: 0.35rem;">4. Kết Bài (Conclusion):</div>
-            <div style="font-size: 0.9rem; color: var(--text-primary); line-height: 1.6;">${outline.conclusion || ''}</div>
-          </div>
+        <div style="background: var(--bg-muted); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-size: 0.95rem; line-height: 1.7; color: var(--text-primary);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> Đề bài:</strong>
+          <span>${essay.prompt}</span>
         </div>
       </div>
 
-      <!-- Cẩm Nang Hướng Dẫn Cấu Trúc Viết Luận 4 Đoạn P.E.E.L & Mẫu Câu Ăn Điểm -->
-      ${renderEssayStructureGuideSection(essay)}
-
-      <!-- Color-coded Full Essay Display -->
-      <div class="card" style="margin-bottom: 2rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
-          <h4 style="margin: 0; color: var(--primary); font-size: 1.2rem;">
-            Bài Luận Mẫu Chuẩn Điểm Cao (~${essay.wordCount || 260} từ):
-          </h4>
-          <div style="display: flex; gap: 0.5rem; font-size: 0.8rem;">
-            <span style="background: rgba(59, 130, 246, 0.15); color: var(--primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Từ Nối Cohesive</span>
-            <span style="background: rgba(16, 185, 129, 0.15); color: var(--success-text); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Từ Vựng B1/B2</span>
-          </div>
-        </div>
-
-        <div class="essay-paper" style="font-size: 1.05rem; line-height: 2.1; color: var(--text-primary); white-space: pre-line; text-align: justify; background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-          ${essay.fullEssay}
-        </div>
+      <!-- Sub-Tab Navigation Bar -->
+      <div class="tabs-header" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; overflow-x: auto;">
+        <button class="tab-btn ${activeTask2SubTab === 'model' ? 'active' : ''}" onclick="window.handleTask2SubTabChange('model')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="file-text" style="width: 15px; height: 15px;"></i> Bài Luận Mẫu & Dàn Ý
+        </button>
+        <button class="tab-btn ${activeTask2SubTab === 'guide' ? 'active' : ''}" onclick="window.handleTask2SubTabChange('guide')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="compass" style="width: 15px; height: 15px;"></i> Cấu Trúc P.E.E.L & Mẫu Câu
+        </button>
+        <button class="tab-btn ${activeTask2SubTab === 'analysis' ? 'active' : ''}" onclick="window.handleTask2SubTabChange('analysis')" style="font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;">
+          <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i> Phân Tích Từng Câu (${(essay.lineByLineAnnotations || []).length})
+        </button>
       </div>
 
-      <!-- Line-by-Line Syntactic Breakdown -->
-      <div class="card" style="padding: 2rem;">
-        <h4 style="color: var(--secondary); margin: 0 0 1.25rem 0; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
-          <i data-lucide="sparkles" style="width: 20px; height: 20px;"></i> Phân Tích Cú Pháp Câu & Kỹ Thuật Viết Luận Điểm:
-        </h4>
+      <!-- Sub-Tab Content -->
+      ${activeTask2SubTab === 'model' ? `
+        <div class="grid-2" style="gap: 1.5rem; align-items: flex-start; margin-bottom: 2rem;">
+          <!-- Left: Full Essay Paper -->
+          <div class="card" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+              <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 0.4rem;">
+                <i data-lucide="file-text" style="width: 16px; height: 16px;"></i> Bài Luận Mẫu Chuẩn:
+              </h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">~${essay.wordCount || 260} từ</span>
+            </div>
 
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          ${(essay.lineByLineAnnotations || []).map((item, idx) => `
-            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--secondary); border-radius: var(--radius-md); padding: 1.25rem;">
-              <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.5;">
-                <span style="font-family: var(--font-mono); color: var(--secondary);">[${idx + 1}]</span> "${item.sentence}"
+            <div class="essay-paper" style="font-size: 1rem; line-height: 2; color: var(--text-primary); white-space: pre-line; text-align: justify;">
+              ${essay.fullEssay}
+            </div>
+          </div>
+
+          <!-- Right: 4-Stage Outline Mind Flow -->
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="margin: 0 0 1rem 0; color: var(--secondary); font-size: 1.1rem; display: flex; align-items: center; gap: 0.4rem;">
+              <i data-lucide="git-merge" style="width: 16px; height: 16px;"></i> Dàn Ý 4 Đoạn Học Thuật:
+            </h4>
+
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div style="background: var(--bg-muted); border-left: 3px solid var(--primary); border-radius: var(--radius-md); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--primary); font-size: 0.9rem; margin-bottom: 0.25rem;">1. Mở Bài (Introduction):</div>
+                <div style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">${outline.introduction || ''}</div>
               </div>
-              <div style="background: var(--bg-muted); padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--primary); margin-bottom: 0.5rem;">
-                <strong>Cấu trúc ngữ pháp & liên kết:</strong> ${item.grammarBreakdown}
+              <div style="background: var(--bg-muted); border-left: 3px solid var(--success); border-radius: var(--radius-md); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--success-text); font-size: 0.9rem; margin-bottom: 0.25rem;">2. Thân Bài 1 (Body 1):</div>
+                <div style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">${outline.bodyParagraph1 || ''}</div>
               </div>
-              <div style="font-size: 0.875rem; color: var(--text-secondary); font-style: italic;">
-                <strong>Bản dịch tiếng Việt:</strong> ${item.vietnameseTranslation}
+              <div style="background: var(--bg-muted); border-left: 3px solid var(--warning-text); border-radius: var(--radius-md); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--warning-text); font-size: 0.9rem; margin-bottom: 0.25rem;">3. Thân Bài 2 (Body 2):</div>
+                <div style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">${outline.bodyParagraph2 || ''}</div>
+              </div>
+              <div style="background: var(--bg-muted); border-left: 3px solid var(--secondary); border-radius: var(--radius-md); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--secondary); font-size: 0.9rem; margin-bottom: 0.25rem;">4. Kết Bài (Conclusion):</div>
+                <div style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">${outline.conclusion || ''}</div>
               </div>
             </div>
-          `).join('')}
+          </div>
         </div>
-      </div>
+      ` : ''}
+
+      ${activeTask2SubTab === 'guide' ? renderEssayStructureGuideSection(essay) : ''}
+
+      ${activeTask2SubTab === 'analysis' ? `
+        <!-- Line-by-Line Syntactic Breakdown -->
+        <div class="card animate-fade-in" style="padding: 1.75rem;">
+          <h4 style="color: var(--secondary); margin: 0 0 1.25rem 0; font-size: 1.15rem; display: flex; align-items: center; gap: 0.4rem;">
+            <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i> Phân Tích Cú Pháp Câu & Kỹ Thuật Viết Luận Điểm:
+          </h4>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+            ${(essay.lineByLineAnnotations || []).map((item, idx) => `
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 3px solid var(--secondary); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem; line-height: 1.5;">
+                  <span style="font-family: var(--font-mono); color: var(--secondary); font-size: 0.9rem;">[${idx + 1}]</span> "${item.sentence}"
+                </div>
+                <div style="background: var(--bg-muted); padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--primary); margin-bottom: 0.4rem;">
+                  <strong>Cấu trúc ngữ pháp & liên kết:</strong> ${item.grammarBreakdown}
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary); font-style: italic;">
+                  <strong>Bản dịch tiếng Việt:</strong> ${item.vietnameseTranslation}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
     </div>
   `;
 }
