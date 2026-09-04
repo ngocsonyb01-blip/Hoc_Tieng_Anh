@@ -514,7 +514,8 @@ function renderExamSelectionLobby() {
                 </div>
               </div>
 
-              <h3 style="color: var(--text-primary); font-size: 1.25rem; margin: 0 0 1rem 0; line-height: 1.4;">Đề Thi Số 0${idx + 1}</h3>
+              <h3 style="color: var(--text-primary); font-size: 1.15rem; margin: 0 0 0.4rem 0; line-height: 1.4;">${exam.name || `Đề Thi Số 0${idx + 1}`}</h3>
+              ${exam.description ? `<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1rem 0; line-height: 1.4;">${exam.description}</p>` : ''}
 
               <!-- Skill Structure Badges -->
               <div style="background: var(--bg-muted); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">

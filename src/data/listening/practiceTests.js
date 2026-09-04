@@ -1,3 +1,6 @@
+import { exam07 } from '../tests/exam07.js';
+import { authenticVstepExams } from '../tests/authenticVstepExams.js';
+
 export const LISTENING_PRACTICE_DATA = {
   "title": "Kho Đề Luyện Nghe VSTEP B1 Chuẩn (Comprehensive Listening Arena)",
   "testSets": [
@@ -5183,6 +5186,22 @@ export const LISTENING_PRACTICE_DATA = {
           }
         ]
       }
+    },
+    {
+      "id": "set-06",
+      "title": "Bộ Đề Luyện Nghe Số 06 (Tổng Ôn Về Đích - 35 Câu)",
+      "badge": "Bộ Đề Về Đích B1-B2",
+      "part1": authenticVstepExams[5].listening.part1,
+      "part2": authenticVstepExams[5].listening.part2,
+      "part3": authenticVstepExams[5].listening.part3
+    },
+    {
+      "id": "set-07",
+      "title": "Bộ Đề Luyện Nghe Số 07 (Đề Mới Nhất ULIS & ĐHQG - 35 Câu)",
+      "badge": "Đề Thi Thật Mới Nhất",
+      "part1": exam07.listening.part1,
+      "part2": exam07.listening.part2,
+      "part3": exam07.listening.part3
     }
   ]
 };
